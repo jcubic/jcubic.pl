@@ -1,0 +1,19 @@
+# Site settings
+title: Głównie JavaScript
+email: jcubic@jcubic.pl
+description: "Blog Głównie JavaScript - informacje najczęściej na temat Front-Endu, głównie o języku JavaScript, ale także na temat nowych api HTML5 czy CSS."
+baseurl: "http://localhost/projects/jcubic/blog/repo/_site"
+url: ""
+
+twitter_username: jekyllrb
+github_username:  jekyll
+
+exclude:
+    -
+        README.md
+
+paginate: 10
+
+# Build settings
+markdown: kramdown
+permalink: pretty

@@ -1,0 +1,13 @@
+<header>
+    <img src="{{ "/img/background.jpg" | prepend: site.baseurl }}" alt="Computer Keyboard - {{ site.title }}"/>
+    <h1><a href="{{ '/' | prepend: site.baseurl }}">{{ site.title }}</a></h1>
+    {% if site.pages %}
+    <nav>
+        <ul>
+        {% for page in site.pages %}
+            <li><a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a></li>
+        {% endfor %}
+        </ul>
+    </nav>
+    {% endif %}
+</header>
