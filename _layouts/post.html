@@ -2,7 +2,8 @@
 layout: default
 ---
 <div class="meta">
-    <h3>{{ page.date | date: "%Y-%m-%d" }}</h3>
+    {% assign author = site.users[page.author] %}
+    <h3>{{ page.date | date: "%Y-%m-%d" }} by <a href="{{ author.url }}">{{ author.name }}</a></h3>
     <h2>{{ page.title }}</h2>
 </div>
 <div class="content">

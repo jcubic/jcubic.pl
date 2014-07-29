@@ -97,10 +97,10 @@ footer p {
     text-align: center;
     font-size: 13px;
 }
-footer a, footer a:visited {
+footer a, footer a:visited, section a, section a:visited {
     color: #152032;
 }
-footer a:hover {
+footer a:hover, section a:hover {
     color: #1520FF;
 }
 #main {
@@ -193,7 +193,7 @@ section p:last-child {
     overflow: hidden; /* clearfix */
     margin-left: 20px;
 }
-section p, .content .highlight {
+section p, .content .highlight, .more {
     margin-left: 20px;
 }
 /* TAGS */
@@ -254,6 +254,10 @@ ul.tags:before {
     color: #152032;
 }
 .pagination li a {
+}
+#disqus_thread {
+    margin: 40px 0 0 20px;
+}
 /* ========================================================================== */
 /* Syntax highlighting styles */
 /* ========================================================================== */
