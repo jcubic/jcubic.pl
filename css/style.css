@@ -258,6 +258,67 @@ ul.tags:before {
 #disqus_thread {
     margin: 40px 0 0 20px;
 }
+@media (max-width: 850px) {
+    #inner > header {
+        font-size: 13px;
+    }
+}
+@media (max-width: 850px) {
+    #inner > header {
+        font-size: 13px;
+    }
+}
+@media (max-width: 790px) {
+    #inner > header {
+        font-size: 12px;
+    }
+}
+@media (max-width: 700px) {
+    #inner > header {
+        font-size: 11px;
+    }
+}
+@media (max-width: 650px) {
+    #inner > header {
+        font-size: 10px;
+    }
+}
+@media (max-width: 600px) {
+    #inner > header img {
+        height: 200px;
+        width: auto;
+    }
+    #inner > header h1 {
+        right: 0;
+        text-align: center;
+    }
+    section {
+        width: 100%;
+        margin: 0;
+        padding-right: 10px;
+        box-sizing: border-box;
+    }
+    aside {
+        display: none;
+    }
+    .content {
+        margin: 0 1em 2em 1em;
+    }
+    .meta {
+        margin-right: 1em;
+    }
+}
+@media (max-width: 320px) {
+    #inner > header {
+        font-size: 9px;
+    }
+    #inner > header img {
+        margin-left: -10em;
+    }
+    .meta h2 {
+        font-size: 1.3em;
+    }
+}
 /* ========================================================================== */
 /* Syntax highlighting styles */
 /* ========================================================================== */
