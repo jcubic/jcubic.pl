@@ -307,6 +307,9 @@ ul.tags:before {
     .meta {
         margin-right: 1em;
     }
+    .index {
+        margin: 60px 1em 2em 1em;
+    }
 }
 @media (max-width: 320px) {
     #inner > header {
@@ -315,7 +318,7 @@ ul.tags:before {
     #inner > header img {
         margin-left: -10em;
     }
-    .meta h2 {
+    .meta h2, .index h2 {
         font-size: 1.3em;
     }
 }
