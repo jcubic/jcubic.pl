@@ -14,7 +14,10 @@ layout: none
     {% for post in site.posts limit:10 %}
       <item>
         <title>{{ post.title | xml_escape }}</title>
-        <description>{{ post.content | xml_escape }}</description>
+        <description>{{ post.content | split: '<!-- more -->' | first | xml_escape }}
+        &lt;br/&gt;
+        *** To tylko fragment wpisu! Kliknij na tytuł aby przeczytać całość.
+        </description>
         <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
         <link>{{ post.url | prepend: site.baseurl | prepend: site.url }}</link>
         <guid isPermaLink="true">{{ post.url | prepend: site.baseurl | prepend: site.url }}</guid>
