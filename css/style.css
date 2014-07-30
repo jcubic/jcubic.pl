@@ -118,7 +118,7 @@ footer, #main:after {
     overflow: hidden; /* clearfix */
 }
 p, .tags {
-    font-family: 'Droid Serif', serif;
+    font-family: Lora, serif;
     line-height: 1.5em;
 }
 .meta {
@@ -139,7 +139,7 @@ h2, h3 {
     text-align: right;
 }
 h3 {
-    font-family: 'Droid Serif', serif;
+    font-family: Lora, serif;
     font-weight: normal;
     font-size: 14px;
 }
