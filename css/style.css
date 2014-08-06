@@ -193,8 +193,15 @@ section p:last-child {
     overflow: hidden; /* clearfix */
     margin-left: 20px;
 }
-section p, .content .highlight, .more {
+section p, .content .highlight {
     margin-left: 20px;
+}
+.more {
+    margin: 0 0 20px 20px;
+}
+.excerpt h2, .content h2 {
+    font-size: 1.1em;
+    margin: 2em 0 0 20px;
 }
 /* TAGS */
 ul.tags {
@@ -220,7 +227,7 @@ ul.tags:before {
 }
 /* PAGINATION */
 .pagination {
-    margin: 40px 0 0 20px;
+    margin: 20px 0 0 20px;
 }
 .pagination .disabled {
     color: #64636b;

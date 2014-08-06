@@ -11,7 +11,7 @@ sitemap:
         <header>
             {% assign author = site.users[post.author] %}
             <h2><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h2>
-            <h3>{{ post.date | date: "%Y-%m-%d" }} by <a href="{{ author.url }}">{{ author.name }}</a></h3>
+            <h3>{{ post.date | date: "%Y-%m-%d" }} by <a href="{{ author.url | prepend: site.baseurl }}">{{ author.name }}</a></h3>
         </header>
         <div class="excerpt">
             {{ post.content | split: '<!-- more -->' | first }}
@@ -34,7 +34,7 @@ sitemap:
                 {% if paginator.previous_page == 1 %}
                 <li><a href="{{ '/' | prepend: site.baseurl | prepend: site.url }}">Poprzednia</a></li>
                 {% else %}
-                <li><a href="{{ '/page' | prepend: site.baseurl | prepend: site.url }}{{ paginator.previous_page }}">Prev</a></li>
+                <li><a href="{{ '/page' | prepend: site.baseurl | prepend: site.url }}{{ paginator.previous_page }}">Poprzednia</a></li>
                 {% endif %}
             {% else %}
             <li><span class="disabled">Poprzednia</span></li>
