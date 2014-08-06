@@ -193,11 +193,11 @@ pluginy jQuery często stosujemy poniższy kod:
 {% endhighlight %}
 
 Dzięki temu możemy wewnątrz tworzyć prywatne zmienne dostępne tylko z wnętrza
-naszego pluginu. Dodatkowo jeśli jeśli użytkownik pluginy używa wywołania
+naszego pluginu. Dodatkowo jeśli użytkownik korzystający z pluginu używa wywołania
 **jQuery.noConflict()** w naszym kodzie nadal będziemy mieli dostęp do zmiennej
 dolar ponieważ jest to zmienna lokalna (dostępna jako parametr IIFE).
 
-W powyższy przykładnie funkcja jest wyrażeniem ponieważ jest objęta za pomocą
+W powyższym przykładzie funkcja jest wyrażeniem ponieważ jest objęta za pomocą
 nawiasów, istnieje kilka sposobów wymuszenia, aby funkcja była wyrażeniem,
 często spotyka się także użycie wykrzyknika na początku:
 
