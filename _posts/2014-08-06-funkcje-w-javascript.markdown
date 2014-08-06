@@ -1,25 +1,25 @@
 ---
 layout: post
-title:  "Wszystko co powineneś wiedzieć o Funkcjach w JavaScript"
+title:  "Wszystko co powinieneś wiedzieć o Funkcjach w JavaScript"
 date:   2014-08-06 10:35:19
 categories: 
 tags: javascript front-end funkcje
 author: jcubic
 ---
 
-W ninejszym artykule przedstawię wszyskie aspekty używania funkcji w języku
-JavaScript. Omówie czym się różni funkcja od procedury, co to są typy
-pierwszo-klasowe, funkcje wyższego rzędu, domknięcia leksyklane, funkcje jako
+W niniejszym artykule przedstawię wszystkie aspekty używania funkcji w języku
+JavaScript. Omówię czym się różni funkcja od procedury, co to są typy
+pierwszo-klasowe, funkcje wyższego rzędu, domknięcia leksykalne, funkcje jako
 metody oraz kontekst funkcji czyli zmienna specjalna **this**.
 
 <!-- more -->
 
 ## Funkcje a procedury
         
-Funkcja czyli odpowiednik matematycznej funkcji jest to objekt, który
-dla tego samego argumentu zawsze zraca tą samą wartość. Z puntku widzenia
+Funkcja czyli odpowiednik matematycznej funkcji jest to obiekt, który
+dla tego samego argumentu zawsze zwraca tą samą wartość. Z punktu widzenia
 programistycznego tego typu funkcje są nazywane czystymi (ang. pure),
-nie wykonują one żadnych dodatkowych czyności, tzn. nie mają efektów ubocznych
+nie wykonują one żadnych dodatkowych czynności, tzn. nie mają efektów ubocznych
 (ang. side effects).
 
 Procedura natomiast jest to pewien wykonywany proces, np. dwie funkcje,
@@ -30,9 +30,9 @@ na obliczenie danej wartości.
 W programowaniu przyjęło się, że procedura to funkcja, która nie zwraca
 wartości, głównie z powodu języka Pascal, którego uczą w szkołach.
 
-## Funkcje są typem pierwszo klasowym
+## Funkcje są typem pierwszo-klasowym
 
-W języku JavaScript funkcje są typem pierwszo klasowym oznacza, funkcja jest
+W języku JavaScript funkcje są typem pierwszo-klasowym oznacza, funkcja jest
 takim samym obiektem jak np. liczba, czy ciąg znaków. Można je umieszczać
 w tablicach, przypisywać do zmiennych, przekazywać jako argumenty do funkcji.
 Można także tworzyć funkcje, które zwracają funkcje. Są to tzw. funkcje wyższego
@@ -42,11 +42,11 @@ rzędu.
 
 Najbardziej znanymi przykładami funkcji wyższego rzędu są funkcje takie jak:
 **map**, **filter**, **reduce** czy **forEach**, które zostały dodane do wersji
-ES5 języka JavaScript. Wersja ES5 powinna być dostąpna w każdej nowej przglądarce
-internetowej. Funkcje te są dostepne jako metody tablic poniewarz operują one
+ES5 języka JavaScript. Wersja ES5 powinna być dostąpna w każdej nowej przeglądarce
+internetowej. Funkcje te są dostępne jako metody tablic ponieważ operują one
 właśnie na tablicach.
 
-Dzięki funkcji **map** możemy zamienić tablicę na nową tablicę przetworząną
+Dzięki funkcji **map** możemy zamienić tablicę na nową tablicę przetworzoną
 w pewien sposób np:
 
 {% highlight javascript %}
@@ -58,8 +58,8 @@ console.log(integers_plus_10);
 // => [11, 12, 13, 14, 15, 16, 17, 18]
 {% endhighlight %}
 
-W powyższym kodzie nowa tablica będzie zwaierała listę liczb w której każda
-została zwiększona o 10. Funkcja **filter** zwraca nowa tablicę w której znajdą
+W powyższym kodzie nowa tablica będzie zawierała listę liczb, w której każda
+została zwiększona o 10. Funkcja **filter** zwraca nowa tablicę, w której znajdą
 się tylko takie elementy dla, których funkcja przekazana jako argument zwróci
 wartość **true**. Funkcja **reduce** łączy wszystkie elementy ze sobą. W wyniku
 jej działania otrzymujemy jedną wartość, dzięki niej możemy obliczyć np. sumę
@@ -72,14 +72,14 @@ integers.reduce(function(sum, integer) {
 // ==> 36
 {% endhighlight %}
 
-Funkcja **forEach** działa jak map, przetwarzając każdy elemente talicy nie
+Funkcja **forEach** działa jak map, przetwarzając każdy element tablicy nie
 zwraca ona jednak nowej tablicy.
 
 Inną ciekawą funkcją, którą można użyć jako przykład funkcji wyższego rzędu jest
 funkcja **curry**, często jako przykład kodu implementującego tą funkcję podaje
 się błędnie __partial application__. Funkcja **curry** przyjmuje funkcje jako
-argument a wynikiem jest seria funkcji w której każda przyjmuje jeden argument
-dopóki wszystkie argumenty nie zostaja wyczerpane wtedy wywoływana jest nasza
+argument a wynikiem jest seria funkcji, w której każda przyjmuje jeden argument
+dopóki wszystkie argumenty nie zostają wyczerpane wtedy wywoływana jest nasza
 oryginalna funkcja i zwracany jest wynik. Kod funkcji **curry** przedstawiono poniżej:
 
 {% highlight javascript %}
@@ -116,9 +116,9 @@ i nazywa się **autoCurry**. Zachęcam do zajrzenia do kodu źródłowego biblio
 
 Jak widzieliście w poprzednich przykładach z funkcją **map** czy **reduce**, można
 zadeklarować funkcję bez nazwy, jest to tzw. funkcja anonimowa. W języku JavaScript
-w zależności od miejsca w którym się znajdzie deklaracja, funkcja może być traktowana
-jako wyrażenie lub instruckja. Jeśli wstawimy ją samą mimo że nie będzie miała nazwy
-będzie to instruckja dlatego nie trzeba na końcu wstawiać średnika.
+w zależności od miejsca, w którym się znajdzie deklaracja, funkcja może być traktowana
+jako wyrażenie lub instrukcja. Jeśli wstawimy ją samą mimo że nie będzie miała nazwy
+będzie to instrukcja dlatego nie trzeba na końcu wstawiać średnika.
 
 {% highlight javascript %}
 function() {
@@ -137,7 +137,7 @@ var foo = function() {
 ## Domknięcia leksykalne
 
 Domknięcia leksykalne (ang. closures) są to funkcje, wewnątrz których mamy dostęp
-do zmiennych, które zostały zadeklarowne na zewnątrz funkcji mimo że zakres ich
+do zmiennych, które zostały zadeklarowane na zewnątrz funkcji mimo że zakres ich
 istnienia się już zakończył. Istnieją one w środowisku, które jest __"doczepione"__
 do funkcji. Często spotykanym przykładem jest licznik:
 
@@ -177,12 +177,12 @@ function counter(init) {
 
 ## IIFE - Immediately-Invoked Function Expression
 
-Natychmiastowo-wywoływwane wyrażenie funkcyjne, jest często stosowane w jezyku
+Natychmiastowo-wywoływane wyrażenie funkcyjne, jest często stosowane w języku
 JavaScript, ponieważ w języku tym bloki nie tworzą nowego zakresu zmiennych, tak
 jak to ma miejsce w przypadku języka **Java** czy **C**. Stosuje się je także
 aby odizolować część kodu od reszty programu. Często stosują ją twórcy bibliotek
-np. cały kod biblioteki **jQuery** znajduje się wewnąrz takie funckcji, tworząc
-pluginy jQuery cześto stosujemy poniższy kod:
+np. cały kod biblioteki **jQuery** znajduje się wewnątrz takie funkcji, tworząc
+pluginy jQuery często stosujemy poniższy kod:
 
 {% highlight javascript %}
 (function($) {
@@ -195,10 +195,10 @@ pluginy jQuery cześto stosujemy poniższy kod:
 Dzięki temu możemy wewnątrz tworzyć prywatne zmienne dostępne tylko z wnętrza
 naszego pluginu. Dodatkowo jeśli jeśli użytkownik pluginy używa wywołania
 **jQuery.noConflict()** w naszym kodzie nadal będziemy mieli dostęp do zmiennej
-dolar poniewarz jest to zmienna lokalna (dostępna jako parametr IIFE).
+dolar ponieważ jest to zmienna lokalna (dostępna jako parametr IIFE).
 
-W powyższy przykładnie funkcja jest wyrażeniem poniewarz jest objęta za pomocą
-nawiastów, istnieje kilka sposobów wymyszenia aby funkcja była wyrażeniem,
+W powyższy przykładnie funkcja jest wyrażeniem ponieważ jest objęta za pomocą
+nawiasów, istnieje kilka sposobów wymuszenia, aby funkcja była wyrażeniem,
 często spotyka się także użycie wykrzyknika na początku:
 
 {% highlight javascript %}
@@ -207,7 +207,7 @@ często spotyka się także użycie wykrzyknika na początku:
 }();
 {% endhighlight %}
 
-W jezyku JavaScript często stosuje się tego typu funkcje wewnątrz petli, aby
+W języku JavaScript często stosuje się tego typu funkcje wewnątrz pętli, aby
 utworzyć **środowisko leksykalne**. Jeśli mamy poniższy kod:
 
 {% highlight javascript %}
@@ -229,7 +229,7 @@ for (var i = 0; i <= 9; i++) {
 {% endhighlight %}
 
 To na konsoli zobaczymy co jedną sekundę 10 wartości 10 a nie jak byśmy się
-spodziewali wartości od 0 do 10. Jest to spowodowane tym że petla for nie tworzy
+spodziewali wartości od 0 do 10. Jest to spowodowane tym że pętla for nie tworzy
 nowego środowiska i dla każdego wywołania **console.log** mamy tą samą referencje.
 Po jednej sekundzie nasza pętla się już zakończy i w zmiennej **i** będzie się
 znajdowała wartość 10, którą następnie wyświetlą wszystkie opóźnione funkcje.
@@ -299,14 +299,14 @@ var jan = new Person('Jan Kowalski');
 {% endhighlight %}
 
 Tak jak w innych językach do utworzenia nowego obiektu stosuje się słowo kluczowe
-**new**. Jeśli go nie zastosujemy, zmienną **this**, czyli tzw. kontekstekstem
-będzie obiekt window, czyli obiekt globalny.
+**new**. Jeśli go nie zastosujemy, zmienną **this**, czyli tzw. kontekstem
+będzie obiekt **window**, czyli obiekt globalny.
 
 Tak jak w innych językach obiektowych możemy tworzyć metody, czyli funkcje, które
 wywołujemy w kontekscie jakiegoś obiektu. Możemy bezpośrednio dodać funkcje do
 zmiennej this lub dodać do tzw. prototypu funkcji. Prototypy wykraczają poza
 zakres niniejszego artykułu, omówimy je przy innej okazji. W poniższym kodzie
-zdefiniowano metodę **getName**, która odwołuje się zo pola **name** za pomocą
+zdefiniowano metodę **getName**, która odwołuje się do pola **name** za pomocą
 zmiennej **this**:
 
 {% highlight javascript %}
@@ -322,7 +322,7 @@ console.log(jan.getName());
 {% endhighlight %}
 
 Możemy wywołać naszą metodę korzystając z notacji kropki. Jak jednak
-dowiedzieliście się wcześniej funkcje są typem pierwszo klasowym. Co stanie więc
+dowiedzieliście się wcześniej funkcje są typem pierwszo-klasowym. Co stanie więc
 gdy przypiszemy metodę do innej zmiennej i spróbujemy ją wywołać. Moglibyśmy czegoś
 takiego potrzebować np. gdybyśmy chcieli przekazać metodę do funkcji wyższego rzędu.
 
@@ -339,7 +339,7 @@ console.log(jan_name());
 // ==> undefined
 {% endhighlight %}
 
-Wyświetli się wartość **undefined**, poniewarz zmienną **this** będzie znowy
+Wyświetli się wartość **undefined**, ponieważ zmienną **this** będzie znowu
 obiekt globalny **window**, który nie ma zdefiniowanej zmiennej **person_name**.
 
 W jezyku JavaScript możemy zmieniać kontekst, czyli zmienną **this** wewnątrz
@@ -347,10 +347,10 @@ funkcji. Służą do tego trzy funkcje **call**, **apply** oraz **bind**. Funkcj
 **call** oraz **apply** są bardzo podobne wywołują one daną funkcje, zmieniając
 kontekst. Do funkcji **call** przekazujemy listę argumentów po przecinku natomiast
 do funkcji **apply** tablicę argumentów. Natomiast funkcja **bind** zwraca nową
-funkcję w której kontekst jest zmieniony.
+funkcję, w której kontekst jest zmieniony.
 
-W naszym poprzednim przykładzie aby wywołać naszą funkcje **jan_name** w kontekscie
-obiekty jan można skorzystać z jednego z poniższych wywołań:
+W naszym poprzednim przykładzie aby wywołać naszą funkcje **jan_name** w kontekście
+obiektu **jan** można skorzystać z jednego z poniższych wywołań:
 
 {% highlight javascript %}
 console.log(jan_name.apply(jan));
