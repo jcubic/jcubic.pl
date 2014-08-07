@@ -24,14 +24,14 @@ layout: default
         var disqus_identifier = "post_{{ page.date | date: '%Y-%m-%d' }}";
         var disqus_url = "http://jcubic.pl{{ page.url }}";
         /* * * DON'T EDIT BELOW THIS LINE * * */
-        (function() {
+        setTimeout(function() {
             if (!location.href.match(/jcubic.pl/)) {
                 return;
             }
             var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
             dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
             (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-        })();
+        }, 0);
     </script>
     <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
     
@@ -41,7 +41,7 @@ layout: default
       _paq.push(["trackPageView"]);
       _paq.push(["enableLinkTracking"]);
 
-      (function() {
+      setTimeout(function() {
         if (!location.href.match(/jcubic.pl/)) {
           return;
         }
@@ -50,7 +50,7 @@ layout: default
         _paq.push(["setSiteId", "2"]);
         var d=document, g=d.createElement("script"), s=d.getElementsByTagName("script")[0]; g.type="text/javascript";
         g.defer=true; g.async=true; g.src=u+"piwik.js"; s.parentNode.insertBefore(g,s);
-      })();
+      }, 0);
     </script>
     <noscript>
         <img src="http://piwik.jcubic.pl/piwik.php?idsite=2&amp;rec=1" style="border:0" alt="" />

@@ -342,6 +342,29 @@ console.log(jan_name());
 Wyświetli się wartość **undefined**, ponieważ zmienną **this** będzie znowu
 obiekt globalny **window**, który nie ma zdefiniowanej zmiennej **person_name**.
 
+Jeśli użyjemy trybu strict, gdy wywołamy funkcję jan_name zwrócony zostanie wyjątek:
+"TypeError: Cannot read property 'person_name' of undefined" poniewarz w trybie
+strict mode zmienna **this** gdy wywołana bez kontekstu jest zawsze niezdefiniowana.
+
+{% highlight javascript %}
+function Person(name) {
+    "use strict";
+    this.person_name = name;
+    this.getName = function() {
+        return this.person_name;
+    };
+}
+var jan = new Person('Jan Kowalski');
+var jan_name = jan.getName;
+console.log(jan_name());
+// ==> TypeError: Cannot read property 'person_name' of undefined
+{% endhighlight %}
+
+Tryb strict jest nową funkcją standardu ECMAScript 5, który nie pozwala na
+pewne konstrukcje, wyrzucając więcej wyjątków. Zawsze dobrze jest mieć włączony
+strict mode, na początku naszego programu, aby wyłapać kod, którego nie powinno
+się stosować.
+
 W jezyku JavaScript możemy zmieniać kontekst, czyli zmienną **this** wewnątrz
 funkcji. Służą do tego trzy funkcje **call**, **apply** oraz **bind**. Funkcje
 **call** oraz **apply** są bardzo podobne wywołują one daną funkcje, zmieniając
