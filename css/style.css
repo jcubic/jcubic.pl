@@ -149,6 +149,7 @@ h3 {
 section {
     width: 60%;
     margin: 0 3% 0 5%;
+    max-width: 800px;
 }
 section, aside {
     float: left;
@@ -224,6 +225,9 @@ ul.tags:before {
 }
 .tags li:last-child:after {
     content: "";
+}
+.facebook {
+    margin: 10px 0 0 20px;
 }
 /* PAGINATION */
 .pagination {

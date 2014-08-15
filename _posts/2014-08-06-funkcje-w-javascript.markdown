@@ -30,6 +30,24 @@ na obliczenie danej wartości.
 W programowaniu przyjęło się, że procedura to funkcja, która nie zwraca
 wartości, głównie z powodu języka Pascal, którego uczą w szkołach.
 
+## Rekurencja
+
+Funkcje tak jak w wielu językach funkcje mogą wywoływać same siebie, aby tworzyć
+funkcje rekurencyjne. Np aby obliczyć silnie (częsty przykład stosowany do opisu
+rekurencji), można użyć funkcji poniżej:
+
+{% highlight javascript %}
+function factorial(n) {
+    if (n <= 0) {
+        return 1;
+    } else {
+        return n*factorial(n-1);
+    }
+}
+factorial(10);
+// ==> 3628800
+{% endhighlight %}
+
 ## Funkcje są typem pierwszo-klasowym
 
 W języku JavaScript funkcje są typem pierwszo-klasowym oznacza, funkcja jest
@@ -262,6 +280,19 @@ Wewnątrz samowywołującego się wyrażenia funkcyjnego zmienna nie musi nosić
 **i** może to być np. **x** ale dzięki temu pokazujemy, że zmienna w pętli i zmienna
 w **console.log** ma tą samą wartość.
 
+Można także stosować wyrażenia funkcyjne, które mają także nazwę aby móc wewnątrz
+funkcji odwołać się do samej siebie.
+
+{% highlight javascript %}
+(function animation() {
+    render();
+    setTimeout(animation, 60);
+})();
+{% endhighlight %}
+
+Istnieje także możliwość odwołania się do samej siebie wewnątrz funkcji za pomocą
+zmiennej **arguments.callee** ale jest ona niedozwolona w trybie **strict mode**.
+
 ## Funkcja jest obiektem, który może mieć właściwości
 
 Funkcja jest takim samym obiektem jak np. ciąg znaków. Posiada wbudowane metody
@@ -343,8 +374,8 @@ Wyświetli się wartość **undefined**, ponieważ zmienną **this** będzie zn
 obiekt globalny **window**, który nie ma zdefiniowanej zmiennej **person_name**.
 
 Jeśli użyjemy trybu strict, gdy wywołamy funkcję jan_name zwrócony zostanie wyjątek:
-"TypeError: Cannot read property 'person_name' of undefined" poniewarz w trybie
-strict mode zmienna **this** gdy wywołana bez kontekstu jest zawsze niezdefiniowana.
+"TypeError: Cannot read property 'person_name' of undefined" ponieważ w trybie
+**strict mode** zmienna **this** gdy wywołana bez kontekstu jest zawsze niezdefiniowana.
 
 {% highlight javascript %}
 function Person(name) {
