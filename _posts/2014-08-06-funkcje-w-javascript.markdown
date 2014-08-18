@@ -32,7 +32,7 @@ wartości, głównie z powodu języka Pascal, którego uczą w szkołach.
 
 ## Rekurencja
 
-Funkcje tak jak w wielu językach funkcje mogą wywoływać same siebie, aby tworzyć
+Funkcje tak jak w wielu innych językach mogą wywoływać same siebie, aby tworzyć
 funkcje rekurencyjne. Np aby obliczyć silnie (częsty przykład stosowany do opisu
 rekurencji), można użyć funkcji poniżej:
 
