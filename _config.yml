@@ -22,4 +22,7 @@ paginate: 10
 
 # Build settings
 markdown: kramdown
+highlighter: pygments
 permalink: /:year/:month/:title.html
+kramdown:
+    input: GFM

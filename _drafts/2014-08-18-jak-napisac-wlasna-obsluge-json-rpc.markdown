@@ -144,7 +144,7 @@ Powyższa implementacja jest najmniejszym działającym przykładem. Aby uruchom
 json_rpc($service);
 {% endhighlight %}
 
-Do powyższego kodu moglibyśmy dodać obsługę błędów. Oprócz tych wynikających z błędnego wywołania serwer JSON-RPC powinien zwracać błąd gdy dana metoda nie istnieje lub gdy wywołano ją z inną niż wymagana liczbą parametrów. Powinno się móc wywołać metodę bez właściwości `params` gdy procedura (metoda) nie wymaga żadnych argumentów. Dodatkowo można zawrzeć wywołanie `call_user_func_array` wewnątrz instrukcji `try..catch`. W takim przypadku oprócz błędu protokołu można także zwrócić informację o wyjątku jaki został wyrzucony, dzięki czemu będziemy mogli zobaczyć jaki błąd wystąpił po stronie serwera bezpośrednio w kodzie klienta. Część błędów można także przechwycić za pomocą funkcji [`set_error_handler`](http://php.net/manual/en/function.set-error-handler.php), która zostanie wywołana w momencie wystąpienia błędu.
+Do powyższego kodu moglibyśmy dodać obsługę błędów. Oprócz tych wynikających z błędnego wywołania serwer JSON-RPC powinien zwracać błąd gdy dana metoda nie istnieje lub gdy wywołano ją z inną niż wymagana liczbą parametrów. Dodatkowo można zawrzeć wywołanie `call_user_func_array` wewnątrz instrukcji `try..catch`. W takim przypadku oprócz błędu protokołu można także zwrócić informację o wyjątku jaki został wyrzucony, dzięki czemu będziemy mogli zobaczyć jaki błąd wystąpił po stronie serwera bezpośrednio w kodzie klienta. Część błędów można także przechwycić za pomocą funkcji [`set_error_handler`](http://php.net/manual/en/function.set-error-handler.php), która zostanie wywołana w momencie wystąpienia błędu.
 
 Przykładowy błąd w protokole JSON-RPC powinien wyglądać jak poniżej:
 
