@@ -2,7 +2,7 @@
 title: Głównie JavaScript
 email: jcubic@jcubic.pl
 description: "Blog Głównie JavaScript - informacje najczęściej na temat Front-Endu, głównie o języku JavaScript, ale także na temat nowych api HTML5 czy CSS."
-baseurl: "" #http://localhost/projects/jcubic/blog/repo/_site"
+baseurl: ""
 url: "http://jcubic.pl"
 
 exclude:

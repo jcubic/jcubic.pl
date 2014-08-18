@@ -157,7 +157,7 @@ Przykładowy błąd w protokole JSON-RPC powinien wyglądać jak poniżej:
 
 Do obiektu `error` można dodać drugą właściwość `error`, która będzie zawiera informację o błędzie php. Implementację obsługi błędów pozostawiam jako ćwiczenie dla czytelnika.
 
-Jeśli będziemy chcieli po stronie klienta utworzyć automagicznie funkcje, które są dostępne w danej usłudze powinniśmy zwrócić informację o wszystkich dostępnych metodach. W specyfikacji (a właściwie szkicu) 1.1 istniała specjalna metoda `system.describe` która miała właśnie za zadanie zwrócenie informacji o wszystkich procedurach. Mimo że metoda ta nie znalazła się w specyfikacji 2.0 my utworzymy taką metodę. Poniższa funkcja zwróci nam tablicę, którą musimy zakodować do formatu JSON za pomocą funkcji `json_encode` w przypadku gdy nazwą zdalnej procedury będzie `system.describe`.
+Jeśli będziemy chcieli po stronie klienta utworzyć automagicznie funkcje, które są dostępne w danej usłudze powinniśmy zwrócić informację o wszystkich dostępnych metodach. W specyfikacji (a właściwie szkicu) 1.1 istniała specjalna metoda `system.describe`, która miała właśnie za zadanie zwrócenie informacji o wszystkich procedurach. Mimo że metoda ta nie znalazła się w specyfikacji 2.0 my utworzymy taką metodę. Poniższa funkcja zwróci nam tablicę, którą musimy zakodować do formatu JSON za pomocą funkcji `json_encode` w przypadku gdy nazwą zdalnej procedury będzie `system.describe`.
 
 {% highlight php startinline=true %}
 function service_description($object) {
