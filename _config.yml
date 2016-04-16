@@ -15,7 +15,7 @@ include:
 
 users:
     jcubic:
-        url: "/jakub-jankiewicz"
+        url: "http://jakub.jankiewi.cz"
         name: "Jakub T. Jankiewicz"
 
 paginate: 10
@@ -26,3 +26,4 @@ highlighter: pygments
 permalink: /:year/:month/:title.html
 kramdown:
     input: GFM
+gems: [jekyll-paginate]

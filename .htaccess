@@ -1,0 +1,85 @@
+Options +Indexes
+Options +FollowSymLinks
+
+AddHandler cgi-script .cgi
+Options +ExecCGI
+
+#don't open in browser
+AddType application/octet-stream .doc .pdf
+
+AddType application/vnd.ms-fontobject eot
+AddType font/ttf                      ttf
+AddType font/otf                      otf
+AddType font/x-woff                   woff
+AddType image/svg+xml                 svg
+
+AddType application/vnd.google-earth.kml+xml .kml
+AddType application/vnd.google-earth.kmz .kmz
+
+
+#block access to style sheet and javascript
+RewriteEngine on
+
+#RewriteCond HTTP_USER_AGENT !bot
+#RewriteCond REQUEST_URI ^$
+#RewriteRule .* http://en.wikipedia.org/wiki/User:Jcubic [R=301]
+
+RewriteCond %{HTTP_HOST}   ^www\.(.*) [NC]
+RewriteRule ^(.*)$ http://%1/$1 [R=301,L]
+
+RewriteRule (.*_tutorial)\.html$ /$1.php [R=301,L]
+
+RewriteRule biwascheme/repl.html /biwascheme/repl.php [R=301,L]
+
+RewriteRule ^jakub-jankiewicz/(.*_tutorial.php) /$1 [R=301,L]
+
+RewriteRule ^jakub-jankiewicz/(.*) http://jakub.jankiewi.cz/$1 [R=301,L]
+
+RewriteCond %{query_string} ^=PHP.{36}$
+RewriteRule (.*) - [F]
+
+RewriteCond %{query_string} .*controller=.* [OR]
+RewriteCond %{query_string} .*proc\/self\/environ.* [OR]
+RewriteCond %{query_string} \.\.\/\.\.
+RewriteRule .* - [F]
+
+RewriteCond %{SCRIPT_FILENAME} !-f
+RewriteCond %{SCRIPT_FILENAME} !-d
+RewriteRule .* /404.php
+
+#Header set Referer
+
+#ErrorDocument 404 /404.php
+ErrorDocument 400 /400.shtml
+ErrorDocument 401 /401.shtml
+ErrorDocument 403 /403.shtml
+ErrorDocument 500 /500.shtml
+
+
+
+#<FilesMatch "\.(ico|pdf|flv|jpg|jpeg|png|gif|js|css|swf|scm|rb|py|woff|svg|eot|ttf)$">
+#    Header set Expires "Mon, 29 Sep 2011 20:00:00 GMT"
+#    Header set Cache-Control "max-age=290304000, public"
+#    Header unset Last-Modified
+#</FilesMatch>
+
+<FilesMatch "\.kml$">
+    Header set Cache-Control "no-cache, must-revalidate, post-check=0, pre-check=0"
+    Header set Pragma "public"
+    Header set Expires "Thu, 01 Dec 1994 16:00:00 GMT"
+</FilesMatch>
+
+#turn of Etag
+#Header unset ETag
+#FileETag None
+
+<Files *.php>
+Header set Cache-Control: "private, pre-check=0, post-check=0, max-age=0"
+Header set Expires: 0
+Header set Pragma: no-cache
+</Files>
+
+<FilesMatch "\.php$"> # phpvs v6
+AddHandler x-httpd-php53 .php # phpvs v6
+</FilesMatch> # phpvs v6
+ # phpvs v6

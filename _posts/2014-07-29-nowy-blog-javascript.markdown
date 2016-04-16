@@ -7,8 +7,8 @@ tags: javascript front-end
 author: jcubic
 ---
 
-Jest to pierwszy post na blogu Głównie JavaScript. Mniej więcej co dwa tygodnie
-będę zamieszczał wpis na tematy związane głównie z Front-Endem, czyli CSS, HTML i
+Jest to pierwszy post na blogu Głównie JavaScript. Od czasu do czasu
+będę zamieszczał wpisy na tematy związane głównie z Front-Endem, czyli CSS, HTML i
 JavaScript, ale mogą pojawić się także posty na inne tematy. Treścią bloga będzie głównie
 JavaScript i na nim postarm się skupić. Będę omawiał podstawowe jak i zaawansowane
 aspekty tworzenia aplikacji internetowych, skupiając się na warstwie Front-End.

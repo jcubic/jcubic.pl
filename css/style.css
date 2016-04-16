@@ -125,7 +125,7 @@ p, .tags {
     padding: 40px 0 1em 0;
     
 }
-h2 {
+h2, h3 {
     font-family: 'Scada', sans-serif;
     font-weight: bold;
 }
@@ -139,9 +139,7 @@ h2, h3 {
     text-align: right;
 }
 h3 {
-    font-family: Lora, serif;
-    font-weight: normal;
-    font-size: 14px;
+    font-size: 1em;
 }
 .meta h3 {
     margin: 0;
@@ -202,6 +200,8 @@ section p, .content .highlight {
 }
 .excerpt h2, .content h2 {
     font-size: 1.1em;
+}
+.excerpt h2, .content h2, .content h3 {
     margin: 2em 0 0 20px;
 }
 /* TAGS */
