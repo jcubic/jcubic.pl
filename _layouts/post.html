@@ -16,7 +16,11 @@ layout: default
         {% endfor %}
         </ul>
     {% endif %}
-    
+    <div class="source">
+        <a href="{{ page.path | prepend: site.source_url}}">
+		  źródło strony
+		</a>
+    </div>
     <div class="facebook">
         <iframe src="//www.facebook.com/plugins/like.php?href={{ page.url | prepend: site.baseurl | prepend: site.url | cgi_escape }}&amp;width&amp;layout=button_count&amp;action=like&amp;show_faces=false&amp;share=false&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; height:35px;" allowtransparency="true"></iframe>
     </div>
@@ -41,20 +45,22 @@ layout: default
     
     <!-- Piwik -->
     <script type="text/javascript">
-      var _paq = _paq || [];
-      _paq.push(["trackPageView"]);
-      _paq.push(["enableLinkTracking"]);
+      if (location.host === 'jcubic.pl') {
+        var _paq = _paq || [];
+        _paq.push(["trackPageView"]);
+        _paq.push(["enableLinkTracking"]);
 
-      setTimeout(function() {
-        if (!location.href.match(/jcubic.pl/)) {
-          return;
-        }
-        var u=(("https:" == document.location.protocol) ? "https" : "http") + "://piwik.jcubic.pl/";
-        _paq.push(["setTrackerUrl", u+"piwik.php"]);
-        _paq.push(["setSiteId", "2"]);
-        var d=document, g=d.createElement("script"), s=d.getElementsByTagName("script")[0]; g.type="text/javascript";
-        g.defer=true; g.async=true; g.src=u+"piwik.js"; s.parentNode.insertBefore(g,s);
-      }, 0);
+        setTimeout(function() {
+          if (!location.href.match(/jcubic.pl/)) {
+            return;
+          }
+          var u=(("https:" == document.location.protocol) ? "https" : "http") + "://piwik.jcubic.pl/";
+          _paq.push(["setTrackerUrl", u+"piwik.php"]);
+          _paq.push(["setSiteId", "2"]);
+          var d=document, g=d.createElement("script"), s=d.getElementsByTagName("script")[0]; g.type="text/javascript";
+          g.defer=true; g.async=true; g.src=u+"piwik.js"; s.parentNode.insertBefore(g,s);
+        }, 0);
+      }
     </script>
     <noscript>
         <img src="http://piwik.jcubic.pl/piwik.php?idsite=2&amp;rec=1" style="border:0" alt="" />

@@ -16,6 +16,7 @@
     {% include footer.html %}
     <!-- Piwik -->
     <script type="text/javascript">
+    if (localhost.host == 'jcubic.pl') {
       var _paq = _paq || [];
       _paq.push(["trackPageView"]);
       _paq.push(["enableLinkTracking"]);
@@ -30,6 +31,7 @@
         var d=document, g=d.createElement("script"), s=d.getElementsByTagName("script")[0]; g.type="text/javascript";
         g.defer=true; g.async=true; g.src=u+"piwik.js"; s.parentNode.insertBefore(g,s);
       }, 0);
+    }
     </script>
     <noscript>
         <img src="http://piwik.jcubic.pl/piwik.php?idsite=2&amp;rec=1" style="border:0" alt="" />
