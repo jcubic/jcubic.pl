@@ -16,8 +16,8 @@ include:
 
 users:
     jcubic:
-        url: "http://jakub.jankiewi.cz"
-        name: "Jakub T. Jankiewicz"
+        url: "http://jcubic/jakub-jankiewicz/"
+        name: "Jakub Jankiewicz"
 
 paginate: 10
 

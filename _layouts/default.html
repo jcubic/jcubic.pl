@@ -16,15 +16,12 @@
     {% include footer.html %}
     <!-- Piwik -->
     <script type="text/javascript">
-    if (localhost.host == 'jcubic.pl') {
+    if (location.host == 'jcubic.pl') {
       var _paq = _paq || [];
       _paq.push(["trackPageView"]);
       _paq.push(["enableLinkTracking"]);
 
       setTimeout(function() {
-        if (!location.href.match(/jcubic.pl/)) {
-          return;
-        }
         var u=(("https:" == document.location.protocol) ? "https" : "http") + "://piwik.jcubic.pl/";
         _paq.push(["setTrackerUrl", u+"piwik.php"]);
         _paq.push(["setSiteId", "2"]);

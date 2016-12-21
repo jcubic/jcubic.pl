@@ -51,9 +51,6 @@ layout: default
         _paq.push(["enableLinkTracking"]);
 
         setTimeout(function() {
-          if (!location.href.match(/jcubic.pl/)) {
-            return;
-          }
           var u=(("https:" == document.location.protocol) ? "https" : "http") + "://piwik.jcubic.pl/";
           _paq.push(["setTrackerUrl", u+"piwik.php"]);
           _paq.push(["setSiteId", "2"]);
