@@ -12,7 +12,7 @@ w tym poście przedstawię jak ich używać.
 
 <!-- more -->
 
-Zmienne CSS zapisujemy używając dwóch myślników prze nazwą np.:
+Zmienne CSS zapisujemy używając dwóch myślników przed nazwą np.:
 
 {% highlight css %}
 p {
@@ -89,7 +89,7 @@ lub
 div.box {
     font-size: 45px;
     --side: 6;
-    --size: calc(var(--size) * 1em);
+    --size: calc(var(--side) * 1em);
     width: var(--size);
     height: var(--size);
 }
@@ -145,6 +145,8 @@ może nawet używać tej właściwości inline, np.:
 {% highlight html %}
 <div style="--prepend: 'hello '">world!</div>
 {% endhighlight %}
+
+Powyższy kod wyświetli tekst "hello world!".
 
 Można definiować zmienne w JavaScript. Aby pobrać wartość można użyć:
 
