@@ -27,13 +27,13 @@ RewriteEngine on
 RewriteCond %{HTTP_HOST}   ^www\.(.*) [NC]
 RewriteRule ^(.*)$ http://%1/$1 [R=301,L]
 
-RewriteRule (.*_tutorial)\.html$ /$1.php [R=301,L]
+RewriteRule (.*_tutorial)\.html$ /jakub-jankiewicz/$1.php [R=301,L]
 
 RewriteRule biwascheme/repl.html /biwascheme/repl.php [R=301,L]
 
-RewriteRule ^jakub-jankiewicz/(.*_tutorial.php) /$1 [R=301,L]
+#RewriteRule ^jakub-jankiewicz/(.*_tutorial.php) /$1 [R=301,L]
 
-RewriteRule ^jakub-jankiewicz/(.*) http://jakub.jankiewi.cz/$1 [R=301,L]
+#RewriteRule ^jakub-jankiewicz/(.*) http://jakub.jankiewi.cz/$1 [R=301,L]
 
 RewriteCond %{query_string} ^=PHP.{36}$
 RewriteRule (.*) - [F]
@@ -78,6 +78,10 @@ Header set Cache-Control: "private, pre-check=0, post-check=0, max-age=0"
 Header set Expires: 0
 Header set Pragma: no-cache
 </Files>
+
+AddHandler cgi-script .scm
+
+DirectoryIndex index.html index.shtml index.php index.scm
 
 <FilesMatch "\.php$"> # phpvs v6
 AddHandler x-httpd-php53 .php # phpvs v6
