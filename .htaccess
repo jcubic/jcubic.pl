@@ -20,10 +20,6 @@ AddType application/vnd.google-earth.kmz .kmz
 #block access to style sheet and javascript
 RewriteEngine on
 
-#RewriteCond HTTP_USER_AGENT !bot
-#RewriteCond REQUEST_URI ^$
-#RewriteRule .* http://en.wikipedia.org/wiki/User:Jcubic [R=301]
-
 RewriteCond %{HTTP_HOST}   ^www\.(.*) [NC]
 RewriteRule ^(.*)$ http://%1/$1 [R=301,L]
 
@@ -73,17 +69,13 @@ ErrorDocument 500 /500.shtml
 #Header unset ETag
 #FileETag None
 
-<Files *.php>
-Header set Cache-Control: "private, pre-check=0, post-check=0, max-age=0"
-Header set Expires: 0
-Header set Pragma: no-cache
-</Files>
+#<Files *.php>
+#Header set Cache-Control: "private, pre-check=0, post-check=0, max-age=0"
+#Header set Expires: 0
+#Header set Pragma: no-cache
+#</Files>
 
 AddHandler cgi-script .scm
 
 DirectoryIndex index.html index.shtml index.php index.scm
 
-<FilesMatch "\.php$"> # phpvs v6
-AddHandler x-httpd-php53 .php # phpvs v6
-</FilesMatch> # phpvs v6
- # phpvs v6
