@@ -27,4 +27,5 @@ highlighter: pygments
 permalink: /:year/:month/:title.html
 kramdown:
     input: GFM
+    hard_wrap: false
 gems: [jekyll-paginate]

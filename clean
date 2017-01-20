@@ -1,0 +1,8 @@
+#!/bin/bash
+
+temp=`mktemp`
+
+find _site -name '*.html' | while read file; do
+    tidy -utf8 -indent -wrap -output $temp $file
+    cp $temp $file
+done
