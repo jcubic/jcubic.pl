@@ -8,7 +8,7 @@ layout: default
 </div>
 <div class="content">
     {{ content }}
-    
+
     {% if page.tags %}
         <ul class="tags">
         {% for tag in page.tags %}
@@ -18,13 +18,13 @@ layout: default
     {% endif %}
     <div class="source">
         <a href="{{ page.path | prepend: site.source_url}}">
-		  źródło strony
-		</a>
+          źródło strony
+        </a>
     </div>
     <div class="facebook">
         <iframe src="//www.facebook.com/plugins/like.php?href={{ page.url | prepend: site.baseurl | prepend: site.url | cgi_escape }}&amp;width&amp;layout=button_count&amp;action=like&amp;show_faces=false&amp;share=false&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; height:35px;" allowtransparency="true"></iframe>
     </div>
-    
+
     <div id="disqus_thread"></div>
     <script type="text/javascript">
         /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */

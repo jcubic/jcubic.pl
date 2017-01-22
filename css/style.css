@@ -156,9 +156,18 @@ aside {
     width: 32%;
     padding-top: 120px;
 }
-section p {
+section > p {
     text-align: justify;
     text-indent: 2em;
+}
+section > p, section ul {
+    font-size: 16px;
+    line-height: 1.5em;
+}
+section li p {
+    margin: 0;
+    text-indent: 0;
+    text-align: justify;
 }
 section p:first-child {
     margin-top: 0;

@@ -2,13 +2,13 @@
 layout: post
 title:  "Zmienne CSS"
 date:   2016-12-21 20:27:43+01:00
-categories: 
+categories:
 tags:  css css3 properties javascript
 author: jcubic
 ---
 
 Zmienne CSS, a dokładniej customowe właściwości (ang. custom properties) są [nowym modułem standardu CSS](https://www.w3.org/TR/css-variables/),
-w tym poście przedstawię jak ich używać. 
+w tym poście przedstawię jak ich używać.
 
 <!-- more -->
 
