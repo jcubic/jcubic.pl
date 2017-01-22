@@ -226,21 +226,25 @@ Powyższy kod wykona zapytanie AJAX-owe typu GET i zamieni zawartość elementu 
 Bibliotekę jQuery można rozszerzać o nowe metody, tzw. plug-iny, prawdopodobnie dlatego jest tak popularna. Jest bardzo dużo gotowych plug-inów, które można używać. Aby utworzyć nowy plugin, należy dodać nową właściwość do obiektu `$.fn` np:
 
 {% highlight javascript %}
-$.fn.link = function(options) {
-   options = options || {};
-   return this.each(function() {
-      var self = $(this);
-      if (options.title) {
-          self.attr('title', options.title);
-      }
-      if (option.href) {
-          self.attr('href', options.href);
-      }
-   });
-};
+(function($) {
+    $.fn.link = function(options) {
+       options = options || {};
+       return this.each(function() {
+          var self = $(this);
+          if (options.title) {
+              self.attr('title', options.title);
+          }
+          if (option.href) {
+              self.attr('href', options.href);
+          }
+       });
+    };
+})(jQuery);
 {% endhighlight %}
 
-I można użyć tak:
+W powyższym przykładzie użyto anonimowego dokmnęcia aby kod plug-inu działał nawet jeśli ktoś użyje funkcji `jQuery.noConflict()` jest to standard jeśli chodzi o plug-iny jQuery.
+
+Powyższego plug-inu można go użyć tak:
 
 {% highlight javascript %}
 $('a').link({href: 'http://example.com', title: 'Example Page'});
