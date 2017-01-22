@@ -7,7 +7,7 @@ tags:  css jQuery javascript
 author: jcubic
 ---
 
-Biblioteka jQuery, mimo wzrastającej popularności takich frameworków jak [Angular](https://pl.wikipedia.org/wiki/AngularJS) czy [React](https://en.wikipedia.org/wiki/React_(JavaScript_library)), które umożliwiają tworzenie skomplikowanych aplikacji typu [SPA](https://en.wikipedia.org/wiki/Single-page_application), nadal jest najczęściej wykorzystywaną biblioteką JavaScript na stronach internetowych. Warto więc znać jak jej używać. W tym poście przedstawię jak korzystać z biblioteki jQuery.
+Biblioteka jQuery, mimo wzrastającej popularności takich frameworków jak [Angular](https://pl.wikipedia.org/wiki/AngularJS) czy [React](https://en.wikipedia.org/wiki/React_(JavaScript_library)), które umożliwiają tworzenie skomplikowanych aplikacji typu [SPA](https://en.wikipedia.org/wiki/Single-page_application), nadal jest najczęściej wykorzystywaną biblioteką JavaScript na stronach internetowych. Warto więc wiedzieć jak jej używać. W tym poście przedstawię jak korzystać z biblioteki jQuery.
 
 <!-- more -->
 
@@ -179,7 +179,7 @@ $('div').css('color', 'red').find('.item:eq(1)').hide().next().show();
 
 ## Ajax
 
-Oprócz funkcji dostępnych jako metody obiekty jQuery, biblioteka udostępnia także funkcje statyczne dodane do obiektu dolara, takie jak np. funkcje do wykonywania zapytań http. Główną funkcją do wykonywania takich zapytań jest funkcja `$.ajax`, ale biblioteka zawiera także skróty `$.get` oraz `$.post`.
+Oprócz funkcji dostępnych jako metody obiekty jQuery, biblioteka udostępnia także funkcje statyczne dodane do obiektu dolara, takie jak np. funkcje do wykonywania zapytań HTTP. Główną funkcją do wykonywania takich zapytań jest funkcja `$.ajax`, ale biblioteka zawiera także skróty `$.get` oraz `$.post`.
 
 {% highlight javascript %}
 $.get('strona.html', function(strona) {
@@ -191,7 +191,8 @@ Powyższy kod wykona zapytanie AJAX-owe typu GET i zamieni zawartość elementu 
 
 Listę wszystkich metod oraz funkcji można znaleźć na [stronie api projektu](http://api.jquery.com/).
 
-[DOM]: Document Object Mode
-[HTTP]: Hypertext Transfer Protocol
-[CSS]: Cascading Style Sheets
-[AJAX]:  Asynchronous JavaScript and XML
+*[DOM]: Document Object Mode
+*[HTTP]: Hypertext Transfer Protocol
+*[CSS]: Cascading Style Sheets
+*[AJAX]:  Asynchronous JavaScript and XML
+*[SPA]: Single Page Application
