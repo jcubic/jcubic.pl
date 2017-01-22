@@ -177,6 +177,38 @@ Każda metoda biblioteki jQuery, która nie zwraca wartości zwraca obiekt jQuer
 $('div').css('color', 'red').find('.item:eq(1)').hide().next().show();
 {% endhighlight %}
 
+## Animacje
+
+Do animacji służy funkcja animate np.:
+
+{% highlight javascript %}
+$('foo').animate({
+    width: '250px'
+});
+{% endhighlight %}
+
+Można animować właściwości css, aby animować kolor (właściwość color lub background-color) należy użyć pluginu [jQuery Color](https://github.com/jquery/jquery-color).
+
+## Pętle
+
+Do iterowania po elementach służy metoda `.each()`:
+
+{% highlight javascript %}
+$('foo').each(function() {
+  $(this).find('span').css('color', 'blue');
+});
+{% endhighlight %}
+
+można także użyć metody .map(), która tak jak metoda obiektu `Array` w ES5 zwraca nowy obiekt jQuery, aby np. dostać tablicę atrybutów href linków, można użyć poniższego kodu:
+
+{% highlight javascript %}
+var links = $('a').map(function() {
+  return $(this).attr('href');
+}).get();
+{% endhighlight %}
+
+Należy użyć metody get aby otrzymać tablicę, metoda `.map()` zwraca obiekt jQuery.
+
 ## Ajax
 
 Oprócz funkcji dostępnych jako metody obiekty jQuery, biblioteka udostępnia także funkcje statyczne dodane do obiektu dolara, takie jak np. funkcje do wykonywania zapytań HTTP. Główną funkcją do wykonywania takich zapytań jest funkcja `$.ajax`, ale biblioteka zawiera także skróty `$.get` oraz `$.post`.
@@ -189,6 +221,55 @@ $.get('strona.html', function(strona) {
 
 Powyższy kod wykona zapytanie AJAX-owe typu GET i zamieni zawartość elementu `.main` tym, co dostanie z serwera.
 
+## Rozszerzanie biblioteki
+
+Bibliotekę jQuery można rozszerzać o nowe metody, tzw. plug-iny, prawdopodobnie dlatego jest tak popularna. Jest bardzo dużo gotowych plug-inów, które można używać. Aby utworzyć nowy plugin, należy dodać nową właściwość do obiektu `$.fn` np:
+
+{% highlight javascript %}
+$.fn.link = function(options) {
+   options = options || {};
+   return this.each(function() {
+      var self = $(this);
+      if (options.title) {
+          self.attr('title', options.title);
+      }
+      if (option.href) {
+          self.attr('href', options.href);
+      }
+   });
+};
+{% endhighlight %}
+
+I można użyć tak:
+
+{% highlight javascript %}
+$('a').link({href: 'http://example.com', title: 'Example Page'});
+{% endhighlight %}
+
+Powyższy kod wykona naszą metodę link na każdym elemencie a czyli doda atrybut `href` i `title` do każdego linku.
+
+Innym sposobem rozszerzania biblioteki są własne customowe selektory, np. aby dodać selektor `:len()`, który pobierze tylko te elementy, których długość tekstu jest mniejsza od podanej, możemy użyć poniższego kodu:
+
+{% highlight javascript %}
+$.expr[':'].len = function(obj, index, meta, stack) {
+    var self = $(obj);
+    var text = self.text();
+    var len = parseInt(meta[3]);
+    return text.length < len;
+};
+{% endhighlight %}
+
+I wywołać:
+
+{% highlight javascript %}
+$('div:len(10)').css('color', 'red');
+{% endhighlight %}
+
+Powyższy kod ustawi kolor czerwony dla elementów div, których tekst jest mniejszy niż 10 znaków.
+
+
+
+
 Listę wszystkich metod oraz funkcji można znaleźć na [stronie api projektu](http://api.jquery.com/).
 
 *[DOM]: Document Object Mode
@@ -196,3 +277,4 @@ Listę wszystkich metod oraz funkcji można znaleźć na [stronie api projektu](
 *[CSS]: Cascading Style Sheets
 *[AJAX]:  Asynchronous JavaScript and XML
 *[SPA]: Single Page Application
+*[ES5]: EcmaScript 5
