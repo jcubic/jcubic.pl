@@ -91,12 +91,20 @@ zwróci trzy elementy `li`. To samo można osiągnąć  używając kodu JavaScri
 document.getElementsByClassName('item');
 {% endhighlight %}
 
-Więcej o selektorach CSS także CSS3 można znaleźć w internecie np. na stronie [kurshtml.edu.pl](http://www.kurshtml.edu.pl/css/selektory.html). W nowoczesnych przeglądarkach znajduje się funkcja, która może zastąpić selektory biblioteki jQuery, a mianowicie `document.querySelector`, która zwraca pierwszy element o danym selektorze lub `document.querySelectorAll`, która zwróci obiekt tablico podobny NodeList, po który można iterować:
+Więcej o selektorach CSS także CSS3 można znaleźć w internecie np. na stronie [kurshtml.edu.pl](http://www.kurshtml.edu.pl/css/selektory.html). W nowoczesnych przeglądarkach znajduje się funkcja, która może zastąpić selektory biblioteki jQuery, a mianowicie `document.querySelector`, która zwraca pierwszy element o danym selektorze lub `document.querySelectorAll`, która zwróci obiekt tablico podobny `NodeList`, po który można iterować:
 
 {% highlight javascript %}
 var item = document.querySelector('#item');
 var items = document.querySelectorAll('.item');
 {% endhighlight %}
+
+Aby skonwertować NodeList do tablicy można wywołać slice tablicy z naszą listą jako kontekstem.
+
+{% highlight javascript %}
+var items = [].slice.call(document.querySelectorAll('.item'));
+{% endhighlight %}
+
+Dzięki temu można wywoływać takie metody jak np. `.map` lub `.filter`.
 
 ## Funkcje jQuery
 
@@ -112,7 +120,7 @@ Obiekt jQuery zwrócony po wywołaniu funkcji dolara zawiera szereg metod:
 * .parents() zwróci listę wszystkich rodziców danego elementu tj. pierwszym elementem będzie element parent, kolejnym parent parent itd.,
 * .find(selektor) - zwróci wszystkie elementy pasujące do nowego selektora przekazanego jako argument które są dziećmi przedniego elementu,
 * .not(selektor) - zwróci elementy które nie należą dod danego selektora, np: `$('div').not('.foo')` zwróci elementy div które nie mają klasy foo,
-* .eq(indeks) - zróci pojedynczy element o indeksie podanym jako argument, np jeśli selektor zwraca dwa elementy to `eq(1)` zwróci drugi element.
+* .eq(indeks) - zwróci pojedynczy element o indeksie podanym jako argument, np jeśli selektor zwraca dwa elementy to `eq(1)` zwróci drugi element.
 
 ### Metody służące do manipulacji dom
 
@@ -143,7 +151,7 @@ $('span').css({
 {% endhighlight %}
 
 * .val() - metoda zwraca wartość elementu formularza tj. input, textarea lub select, lub ustawia nową wartość danego elementu,
-* .data() - metoda ustawia lub pobiera wartość atrybutu `data-nazwa`, w przypadku zapisywania wartości, wartość atrybutu się nie zmiania. Aby zmienić atrybut należy użyć `.attr()`, która przyjmuje jeden string (do pobrania atrybutu) dwie wartości do zapisywania lub obiekt także do zapisywania,
+* .data() - metoda ustawia lub pobiera wartość atrybutu `data-nazwa`, w przypadku zapisywania wartości, wartość atrybutu się nie zmienia. Aby zmienić atrybut należy użyć `.attr()`, która przyjmuje jeden string (do pobrania atrybutu) dwie wartości do zapisywania lub obiekt także do zapisywania,
 * .removeAttr() - metoda służy do usuwania atrybutu,
 * .addClass()/.removeClass() - metody dodają/usuwają klasę do/z wybranych elementów.
 
@@ -162,7 +170,7 @@ Jeśli chcemy dodać zdarzenie do elementów, które mogą się pojawić późni
 
 {% highlight javascript %}
 $('ul').on('click', 'li', function() {
-   alert('cliknąłeś na element li');
+   alert('kliknąłeś na element li');
 });
 $('ul').append('<li>Nowy element</li>');
 {% endhighlight %}
@@ -179,7 +187,7 @@ $('div').css('color', 'red').find('.item:eq(1)').hide().next().show();
 
 ## Animacje
 
-Do animacji służy funkcja animate np.:
+Do animacji służy funkcja `animate` np.:
 
 {% highlight javascript %}
 $('foo').animate({
@@ -187,7 +195,7 @@ $('foo').animate({
 });
 {% endhighlight %}
 
-Można animować właściwości css, aby animować kolor (właściwość color lub background-color) należy użyć pluginu [jQuery Color](https://github.com/jquery/jquery-color).
+Można animować właściwości css, aby animować kolor (właściwość `color` lub `background-color`) należy użyć pluginu [jQuery Color](https://github.com/jquery/jquery-color).
 
 ## Pętle
 
@@ -199,7 +207,7 @@ $('foo').each(function() {
 });
 {% endhighlight %}
 
-można także użyć metody .map(), która tak jak metoda obiektu `Array` w ES5 zwraca nowy obiekt jQuery, aby np. dostać tablicę atrybutów href linków, można użyć poniższego kodu:
+można także użyć metody .map(), która tak jak metoda obiektu `Array` w ES5 zwraca nowy obiekt jQuery, aby np. dostać tablicę atrybutów `href` linków, można użyć poniższego kodu:
 
 {% highlight javascript %}
 var links = $('a').map(function() {
@@ -207,7 +215,7 @@ var links = $('a').map(function() {
 }).get();
 {% endhighlight %}
 
-Należy użyć metody get aby otrzymać tablicę, metoda `.map()` zwraca obiekt jQuery.
+Należy użyć metody `get` aby otrzymać tablicę, metoda `.map()` zwraca obiekt jQuery.
 
 ## Ajax
 
@@ -219,7 +227,7 @@ $.get('strona.html', function(strona) {
 });
 {% endhighlight %}
 
-Powyższy kod wykona zapytanie AJAX-owe typu GET i zamieni zawartość elementu `.main` tym, co dostanie z serwera.
+Powyższy kod wykona zapytanie AJAX-owe typu `GET` i zamieni zawartość elementu `.main` tym, co dostanie z serwera.
 
 ## Rozszerzanie biblioteki
 
