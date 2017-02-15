@@ -1,13 +1,16 @@
 <header>
-    <img src="{{ "/img/background.jpg" | prepend: site.baseurl }}" alt="Computer Keyboard - {{ site.title }}"/>
-    <h1><a href="{{ '/' | prepend: site.baseurl }}">{{ site.title }}</a></h1>
+    <img src="{{ "/img/background.jpg" | prepend: site.baseurl | prepend: site.url }}" alt="Computer Keyboard - {{ site.title }}"/>
+    <h1><a href="{{ '/' | prepend: site.baseurl | prepend: site.url }}">{{ site.title }}</a></h1>
     {% if site.pages %}
     <nav>
         <ul>
         {% for page in site.pages %}
-            <li><a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a></li>
+            <li><a href="{{ page.url | prepend: site.baseurl | prepend: site.url }}">{{ page.title }}</a></li>
         {% endfor %}
         </ul>
     </nav>
+    <a class="rss" href="{{ '/feed.xml' | prepend: site.baseurl | prepend: site.url }}" title="rss feed">
+      <img src="{{ '/img/rss.png' | prepend: site.baseurl | prepend: site.url }}" alt="rss feed icon"/>
+    </a>
     {% endif %}
 </header>

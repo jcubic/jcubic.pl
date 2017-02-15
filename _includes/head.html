@@ -36,7 +36,7 @@
     -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
-    <link rel="stylesheet" href="{{ "/css/style.css" | prepend: site.baseurl }}">
+    <link rel="stylesheet" href="{{ "/css/style.css" | prepend: site.baseurl | prepend: site.url }}">
     <link rel="alternate" type="application/rss+xml" title="Głównie JavaScript - RSS" href="{{ '/feed.xml' | prepend: site.baseurl | prepend: site.url }}"/>
     <!--
     <script src="http://code.jquery.com/jquery-latest.min.js"></script>

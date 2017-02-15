@@ -20,7 +20,12 @@ body {
 header {
     position: relative;
 }
-header img {
+header .rss {
+    position: absolute;
+    right: 5px;
+    bottom: 5px;
+}
+header > img {
     width: 100%;
     height: auto;
 }
@@ -308,7 +313,7 @@ ul.tags:before {
     }
 }
 @media (max-width: 600px) {
-    #inner > header img {
+    #inner > header > img {
         height: 200px;
         width: auto;
     }
@@ -339,7 +344,7 @@ ul.tags:before {
     #inner > header {
         font-size: 9px;
     }
-    #inner > header img {
+    #inner > header > img {
         margin-left: -10em;
     }
     .meta h2, .index h2 {
