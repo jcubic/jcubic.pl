@@ -1,10 +1,10 @@
 all: build tidy
 
 tidy:
-	./clean
+	@./clean
 
 build:
-	jekyll build
+	@jekyll build
 
 now:
 	@date +"%F %T%:z"
