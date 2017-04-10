@@ -4,8 +4,13 @@ Options +FollowSymLinks
 AddHandler cgi-script .cgi
 Options +ExecCGI
 
+
+Header set Access-Control-Allow-Origin "*"
+Header set Access-Control-Allow-Methods: "GET"
+
+
 #don't open in browser
-AddType application/octet-stream .doc .pdf
+AddType application/octet-stream .doc
 
 AddType application/vnd.ms-fontobject eot
 AddType font/ttf                      ttf
@@ -27,10 +32,6 @@ RewriteRule (.*_tutorial)\.html$ /jakub-jankiewicz/$1.php [R=301,L]
 
 RewriteRule biwascheme/repl.html /biwascheme/repl.php [R=301,L]
 
-#RewriteRule ^jakub-jankiewicz/(.*_tutorial.php) /$1 [R=301,L]
-
-#RewriteRule ^jakub-jankiewicz/(.*) http://jakub.jankiewi.cz/$1 [R=301,L]
-
 RewriteCond %{query_string} ^=PHP.{36}$
 RewriteRule (.*) - [F]
 
@@ -38,6 +39,8 @@ RewriteCond %{query_string} .*controller=.* [OR]
 RewriteCond %{query_string} .*proc\/self\/environ.* [OR]
 RewriteCond %{query_string} \.\.\/\.\.
 RewriteRule .* - [F]
+
+RewriteRule /?me/?$ /jakub-jankiewicz [R=301,L]
 
 RewriteCond %{SCRIPT_FILENAME} !-f
 RewriteCond %{SCRIPT_FILENAME} !-d
@@ -78,4 +81,3 @@ ErrorDocument 500 /500.shtml
 AddHandler cgi-script .scm
 
 DirectoryIndex index.html index.shtml index.php index.scm
-
