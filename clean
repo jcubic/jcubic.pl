@@ -6,4 +6,7 @@ find _site -name '*.html' | while read file; do
     sed -i 's!<span></span>!!g' $file
     tidy --drop-proprietary-attributes true -utf8 -indent -wrap 200 -modify -quiet "$file"
 done
-tidy -xml -utf8 -indent -wrap 200 -modify -quiet _site/sitemap.xml
+find _site -name '*.xml' | while read file; do
+    tidy -xml -utf8 -indent -wrap 200 -modify -quiet "$file"
+    sed -i 's/<!\[CDATA\[/        <![CDATA[/g' "$file"
+done
