@@ -1,0 +1,3 @@
+#!/bin/bash
+
+/bin/date +"%F %T%z"

@@ -2,9 +2,12 @@
 layout: post
 title:  "Wyrażenia Regularne"
 date:   2016-04-10 22:04:28 +0200
-categories: 
+categories:
 tags:  javascript regexp functions replace split match
 author: jcubic
+description: Wyrażenia regularne są małym mini językiem dostępnym niemal w każdym języku programowania. JavaScript także udostępnia te wyrażenia.
+sitemap:
+  lastmod: 2017-04-30 20:14:29+0200
 ---
 
 Wyrażenia regularne są małym mini językiem dostępnym niemal w każdym języku programowania.

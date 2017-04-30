@@ -5,6 +5,9 @@ date:   2017-01-22 18:01:42+01:00
 categories:
 tags:  css jQuery javascript
 author: jcubic
+description: Biblioteka jQuery, mimo wzrastającej popularności takich frameworków jak Angular czy React, nadal jest najczęściej wykorzystywaną biblioteką JavaScript na stronach internetowych
+sitemap:
+  lastmod: 2017-04-30 20:14:29+0200
 ---
 
 Biblioteka jQuery, mimo wzrastającej popularności takich frameworków jak [Angular](https://pl.wikipedia.org/wiki/AngularJS) czy [React](https://en.wikipedia.org/wiki/React_(JavaScript_library)), które umożliwiają tworzenie skomplikowanych aplikacji typu [SPA](https://en.wikipedia.org/wiki/Single-page_application), nadal jest najczęściej wykorzystywaną biblioteką JavaScript na stronach internetowych. Warto więc wiedzieć jak jej używać. W tym poście przedstawię jak korzystać z biblioteki jQuery.

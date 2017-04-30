@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
-    <meta name="description" content="{{ site.description }}">
+    <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}"/>
     <link rel="shortcut icon" href="{{ '/favicon/favicon.ico' | prepend: site.baseurl | prepend: site.url }}">
     <link rel="apple-touch-icon" sizes="57x57" href="{{ '/favicon/apple-touch-icon-57x57.png' | prepend: site.baseurl | prepend: site.url }}">
     <link rel="apple-touch-icon" sizes="114x114" href="{{ '/favicon/apple-touch-icon-114x114.png' | prepend: site.baseurl | prepend: site.url }}">

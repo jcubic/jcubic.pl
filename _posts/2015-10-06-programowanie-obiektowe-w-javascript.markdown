@@ -2,9 +2,12 @@
 layout: post
 title:  "Programowanie Obiektowe w JavaScript"
 date:   2015-10-06 17:25:36
-categories: 
+categories:
 tags:  javascript front-end functions objects oop
 author: jcubic
+description: Dzisiaj przedstawię wam jak programować obiektowo w języku JavaScript.
+sitemap:
+  lastmod: 2017-04-30 20:14:29+0200
 ---
 
 Dzisiaj przedstawię wam jak programować obiektowo w języku JavaScript.
@@ -13,7 +16,7 @@ Dzisiaj przedstawię wam jak programować obiektowo w języku JavaScript.
 
 ## Obiekty bezpośrednie
 
-Najprostrzym sposobem utworzenia nowego obiektu jest jego utworzenie "inline"
+Najprostrzym sposobem utworzenia nowego obiektu jest jego utworzenie "inline" czyli tzw. Object literal:
 
 {% highlight javascript %}
 var jan = {

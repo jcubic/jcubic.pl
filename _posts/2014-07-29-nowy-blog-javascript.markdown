@@ -2,9 +2,12 @@
 layout: post
 title:  "Nowy blog na temat języka JavaScript i nie tylko"
 date:   2014-07-29 10:57:43
-categories: 
+categories:
 tags: javascript front-end
 author: jcubic
+description: Jest to pierwszy post na blogu Głównie JavaScript. Od czasu do czasu będę zamieszczał wpisy na tematy związane głównie z Front-Endem
+sitemap:
+  lastmod: 2017-04-30 20:14:29+0200
 ---
 
 Jest to pierwszy post na blogu Głównie JavaScript. Od czasu do czasu

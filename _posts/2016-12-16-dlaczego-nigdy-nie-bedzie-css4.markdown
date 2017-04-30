@@ -2,9 +2,12 @@
 layout: post
 title:  "Dlaczego nigdy nie będzie CSS4"
 date:   2016-12-16 20:45:55+01:00
-categories: 
+categories:
 tags:  css css3 css4
 author: jcubic
+description: CSS3 to nowy standard CSS, który dodał wiele nowych właściwości, funkcji i efektów, w tym poście przedstawię, dlaczego nigdy nie będzie CSS4.
+sitemap:
+  lastmod: 2017-04-30 20:14:29+0200
 ---
 
 CSS3 to nowy standard CSS, który dodał wiele nowych właściwości, funkcji i efektów,

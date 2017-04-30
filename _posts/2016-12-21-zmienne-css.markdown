@@ -5,10 +5,12 @@ date:   2016-12-21 20:27:43+01:00
 categories:
 tags:  css css3 properties javascript
 author: jcubic
+description: Zmienne CSS, a dokładniej customowe właściwości (ang. custom properties) są nowym modułem standardu CSS, w tym poście przedstawię jak ich używać
+sitemap:
+  lastmod: 2017-04-30 20:14:29+0200
 ---
 
-Zmienne CSS, a dokładniej customowe właściwości (ang. custom properties) są [nowym modułem standardu CSS](https://www.w3.org/TR/css-variables/),
-w tym poście przedstawię jak ich używać.
+Zmienne CSS, a dokładniej customowe właściwości (ang. custom properties) są [nowym modułem standardu CSS](https://www.w3.org/TR/css-variables/), w tym poście przedstawię jak ich używać.
 
 <!-- more -->
 

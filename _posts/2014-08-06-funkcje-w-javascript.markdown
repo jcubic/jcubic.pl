@@ -2,9 +2,12 @@
 layout: post
 title:  "Wszystko co powinieneś wiedzieć o Funkcjach w JavaScript"
 date:   2014-08-06 10:35:19
-categories: 
+categories:
 tags: javascript front-end funkcje
 author: jcubic
+description: W niniejszym artykule przedstawię wszystkie aspekty używania funkcji w języku JavaScript.
+sitemap:
+  lastmod: 2017-04-30 20:14:29+0200
 ---
 
 W niniejszym artykule przedstawię wszystkie aspekty używania funkcji w języku
@@ -15,7 +18,7 @@ metody oraz kontekst funkcji czyli zmienna specjalna **this**.
 <!-- more -->
 
 ## Funkcje a procedury
-        
+
 Funkcja czyli odpowiednik matematycznej funkcji jest to obiekt, który
 dla tego samego argumentu zawsze zwraca tą samą wartość. Z punktu widzenia
 programistycznego tego typu funkcje są nazywane czystymi (ang. pure),

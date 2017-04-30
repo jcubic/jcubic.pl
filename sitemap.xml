@@ -7,7 +7,7 @@
     <url>
       <loc>{{ post.url | prepend: site.baseurl | prepend: site.url }}</loc>
       {% if post.sitemap.lastmod %}
-        <lastmod>{{ post.sitemap.lastmod | date: "%Y-%m-%d" }}</lastmod>
+        <lastmod>{{ post.sitemap.lastmod | date_to_xmlschema }}</lastmod>
       {% elsif post.date %}
         <lastmod>{{ post.date | date_to_xmlschema }}</lastmod>
       {% else %}

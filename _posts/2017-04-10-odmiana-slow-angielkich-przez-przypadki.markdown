@@ -5,6 +5,9 @@ date:   2017-04-10 18:48:03+02:00
 categories:
 tags:  javascript language translations
 author: jcubic
+description: Odmieniając słowo JavaScript przez przypadki, w mowie, nie powinniśmy mieć problemów. Problem pojawia się gdy musimy zapisać to słowo w odpowiedniej formie.
+sitemap:
+  lastmod: 2017-04-30 20:14:29+0200
 ---
 
 Odmieniając słowo JavaScript przez przypadki, w mowie, nie powinniśmy mieć problemów. Zakładając, że używamy spolszczonej nazwy czyli mówiąc przez „w” i „y”.
