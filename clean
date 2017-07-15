@@ -8,5 +8,5 @@ find _site -name '*.html' | while read file; do
 done
 find _site -name '*.xml' | while read file; do
     tidy -xml -utf8 -indent -wrap 200 -modify -quiet "$file"
-    sed -i 's/<!\[CDATA\[/        <![CDATA[/g' "$file"
+    sed -i 's/^<!\[CDATA\[/        <![CDATA[/g' "$file"
 done
