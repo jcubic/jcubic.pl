@@ -5,10 +5,10 @@ date:   2017-08-27 17:22:10+0200
 categories:
 tags:  javascript react preact redux
 author: jcubic
-description: React lub Preact + Redux to bardzo silne połączenie dające możliwość tworzenia aplikacji typu, ale istnieje alternatywa, która zajmuje tylko 1KB
+description: React lub Preact + Redux to bardzo silne połączenie, dające możliwość tworzenia skomplikowanych aplikacji typu, ale istnieje alternatywa, która zajmuje tylko 1KB
 ---
 
-[React](https://facebook.github.io/react/) lub [Preact](https://preactjs.com/) + [Redux](http://redux.js.org/) to bardzo silne połączenie dające możliwość tworzenia aplikacji typu [SPA](https://en.wikipedia.org/wiki/Single-page_application) ale istnieje alternatywa, która zajmuje tylko 1KB zminimalizowana z kompresją gzip.
+[React](https://facebook.github.io/react/) lub [Preact](https://preactjs.com/) + [Redux](http://redux.js.org/) to bardzo silne połączenie, dające możliwość tworzenia skomplikowanych aplikacji typu [SPA](https://en.wikipedia.org/wiki/Single-page_application), ale istnieje alternatywa, która zajmuje tylko 1KB zminimalizowana z kompresją gzip.
 
 <!-- more -->
 
@@ -48,12 +48,14 @@ Obiekt, którego metody zmieniają stan, zwracają nowy obiekt, który jest łą
 
 
 {% highlight javascript %}
-function(state, actions) {
-    fetch('/settings').then((response) => response.json(); })
-        .then((data) { actions.set_settings(data); });
-    return {
-       fetching: true;
-    };
+{
+    fetch_settings: function(state, actions) {
+        fetch('/settings').then((response) => response.json(); })
+            .then((data) { actions.set_settings(data); });
+        return {
+            fetching: true;
+        };
+    }
 }
 {% endhighlight %}
 
@@ -77,7 +79,7 @@ i wywołujemy ją w ten sposób:
 actions.fetch_user({name: 'Bill Murray', age: 'any'});
 {% endhighlight %}
 
-Możemy używać ES6 bo i tak będziemy musieli użyć [transpilera](https://en.wikipedia.org/wiki/Source-to-source_compiler) aby zamienić jsx na js, więc możemy przy okazji skorzystać z ES6.
+Możemy używać ES6 bo i tak będziemy musieli użyć [transpilera](https://en.wikipedia.org/wiki/Source-to-source_compiler), aby zamienić jsx na js, więc możemy przy okazji skorzystać z ES6.
 
 ## 2. Widok
 
@@ -105,6 +107,6 @@ i można go użyć tak:
 <Pagination size={10} selected={1}/>
 {% endhighlight %}
 
-Nazwy komponentów muszą zaczynać się wielką literą. Jeśli chcemy skorzystać wewnątrz komponentów z akcji lub stanu musimy niestety przekazać je jawnie jako właściwości (ang. props).
+Nazwy komponentów muszą zaczynać się wielką literą. Jeśli chcemy skorzystać, wewnątrz komponentów, z akcji lub stanu musimy niestety przekazać je jawnie jako właściwości (ang. props).
 
-Na codepen możecie zobaczyć [przykładową aplikacje TODO](https://codepen.io/jcubic/pen/eRbjOB), napisaną przez mnie, która bazuje na [TodoMVC](http://todomvc.com/), ale nie wszystko jest zaimplementowane (brakuje przełączania widoków). Jest także oficjalna wersja TodoMVC, trochę bardziej skomplikowana, na [tej stronie](http://hyperapp-todomvc.glitch.me/) ze wszystkimi funkcjami, włączając router.
+Na codepen możecie zobaczyć [przykładową aplikacje TODO](https://codepen.io/jcubic/pen/eRbjOB), napisaną przez mnie, która bazuje na [TodoMVC](http://todomvc.com/), ale nie wszystko jest zaimplementowane (brakuje przełączania widoków). Jest także oficjalna wersja TodoMVC, trochę bardziej skomplikowana, na [tej stronie](http://hyperapp-todomvc.glitch.me/). Zawiera ona wszystkie funkcje, włączając router.
