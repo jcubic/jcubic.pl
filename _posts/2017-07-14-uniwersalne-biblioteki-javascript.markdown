@@ -7,7 +7,7 @@ tags:  javascript node.js umd modules
 author: jcubic
 description: UMD czyli Uniwersalna definicja modułu (ang. Universal Module Definition) jest to sposób tworzenia definicji modułu/biblioteki JavaScript aby była możliwość korzystania z niej wszędzie.
 sitemap:
-  lastmod: 2017-07-14 17:08:37+0200
+  lastmod: 2017-09-08 20:35:15+0200
 ---
 
 UMD czyli Uniwersalna definicja modułu (ang. Universal Module Definition) jest to sposób tworzenia definicji modułu/biblioteki JavaScript aby była możliwość korzystania z niej wszędzie.

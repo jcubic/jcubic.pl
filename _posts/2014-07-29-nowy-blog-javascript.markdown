@@ -7,7 +7,7 @@ tags: javascript front-end
 author: jcubic
 description: Jest to pierwszy post na blogu Głównie JavaScript. Od czasu do czasu będę zamieszczał wpisy na tematy związane głównie z Front-Endem
 sitemap:
-  lastmod: 2017-04-30 20:14:29+0200
+  lastmod: 2017-09-08 20:35:15+0200
 ---
 
 Jest to pierwszy post na blogu Głównie JavaScript. Od czasu do czasu

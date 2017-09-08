@@ -7,7 +7,7 @@ tags:  javascript regexp functions replace split match
 author: jcubic
 description: Wyrażenia regularne są małym mini językiem dostępnym niemal w każdym języku programowania. JavaScript także udostępnia te wyrażenia.
 sitemap:
-  lastmod: 2017-04-30 20:14:29+0200
+  lastmod: 2017-09-08 20:35:15+0200
 ---
 
 Wyrażenia regularne są małym mini językiem dostępnym niemal w każdym języku programowania.

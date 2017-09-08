@@ -7,7 +7,7 @@ tags: javascript php json-rpc
 author: jcubic
 description: JSON-RPC to protokół zdalnego wywoływania procedur, w którym zapytanie oraz wynik zwracany przez serwer są przesyłane w postaci JSON-a
 sitemap:
-  lastmod: 2017-04-30 20:14:29+0200
+  lastmod: 2017-09-08 20:35:16+0200
 ---
 
 [JSON-RPC](http://pl.wikipedia.org/wiki/JSON-RPC) to protokół zdalnego wywoływania procedur (ang. Remote Procedure Call), w którym zapytanie oraz wynik zwracany przez serwer są przesyłane w postaci [JSON-a](http://pl.wikipedia.org/wiki/JSON) (skrót od JavaScript Object Notation). Jest to bardzo prosty protokół, który zazwyczaj implementuje się ponad [HTTP](http://pl.wikipedia.org/wiki/HTTP).

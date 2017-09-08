@@ -6,6 +6,8 @@ categories:
 tags:  javascript react preact redux
 author: jcubic
 description: React lub Preact + Redux to bardzo silne połączenie, dające możliwość tworzenia skomplikowanych aplikacji typu SPA, ale istnieje alternatywa, która zajmuje tylko 1KB
+sitemap:
+  lastmod: 2017-09-08 20:35:16+0200
 ---
 
 [React](https://facebook.github.io/react/) lub [Preact](https://preactjs.com/) + [Redux](http://redux.js.org/) to bardzo silne połączenie, dające możliwość tworzenia skomplikowanych aplikacji typu [SPA](https://en.wikipedia.org/wiki/Single-page_application), ale istnieje alternatywa, która zajmuje tylko 1KB zminimalizowana z kompresją gzip.

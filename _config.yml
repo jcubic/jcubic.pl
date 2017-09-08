@@ -1,6 +1,7 @@
 # Site settings
-title: Głównie JavaScript
-email: jcubic@jcubic.pl
+title: "Głównie JavaScript"
+email: "jcubic@jcubic.pl"
+twitter: "jcubic"
 description: "Blog Głównie JavaScript - informacje najczęściej na temat Front-Endu, głównie o języku JavaScript, ale także na temat nowych api HTML5 czy CSS."
 baseurl: ""
 url: "http://jcubic.pl"
@@ -18,8 +19,10 @@ users:
     jcubic:
         url: "http://jcubic.pl/jakub-jankiewicz/"
         name: "Jakub Jankiewicz"
+        twitter: "jcubic"
 
 paginate: 10
+paginate_path: "/page:num"
 
 # Build settings
 markdown: kramdown

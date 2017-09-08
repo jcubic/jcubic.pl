@@ -7,7 +7,7 @@ tags:  javascript front-end functions objects oop
 author: jcubic
 description: Dzisiaj przedstawię wam jak programować obiektowo w języku JavaScript.
 sitemap:
-  lastmod: 2017-04-30 20:14:29+0200
+  lastmod: 2017-09-08 20:35:15+0200
 ---
 
 Dzisiaj przedstawię wam jak programować obiektowo w języku JavaScript.

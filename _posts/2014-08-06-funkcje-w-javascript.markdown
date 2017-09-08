@@ -7,7 +7,7 @@ tags: javascript front-end funkcje
 author: jcubic
 description: W niniejszym artykule przedstawię wszystkie aspekty używania funkcji w języku JavaScript.
 sitemap:
-  lastmod: 2017-04-30 20:14:29+0200
+  lastmod: 2017-09-08 20:35:15+0200
 ---
 
 W niniejszym artykule przedstawię wszystkie aspekty używania funkcji w języku
