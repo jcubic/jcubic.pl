@@ -1,11 +1,12 @@
 <header>
     <img src="{{ "/img/background.jpg" | prepend: site.baseurl | prepend: site.url }}" alt="Computer Keyboard - {{ site.title }}"/>
     <h1><a href="{{ '/' | prepend: site.baseurl | prepend: site.url }}">{{ site.title }}</a></h1>
-    {% if site.pages %}
+    {% assign pages = site.pages.select {|p| p.title } %}
+    {% if pages %}
     <nav>
         <ul>
-        {% for page in site.pages %}
-            <li><a href="{{ page.url | prepend: site.baseurl | prepend: site.url }}">{{ page.title }}</a></li>
+        {% for page in pages %}
+          <li><a href="{{ page.url | prepend: site.baseurl | prepend: site.url }}">{{ page.title }}</a></li>
         {% endfor %}
         </ul>
     </nav>

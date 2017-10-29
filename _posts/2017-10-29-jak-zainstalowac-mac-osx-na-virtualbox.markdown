@@ -3,7 +3,7 @@ layout: post
 title:  "Jak Zainstalować MacOSX na VirtualBoxie"
 date:   2017-10-29 09:36:40+0100
 categories:
-tags:  browser safari maxos virtualbox
+tags:  przegladarki safari macosx virtualbox
 author: jcubic
 description: Jeśli piszesz aplikacje www dobrze jest ją przetestować na wszystkich przeglądarkach, czyli Firefox Opera, Chrome ale też na IE/Edge na windowsie oraz Safari na MacOSX.
 ---
@@ -81,5 +81,5 @@ Po pobraniu pliku xip, musisz go rozpakować, nastąpi to automatycznie jeśli k
 
 Po uruchomieniu xcode pojawi się ikonka w docku, jeśli klikniesz na nią prawym klawiszem myszy będziesz miał dostęp, w menu "Open Developer Tools", do aplikacji Simulator.
 
-> UWAGA: nie powinno się robić update-u, przynajmniej mi się nie udało potem odpalić systemu i musiałem usunąć dysk,
+> UWAGA: nie powinno się robić update-u. Przynajmniej mi się nie udało potem odpalić systemu i musiałem usunąć dysk,
 > dodać nowy oraz konfigurować MacOSX jeszcze raz, więc nie polecam.

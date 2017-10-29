@@ -15,6 +15,7 @@ include:
     -
         .htaccess
 
+exclude: [Gemfile, Gemfile.lock, Makefile, clean, date]
 users:
     jcubic:
         url: "http://jcubic.pl/jakub-jankiewicz/"
