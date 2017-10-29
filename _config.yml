@@ -24,6 +24,10 @@ users:
 paginate: 10
 paginate_path: "/page:num"
 
+tag_page_layout: tag_page
+tag_page_dir: tag
+tag_permalink_style: pretty
+
 # Build settings
 markdown: kramdown
 highlighter: pygments

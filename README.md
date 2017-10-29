@@ -9,6 +9,7 @@ Pod GNU/Linuxem Ubuntu lub dystrybucjami pochodnymi wykonaj:
 ```
 sudo apt-get install ruby ruby-dev python
 sudo gem install jekyll jekyll-paginate pygments.rb
+sudo pip install pygments-lexer-babylon
 ```
 
 to install tidy html5 you need to use execute this:

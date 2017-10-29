@@ -102,11 +102,36 @@ footer p {
     text-align: center;
     font-size: 13px;
 }
-footer a, footer a:visited, section a, section a:visited {
+footer a, footer a:visited, section a, section a:visited, #tag-cloud a {
     color: #152032;
 }
-footer a:hover, section a:hover {
+footer a:hover, section a:hover, #tag-cloud a:hover {
     color: #1520FF;
+}
+#tag-cloud .set-1 { font-size: 0.7em; font-weight: 100; }
+#tag-cloud .set-2 { font-size: 0.8em; font-weight: 200; }
+#tag-cloud .set-3 { font-size: 0.9em; font-weight: 300; }
+#tag-cloud .set-4 { font-size: 1.0em; font-weight: 400; }
+#tag-cloud .set-5 { font-size: 1.2em; font-weight: 500; }
+#tag-cloud .set-6 { font-size: 1.4em; font-weight: 600; }
+#tag-cloud .set-7 { font-size: 1.6em; font-weight: 700; }
+#tag-cloud .set-8 { font-size: 1.8em; font-weight: 800; }
+#tag-cloud .set-9 { font-size: 2.2em; font-weight: 900; }
+#tag-cloud .set-10 { font-size: 2.5em; font-weight: 900; }
+#tag-cloud {
+    margin: 10px 0;
+    padding: 2px;
+    line-height: 1.2em;
+    text-align: center;
+    font-size: 25px;
+}
+#tag-cloud a {
+    text-decoration: none;
+    padding: 2px;
+    margin: 4px;
+}
+#tag-cloud a:hover {
+    text-decoration: underline;
 }
 #main {
     min-height: 100%;
@@ -128,7 +153,6 @@ p, .tags {
 }
 .meta {
     padding: 40px 0 1em 0;
-    
 }
 h2, h3 {
     font-family: 'Scada', sans-serif;

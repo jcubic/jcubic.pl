@@ -6,5 +6,8 @@ tidy:
 build:
 	@jekyll build
 
+install:
+	bundle install
+
 now:
 	@date +"%F %T%:z"
