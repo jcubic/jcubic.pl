@@ -179,7 +179,7 @@ Mamy możliwość podpięcia się pod automatyczne konwertowanie typów JavaScri
 {% highlight javascript %}
 function Answer() {
   this[Symbol.toPrimitive] = function(hint) {
-    log('convert to ' + hint);
+    console.log('convert to ' + hint);
     if (hint == 'string') {
       return 'the answer is 42';
     } else if (hint == 'number') {
