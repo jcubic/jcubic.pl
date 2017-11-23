@@ -32,7 +32,7 @@ nearleyc grammar.ne > grammar.js
 wynikiem będzie kod, który możemy użyć aby otrzymać parser:
 
 {% highlight javascript %}
-const grammar = require('./grammar);
+const grammar = require('./grammar');
 const nearley = require('nearley');
 
 const parser = new nearley.Parser(nearley.Grammar.fromCompiled(grammar));
@@ -182,7 +182,7 @@ Wynikiem będzie plik `grammar.js`, który tak jak w przypadku Peg.js jest samoi
 
 Kod użycia parsera jest taki sam jak w przypadku Peg.js.
 
-Przykładowa gramatyka (wzięta z oficjalnych przykładów, tylko usunąłem wywołanie funkcji print) składa się z 3 części leksera, kolejności reguł oraz gramatyki:
+Przykładowa gramatyka (wzięta z oficjalnych przykładów, tylko usunąłem wywołanie funkcji print) składa się z 3 części: leksera, kolejności reguł oraz gramatyki:
 
 ```
 %lex
