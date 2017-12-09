@@ -1,12 +1,19 @@
 @font-face {
     font-family: 'bebas';
-    src: url('fonts/bebasneue-webfont.eot');
-    src: url('fonts/bebasneue-webfont.eot?#iefix') format('embedded-opentype'),
-         url('fonts/bebasneue-webfont.woff') format('woff'),
-         url('fonts/bebasneue-webfont.ttf') format('truetype'),
-         url('fonts/bebasneue-webfont.svg#bebas_neueregular') format('svg');
+    src: url('/css/fonts/bebasneue-webfont.eot');
+    src: url('/css/fonts/bebasneue-webfont.eot?#iefix') format('embedded-opentype'),
+    url('/css/fonts/bebasneue-webfont.woff') format('woff'),
+    url('/css/fonts/bebasneue-webfont.ttf') format('truetype'),
+    url('/css/fonts/bebasneue-webfont.svg#bebas_neueregular') format('svg');
     font-weight: normal;
     font-style: normal;
+}
+header h1 {
+    top: 0;
+    left: 0;
+    margin: 20px;
+    font-family: bebas;
+    font-size: 4em;
 }
 body, html {
     height: 100%;
@@ -34,13 +41,6 @@ header nav, header h1 {
 }
 header {
     font-size: 14px;
-}
-header h1 {
-    top: 0;
-    left: 0;
-    margin: 20px;
-    font-family: bebas;
-    font-size: 4em;
 }
 header h1, header h1:before, header h1:after {
     font-weight: normal;
