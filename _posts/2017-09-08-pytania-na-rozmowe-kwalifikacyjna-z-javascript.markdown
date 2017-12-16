@@ -108,7 +108,7 @@ for (var i = 0; i < 10; ++i) {
 
 {% highlight javascript %}
 function Foo(number) {
-    this.init = number;
+    this.number = number;
     this.add = function(array) {
         return array.map(function(number) {
             return this.number + number;
@@ -124,7 +124,7 @@ Nie ponieważ `this` w funkcji `map` będzie to obiekt `window` albo zwróci wyj
 
 {% highlight javascript %}
 function Foo(number) {
-    this.init = number;
+    this.number = number;
     this.add = function(array) {
         return array.map((number) => {
             return this.number + number;
@@ -138,7 +138,7 @@ lub zapisać `this` do zmiennej (bardziej przenośne rozwiązanie) np.:
 
 {% highlight javascript %}
 function Foo(number) {
-    this.init = number;
+    this.number = number;
     this.add = function(array) {
         var self = this;
         return array.map(function(number) => {
