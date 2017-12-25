@@ -104,7 +104,13 @@ wykorzystać podatność Session Fixation.
 Jeśli przechowujemy wrażliwe dane w aplikacji, np. gdy mamy system logowania i przechowujemy dane użytkowników,
 powinniśmy udostępniać naszą aplikacje poprzez SSL/TLS czyli poprzez protokół https. W przeciwnym wypadku będą możliwe ataki typu Man-in-the-middle na naszą aplikacje.
 Atak MITM wygląda tak, że jest osoba, przez którą "przechodzą" zapytania HTTP naszej aplikacji. Haker może np. przechwytywać ruch w publicznej sici wifi ale nie tylko.
-Osoba atakująca może np. wstrzykiwać kod JavaScript do naszej aplikacji nawet jeśli nie jest podatna na XSS
+Osoba atakująca może np. wstrzykiwać kod JavaScript do naszej aplikacji nawet jeśli nie jest podatna na XSS. W przypadku gdy nasza
+aplikacja nie korzysta z HTTPS do przesyłanie hasła na jego odczytanie. Istnieje także możliwość usunięcia SSL ze źle
+skonfigurowanych serwerów www, więcej informacji możecie znaleźć szukając ["strip ssl MITM"](https://encrypted.google.com/search?hl=pl&q=strip%20ssl%20MITM).
+
+Uwaga: Prawdopodonie w październiku 2017 został wykryty nowy atak na urządzenia z Androidem i Linux-em o nazwie Krack,
+który pozwala na złamanie szyfrowania WPA2 poprzez sklonowanie zaszyfrowanej sieci WiFi. **Dzięki niemu możliwy jest atak MITM.**
+Więcej na [stronie błędu](https://www.krackattacks.com/), na której można też naleźć krótki filmik, jak wygląda atak.
 
 10. Błędny mechanizm autoryzacji
 
