@@ -87,11 +87,17 @@ Najlepiej skorzystać z przygotowanych zapytań (ang. prepared statements), pol
 RFI (ang. Remote File Inclusion) i LFI (ang. Local File Inclusion) to luka w aplikacji która umożliwia wstrzykiwanie plików do aplikacji.
 LFI jest związana także z poprzednim błędem czyli directory traversal jeśli np. aplikacja przyjmuje jako parametr plik który ma zostać wstawiony.
 
-6. Request Tampering
+6. Wstrzykiwanie CRLF
+
+Polega na dodaniu znaku nowego wiersza i za nim jakiś złośliwych danych. Przykładem może być aplikacja, która wstawia dane
+z zapytania np. do nagłówka `Location`. Istnieje jakieś prawdopodobieństwo, w zależności od tego, w jaki sposób dodawany jest ten
+nagłówek, że atakujący doda np. znak nowej lini i za nim nowy nagłówek np. `Set-Cookie`, który spowoduje, że będzie można
+wykorzystać podatność Session Fixation.
 
 7. Cross-Site Request Forgery
 
-8. Nie sprawdzane przekierowania
+
+8. Nie walidowne przekierowania
 
 9. SSL/TLS i MITM
 
@@ -106,4 +112,9 @@ Występuje np. gdy nasza aplikacja niepoprawnie sprawdza, czy dany zasób powini
 * Aplikacja może udostępniać panel administracyjny, który jest schowany ale nie zabezpieczony hasłem, albo dostępny dla każdego
   zalogowanego użytkownika, a nie tylko administratora systemu.
 * Udostępnianie plików konfiguracyjnych które mogą np. zawierać hasło bazy danych
-* Dostęp do plików logów np. w ASP.Net możemy mieć zainstalową aplikacje [elmah](https://docs.microsoft.com/en-us/aspnet/web-forms/overview/older-versions-getting-started/deploying-web-site-projects/logging-error-details-with-elmah-cs), która loguje wyszytkie błędy w aplikacji razem zapytaniem HTTP, który je wykonał. Może on np. zawierać ciasteczka użytkowników.
+* Dostęp do plików logów np. w ASP.Net możemy mieć zainstalową aplikacje
+  [elmah](https://docs.microsoft.com/en-us/aspnet/web-forms/overview/older-versions-getting-started/deploying-web-site-projects/logging-error-details-with-elmah-cs),
+  która loguje wyszytkie błędy w aplikacji razem zapytaniem HTTP, który je wykonał. Może on np. zawierać ciasteczka użytkowników.
+
+
+
