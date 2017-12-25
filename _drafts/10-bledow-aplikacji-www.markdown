@@ -94,8 +94,18 @@ z zapytania np. do nagłówka `Location`. Istnieje jakieś prawdopodobieństwo, 
 nagłówek, że atakujący doda np. znak nowej lini i za nim nowy nagłówek np. `Set-Cookie`, który spowoduje, że będzie można
 wykorzystać podatność Session Fixation.
 
-7. Cross-Site Request Forgery
+7. Cross-Site Request Forgery oraz Click Jacking
 
+Aby zapobiedz atakowi typu click jacking, można wysyłać nagłowek HTTP X-Frame-Options, za pomocą którego możemy ograniczyć
+lub uniemożliwić wstawianie naszej aplikacji poprzez iframe-a. Więcej o tym nagłówku możesz przeczytać na
+[stronie MDN](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options).
+
+Jeśli myślisz, że jeśli Twoja aplikacja jest bezpieczna przed atakami CSRF, jeśli kożysta z JSON-a i napisana jest w JavaScript,
+a nie za pomocą formularzy, to się mylisz. Jeśli nie sprawdzasz jaki jest MIME zapytania po stronie servera, czyli nagłóweka
+Content-Type, to istnieje możliwość wysłania zapytania HTTP typu POST z typem text/plain, które może zawierać zwykły tekst.
+Więcej informacji na stronie [StackOverlow](https://stackoverflow.com/questions/11008469/are-json-web-services-vulnerable-to-csrf-attacks)
+oraz na [pentestmonkey.net](http://pentestmonkey.net/blog/csrf-xml-post-request), która pokazuje jak wysłać XML ale
+z JSON-em będzie tak samo.
 
 8. Nie walidowne przekierowania
 
@@ -105,8 +115,8 @@ Jeśli przechowujemy wrażliwe dane w aplikacji, np. gdy mamy system logowania i
 powinniśmy udostępniać naszą aplikacje poprzez SSL/TLS czyli poprzez protokół https. W przeciwnym wypadku będą możliwe ataki typu Man-in-the-middle na naszą aplikacje.
 Atak MITM wygląda tak, że jest osoba, przez którą "przechodzą" zapytania HTTP naszej aplikacji. Haker może np. przechwytywać ruch w publicznej sici wifi ale nie tylko.
 Osoba atakująca może np. wstrzykiwać kod JavaScript do naszej aplikacji nawet jeśli nie jest podatna na XSS. W przypadku gdy nasza
-aplikacja nie korzysta z HTTPS do przesyłanie hasła na jego odczytanie. Istnieje także możliwość usunięcia SSL ze źle
-skonfigurowanych serwerów www, więcej informacji możecie znaleźć szukając ["strip ssl MITM"](https://encrypted.google.com/search?hl=pl&q=strip%20ssl%20MITM).
+aplikacja nie korzysta z HTTPS do przesyłanie hasła na jego odczytanie. **Istnieje także możliwość usunięcia SSL ze źle
+skonfigurowanych serwerów www**, więcej informacji możecie znaleźć szukając ["strip ssl MITM"](https://encrypted.google.com/search?hl=pl&q=strip%20ssl%20MITM).
 
 Uwaga: Prawdopodonie w październiku 2017 został wykryty nowy atak na urządzenia z Androidem i Linux-em o nazwie Krack,
 który pozwala na złamanie szyfrowania WPA2 poprzez sklonowanie zaszyfrowanej sieci WiFi. **Dzięki niemu możliwy jest atak MITM.**
