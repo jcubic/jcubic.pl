@@ -85,7 +85,9 @@ var trampoline_sum = trampoline(ffunction sum(acc, arg, ...args) {
 });
 {% endhighlight %}
 
-Zastanawiasz się może, poco zawracać sobie głowę trampoliną, kiedy możesz po prostu użyć zwykłej pętli.
+Zastanawiasz się może, po co zawracać sobie głowę trampoliną, kiedy możesz po prostu użyć zwykłej pętli.
 Czasami rekurencja jest prostszym albo nawet jedynym rozwiązaniem. Istnieją np. gotowe rekurencyjne algorytmy,
-które by było bardzo trudno zastąpić pętlami np. przechodzenie drzewa lub grafu.
+które by było trudno zastąpić pętlami np. przechodzenie drzewa lub grafu.
 
+
+Możesz przetestować powyższe funkcje w tym [Demo](https://codepen.io/jcubic/pen/VymROK?editors=0011).
