@@ -9,6 +9,16 @@ layout: default
 <div class="content">
     {{ content }}
 
+    {% if page.related %}
+        <div class="related">
+          <p>Zobacz też:</p>
+          <ul>
+            {% for page in page.related %}
+            <li><a href="{{page.url}}">{{page.name}}</a></li>
+            {% endfor %}
+          </ul>
+        </div>
+    {% endif %}
     {% if page.tags %}
         <ul class="tags">
         {% for tag in page.tags %}
