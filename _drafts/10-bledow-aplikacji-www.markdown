@@ -91,7 +91,8 @@ Aby się zabezpieczyć przed tego typu błędami, jeśli dane wejściowe od uży
 w przypadku XSS odpowiednio je formatować (ang. escape). Najlepiej skorzystać z przygotowanych zapytań (ang. prepared statements),
 polega to na tym, że zanim wykonamy zapytanie przekazujemy do niego kod SQL z zamiennikami (ang. placeholer) np. pytajnikami
 i przy wywołaniu zapytania przekazujemy do tak przygotowanego zapytania dane, które zostaną odpowiednio sformatowane przez
-bibliotekę bazy danych.
+bibliotekę bazy danych, w zależności od typu (liczbowe wartości będziemy musieli zamienić na liczby, ponieważ zmienne
+z zapytania zawsze pobierane są jako ciągi znaków).
 
 ### Co dalej
 
@@ -99,6 +100,12 @@ Korzystając z twojej ulubionej przeglądarki łatwo znajdziesz przykłady zapyt
 mysql możesz zastąpić dowolnym innym silnikiem. Istnieją także gotowe aplikacje, którym możecie przetestować "waszą" aplikację
 np. bardzo popularna aplikacja wiersza poleceń [sqlmap](http://sqlmap.org/) bardzo fajną jego funkcją, jest dostęp do konsoli sql,
 która będzie wykonywała zapytania poprzez SQL injection na atakowanej stronie.
+
+Istnieją także ataki na bazy noSQL (czyli nie relacyjne), takie jak mongoDB, gdzie można wstrzyknąć kod javascript
+(jest on wewnętrznym językiem do definiowania zapytań oraz funkcji agregujących w mongo) lub objekty JSON-a bezpośrednio do bazy.
+Zobacz ten [artykuł na stonie owasp.org](https://www.owasp.org/index.php/Testing_for_NoSQL_injection) oraz artykuł
+[No SQL, No Injection? Examining NoSQL Security](https://arxiv.org/abs/1506.04082) (plik pdf po prawej stronie) oba omawiają
+bazę mongoDB najczęściej używaną baze typu noSQL.
 
 ## 3. Session Fixation
 
@@ -140,12 +147,12 @@ Osoba atakująca może np. wstrzykiwać kod JavaScript do naszej aplikacji nawet
 aplikacja nie korzysta z HTTPS do przesyłanie hasła na jego odczytanie. **Istnieje także możliwość usunięcia SSL ze źle
 skonfigurowanych serwerów www**, więcej informacji możecie znaleźć szukając ["strip ssl MITM"](https://encrypted.google.com/search?hl=pl&q=strip%20ssl%20MITM).
 Chociaż przeglądarka Google Chrome w wersji 62 pokazuje komunikat, że strona nie jest bezpieczna w pasku adresu, jeśli strona
-zawiera input box-y, a wersja 63 pokazuje je gdy wpisujemy jakiś tekst w dowolny element. Natomiast przeglądarka Firefox od wersji
-52 pokazuje komunikat przy input box-ie.
+zawiera input box-y, a wersja 63 pokazuje je gdy wpisujemy jakiś tekst w dowolny element. Natomiast przeglądarka
+[Firefox od wersji 52 pokazuje ikonkę w pasku adresu oraz komunikat przy input box-ie z hasłem](https://support.mozilla.org/en-US/kb/insecure-password-warning-firefox).
 
-Uwaga: Prawdopodonie w październiku 2017, został wykryty nowy atak na urządzenia z Androidem i Linux-em o nazwie Krack,
-który pozwala na złamanie szyfrowania WPA2 poprzez sklonowanie zaszyfrowanej sieci WiFi. **Dzięki niemu możliwy jest atak MITM.**
-Więcej na [stronie błędu](https://www.krackattacks.com/), na której można też naleźć krótki filmik, który przedstawia jak wygląda
+Uwaga: W październiku 2017, został wykryty nowy atak na urządzenia z Androidem i Linux-em o nazwie Krack, który pozwala na
+złamanie szyfrowania WPA2 poprzez sklonowanie zaszyfrowanej sieci WiFi. **Dzięki niemu możliwy jest atak MITM.** Więcej na
+[stronie błędu](https://www.krackattacks.com/), na której można też znaleźć krótki filmik, który przedstawia jak wygląda
 atak.
 
 Należy jednak pamiętać, że dzięki SSL nie zawsze będziemy zabezpieczenie przed atakami typu MITM, ktoś może np.
@@ -158,22 +165,19 @@ Istnieją także ataki na protokół https, możesz o nich przeczytać w
 
 ### Co dalej
 
-Możesz obejrzeć prezentacje z konferencji Black Hat (ok godziny) z 2012
-["Defeating Ssl Using Sslstrip"](https://www.youtube.com/watch?v=MFol6IMbZ7Y) autorem jest [Moxie Marlinspike](https://moxie.org/).
+Możesz obejrzeć:
+* Prezentacje z konferencji Black Hat (ok godziny) z 2012
+  ["Defeating Ssl Using Sslstrip"](https://www.youtube.com/watch?v=MFol6IMbZ7Y) autorem jest [Moxie Marlinspike](https://moxie.org/).
 
 ### Jak się zabezpieczyć
 
-Przede wszystkim najlepiej całą aplikacje ustostępniać poprzez szyfrowane połączenie. Można wymysić też na przeglądarce,
-aby zawsze było używane szyfrowanie za pomocą nagłówka HTTP Strict-Transport-Security. Więcej na tym nagłówku na stronie
-[MDN](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Strict-Transport-Security). Ważen jest także aby aplikacja nie
-pobierała żacnych danych za pomocą HTTP np. obrazków lub plików JS ponieważ wtedy pojawi się komunikat że połączenie nie jest
-bezpieczne. Ważne jest także aby użytkownik wiedział, że nie powinien kożystać z aplikacji jeśli przeglądarka "mówi", że
-połączenie nie jest bezpieczne.
-
-Warto też sprawdzić czy aplikacja jest podatna na sslstrip, jeśli tak, to można się zabezpieczyć sprawdzając czy request jest
-przesłany przez HTTPS. Można by też ustawić ciasteczka jako secure czyli takie, które będą tylko przesyłane przez HTTPS,
-ale przypadku ataku MITM atakujący może także, usunąć flagę secure z nagłówka Set-Cookie. Więc sprawdzanie czy zapytanie
-jest wysyłane po HTTPS jest jedynym sposobem zabezpieczenia.
+Przede wszystkim najlepiej całą aplikacje ustostępniać poprzez szyfrowane połączenie (a nie tylko strone logowania/rejestracji)
+i dodać przekierowanie ze http na https. Można wymusić też na przeglądarce, aby dla każdego następnego zapytania zawsze
+było używane szyfrowanie za pomocą nagłówka HTTP Strict-Transport-Security. Więcej na tym nagłówku na stronie
+[MDN](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Strict-Transport-Security). Ważne jest także aby aplikacja
+nie pobierała żacnych danych za pomocą HTTP np. obrazków lub plików JS ponieważ wtedy pojawi się komunikat, że połączenie
+nie jest bezpieczne lub zostanie zablokowane przez przeglądarkę gdy serwer zwróci wspomniany wcześniej nagłówek. Można też ustawić
+ciasteczka jako secure czyli takie, które będą przesyłane tylko poprzez szyfrowane połączenie.
 
 
 ## 10. Błędny mechanizm autoryzacji
