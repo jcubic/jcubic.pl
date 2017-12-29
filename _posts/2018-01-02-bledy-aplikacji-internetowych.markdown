@@ -263,6 +263,10 @@ Jeśli ten parametr nie jest sprawdzany, atakujący może podać URL do swojej s
 [phishing-owej](https://pl.wikipedia.org/wiki/Phishing) jako parametr i wysłać takiego linka do swojej ofiary. Dodatkowo
 można zakodować każdy znak URLa jako `%hex`, aby ofiara nie zwróciła uwagi na inny adres przekierowania.
 
+Innym błędem może być przypadek, gdy aplikacja zamierza przekierować użytkownika na inną stronę, np. na jeden z przygotowanych
+URLi, mogą to być sub domeny lub strony klientów, bez sprawdzania czy URL jest poprawny. Aplikacja może np. mieć linki
+w kodzie HTML, które wskazują gdzie należy przekierować i zakłada, że tylko takie przekierowania będą użyte.
+
 ## 7. Wstrzykiwanie CRLF
 
 Polega na dodaniu znaku nowego wiersza i za nim jakiś złośliwych danych. Przykładem może być aplikacja, która wstawia dane
@@ -382,7 +386,15 @@ przypadkach.
 Najlepiej jeśli email zawiera link z tokenem, który pozwoli zmienić hasło bez logowania, który zostanie unieważniony po np.
 godzinie od utworzenie lub po poprawnej zmianie hasła.
 
-## Co dalej
+## Na koniec
+
+### Jak się zabezpieczyć
+
+Przede wszystkim trzeba zawsze walidować dane pochodzące od użytkownika, ale także te pochodzące od przeglądarki
+(jak np. User-Agent, Referer czy Cookie, które łatwo zmienić, może się np. zdarzyć SQL injection w ciasteczkach)
+i odpowiednie je formatować gdy są użyte.
+
+### Co dalej
 
 Jako wstęp polecam darmowy kurs w języku angielskim (bez logowania) na pluralsight.com
 ["Hack Yourself First: How to go on the Cyber-Offense"](https://www.pluralsight.com/courses/hack-yourself-first) autorem jest
