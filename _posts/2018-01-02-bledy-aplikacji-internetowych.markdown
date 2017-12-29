@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "10 błędów aplikacji www, wykorzystanych przez Hakerów"
-date:   2017-12-28 11:30:22+0100
+date:   2018-01-02 11:30:22+0100
 categories:
 tags:  hacking www
 author: jcubic
@@ -384,13 +384,13 @@ godzinie od utworzenie lub po poprawnej zmianie hasła.
 
 ## Co dalej
 
-Jako wstęp polecam Darmowy Kurs w języku angielskim (bez logowania) na pluralsight.com
+Jako wstęp polecam darmowy kurs w języku angielskim (bez logowania) na pluralsight.com
 ["Hack Yourself First: How to go on the Cyber-Offense"](https://www.pluralsight.com/courses/hack-yourself-first) autorem jest
 Troy Hunt ten od [haveibeenpwned.com](https://haveibeenpwned.com) (gdzie można sprawdzić czy nasze konto podpięte pod dany
 email wyciekło). Ma już kilka lat ale nadal zawiera aktualne informacje. Polecam prędkość 1.4.
 
 Możesz też zainstalować sobie [Kali Linux](https://www.kali.org/) np. na za pomocą aplikacji
-[VirtualBox](https://www.virtualbox.org/) (lub innej aplikacji do tworzenia maszyn wirtualnych) oraz
+[VirtualBox](https://www.virtualbox.org/) (lub innej do tworzenia maszyn wirtualnych) oraz
 [podatną aplikacje OWASP](https://www.owasp.org/index.php/OWASP_Vulnerable_Web_Applications_Directory_Project),
 na której można testować lokalnie różne błędy.
 
