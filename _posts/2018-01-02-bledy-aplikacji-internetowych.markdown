@@ -401,6 +401,13 @@ Jako wstęp polecam darmowy kurs w języku angielskim (bez logowania) na plurals
 Troy Hunt ten od [haveibeenpwned.com](https://haveibeenpwned.com) (gdzie można sprawdzić czy nasze konto podpięte pod dany
 email wyciekło). Ma już kilka lat ale nadal zawiera aktualne informacje. Polecam prędkość 1.4.
 
+Możesz też zerknąć na stronę [OWASP Top Ten Project](https://www.owasp.org/index.php/Category:OWASP_Top_Ten_Project) (pdf
+po prawej stronie), która zawiera najważniejsze błędy, które mogą się znaleźć w web aplikacjach (co roku wychodzi nowy
+raport) oraz [OWASP Top Ten Cheat Sheet](https://www.owasp.org/index.php/OWASP_Top_Ten_Cheat_Sheet), która
+zawiera informacje jak testować czy aplikacja jest na nie podatna. Szczególnie punkt
+[pierwszy injection](https://www.owasp.org/index.php/OWASP_Top_Ten_Cheat_Sheet#A1_Injection), który zwiera więcej typów
+wstrzykiwania złośliwych danych.
+
 Możesz też zainstalować sobie [Kali Linux](https://www.kali.org/) np. na za pomocą aplikacji
 [VirtualBox](https://www.virtualbox.org/) (lub innej do tworzenia maszyn wirtualnych) oraz
 [podatną aplikacje OWASP](https://www.owasp.org/index.php/OWASP_Vulnerable_Web_Applications_Directory_Project),
