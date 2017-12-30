@@ -355,12 +355,12 @@ Jeśli aplikacja nie sprawdza ilości nieudanych prób logowania, wtedy jest pod
 albo słownikowego. Istnieją gotowe aplikacje np. [Hydra](https://www.thc.org/thc-hydra/), która wykonuje ataki słownikowe,
 razem z programem [John the Ripper](http://www.openwall.com/john/), umożliwia ataki brute force.
 
-Jeśli aplikacja wyświetla inny komunikat przy niepoprawnej nazwie użytkownika a inny przy niepoprawnym haśle złamanie
+Jeśli aplikacja wyświetla inny komunikat przy niepoprawnej nazwie użytkownika, a inny przy niepoprawnym haśle złamanie
 haseł będzie o wiele szybsze ponieważ nie będzie trzeba sprawdzać wszystkich kombinacji użytkownik/hasło.
 
-Innym błędem może być ograniczenie liczby znaków, nie ma żadnego powodu aby uniemożliwiać wpisanie hasła o mniejszej liczbie
+Innym błędem może być ograniczenie liczby znaków, nie ma żadnego powodu, aby uniemożliwiać wpisywanie hasła o mniejszej liczbie
 znaków niż 100. Nie powinno się też ograniczać liczby znaków jakie można wpisać w hasło np. jeśli sprawdzamy czy hasło zawiera
-znaki które mogą próbą SQL Injection lub ataku XSS. Takie znaki powinny być dozwolone aby zwiększyć liczbę potrzebnych
+znaki, które mogą próbą SQL Injection lub ataku XSS. Takie znaki powinny być dozwolone, aby zwiększyć liczbę potrzebnych
 kombinacji przy atakach brute force.
 
 ### Przypominanie hasła
@@ -373,15 +373,16 @@ komuś hasło aby wygrać licytacje.
 
 ### Jak się zabezpieczyć
 
-Jeśli chodzi o logowanie, to moim zdaniem najlepiej dodać opóźnienie w sekundach, które jest wielokrotnością liczby np. 5
-(czyli $$5^{liczba\:prób}$$) wraz z odpowiednim komunikatem. Można też dodać licznik w języku JavaScript. Oczywiście blokada
-musi być po stronie serwera.
+Jeśli chodzi o logowanie, to moim zdaniem najlepiej dodać opóźnienie w sekundach, które jest wielokrotnością liczby np. 2
+gdy próby większe niż np. 3 albo 5 (czyli $$2^{n} \ gdy \ n > 3$$ gdzie n == liczba prób) wraz z odpowiednim komunikatem.
+Można też dodać licznik w języku JavaScript. Oczywiście blokada musi być po stronie serwera. To skutecznie zabezpieczy
+przed atakiem typu brute force. Warto też wyświetlać ten sam komunikat, że "Hasło albo nazwa użytkownika nie są poprawne".
 
 Najlepszym sposobem dodania systemu przypominania hasła jest wyświetlenie komunikatu, że email został wysłany. Komunikat
 powinien być taki sam w przypadku gdy email jest i nie ma go w bazie. Często można się spotkać z komunikatem, że email został
-wysłany ja proponuje coś w rodzaju "Jeśli masz konto w naszym portalu/aplikacji to wysłaliśmy ci email z dalszym postępowaniem".
-Moim zdaniem taki komunikat jest lepszy z punktu widzenia UX, a nie powoduje żadnych problemów, bo jest taki sam w obu
-przypadkach.
+wysłany. Ja proponuje coś w rodzaju "Jeśli masz konto w naszym portalu/aplikacji to wysłaliśmy ci email z dalszym
+postępowaniem". Moim zdaniem taki komunikat jest lepszy z punktu widzenia UX, a nie powoduje żadnych problemów, bo jest taki
+sam w obu przypadkach.
 
 Najlepiej jeśli email zawiera link z tokenem, który pozwoli zmienić hasło bez logowania, który zostanie unieważniony po np.
 godzinie od utworzenie lub po poprawnej zmianie hasła.
@@ -391,7 +392,7 @@ godzinie od utworzenie lub po poprawnej zmianie hasła.
 ### Jak się zabezpieczyć
 
 Przede wszystkim trzeba zawsze walidować dane pochodzące od użytkownika, ale także te pochodzące od przeglądarki
-(jak np. User-Agent, Referer czy Cookie, które łatwo zmienić, może się np. zdarzyć SQL injection w ciasteczkach)
+(jak np. nagłówki User-Agent, Referer czy Cookie, które łatwo zmienić, może się np. zdarzyć SQL injection w ciasteczkach)
 i odpowiednie je formatować gdy są użyte.
 
 ### Co dalej
