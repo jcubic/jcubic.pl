@@ -374,7 +374,7 @@ komuś hasło aby wygrać licytacje.
 ### Jak się zabezpieczyć
 
 Jeśli chodzi o logowanie, to moim zdaniem najlepiej dodać opóźnienie w sekundach, które jest wielokrotnością liczby np. 2
-gdy próby większe niż np. 3 albo 5 (czyli $$2^{n} \ gdy \ n > 3$$ gdzie n == liczba prób) wraz z odpowiednim komunikatem.
+gdy próby większe niż np. 3 albo 5 (czyli $$2^{n-3} \ dla \ n > 3$$ gdzie n == liczba prób) wraz z odpowiednim komunikatem.
 Można też dodać licznik w języku JavaScript. Oczywiście blokada musi być po stronie serwera. To skutecznie zabezpieczy
 przed atakiem typu brute force. Warto też wyświetlać ten sam komunikat, że "Hasło albo nazwa użytkownika nie są poprawne".
 
