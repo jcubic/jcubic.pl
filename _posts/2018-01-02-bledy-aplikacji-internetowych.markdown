@@ -80,7 +80,7 @@ różne znaki komentarza).
 Innym przykładem może być przekazanie jako nazwę użytkownika `user' --` wtedy, jeśli logowanie będzie podatne na SQL injection,
 będzie można się zalogować jako dany użytkownik bez hasła.
 
-Istnieją dwa rodzaje tej podatności:
+Istnieją trzy rodzaje tej podatności:
 
 ### Zwykłe
 Wyświetla dane z zapytania na stronie. Za pomocą niego można wykraść wszystkie dane zapisane w bazie danych (np. poprzez
@@ -96,8 +96,11 @@ użyć `CASE..WHEN` gdzie `ELSE` wywołuje błąd (można wywołać `convert(int
 nadal być podatna na SQL injection, można wtedy np. do zapytania, gdy zwraca prawdę dodać opóźnienie i sprawdzać czas jaki
 zajmuje zapytanie.
 
-W atakach SQL injection można także wykorzystywać błędy zwracane przez aplikacje (tzn. nieprzechwytywane wyjątki), które
-pokazują komunikat błędu z bazy danych.
+### Poprzez komunikat błędu
+
+Jeśli aplikacja pokazuje błędy bazy danych można to wykorzystać je przy atakach typy SQL Injection. Np. baza danych
+MSSQL pokazuje jaka była wartość pola, gdy użyje się funkcji `convert(int, wartość)`, można też z błędów odczytać
+nazwę kolumny co może być szybsze niż blind SQL Injection.
 
 ### jak się zabezpieczyć
 
@@ -106,6 +109,9 @@ jak w przypadku XSS odpowiednio je formatować (ang. escape). Najlepiej skorzyst
 statements), polega to na tym, że zanim wykonamy zapytanie przekazujemy do niego kod SQL z zamiennikami (ang. placeholers)
 np. pytajnikami i przy wywołaniu zapytania przekazujemy do tak przygotowanego zapytania dane, które zostaną odpowiednio
 sformatowane przez bibliotekę bazy danych, w zależności od typu.
+
+Jeśli biblioteka do bazy danych zwraca wyjątki należy je przechwytywać w wyświetlać błąd przyjazny dla użytkownika. Prawdziwy
+błąd SQL można zapiać w pliku błędów. Oczywiście pliki logów powinny być zabezpieczone przez niepowołanym dostępem.
 
 ### Co dalej
 
@@ -117,7 +123,18 @@ sql, która będzie wykonywała zapytania poprzez SQL injection na atakowanej st
 [Havij](https://www.darknet.org.uk/2010/09/havij-advanced-automated-sql-injection-tool/) (działa tylko po Windows) oraz
 [sqlninja](http://sqlninja.sourceforge.net/).
 
-Istnieją także ataki na bazy noSQL (czyli nie relacyjne), takie jak mongoDB, gdzie można wstrzyknąć kod JavaScript
+Więcej o atakach poprzez komunikaty błędów w MSSQL możesz przeczytać w artykule:
+["Error-based SQL Injection w aplikacjach ASP(.NET) + MS SQL"](https://sekurak.pl/error-based-sql-injection-w-aplikacjach-asp-net-ms-sql/)
+
+Istnieją też ataki na bibliotekę Hibernate (w języku java), jest to ORM (ang. Object-Relational Mapping) czyli mapowanie
+obiektów bazodanowych na te z javy. Hibernate udsotępnia mini języki HQL i JPQL (ograniczone wersje SQL), które są podatny
+na wstrzykiwanie kodu SQL jako blind injection. Więcej o tym ataku w
+[tej prezentacji (slajdy)](https://www.slideshare.net/0ang3el/orm2pwn-exploiting-injections-in-hibernate-orm) z 2015 oraz
+prezentacja (Video ok godziny) ["New Methods For Exploiting ORM Injections"](https://www.youtube.com/watch?v=DKEwWy043WI)
+z 2016, która oprócz Hibernate, pokazuje różne metody wykorzystywania, błędów Hibernate oraz innych bibliotek ORM dla języka
+java oraz różnych baz danych.
+
+Podatne są także bazy noSQL (czyli nie relacyjne), takie jak mongoDB, gdzie można wstrzyknąć kod JavaScript
 (jest on wewnętrznym językiem do definiowania zapytań oraz funkcji agregujących w mongo) lub obiekty JSON-a bezpośrednio
 do bazy. Zobacz ten [artykuł na stonie owasp.org](https://www.owasp.org/index.php/Testing_for_NoSQL_injection) oraz artykuł
 [No SQL, No Injection? Examining NoSQL Security](https://arxiv.org/abs/1506.04082) (plik pdf po prawej stronie) oba omawiają
