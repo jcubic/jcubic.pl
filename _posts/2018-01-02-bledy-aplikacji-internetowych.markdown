@@ -8,7 +8,11 @@ author: jcubic
 description: Najczęstsze błędy aplikacji internetowych, które mogą być wykorzystane przez Hackerów. Jak hackować aplikacje internetowe i jak się przed takimi atakami bronić.
 ---
 
-W tym artykule przedstawię najczęstsze błędy aplikacji internetowych, które mogą być wykorzystane przez Hackerów, a raczej Crackerów oraz jak się przed nimi bronić.
+Jeśli tworzysz aplikacje internetowe i jesteś Full-Stack-iem, czyli oprócz Front-End-em zajmujesz się także Back-End-em,
+czy to jest php, asp.net, java czy node.js, twoja aplikacja może być podatna na ataki hackerów a raczej Crackerów.
+
+W tym artykule przedstawię najczęstsze błędy aplikacji internetowych, które mogą być wykorzystane przez Hackerów oraz jak
+się przed nimi bronić.
 
 <!-- more -->
 
@@ -437,6 +441,11 @@ zawiera informacje jak testować czy aplikacja jest na nie podatna. Szczególnie
 wstrzykiwania złośliwych danych. Innymi przydatnymi stronami są [The WASC Threat Classification v2.0](http://projects.webappsec.org/w/page/13246978/Threat%20Classification), która prezentuje błędy które mogą się znajdować w aplikacjach
 (niestety ostatnia aktualizacja 6 lat temu) oraz [Raporty WhiteHat Security](https://www.whitehatsec.com/resources-category/threat-reports/), które tak jak OWASP Top 10 wydawane są co roku. Aby pobrać pdf, trzeba podać dane, takie jak email czy firma,
 w której pracujesz. Link do raportu dostaniesz pocztą.
+
+Jeśli chcesz sprawdzić, czy dana platforma/framework zawiera błędy, które można wykorzystać, możesz odwiedzić np. stronę
+[cvedetails.com](https://www.cvedetails.com/), która zawiera wszystkie zgłoszone błędy. Wystarczy że wpiszesz nazwę
+frameworka/biblioteki albo producenta, możesz także wyszukiwać po typie błędu. Możesz też wyszukiwać gotowe exploit-y,
+czyli przykład wykorzystania błędu na stronie [exploit-db.com](https://www.exploit-db.com).
 
 Możesz też zainstalować sobie [Kali Linux](https://www.kali.org/) np. na za pomocą aplikacji
 [VirtualBox](https://www.virtualbox.org/) (lub innej do tworzenia maszyn wirtualnych) oraz
