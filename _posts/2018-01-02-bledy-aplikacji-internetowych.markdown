@@ -124,7 +124,9 @@ sql, która będzie wykonywała zapytania poprzez SQL injection na atakowanej st
 [sqlninja](http://sqlninja.sourceforge.net/).
 
 Więcej o atakach poprzez komunikaty błędów w MSSQL możesz przeczytać w artykule:
-["Error-based SQL Injection w aplikacjach ASP(.NET) + MS SQL"](https://sekurak.pl/error-based-sql-injection-w-aplikacjach-asp-net-ms-sql/)
+["Error-based SQL Injection w aplikacjach ASP(.NET) + MS SQL"](https://sekurak.pl/error-based-sql-injection-w-aplikacjach-asp-net-ms-sql/). Innym ciekawym przykładem jest funkcja MySQL, exp która może być użyta do wyświetlenia zawartości komendy `SELECT`
+w komunikacie o błędzie. Więcej o tym ataku w artykule
+["MySQL Error Based SQL Injection Using EXP"](https://www.exploit-db.com/docs/english/37953-mysql-error-based-sql-injection-using-exp.pdf).
 
 Istnieją też ataki na bibliotekę Hibernate (w języku java), jest to ORM (ang. Object-Relational Mapping) czyli mapowanie
 obiektów bazodanowych na te z javy. Hibernate udsotępnia mini języki HQL i JPQL (ograniczone wersje SQL), które są podatny
@@ -299,6 +301,9 @@ do odpowiedzi HTTP (wtedy można np. wykonać atak [XSS](#1-cross-site-scripting
 W php (prawdopodobnie przed wersją 4.2.2), była podatna funkcja `header`, którą można było wykorzystać aby przeprowadzić
 atak typu CRLF, ale nie jest on już możliwy.
 
+W 2016 odkryto problem z wstrzykiwaniem CRLF w Node.js, więcej o nim w artykule ["HTTP Response Splitting in Node.js
+(bypassing Node.js's HTTP Response Splitting protection)"](https://go.safebreach.com/rs/535-IXZ-934/images/Node-js-Response-Splitting.pdf).
+
 ### Co dalej
 
 Możesz zobaczyć te dwa artykuły:
@@ -418,6 +423,11 @@ Jako wstęp polecam darmowy kurs w języku angielskim (bez logowania) na plurals
 ["Hack Yourself First: How to go on the Cyber-Offense"](https://www.pluralsight.com/courses/hack-yourself-first) autorem jest
 Troy Hunt ten od [haveibeenpwned.com](https://haveibeenpwned.com) (gdzie można sprawdzić czy nasze konto podpięte pod dany
 email wyciekło). Ma już kilka lat ale nadal zawiera aktualne informacje. Polecam prędkość 1.4.
+
+Polecam też prezentacje [Mathiasa Bynensa](https://mathiasbynens.be/) (45 minut)
+["Hacking with Unicode in 2016"](https://www.youtube.com/watch?v=HhIEDWmQS3w), z konferencji RuhrSec 2016.
+Przedstawia tam Unicode i problemy z kodowaniem, ale też różne błędy i jak je wykorzystać np. w MySQL. Przedstawia też
+podatności, które były znalezione w aplikacjach, np. Wordpress czy Joomla spowodowane kodowaniem znaków.
 
 Możesz też zerknąć na stronę [OWASP Top Ten Project](https://www.owasp.org/index.php/Category:OWASP_Top_Ten_Project) (pdf
 po prawej stronie), która zawiera najważniejsze błędy, które mogą się znaleźć w web aplikacjach (co roku wychodzi nowy
