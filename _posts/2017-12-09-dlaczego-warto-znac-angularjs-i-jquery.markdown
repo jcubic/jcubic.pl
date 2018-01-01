@@ -8,7 +8,7 @@ author: jcubic
 description: W roku 2017 mało kto, kto tworzy nową aplikacje korzysta z jQuery albo AngularJS. Zaczynając od zera warto korzystać z najnowszego Reacta, Vue.js lub Angulara 2, ale na pewno warto znać tą bibliotekę i framework.
 ---
 
-W roku 2017 mało kto, kto tworzy nową aplikacje korzysta z jQuery albo AngularJS. Tworząc aplikacje od początku warto skorzystać z najnowszego Reacta, Vue.js lub Angulara 2 (z chwilą pisania tego artykułu Angular 5)
+W roku 2017 mało kto, kto tworzył nową aplikacje korzystał z jQuery albo AngularJS. W 2018 roku tworząc aplikacje od początku warto skorzystać z najnowszego Reacta, Vue.js lub Angulara 2 (z chwilą pisania tego artykułu Angular 5).
 
 Oto 5 powodów, dla których nadal warto znać Angulara 1.x czyli AngularJS oraz jQuery.
 

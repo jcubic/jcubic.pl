@@ -5,7 +5,7 @@ date:   2018-01-02 11:30:22+0100
 categories:
 tags:  hacking www
 author: jcubic
-description: Najczęstsze błędy aplikacji internetowych, które mogą być wykorzystane przez Hackerów, a raczej Crackerów oraz jak się przed nimi bronić.
+description: Najczęstsze błędy aplikacji internetowych, które mogą być wykorzystane przez Hackerów. Jak hackować aplikacje internetowe i jak się przed takimi atakami bronić.
 ---
 
 W tym artykule przedstawię najczęstsze błędy aplikacji internetowych, które mogą być wykorzystane przez Hackerów, a raczej Crackerów oraz jak się przed nimi bronić.
@@ -434,7 +434,8 @@ po prawej stronie), która zawiera najważniejsze błędy, które mogą się zna
 raport) oraz [OWASP Top Ten Cheat Sheet](https://www.owasp.org/index.php/OWASP_Top_Ten_Cheat_Sheet), która
 zawiera informacje jak testować czy aplikacja jest na nie podatna. Szczególnie punkt
 [pierwszy injection](https://www.owasp.org/index.php/OWASP_Top_Ten_Cheat_Sheet#A1_Injection), który zwiera więcej typów
-wstrzykiwania złośliwych danych.
+wstrzykiwania złośliwych danych. Inną przydatną stroną jest [The WASC Threat Classification v2.0](http://projects.webappsec.org/w/page/13246978/Threat%20Classification), która prezentuje błędy które mogą się znajdować w aplikacjach
+(niestety ostatnia aktualizacja 6 lat temu).
 
 Możesz też zainstalować sobie [Kali Linux](https://www.kali.org/) np. na za pomocą aplikacji
 [VirtualBox](https://www.virtualbox.org/) (lub innej do tworzenia maszyn wirtualnych) oraz
