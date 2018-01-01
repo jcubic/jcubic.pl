@@ -50,7 +50,7 @@ front-endzie. Możemy np. skorzystać z jakieś frameworka, który zrobi to za n
 wstawianie kodu HTML ze zmiennej i trzeba użyć specjalnej komendy lub filtra by była taka możliwość.
 
 ### Co dalej
-Polecam dwa artykuły, w języku angielskim, na stronach OWASP
+Polecam dwa artykuły, w języku angielskim, na stronach OWASP (czyli Open Web Application Security Project)
 [XSS Filter Evasion Cheat Sheet](https://www.owasp.org/index.php/XSS_Filter_Evasion_Cheat_Sheet) oraz
 [XSS (Cross Site Scripting) Prevention Cheat Sheet](https://www.owasp.org/index.php/XSS_(Cross_Site_Scripting)_Prevention_Cheat_Sheet),
 czyli odpowiednio obchodzenie i zabezpieczanie aplikacji.
@@ -444,3 +444,4 @@ na której można testować lokalnie różne błędy.
 W przypadku programu VirtualBox, aby dwie maszyny wirtualne się widziały trzeba ustawić kartę sieciową podatnej maszyny
 w tryb mostkowy (ang. bridge mode) lub [utworzyć usługę NAT](https://www.virtualbox.org/manual/ch06.html#network_nat_service),
 jeśli nie chcesz aby inni użytkownicy sieci lokalnej mieli dostęp do twojej podatnej maszyny.
+
