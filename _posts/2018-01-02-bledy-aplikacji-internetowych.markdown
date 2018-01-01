@@ -434,8 +434,9 @@ po prawej stronie), która zawiera najważniejsze błędy, które mogą się zna
 raport) oraz [OWASP Top Ten Cheat Sheet](https://www.owasp.org/index.php/OWASP_Top_Ten_Cheat_Sheet), która
 zawiera informacje jak testować czy aplikacja jest na nie podatna. Szczególnie punkt
 [pierwszy injection](https://www.owasp.org/index.php/OWASP_Top_Ten_Cheat_Sheet#A1_Injection), który zwiera więcej typów
-wstrzykiwania złośliwych danych. Inną przydatną stroną jest [The WASC Threat Classification v2.0](http://projects.webappsec.org/w/page/13246978/Threat%20Classification), która prezentuje błędy które mogą się znajdować w aplikacjach
-(niestety ostatnia aktualizacja 6 lat temu).
+wstrzykiwania złośliwych danych. Innymi przydatnymi stronami są [The WASC Threat Classification v2.0](http://projects.webappsec.org/w/page/13246978/Threat%20Classification), która prezentuje błędy które mogą się znajdować w aplikacjach
+(niestety ostatnia aktualizacja 6 lat temu) oraz [Raporty WhiteHat Security](https://www.whitehatsec.com/resources-category/threat-reports/), które tak jak OWASP Top 10 wydawane są co roku. Aby pobrać pdf, trzeba podać dane, takie jak email czy firma,
+w której pracujesz. Link do raportu dostaniesz pocztą.
 
 Możesz też zainstalować sobie [Kali Linux](https://www.kali.org/) np. na za pomocą aplikacji
 [VirtualBox](https://www.virtualbox.org/) (lub innej do tworzenia maszyn wirtualnych) oraz
