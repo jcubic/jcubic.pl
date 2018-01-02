@@ -32,7 +32,26 @@ layout: default
         </a> (aby zobaczyć kod na githubie musisz kliknąć przycisk raw)
     </div>
     <div class="facebook">
-        <iframe src="//www.facebook.com/plugins/like.php?href={{ page.url | prepend: site.baseurl | prepend: site.url | cgi_escape }}&amp;width&amp;layout=button_count&amp;action=like&amp;show_faces=false&amp;share=false&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; height:35px;"></iframe>
+      
+      <div id="facebook-share" class="share-button hidden">
+        <div class="icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" class="_1pbq" color="#ffffff">
+            <path fill="#ffffff" fill-rule="evenodd" d="M8 14H3.667C2.733 13.9 2 13.167 2 12.233V3.667A1.65 1.65 0 0 1 3.667 2h8.666A1.65 1.65 0 0 1 14 3.667v8.566c0 .934-.733 1.667-1.667 1.767H10v-3.967h1.3l.7-2.066h-2V6.933c0-.466.167-.9.867-.9H12v-1.8c.033 0-.933-.266-1.533-.266-1.267 0-2.434.7-2.467 2.133v1.867H6v2.066h2V14z"></path></svg>
+        </div>
+        <div class="label">
+          Udostępnij
+        </div>
+      </div>
+      <iframe src="//www.facebook.com/plugins/like.php?href={{ page.url | prepend: site.baseurl | prepend: site.url | cgi_escape }}&amp;width&amp;layout=button_count&amp;action=like&amp;show_faces=false&amp;share=false&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; height:35px;"></iframe>
+      <script type="text/javascript">
+       var button = document.getElementById('facebook-share');
+       button.classList.remove('hidden');
+       button.addEventListener('click', function(e) {
+           var location = window.location.href.replace('?' + window.location.search, '');
+           var url = 'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(location);
+           window.open(url, "pop", "width=600, height=400, scrollbars=no");
+       });
+      </script>
     </div>
 
     <div id="disqus_thread"></div>

@@ -269,6 +269,38 @@ ul.tags:before {
 }
 .facebook {
     margin: 10px 0 0 20px;
+    clear: both;
+}
+.facebook iframe {
+    float: left;
+}
+.hidden {
+    display: none;
+}
+.share-button {
+    background: #4267b2;
+    height: 16px;
+    margin-right: 20px;
+    padding: 2px;
+    float: left;
+    clear: both;
+    font-family: sans-serif;
+    color: white;
+    font-size: 12px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.share-button > div {
+    float: left;
+}
+.share-button .label {
+    padding: 1px 2px;
+    font-weight: bold;
+}
+.share-button svg {
+    width: 16px;
+    height: 16px;
 }
 /* PAGINATION */
 .pagination {
