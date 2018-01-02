@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "10 błędów aplikacji www, wykorzystanych przez Hakerów"
-date:   2018-01-02 11:30:22+0100
+title:  "10 błędów aplikacji www, wykorzystywanych przez Hakerów"
+date:   2018-01-02 14:49:04+0100
 categories:
 tags:  hacking www
 author: jcubic
@@ -140,11 +140,13 @@ prezentacja (Video ok godziny) ["New Methods For Exploiting ORM Injections"](htt
 z 2016, która oprócz Hibernate, pokazuje różne metody wykorzystywania, błędów Hibernate oraz innych bibliotek ORM dla języka
 java oraz różnych baz danych.
 
-Podatne są także bazy noSQL (czyli nie relacyjne), takie jak mongoDB, gdzie można wstrzyknąć kod JavaScript
+Podatne są także bazy NoSQL (czyli nie relacyjne), takie jak MongoDB, gdzie można wstrzyknąć kod JavaScript
 (jest on wewnętrznym językiem do definiowania zapytań oraz funkcji agregujących w mongo) lub obiekty JSON-a bezpośrednio
 do bazy. Zobacz ten [artykuł na stonie owasp.org](https://www.owasp.org/index.php/Testing_for_NoSQL_injection) oraz artykuł
 [No SQL, No Injection? Examining NoSQL Security](https://arxiv.org/abs/1506.04082) (plik pdf po prawej stronie) oba omawiają
-bazę mongoDB, najczęściej używaną bazę typu noSQL.
+bazę mongoDB, najczęściej używaną bazę typu noSQL. Jeśli chcesz przetestować aplikacje, która używa bazy NoSQL, możesz użyć
+narzędzia ["Nosql-Exploitation-Framework"](https://github.com/torque59/Nosql-Exploitation-Framework), które oprócz Mongo
+"obsługuje" także bazy: CouchDB, Redis, Cassandra oraz H-Base.
 
 ## 3. SSL/TLS i MITM
 
