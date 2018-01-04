@@ -6,7 +6,6 @@ AddHandler cgi-script .cgi
 Header set Access-Control-Allow-Origin "*"
 Header set Access-Control-Allow-Methods: "GET"
 
-
 #don't open in browser
 AddType application/octet-stream .doc
 
@@ -30,8 +29,10 @@ RewriteRule (.*_tutorial)\.html$ /jakub-jankiewicz/$1.php [R=301,L]
 
 RewriteRule biwascheme/repl.html /biwascheme/repl.php [R=301,L]
 
+RewriteRule 2017/12/bledy-aplikacji-internetowych.html /2018/01/bledy-aplikacji-internetowych.html [R=301,L]
 RewriteRule 2017/08/alternatywal-dla-react-preact-redux.html /2017/08/alternatywa-dla-react-preact-redux.html [R=301,L]
 RewriteRule 2017/10/metaprogramming-javascript.html /2017/10/metaprogramowanie-javascript.html [R=301,L]
+
 
 RewriteCond %{query_string} ^=PHP.{36}$
 RewriteRule (.*) - [F]

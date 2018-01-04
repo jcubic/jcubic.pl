@@ -87,6 +87,7 @@ będzie można się zalogować jako dany użytkownik bez hasła.
 Istnieją trzy rodzaje tej podatności:
 
 ### Zwykłe
+
 Wyświetla dane z zapytania na stronie. Za pomocą niego można, w bardzo prosty sposób, wykraść wszystkie dane zapisane w bazie
 danych (np. poprzez zapytanie UNION SELECT, które pozwala na dodanie, danych z innej tabeli, do zapytania, do którego
 wstrzykiwany jest kod SQL), ale także hasło do bazy danych, jeśli aplikacja korzysta z konta root bazy. Jeśli aplikacja
@@ -94,11 +95,13 @@ umożliwia wykonywanie wielokrotnych zapytań albo gdy mamy hasło do bazy danyc
 np. jakiś złośliwy kod, gdy aplikacja jest podatna na XSS (nie sprawdza danych pochodzących z bazy).
 
 ### Ślepe (ang. blind)
+
 Natomiast ślepe może wyświetlać dwa rodzaje stron, np. pustą oraz z danymi, wtedy atakujący może wstrzyknąć zapytanie, które
 zwraca prawdę albo fałsz (można do tego celu użyć `CASE..WHEN`). Albo wyświetlać zwykłą stronę i stronę błędu, wtedy można
 użyć `CASE..WHEN` gdzie `ELSE` wywołuje błąd (można wywołać `convert(int, 'x')`). Aplikacja może także nie zwracać nic, ale
 nadal być podatna na SQL injection, można wtedy np. do zapytania, gdy zwraca prawdę, dodać opóźnienie i sprawdzać czas jaki
-zajmuje zapytanie.
+zajmuje zapytanie. Jeśli chcemy np. zgadnąć hasło, nazwę użytkownika albo nazwę kolumny w bazie, trzeba sprawdzać nazwę
+znak po znaku np. używając funkcji substring.
 
 ### Poprzez komunikat błędu
 
