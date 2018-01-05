@@ -36,7 +36,7 @@ RewriteRule 2017/12/bledy-aplikacji-internetowych.html /2018/01/bledy-aplikacji-
 RewriteRule 2017/08/alternatywal-dla-react-preact-redux.html /2017/08/alternatywa-dla-react-preact-redux.html [R=301,L]
 RewriteRule 2017/10/metaprogramming-javascript.html /2017/10/metaprogramowanie-javascript.html [R=301,L]
 
-RewriteRule wp-login.php source.php
+RewriteRule wp-.*.php source.php
 
 RewriteCond %{query_string} ^=PHP.{36}$
 RewriteRule (.*) - [F]

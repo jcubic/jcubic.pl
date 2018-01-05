@@ -3,7 +3,7 @@ layout: post
 title:  "Dlaczego warto znać AngularJS i jQuery w 2017"
 date:   2017-12-09 12:24:14+0100
 categories:
-tags:  javascript biblioteki jquery angularjs angular
+tags:  javascript biblioteki jQuery angularjs angular
 author: jcubic
 description: W roku 2017 mało kto, kto tworzy nową aplikacje korzysta z jQuery albo AngularJS. Zaczynając od zera warto korzystać z najnowszego Reacta, Vue.js lub Angulara 2, ale na pewno warto znać tą bibliotekę i framework.
 ---
