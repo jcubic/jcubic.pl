@@ -5,7 +5,7 @@ date:   2017-12-25 16:47:31+0100
 categories:
 tags:  javascript front-end funkcje
 author: jcubic
-description: Pisanie funkcji rekurencyjnych może być wyzwaniem. Możesz się spotkać z wyjątkiem "Maximum call stack size exceeded" oto sposób na rozwiązenie tego problemu.
+description: Pisanie funkcji rekurencyjnych może być wyzwaniem. Możesz się spotkać z wyjątkiem "Maximum call stack size exceeded" oto sposób na rozwiązanie tego problemu.
 related:
   -
     name: Wszystko co powinieneś wiedzieć o Funkcjach w JavaScript
@@ -19,7 +19,8 @@ Oto sposób aby temu zaradzić.
 <!-- more -->
 
 Wyjątek ten spowodowany jest tym, że wywołanie funkcji tworzy nowa "ramkę" na stosie (czyli specjalnego miejsca w pamięci),
-która zawiera argumenty wywołania funkcji.
+która zawiera argumenty wywołania funkcji. Jeśli wywołujesz funkcje w funkcji, jak przy rekurencji, to ramka z poprzedniego
+wywołania funkcji nie jest zwalniana, czyli ilość zużytej pamięci rośnie liniowo.
 
 Jeśli np. masz funkcje rekurencyjną, która akceptuje tablicę i tworzy sumę jej argumentów
 
@@ -32,16 +33,20 @@ function sum(arg, ...args) {
 }
 {% endhighlight %}
 
-to jeśli ją wywołasz z tablicą tysiąca liczb (Liczba elementów może być inna w twoim przypadku) to przeglądarka Google Chrome, 
-zwróci wspomniany wcześniej wyjątek.
+to jeśli ją wywołasz, tą funkcje, używając tablicy tysiąca liczb (liczba elementów może być inna w twoim przypadku)
+to przeglądarka, przynajmniej Google Chrome, zwróci wspomniany wcześniej wyjątek. Jest to spowodowane tym, że każdy element
+tablicy będzie musiał być umieszczony na stosie. (W przypadku gdy przekażemy do funkcji tablicę wywołań rekurencyjnych będzie
+musiało być o wiele więcej, aby przeglądarka wyrzuciła wyjątek).
 
 {% highlight javascript %}
 var array = new Array(1000).fill(0).map((_, i) => i + 1);
 console.log(sum(...array));
 {% endhighlight %}
 
-Poniżej przedstawiam podobną funkcje, wyjątkiem jest to że pierwszy argument przechowuje sumę oraz to, że zwracana jest wywołanie
-rekurencyjne opakowane jest w funkcje strzałkową (ang. arrow function):
+## Rozwiązanie
+
+Poniżej przedstawiam podobną funkcje, wyjątkiem jest to że pierwszy argument przechowuje sumę oraz to, że zwracane wywołanie
+rekurencyjne opakowane jest w funkcje strzałkową z ES6 (ang. arrow function):
 
 {% highlight javascript %}
 function sum(acc, arg, ...args) {
@@ -73,10 +78,10 @@ przykładu:
 var trampoline_sum = trampoline(sum);
 {% endhighlight %}
 
-Można też stworzyć funnkcje trampoline_sum bezpośrednio przekazują wyrażenie funkcujne z nazwą:
+Można też stworzyć funkcje trampoline_sum bezpośrednio przekazują wyrażenie funkcyjne z nazwą:
 
 {% highlight javascript %}
-var trampoline_sum = trampoline(ffunction sum(acc, arg, ...args) {
+var trampoline_sum = trampoline(function sum(acc, arg, ...args) {
   acc += arg;
   if (args.length == 0) {
     return acc;
@@ -85,9 +90,11 @@ var trampoline_sum = trampoline(ffunction sum(acc, arg, ...args) {
 });
 {% endhighlight %}
 
-Zastanawiasz się może, po co zawracać sobie głowę trampoliną, kiedy możesz po prostu użyć zwykłej pętli.
-Czasami rekurencja jest prostszym albo nawet jedynym rozwiązaniem. Istnieją np. gotowe rekurencyjne algorytmy,
-które by było trudno zastąpić pętlami np. przechodzenie drzewa lub grafu.
-
+Zastanawiasz się może, po co zawracać sobie głowę trampoliną, kiedy możesz po prostu użyć zwykłej pętli. Czasami rekurencja
+jest prostszym albo nawet jedynym rozwiązaniem. Istnieją np. gotowe rekurencyjne algorytmy, które by było trudno zastąpić
+pętlami np. przechodzenie drzewa lub grafu.
 
 Możesz przetestować powyższe funkcje w tym [Demo](https://codepen.io/jcubic/pen/VymROK?editors=0011).
+
+Oczywiście funkcja `sum` to tylko przykład, jeśli potrzebujesz zsumować liczby, albo połączyć tablicę jakimś wzorem, najlepiej
+użyć funkcji `Array::reduce`.
