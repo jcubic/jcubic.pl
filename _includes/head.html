@@ -61,5 +61,14 @@
     <!--
     <script type="text/javascript" data-cfasync="false" src="//dsms0mj1bbhn4.cloudfront.net/assets/pub/shareaholic.js" data-shr-siteid="6d503d9769a878adc55ebee4698e4230" async="async"></script>
     -->
+    {% if page %}
+    <link rel="schema.dc" href="http://purl.org/dc/elements/1.1/"/>
+    <meta name="DC.license" content="http://creativecommons.org/licenses/by-sa/4.0/"/>
+    <meta name="DC.created" content="{{ page.date }}"/>
+    <meta name="DC.creator" content="{{ site.users[page.author].name }}"/>
+    {% if page.sitemap.lastmod %}
+    <meta name="DC.modified" content="{{ page.sitemap.lastmod }}"/>
+    {% endif %}
+    {% endif %}
     <meta name="generator" content="{% version %}"/>
 </head>
