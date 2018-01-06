@@ -74,6 +74,7 @@ function trampoline(fn) {
 
 Jest to [funkcja wyższego rzędu](/2014/08/funkcje-w-javascript.html), do której możemy przekazać funkcje sum z poprzedniego
 przykładu:
+
 {% highlight javascript %}
 var trampoline_sum = trampoline(sum);
 {% endhighlight %}
@@ -90,11 +91,11 @@ var trampoline_sum = trampoline(function sum(acc, arg, ...args) {
 });
 {% endhighlight %}
 
-Zastanawiasz się może, po co zawracać sobie głowę trampoliną, kiedy możesz po prostu użyć zwykłej pętli. Czasami rekurencja
-jest prostszym albo nawet jedynym rozwiązaniem. Istnieją np. gotowe rekurencyjne algorytmy, które by było trudno zastąpić
-pętlami np. przechodzenie drzewa lub grafu.
+Dzięki trampolinie i "zawijaniu" wywołania rekurencyjnego w funkcje (można też użyć zwykłej funkcji, nie tylko strzałkowej),
+za każdym razem na stosie będą argumenty tylko z jednego wywołania.
 
-Możesz przetestować powyższe funkcje w tym [Demo](https://codepen.io/jcubic/pen/VymROK?editors=0011).
+Zastanawiasz się może, po co zawracać sobie głowę trampoliną, kiedy możesz po prostu użyć zwykłej pętli albo `Array::reduce`.
+Czasami rekurencja jest prostszym albo nawet jedynym rozwiązaniem. Istnieją np. gotowe rekurencyjne algorytmy, które by było
+trudno zastąpić pętlami np. przechodzenie drzewa lub grafu.
 
-Oczywiście funkcja `sum` to tylko przykład, jeśli potrzebujesz zsumować liczby, albo połączyć tablicę jakimś wzorem, najlepiej
-użyć funkcji `Array::reduce`.
+Możesz przetestować powyższe funkcje w tym [demo](https://codepen.io/jcubic/pen/VymROK?editors=0011).
