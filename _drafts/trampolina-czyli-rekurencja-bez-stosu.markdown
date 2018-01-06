@@ -22,7 +22,7 @@ Wyjątek ten spowodowany jest tym, że wywołanie funkcji tworzy nowa "ramkę" n
 która zawiera argumenty wywołania funkcji. Jeśli wywołujesz funkcje w funkcji, jak przy rekurencji, to ramka z poprzedniego
 wywołania funkcji nie jest zwalniana, czyli ilość zużytej pamięci rośnie liniowo.
 
-Jeśli np. masz funkcje rekurencyjną, która akceptuje tablicę i tworzy sumę jej argumentów
+Jeśli np. masz funkcje rekurencyjną, która tworzy sumę jej argumentów:
 
 {% highlight javascript %}
 function sum(arg, ...args) {
@@ -33,20 +33,23 @@ function sum(arg, ...args) {
 }
 {% endhighlight %}
 
-to jeśli ją wywołasz, tą funkcje, używając tablicy tysiąca liczb (liczba elementów może być inna w twoim przypadku)
-to przeglądarka, przynajmniej Google Chrome, zwróci wspomniany wcześniej wyjątek. Jest to spowodowane tym, że każdy element
-tablicy będzie musiał być umieszczony na stosie. (W przypadku gdy przekażemy do funkcji tablicę wywołań rekurencyjnych będzie
-musiało być o wiele więcej, aby przeglądarka wyrzuciła wyjątek).
+to jeśli ją wywołasz, używając tablicy tysiąca liczb (liczba elementów może być inna w twoim przypadku) to przeglądarka,
+przynajmniej Google Chrome, zwróci wspomniany wcześniej wyjątek.
 
 {% highlight javascript %}
 var array = new Array(1000).fill(0).map((_, i) => i + 1);
 console.log(sum(...array));
 {% endhighlight %}
 
+Jest to spowodowane tym, że każdy element tablicy będzie musiał być umieszczony na stosie, Będzie to tak jakby wywoływać
+funkcje sum z tysiącem argumentów. W przypadku gdy przekażemy do funkcji tablicę liczb, będzie musiało być o wiele więcej
+wywołań rekurencyjnych, aby przeglądarka wyrzuciła wyjątek.
+
+
 ## Rozwiązanie
 
-Poniżej przedstawiam podobną funkcje, wyjątkiem jest to że pierwszy argument przechowuje sumę oraz to, że zwracane wywołanie
-rekurencyjne opakowane jest w funkcje strzałkową z ES6 (ang. arrow function):
+Poniżej przedstawiam podobną funkcję, wyjątkiem jest to że pierwszy argument przechowuje sumę (nie powinno to mieć znaczenia)
+oraz to, że zwracane wywołanie rekurencyjne, opakowane jest w funkcje strzałkową z ES6 (ang. arrow function):
 
 {% highlight javascript %}
 function sum(acc, arg, ...args) {
