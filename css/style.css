@@ -430,6 +430,11 @@ ul.tags:before {
     }
 }
 @media (max-width: 600px) {
+    a {
+        padding: 5px;
+        margin: -5px;
+        display: inline-block;
+    }
     #inner > header > img {
         height: 200px;
         width: auto;
