@@ -1,0 +1,15 @@
+<div class="cookie-baner">
+  <p>Ta strona używa ciasteczek w celach reklamowych i statystycznych <a href="/cookies.html">Czytaj Więcej ...</a> <a id="ok" class="btn">Rozumiem</a></p>
+</div>
+<script>
+ function hide_baner() {
+     document.querySelector('.cookie-baner').style.display = 'none';
+ }
+ if (localStorage.getItem('cookie')) {
+     hide_baner();
+ }
+ document.getElementById('ok').addEventListener('click', function() {
+     localStorage.setItem('cookie', true);
+     hide_baner();
+ });
+</script>

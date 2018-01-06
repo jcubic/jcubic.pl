@@ -305,6 +305,18 @@ ul.tags:before {
     width: 16px;
     height: 16px;
 }
+#sidebar .related p {
+    margin-bottom: 10px;
+}
+#sidebar .related ul li ~ li {
+    margin-top: 20px;
+}
+#sidebar .related ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    line-height: 1.5em;
+}
 /* PAGINATION */
 .pagination {
     margin: 20px 0 0 20px;
@@ -317,6 +329,48 @@ ul.tags:before {
     padding: 0 0 0 4px;
     overflow: hidden;
     color: #64636b;
+}
+.btn {
+  background: #3498db;
+  background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
+  background-image: -moz-linear-gradient(top, #3498db, #2980b9);
+  background-image: -ms-linear-gradient(top, #3498db, #2980b9);
+  background-image: -o-linear-gradient(top, #3498db, #2980b9);
+  background-image: linear-gradient(to bottom, #3498db, #2980b9);
+  -webkit-border-radius: 6;
+  -moz-border-radius: 6;
+  border-radius: 6px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 18px;
+  padding: 5px 10px 5px 10px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: #3cb0fd;
+  background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+  text-decoration: none;
+}
+.cookie-baner {
+    padding: 10px;
+    box-sizing: border-box;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    text-align: center;
+    z-index: 100;
+    background: white;
+}
+.cookie-baner .btn {
+    margin-left: 10px;
 }
 .pagination li {
     list-style: none;
