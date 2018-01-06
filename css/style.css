@@ -309,7 +309,10 @@ ul.tags:before {
     margin-bottom: 10px;
 }
 #sidebar .related ul li ~ li {
-    margin-top: 20px;
+    margin-top: 10px;
+}
+#sidebar .related {
+    margin-bottom: 20px;
 }
 #sidebar .related ul {
     margin: 0;
@@ -347,7 +350,6 @@ ul.tags:before {
   text-decoration: none;
   cursor: pointer;
 }
-
 .btn:hover {
   background: #3cb0fd;
   background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);

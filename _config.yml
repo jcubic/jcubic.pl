@@ -22,10 +22,10 @@ users:
         name: "Jakub Jankiewicz"
         twitter: "jcubic"
 
-#related:
-#  -
-#    url: "http://algosmart.pl"
-#    text: "AlgoSmart. Blog o sprytnym podejściu do nauki ReactJS"
+related:
+  -
+    url: "http://algosmart.pl"
+    text: "AlgoSmart. Blog o sprytnym podejściu do nauki ReactJS"
 
 paginate: 10
 paginate_path: "/page:num"
