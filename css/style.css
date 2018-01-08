@@ -270,14 +270,18 @@ ul.tags:before {
 .tags li:last-child:after {
     content: "";
 }
-.facebook {
+.share {
     margin: 10px 0 0 20px;
     clear: both;
+    overflow: hidden;
 }
-.facebook iframe {
+.share iframe, .share .twitter, #facebook-share {
     float: left;
 }
-.twitter {
+.share .twitter {
+    margin-right: 20px;
+}
+#sidebar .twitter {
     margin-bottom: 20px;
 }
 .hidden {
@@ -289,7 +293,6 @@ ul.tags:before {
     margin-right: 20px;
     padding: 2px;
     float: left;
-    clear: both;
     font-family: sans-serif;
     color: white;
     font-size: 12px;
