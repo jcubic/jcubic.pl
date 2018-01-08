@@ -26,6 +26,10 @@ related:
   -
     url: "http://algosmart.pl"
     text: "AlgoSmart. Blog o sprytnym podejściu do nauki ReactJS"
+  -
+    url: "https://fsgeek.pl/"
+    title: "Full Stack Geek"
+    text: "FSGeek"
 
 paginate: 10
 paginate_path: "/page:num"

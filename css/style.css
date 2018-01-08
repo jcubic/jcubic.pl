@@ -154,6 +154,9 @@ p, .tags {
 .meta {
     padding: 40px 0 1em 0;
 }
+.meta img {
+    width: 100%;
+}
 h2, h3 {
     font-family: 'Scada', sans-serif;
     font-weight: bold;
@@ -184,7 +187,7 @@ section, aside {
 aside {
     width: 300px;
     margin-right: 10px;
-    padding-top: 120px;
+    padding-top: 60px;
 }
 section > p {
     text-align: justify;
@@ -428,8 +431,6 @@ ul.tags:before {
     #inner > header {
         font-size: 10px;
     }
-}
-@media (max-width: 600px) {
     a {
         padding: 5px;
         margin: -5px;

@@ -5,6 +5,11 @@ layout: default
     {% assign author = site.users[page.author] %}
     <h3>{{ page.date | date: "%Y-%m-%d" }} by <a href="{{ author.url }}">{{ author.name }}</a></h3>
     <h2>{{ page.title }}</h2>
+    {% if page.image %}
+    <div>
+      <img src="{{ page.image.url | prepend: site.baseurl | prepend: site.url }}" alt="{{ page.image.alt }}"/>
+    </div>
+    {% endif %}
 </div>
 <div class="content">
     {{ content }}

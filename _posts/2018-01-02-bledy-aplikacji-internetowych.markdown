@@ -6,6 +6,9 @@ categories:
 tags:  hacking www
 author: jcubic
 description: Najczęstsze błędy aplikacji internetowych, które mogą być wykorzystane przez Hackerów. Jak hackować aplikacje internetowe i jak się przed takimi atakami bronić.
+image:
+  url: "/img/hacker.jpg"
+  alt: "Grafika ze zdjęcia osoby w kapturze oraz kodu zero jedynkowego"
 ---
 
 Jeśli tworzysz aplikacje internetowe i jesteś Full-Stack-iem, czyli oprócz Front-End-u zajmujesz się także Back-End-em,
