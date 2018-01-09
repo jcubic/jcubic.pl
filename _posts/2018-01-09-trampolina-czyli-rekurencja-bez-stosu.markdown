@@ -1,19 +1,18 @@
 ---
 layout: post
 title:  "Trampolina czyli rekurencja bez stosu"
-date:   2017-12-25 16:47:31+0100
+date:   2018-01-09 18:02:58+0100
 categories:
 tags:  javascript front-end funkcje
 author: jcubic
 description: Pisanie funkcji rekurencyjnych może być wyzwaniem. Możesz się spotkać z wyjątkiem "Maximum call stack size exceeded" oto sposób na rozwiązanie tego problemu.
 related:
   -
-    name: Wszystko co powinieneś wiedzieć o Funkcjach w JavaScript
+    name: Wszystko co powinieneś wiedzieć o funkcjach w JavaScript
     url: /2014/08/funkcje-w-javascript.html
 image:
-  -
-    url: /img/trampoline.jpg
-    alt: Człowiek skaczący na trampolinie
+  url: /img/trampoline.jpg
+  alt: Człowiek skaczący na trampolinie
 ---
 
 Pisanie funkcji rekurencyjnych może być wyzwaniem. Jeśli musisz napisać taką funkcje, która operuje na dużej ilości danych
@@ -65,7 +64,7 @@ function sum(acc, arg, ...args) {
 }
 {% endhighlight %}
 
-Aby ta funkcja zadziałała potrzebujemy specjalnej funkcji, która "odwinie" funkcje sum. Wygląda ona tak:
+Aby ta funkcja zadziałała potrzebujemy specjalnej funkcji, która będzie "odwijała" funkcje sum w pętli. Wygląda ona tak:
 
 {% highlight javascript %}
 function trampoline(fn) {
@@ -101,8 +100,8 @@ var trampoline_sum = trampoline(function sum(acc, arg, ...args) {
 Dzięki trampolinie i "zawijaniu" wywołania rekurencyjnego w funkcje (można też użyć zwykłej funkcji, nie tylko strzałkowej),
 za każdym razem na stosie będą argumenty tylko z jednego wywołania.
 
-Zastanawiasz się może, po co zawracać sobie głowę trampoliną, kiedy możesz po prostu użyć zwykłej pętli albo `Array::reduce`.
-Czasami rekurencja jest prostszym albo nawet jedynym rozwiązaniem. Istnieją np. gotowe rekurencyjne algorytmy, które by było
+Zastanawiasz się może, po co zawracać sobie głowę trampoliną, kiedy możesz po prostu użyć zwykłej pętli, albo `Array::reduce`.
+Czasami rekurencja jest prostszym, albo nawet jedynym rozwiązaniem. Istnieją np. gotowe rekurencyjne algorytmy, które by było
 trudno zastąpić pętlami np. przechodzenie drzewa lub grafu.
 
 Możesz przetestować powyższe funkcje w tym [demo](https://codepen.io/jcubic/pen/VymROK?editors=0011).

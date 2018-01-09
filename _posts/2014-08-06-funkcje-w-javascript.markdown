@@ -1,13 +1,17 @@
 ---
 layout: post
-title:  "Wszystko co powinieneś wiedzieć o Funkcjach w JavaScript"
+title:  "Wszystko co powinieneś wiedzieć o funkcjach w JavaScript"
 date:   2014-08-06 10:35:19
 categories:
 tags: javascript front-end funkcje
 author: jcubic
 description: W niniejszym artykule przedstawię wszystkie aspekty używania funkcji w języku JavaScript.
 sitemap:
-  lastmod: 2017-09-08 20:35:15+0200
+  lastmod: 2018-01-09 18:06:41+0100
+related:
+  -
+    name: Trampolina czyli rekurencja bez stosu
+    url: /2018/01/09/trampolina-czyli-rekurencja-bez-stosu.html
 ---
 
 W niniejszym artykule przedstawię wszystkie aspekty używania funkcji w języku
@@ -128,10 +132,9 @@ curry(add)(1)(2)(3)(4);
 // ==> 10
 {% endhighlight %}
 
-Ciekawszym rozwiązaniem jest funkcja, która działa podobnie ale na każdym etapie
-można wywoływać funkcję z wieloma argumentami lub bez argumentów, tego typu
-funkcja dostępna jest w bibliotece [wu.js](https://fitzgen.github.io/wu.js/)
-i nazywa się **autoCurry**. Zachęcam do zajrzenia do kodu źródłowego biblioteki.
+Powyższa funkcja `curry` nie zadziała, gdy uruchomimy wynikową funkcje dwa razy.
+Zamieściłem ją tutaj jako prosty przykład. Poprawną funkcje `curry`. wraz z prostymi
+testami, możesz znaleźć na [Codepen](https://codepen.io/jcubic/pen/LxrOYP?editors=0011).
 
 ## Funkcje bez nazwy
 
