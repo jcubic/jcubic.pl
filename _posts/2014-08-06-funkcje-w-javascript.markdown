@@ -3,7 +3,7 @@ layout: post
 title:  "Wszystko co powinieneś wiedzieć o funkcjach w JavaScript"
 date:   2014-08-06 10:35:19
 categories:
-tags: javascript front-end funkcje
+tags: javascript funkcje
 author: jcubic
 description: W niniejszym artykule przedstawię wszystkie aspekty używania funkcji w języku JavaScript.
 sitemap:
@@ -11,7 +11,7 @@ sitemap:
 related:
   -
     name: Trampolina czyli rekurencja bez stosu
-    url: /2018/01/09/trampolina-czyli-rekurencja-bez-stosu.html
+    url: /2018/01/trampolina-czyli-rekurencja-bez-stosu.html
 ---
 
 W niniejszym artykule przedstawię wszystkie aspekty używania funkcji w języku
