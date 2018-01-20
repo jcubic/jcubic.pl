@@ -5,7 +5,7 @@ date:   2018-01-09 18:02:58+0100
 categories:
 tags:  javascript funkcje
 author: jcubic
-description: Pisanie funkcji rekurencyjnych może być wyzwaniem. Możesz się spotkać z wyjątkiem "Maximum call stack size exceeded" oto sposób na rozwiązanie tego problemu.
+description: Pisanie funkcji rekurencyjnych może być wyzwaniem. Możesz się spotkać z wyjątkiem 'Maximum call stack size exceeded' oto sposób na rozwiązanie tego problemu.
 related:
   -
     name: Wszystko co powinieneś wiedzieć o funkcjach w JavaScript
