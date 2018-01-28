@@ -21,7 +21,7 @@
           {% endif %}
         {{ post.content | split: '<!-- more -->' | first | xml_escape }}
         &lt;br/&gt;
-        *** To tylko fragment wpisu! Kliknij na tytuł aby przeczytać całość.
+        &lt;a href=&quot;{{ site.url }}{{ site.baseurl }}&quot;&gt;Kliknij aby zobaczyć cały artykuł&lt;/a&gt;
         </description>
         <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
         <link>{{ post.url | prepend: site.baseurl | prepend: site.url }}</link>

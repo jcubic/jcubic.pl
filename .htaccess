@@ -1,7 +1,7 @@
 Options +Indexes
 Options +FollowSymLinks
 
-AddHandler cgi-script .cgi
+#AddHandler cgi-script .cgi
 
 Header set Access-Control-Allow-Origin "*"
 Header set Access-Control-Allow-Methods: "GET"
