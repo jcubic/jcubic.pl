@@ -4,7 +4,7 @@ email: "jcubic@jcubic.pl"
 twitter: "jcubic"
 description: "Blog Głównie JavaScript - informacje najczęściej na temat Front-Endu, głównie o języku JavaScript, ale także na temat nowych api HTML5 czy CSS."
 baseurl: ""
-url: "http://jcubic.pl"
+url: "https://jcubic.pl"
 source_url: "https://github.com/jcubic/jcubic.pl/blob/master/"
 
 exclude:
@@ -18,7 +18,7 @@ include:
 exclude: [Gemfile, Gemfile.lock, Makefile, clean, date]
 users:
     jcubic:
-        url: "http://jcubic.pl/jakub-jankiewicz/"
+        url: "https://jcubic.pl/jakub-jankiewicz/"
         name: "Jakub Jankiewicz"
         twitter: "jcubic"
 

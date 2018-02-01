@@ -9,7 +9,7 @@ Pod GNU/Linuxem Ubuntu lub dystrybucjami pochodnymi wykonaj:
 ```
 sudo apt-get install ruby ruby-dev python
 sudo gem install jekyll jekyll-paginate pygments.rb
-sudo pip install pygments-lexer-babylon
+pip install pygments-lexer-babylon
 ```
 
 to install tidy html5 you need to use execute this:
@@ -33,6 +33,6 @@ $ make
 
 wynikowa strona znajdzie się w katalogu _site.
 
-Copyright (C) 2014-2017 [Jakub T Jankiewicz](http://jcubic.pl/jakub-jankiewicz)
+Copyright (C) 2014-2018 [Jakub Jankiewicz](http://jcubic.pl/jakub-jankiewicz)
 
 Wszystko na licencji [CC-BY-SA](http://creativecommons.org/licenses/by-sa/4.0/), chyba że napisano inaczej

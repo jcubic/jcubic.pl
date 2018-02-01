@@ -1,7 +1,12 @@
 Options +Indexes
 Options +FollowSymLinks
 
+#Options +ExecCGI
 #AddHandler cgi-script .cgi
+
+RewriteCond %{HTTPS} off
+RewriteCond %{SERVER_NAME} ^jcubic.pl
+RewriteRule ^(.*)$ https://%{SERVER_NAME}%{REQUEST_URI} [L,R]
 
 Header set Access-Control-Allow-Origin "*"
 Header set Access-Control-Allow-Methods: "GET"
