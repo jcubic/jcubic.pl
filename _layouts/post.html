@@ -8,6 +8,9 @@ layout: default
     {% if page.image %}
     <div>
       <img src="{{ page.image.url | prepend: site.baseurl | prepend: site.url }}" alt="{{ page.image.alt }}"/>
+      {% if page.image.attribution %}
+      <p>{{ page.image.attribution }}</p>
+      {% endif %}
     </div>
     {% endif %}
 </div>
