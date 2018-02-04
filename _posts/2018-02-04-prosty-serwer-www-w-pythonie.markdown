@@ -60,7 +60,7 @@ server.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
 {% endhighlight %}
 
 Ale powyższy skrypt obsługuje zabicie procesu za pomocą `CTRL+C` dlatego nie powinno się
-to wydarzyć.
+to wydarzyć, chyba że wasz kod wyrzuci wyjątek.
 
 Następnym krokiem, jest napisanie głównej funkcji, która jest przekazywana jako parametr
 `target` do konstruktora `threading.Thread`. Funkcja `handler` wygląda tak:
@@ -105,9 +105,9 @@ header_re = re.compile(r"(GET|POST) ([^ ]+) HTTP/", re.I)
 
 W funkcji `handler` użyto kilku funkcji pomocniczych:
 
-1. `get_request_data`, która czyta wszystkie dane z gniazda i zwraca listę. W naszym programie
-   używamy tylko pierwszego elementu czyli nagłówków protokołu HTTP. Drugim elementem byłyby
-   dane wysłane za pomocą metody POST.
+* `get_request_data`, która czyta wszystkie dane z gniazda i zwraca listę. W naszym programie
+  używamy tylko pierwszego elementu czyli nagłówków protokołu HTTP. Drugim elementem byłyby
+  dane wysłane za pomocą metody POST.
 
 {% highlight python %}
 def get_request_data(socket):
@@ -120,8 +120,8 @@ def get_request_data(socket):
     return "".join(request).split("\r\n\r\n", 1)
 {% endhighlight %}
 
-2. funkcja `status`, która zwraca status HTTP wraz z kodem, tylko dwa rodzaje 404 oraz 200
-   zostały użyte.
+* funkcja `status`, która zwraca status HTTP wraz z kodem, tylko dwa rodzaje 404 oraz 200
+  zostały użyte.
 
 {% highlight python %}
 def status(code):
@@ -131,7 +131,7 @@ def status(code):
         return "404 Not Found"
 {% endhighlight %}
 
-3. `response` - funkcja, która zwraca odpowiedź HTTP jako ciąg znaków:
+* `response` - funkcja, która zwraca odpowiedź HTTP jako ciąg znaków:
 
 {% highlight python %}
 def response(code, data, mime = "text/plain", headers = None):
@@ -148,10 +148,10 @@ def response(code, data, mime = "text/plain", headers = None):
     return res % (status(code), headers, data)
 {% endhighlight %}
 
-4. `mime` jest ostatnią użytą funkcją, która zwraca MIME czyli typ, który jest rozpoznawany
-   przez przeglądarkę, np. `text/html`. Typ MIME informuje przeglądarkę, jak wyświetlić
-   odpowiedź z serwera. Nic nie stoi na przeszkodzie aby np. wyświetlić stronę z rozszerzeniem
-   html jako obrazek. (jeśli nie jest to obrazek, to wyświetli się ikonką niepoprawnego obrazka)
+* `mime` jest ostatnią użytą funkcją, która zwraca MIME czyli typ, który jest rozpoznawany
+  przez przeglądarkę, np. `text/html`. Typ MIME informuje przeglądarkę, jak wyświetlić
+  odpowiedź z serwera. Nic nie stoi na przeszkodzie aby np. wyświetlić stronę z rozszerzeniem
+  html jako obrazek. (jeśli nie jest to obrazek, to wyświetli się ikonka niepoprawnego obrazka)
 
 {% highlight python %}
 def mime(fname):
@@ -170,7 +170,7 @@ def mime(fname):
         return 'text/plain'
 {% endhighlight %}
 
-Zamiast funkcji można by też użyć słownika, którego kluczami byłyby rozszerzenia, natomiast
+Zamiast funkcji, można by też użyć słownika, którego kluczami byłyby rozszerzenia, natomiast
 wartościami typy MIME.
 
 Jest to przykład prostego serwera, który może być przydatny w debugowaniu, można go rozszerzyć
@@ -181,5 +181,5 @@ dodam że nie testowałem).
 Cały skrypt można znaleźć na [githubie](https://gist.github.com/jcubic/e322940752f50b6c1cec08166fd5ea4b).
 
 Więcej informacji o protokole HTTP, możesz znaleźć w
-[Wikipedii](https://pl.wikipedia.org/wiki/HTTP), natomiast pełny opis protokołu
+[Wikipedii](https://pl.wikipedia.org/wiki/HTTP), natomiast pełny opis protokołu,
 można znaleźć w [dokumentach RFC](https://www.rfc-editor.org/search/rfc_search_detail.php?title=http&pubstatus%5B%5D=Any&pub_date_type=any) (ang. Request for Comments).
