@@ -105,9 +105,10 @@ header_re = re.compile(r"(GET|POST) ([^ ]+) HTTP/", re.I)
 
 W funkcji `handler` użyto kilku funkcji pomocniczych:
 
-* `get_request_data`, która czyta wszystkie dane z gniazda i zwraca listę. W naszym programie
-  używamy tylko pierwszego elementu czyli nagłówków protokołu HTTP. Drugim elementem byłyby
-  dane wysłane za pomocą metody POST.
+
+1. `get_request_data`, która czyta wszystkie dane z gniazda i zwraca listę. W naszym programie
+   używamy tylko pierwszego elementu czyli nagłówków protokołu HTTP. Drugim elementem byłyby
+   dane wysłane za pomocą metody POST.
 
 {% highlight python %}
 def get_request_data(socket):
@@ -120,7 +121,8 @@ def get_request_data(socket):
     return "".join(request).split("\r\n\r\n", 1)
 {% endhighlight %}
 
-* funkcja `status`, która zwraca status HTTP wraz z kodem, tylko dwa rodzaje 404 oraz 200
+{:start="2"}
+2. funkcja `status`, która zwraca status HTTP wraz z kodem, tylko dwa rodzaje 404 oraz 200
   zostały użyte.
 
 {% highlight python %}
@@ -131,7 +133,8 @@ def status(code):
         return "404 Not Found"
 {% endhighlight %}
 
-* `response` - funkcja, która zwraca odpowiedź HTTP jako ciąg znaków:
+{:start="3"}
+3. `response` - funkcja, która zwraca odpowiedź HTTP jako ciąg znaków:
 
 {% highlight python %}
 def response(code, data, mime = "text/plain", headers = None):
@@ -148,10 +151,11 @@ def response(code, data, mime = "text/plain", headers = None):
     return res % (status(code), headers, data)
 {% endhighlight %}
 
-* `mime` jest ostatnią użytą funkcją, która zwraca MIME czyli typ, który jest rozpoznawany
-  przez przeglądarkę, np. `text/html`. Typ MIME informuje przeglądarkę, jak wyświetlić
-  odpowiedź z serwera. Nic nie stoi na przeszkodzie aby np. wyświetlić stronę z rozszerzeniem
-  html jako obrazek. (jeśli nie jest to obrazek, to wyświetli się ikonka niepoprawnego obrazka)
+{:start="4"}
+4. `mime` jest ostatnią użytą funkcją, która zwraca MIME czyli typ, który jest rozpoznawany
+   przez przeglądarkę, np. `text/html`. Typ MIME informuje przeglądarkę, jak wyświetlić
+   odpowiedź z serwera. Nic nie stoi na przeszkodzie aby np. wyświetlić stronę z rozszerzeniem
+   html jako obrazek. (jeśli nie jest to obrazek, to wyświetli się ikonka niepoprawnego obrazka)
 
 {% highlight python %}
 def mime(fname):
