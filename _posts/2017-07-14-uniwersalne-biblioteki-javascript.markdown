@@ -3,7 +3,7 @@ layout: post
 title:  "Uniwersalne biblioteki JavaScript czyli UMD"
 date:   2017-07-14 17:08:37+0200
 categories:
-tags:  javascript node.js umd modules
+tags:  javascript node.js umd biblioteki
 author: jcubic
 description: UMD czyli Uniwersalna definicja modułu (ang. Universal Module Definition) jest to sposób tworzenia definicji modułu/biblioteki JavaScript aby była możliwość korzystania z niej wszędzie.
 sitemap:

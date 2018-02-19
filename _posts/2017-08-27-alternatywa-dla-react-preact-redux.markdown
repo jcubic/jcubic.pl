@@ -3,7 +3,7 @@ layout: post
 title:  "Alternatywa dla React/Preact + Redux"
 date:   2017-08-27 17:22:10+0200
 categories:
-tags:  javascript react preact redux
+tags:  javascript react preact redux biblioteki
 author: jcubic
 description: React lub Preact + Redux to bardzo silne połączenie, dające możliwość tworzenia skomplikowanych aplikacji typu SPA, ale istnieje alternatywa, która zajmuje tylko 1KB
 sitemap:

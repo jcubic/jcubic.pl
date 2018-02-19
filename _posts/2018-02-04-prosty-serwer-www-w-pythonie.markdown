@@ -13,7 +13,7 @@ image:
 
 Python posiada wbudowany serwer www, który można uruchomić za pomocą polecenia
 `python -m SimpleHTTPServer 8000`, który serwuje pliki z aktualnego katalogu.
-W tym artykule natomiast, przestawię jak napisać prosty serwer HTTP za pomocą gniazd
+W tym artykule natomiast, przedstawię jak napisać prosty serwer HTTP za pomocą gniazd
 (ang. sockets).
 
 

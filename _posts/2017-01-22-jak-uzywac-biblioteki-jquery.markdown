@@ -3,7 +3,7 @@ layout: post
 title:  "Jak używać biblioteki jQuery"
 date:   2017-01-22 18:01:42+01:00
 categories:
-tags:  css jQuery javascript
+tags:  css jQuery javascript biblioteki
 author: jcubic
 description: Biblioteka jQuery, mimo wzrastającej popularności takich frameworków jak Angular czy React, nadal jest najczęściej wykorzystywaną biblioteką JavaScript na stronach internetowych
 sitemap:
