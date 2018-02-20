@@ -1,9 +1,9 @@
 ---
 layout: post
 title:  "5 Bibliotek do przetwarzania obiektów JavaScript i JSON"
-date:   2018-02-04 19:06:32+0100
+date:   2018-02-18 11:42:07+0100
 categories:
-tags:  json biblioteki
+tags:  json biblioteki javascript
 author: jcubic
 description: 5 Bibliotek i narzędzi operujących na obiektach JavaScript i JSON.
 image:
