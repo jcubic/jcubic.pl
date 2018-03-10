@@ -157,6 +157,10 @@ p, .tags {
 .meta img {
     width: 100%;
 }
+.meta .attribution {
+    margin: 0;
+    font-size: 12px;
+}
 h2, h3 {
     font-family: 'Scada', sans-serif;
     font-weight: bold;
