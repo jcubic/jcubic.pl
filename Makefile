@@ -4,7 +4,7 @@ tidy:
 	@./clean
 
 build:
-	@jekyll build
+	@bundle exec jekyll build
 
 install:
 	bundle install

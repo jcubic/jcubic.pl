@@ -8,15 +8,34 @@ Pod GNU/Linuxem Ubuntu lub dystrybucjami pochodnymi wykonaj:
 
 ```
 sudo apt-get install ruby ruby-dev python
-sudo gem install jekyll jekyll-paginate pygments.rb
+sudo gem install jekyll jekyll-paginate pygments.rb bundler
 pip install pygments-lexer-babylon
+cd jcubic.pl
+make install
 ```
 
-to install tidy html5 you need to use execute this:
+dla dystrybucji fedora
+
+```
+sudo dnf install ruby ruby-devel python gcc gcc-c++
+```
+Plus komendy gem, pip oraz make install
+
+aby zaisntalować tidy html5 musisz zainstalować cmake i xsltproc:
 
 ```
 sudo apt-get install cmake xsltproc
+```
 
+lub
+
+```
+sudo dnf install cmake libxslt
+```
+
+i potem
+
+```
 git clone https://github.com/htacg/tidy-html5
 cd tidy-html5/build/cmake
 cmake ../.. -DCMAKE_BUILD_TYPE=Release
@@ -28,7 +47,7 @@ sudo make install
 Aby zbudować stronę po zainstalowania programu jekyll oraz tidy-html5 wywołaj
 
 ```
-$ make
+make
 ```
 
 wynikowa strona znajdzie się w katalogu _site.
