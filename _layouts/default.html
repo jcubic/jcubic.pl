@@ -15,16 +15,7 @@
     </div>
     {% include footer.html %}
     {% include cookie.html %}
-    <script type="text/javascript">
-     var styles = document.querySelectorAll('link[rel="stylesheet"][media="only x"]');
-     [].forEach.call(styles, function(style) {
-         style.addEventListener('load', function load() {
-             console.log('load');
-             style.removeEventListener('load', load);
-             style.media = 'all';
-         });
-     });
-    </script>
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,400italic,700,700italic|Scada:700italic,700&amp;subset=latin,latin-ext' rel='stylesheet' type='text/css'/>
     <script src="{{ '/script.js' | prepend: site.baseurl | prepend: site.url }}"></script>
     <!-- Piwik -->
     <script type="text/javascript">
