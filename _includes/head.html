@@ -30,13 +30,14 @@
     <!--[if IE]>
     <script src="https://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-    <link href='https://fonts.googleapis.com/css?family=Lora:400,400italic,700,700italic|Scada:700italic,700&amp;subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,400italic,700,700italic|Scada:700italic,700&amp;subset=latin,latin-ext' rel='stylesheet' type='text/css' media="only x"/>
     <!--
     <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,400italic|Scada:700italic,400,700&amp;subset=latin,latin-ext' rel='stylesheet' type='text/css'>
     -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
-    <link rel="stylesheet" href="{{ "/css/style.css" | prepend: site.baseurl | prepend: site.url }}">
+    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}"/>
+    <link rel="stylesheet" href="{{ "/css/base.css" | prepend: site.baseurl | prepend: site.url }}" />
+    <link rel="stylesheet" href="{{ "/css/style.css" | prepend: site.baseurl | prepend: site.url }}" media="only x"/>
     <link rel="alternate" type="application/rss+xml" title="Głównie JavaScript - RSS" href="{{ '/feed.xml' | prepend: site.baseurl | prepend: site.url }}"/>
 
     <!-- meta tags -->
@@ -61,6 +62,10 @@
     {% if page.image %}
     <link rel="preload" href="{{ page.image.url | prepend: site.baseurl | prepend: site.url }}" as="image" />
     {% endif %}
+    <link rel="preconnect" href="https://www.facebook.com"/>
+    <link rel="preconnect" href="https://pagead2.googlesyndication.com"/>
+    <link rel="preconnect" href="https://piwik.jcubic.pl"/>
+
     <!--
     <script type="text/javascript" data-cfasync="false" src="//dsms0mj1bbhn4.cloudfront.net/assets/pub/shareaholic.js" data-shr-siteid="6d503d9769a878adc55ebee4698e4230" async="async"></script>
     -->
