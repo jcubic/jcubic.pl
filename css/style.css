@@ -299,16 +299,16 @@ ul.tags:before {
 .pagination li:first-child {
     margin-left: -5px;
 }
+.pagination li a, .pagination li a:visited {
+    text-decoration: none;
+    color: #152032;
+}
 .pagination li .active, .pagination li a:hover {
     color: #e9e9e8;
     background-color: #152032;
 }
 .pagination li a, .pagination li span {
     padding: 1px 4px;
-    color: #152032;
-}
-.pagination li a, .pagination li a:visited {
-    text-decoration: none;
     color: #152032;
 }
 .pagination li a {
