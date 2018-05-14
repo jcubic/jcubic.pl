@@ -9,3 +9,10 @@ document.getElementById('ok').addEventListener('click', function() {
     localStorage.setItem('cookie', true);
     hide_baner();
 });
+// jekyll+pygment+babylon lexer don't support async await
+var nx = document.querySelectorAll('.nx');
+for (var i in nx) {
+    if (['async', 'await'].indexOf(nx[i].innerHTML) !== -1) {
+        nx[i].classList.add('kd');
+    }
+}
