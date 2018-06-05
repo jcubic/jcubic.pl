@@ -9,7 +9,7 @@ Pod GNU/Linuxem Ubuntu lub dystrybucjami pochodnymi wykonaj:
 ```
 sudo apt-get install ruby ruby-dev python
 sudo gem install jekyll jekyll-paginate pygments.rb bundler
-pip install pygments-lexer-babylon
+sudo pip install pygments-lexer-babylon
 cd jcubic.pl
 make install
 ```

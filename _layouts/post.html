@@ -3,7 +3,13 @@ layout: default
 ---
 <div class="meta">
     {% assign author = site.users[page.author] %}
-    <h3>{{ page.date | date: "%Y-%m-%d" }} by <a href="{{ author.url }}">{{ author.name }}</a></h3>
+    <h3>
+      <time datetime="{{ page.date | date: '%Y-%m-%dT%H:%M:%S.%L%z' }}">
+        {{ page.date | date: "%Y-%m-%d" }}
+      </time>
+      by
+      <a href="{{ author.url }}">{{ author.name }}</a>
+    </h3>
     <h2>{{ page.title }}</h2>
     {% if page.image %}
     <div>

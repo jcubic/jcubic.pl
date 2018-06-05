@@ -187,6 +187,9 @@ ul.tags:before {
 .share iframe, .share .twitter, #facebook-share {
     float: left;
 }
+.fb_iframe_widget > span {
+    height: 234px !important;
+}
 .share .twitter {
     margin-right: 20px;
 }

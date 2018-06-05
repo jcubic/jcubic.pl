@@ -13,8 +13,13 @@ RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 RewriteCond %{HTTP_HOST} ^mail.jcubic.pl
 RewriteRule ^(.well-known.*)$ /mail/$1 [L]
 
+<FilesMatch "^.*(?<!proxy\.php)$">
 Header set Access-Control-Allow-Origin "*"
 Header set Access-Control-Allow-Methods: "GET"
+</FilesMatch>
+<FilesMatch "^proxy\.php$">
+Header unset Access-Control-Allow-Origin
+</FilesMatch>
 
 #don't open in browser
 AddType application/octet-stream .doc

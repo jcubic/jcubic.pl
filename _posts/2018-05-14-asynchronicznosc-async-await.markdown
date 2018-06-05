@@ -155,12 +155,11 @@ getUsers(function(users) {
 });
 {% endhighlight %}
 
-Słowo kluczowe `await`, może być wywoływane, tylko i wyłącznie wewnątrz funkcja `async`. O ile mnie pamięć nie myli
-było chyba coś o użyciu `await` poza funkcją `async`, ale chyba ten pomysł upadł, co może potwierdzić wpis:
-[Top-level await is a footgun](https://gist.github.com/Rich-Harris/0b6f317657f5167663b493c722647221).  Wiem tylko o
-jednej możliwości użycia `await` poza funkcja `async`. Można go użyć w konsoli devtools przeglądarki Google
-Chrome/Chromium.  Dlatego aby skorzystać z `await` "luzem", trzeba utworzyć IIFE (ang. Immediately Invoked Function
-Expression), czyli funkcję anonimową, którą od razu wywołujemy:
+Słowo kluczowe `await`, może być wywoływane, tylko i wyłącznie wewnątrz funkcja `async`. Ale istnieje
+[propozycja aby dodać możliwość użycia go bez async](https://github.com/tc39/proposal-top-level-await). Z chwilą
+pisania tego artykułu, wiem tylko o jednej możliwości użycia `await` poza funkcja `async`. Można go użyć w konsoli
+devtools przeglądarki Google Chrome/Chromium.  Dlatego aby skorzystać z `await` "luzem", trzeba utworzyć IIFE
+(ang. Immediately Invoked Function Expression), czyli funkcję anonimową, którą od razu wywołujemy:
 
 {% highlight javascript %}
 (async function() {

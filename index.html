@@ -11,7 +11,13 @@ sitemap:
         <header>
             {% assign author = site.users[post.author] %}
             <h2><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h2>
-            <h3>{{ post.date | date: "%Y-%m-%d" }} by <a href="{{ author.url | prepend: site.baseurl }}">{{ author.name }}</a></h3>
+            <h3>
+              <time datetime="{{ post.date | date: '%Y-%m-%dT%H:%M:%S.%L%z' }}">
+                {{ post.date | date: "%Y-%m-%d" }}
+              </time>
+              by
+              <a href="{{ author.url }}">{{ author.name }}</a>
+            </h3>
         </header>
         <div class="excerpt">
             {{ post.content | split: '<!-- more -->' | first }}
