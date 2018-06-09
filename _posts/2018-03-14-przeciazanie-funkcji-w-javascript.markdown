@@ -7,8 +7,9 @@ tags:  javascript funkcje
 author: jcubic
 description: JavaScript nie udostępnia przeciążania funkcji, oto jak można dodać taką funkcje do języka.
 image:
-  url: "/img/family.jpg"
-  alt: "Rodzina 4 osobowa"
+  url: "/img/overload.jpg"
+  alt: "Przeładowana ciężarówka w Indiach"
+  attribution: Peter Krimbacher, źródło [wikimedia commons](https://commons.wikimedia.org/wiki/File:India-Truck-Overload.j) licencja [CC-BY-SA](https://creativecommons.org/licenses/by-sa/4.0/)
 ---
 
 JavaScript jest językiem dynamicznym, w którym funkcje mogą przyjmować wiele argumentów. Nie ma w nim jednak

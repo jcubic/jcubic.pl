@@ -9,6 +9,7 @@ author: jcubic
 image:
   url: "/img/old-pocket-watch.jpg"
   alt: "Stary zegarek kieszonkowy"
+  attribution: Źródło [maxpixel.net](https://www.maxpixel.net/Old-Digits-Time-Clock-Pocket-Watch-Nostalgia-2039822) licencja [CC0 Public Domain](https://creativecommons.org/publicdomain/zero/1.0/)
 related:
   -
     name: "Asynchroniczność cz. 1: Obietnice"
