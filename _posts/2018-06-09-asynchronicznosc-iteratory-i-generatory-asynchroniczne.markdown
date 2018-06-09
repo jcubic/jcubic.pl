@@ -6,7 +6,6 @@ categories:
 description: Wpis opisjuący nową propozycje ECMAScript ES2018, w której można używać asynchronicznych generatorów i iteratorów tak jak zwykłych ich odpowiedników za pomocą pętli for..await..of
 tags: javascript es2018 asynchroniczność
 author: jcubic
-
 image:
   url: "/img/old-pocket-watch.jpg"
   alt: "Stary zegarek kieszonkowy"

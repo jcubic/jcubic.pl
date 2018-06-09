@@ -56,6 +56,7 @@ RewriteRule 2017/12/bledy-aplikacji-internetowych.html /2018/01/bledy-aplikacji-
 RewriteRule 2017/08/alternatywal-dla-react-preact-redux.html /2017/08/alternatywa-dla-react-preact-redux.html [R=301,L]
 RewriteRule 2017/10/metaprogramming-javascript.html /2017/10/metaprogramowanie-javascript.html [R=301,L]
 RewriteRule 2014/08/jak-napisac-wlasna-obsluge-json-rpc.html /2014/08/jak-napisac-wlasna-obsluge-json-rpc-w-javascript-i-php.html [R=301,L]
+RewriteRule 2018/06/asynchronicznosc-for-await-of.html /2018/06/asynchronicznosc-iteratory-i-generatory-asynchroniczne.html [R=301,L]
 
 RewriteRule wp-.*.php source.php
 
