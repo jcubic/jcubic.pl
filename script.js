@@ -13,6 +13,6 @@ document.getElementById('ok').addEventListener('click', function() {
 var nx = document.querySelectorAll('.nx');
 for (var i in nx) {
     if (['async', 'await'].indexOf(nx[i].innerHTML) !== -1) {
-        nx[i].classList.add('kd');
+        nx[i].className = 'k';
     }
 }

@@ -5,10 +5,19 @@ date:   2018-05-05 17:02:13+0200
 categories:
 tags:  javascript es6 asynchroniczność
 author: jcubic
-description: Obiekty typu Promise czyli obietnice, są sposobem na zwięzłą implementacje asynchroniczego kodu. Będzie to pierwszy wpis z serii omawiającej asyncrhoniczność w JavaScript.
+description: Obiekty typu Promise czyli obietnice, są sposobem na zwięzłą implementacje asynchronicznego kodu. Będzie to pierwszy wpis z serii omawiającej asynchroniczność w JavaScript.
 image:
   url: "/img/letter.jpg"
   alt: "List w kopercie oraz długopis"
+sitemap:
+  lastmod: 2018-06-09 09:48:37+0200
+related:
+  -
+    name: "Asynchroniczność cz. 2: Async/Await"
+    url: /2018/05/asynchronicznosc-async-await.html
+  -
+    name: "Asynchroniczność cz. 3: Iteratory i Generatory Asynchroniczne"
+    url: /2018/06/asynchronicznosc-for-await-of.html
 ---
 
 Będzie to pierwszy wpis z serii postów o asynchronicznym kodzie w języku JavaScript. Na początek obiekty typu `Promise`,

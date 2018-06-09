@@ -9,6 +9,15 @@ description: Async/Await to dwa nowe słowa kluczowe, dodane do jezyka JavaScrip
 image:
   url: "/img/ducks.jpg"
   alt: "Drewniane, kolorowe, stylizowane kaczki ustawione w kolejce"
+sitemap:
+  lastmod: 2018-06-09 09:48:37+0200
+related:
+  -
+    name: "Asynchroniczność cz. 1: Obietnice"
+    url: /2018/05/asynchronicznosc-obietnice.html
+  -
+    name: "Asynchroniczność cz. 3: Iteratory i Generatory Asynchroniczne"
+    url: /2018/06/asynchronicznosc-for-await-of.html
 ---
 
 Async/Await to dwa nowe słowa kluczowe dodane do języka JavaScript w wersji

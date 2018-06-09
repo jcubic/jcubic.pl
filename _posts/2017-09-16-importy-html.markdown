@@ -131,7 +131,7 @@ Dzięki importom HTML możemy w łatwy sposób dołączać web komponenty
                      (this.getAttribute('name') || '?') + '</b>';
   };
 
-  document.registerElement('czesc', {prototype: proto});
+  document.registerElement('hello-user', {prototype: proto});
 </script>
 {% endhighlight %}
 
@@ -142,7 +142,7 @@ Dołączając taki import mamy możliwość skorzystania z nowego taga `czesc`
 <link ref="import" href="komponent.html"/>
 </head>
 <body>
-  <czesc name="Jan"><czesc>
+  <hello-user name="Jan"><hello-user>
 </body>
 {% endhighlight %}
 
