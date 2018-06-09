@@ -21,9 +21,6 @@ related:
     url: /2018/06/iteratory-i-generatory.html
 ---
 
-Aby iterować po tablicach, do tej pory w języku JavaScript były dostępne dwa rodzaje pętli `for`,
-obie iterowały po indeksach. Nowością jest nowy operator `of` oraz jego użycie w pętli `for`.
-
 W tym wpisie opiszę nową propozycje ECMAScript, która wejdzie do standardu ES2018, której już można używać w
 przeglądarkach oraz node (wersje przed v10 wymagają opcji `--harmony-async-iteration`), jaką jest asynchroniczna
 pętla `for..of` za pomocą słowa kluczowego `await`.
