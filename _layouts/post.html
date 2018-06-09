@@ -22,17 +22,24 @@ layout: default
 </div>
 <div class="content">
     {{ content }}
-
-    {% if page.related %}
-        <div class="related">
-          <p>Zobacz też:</p>
-          <ul>
-            {% for page in page.related %}
+    <div class="related">
+      {% if page.related %}
+        <p>Zobacz też:</p>
+        <ul>
+          {% for page in page.related %}
             <li><a href="{{page.url}}">{{page.name}}</a></li>
-            {% endfor %}
-          </ul>
-        </div>
-    {% endif %}
+          {% endfor %}
+        </ul>
+      {% endif %}
+      {% if site.related %}
+        <p>Oraz Blogi o podobnej tematyce:</p>
+        <ul>
+          {% for blog in site.related %}
+            <li><a href="{{ blog.url }}"{% if blog.title %} title="{{ blog.title }}"{% endif %}>{{blog.text}}</a></li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+    </div>
     {% if page.tags %}
         <ul class="tags">
         {% for tag in page.tags %}
