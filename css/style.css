@@ -99,6 +99,9 @@ section > p {
     text-align: justify;
     text-indent: 2em;
 }
+figure {
+    margin: 0;
+}
 section > p code {
     white-space: nowrap;
 }

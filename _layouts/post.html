@@ -4,20 +4,24 @@ layout: default
 <div class="meta">
     {% assign author = site.users[page.author] %}
     <h3>
-      <time datetime="{{ page.date | date: '%Y-%m-%dT%H:%M:%S.%L%z' }}">
+      <time itemprop="pubdate" datetime="{{ page.date | date: '%Y-%m-%dT%H:%M:%S.%L%z' }}">
         {{ page.date | date: "%Y-%m-%d" }}
       </time>
       by
-      <a href="{{ author.url }}">{{ author.name }}</a>
+      <span itemscope itemtype="http://schema.org/Person">
+        <a href="{{ author.url }}" itemprop="author name url" rel="author">{{ author.name }}</a>
+      </span>
     </h3>
-    <h2>{{ page.title }}</h2>
+    <h2 itemprop="title">{{ page.title }}</h2>
     {% if page.image %}
-    <div>
+    <figure>
       <img src="{{ page.image.url | prepend: site.baseurl | prepend: site.url }}" alt="{{ page.image.alt }}"/>
       {% if page.image.attribution %}
-      <p class="attribution">{{ page.image.attribution | markdownify | remove: '<p>' | remove: '</p>' }}</p>
+      <figcaption class="attribution">
+        {{ page.image.attribution | markdownify | remove: '<p>' | remove: '</p>' }}
+      </figcaption>
       {% endif %}
-    </div>
+    </figure>
     {% endif %}
 </div>
 <div class="content">
