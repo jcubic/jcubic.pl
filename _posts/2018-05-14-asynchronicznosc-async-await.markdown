@@ -18,6 +18,9 @@ related:
   -
     name: "Asynchroniczność cz. 3: Iteratory i Generatory Asynchroniczne"
     url: /2018/06/asynchronicznosc-for-await-of.html
+  -
+    name: "Asynchroniczność cz. 4: Funkcja async jako generator"
+    url: /2018/06/asynchronicznosc-funkcja-async-jako-generator.html
 ---
 
 Async/Await to dwa nowe słowa kluczowe dodane do języka JavaScript w wersji

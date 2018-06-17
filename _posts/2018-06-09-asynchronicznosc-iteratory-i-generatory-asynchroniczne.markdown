@@ -3,7 +3,7 @@ layout: post
 title:  "Asynchroniczność cz. 3: Iteratory i Generatory Asynchroniczne"
 date:   2018-06-09 10:12:31+0200
 categories:
-description: Wpis opisjuący nową propozycje ECMAScript ES2018, w której można używać asynchronicznych generatorów i iteratorów tak jak zwykłych ich odpowiedników za pomocą pętli for..await..of
+description: Wpis opisujący nową propozycje ECMAScript ES2018, w której można używać asynchronicznych generatorów i iteratorów tak jak zwykłych ich odpowiedników za pomocą pętli for..await..of
 tags: javascript es2018 asynchroniczność
 author: jcubic
 image:
@@ -17,6 +17,9 @@ related:
   -
     name: "Asynchroniczność cz. 2: Async/Await"
     url: /2018/05/asynchronicznosc-async-await.html
+  -
+    name: "Asynchroniczność cz. 4: Funkcja async jako generator"
+    url: /2018/06/asynchronicznosc-funkcja-async-jako-generator.html
   -
     name: "Iteratory i Generatory"
     url: /2018/06/iteratory-i-generatory.html

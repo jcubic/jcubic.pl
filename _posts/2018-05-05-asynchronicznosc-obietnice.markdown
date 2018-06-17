@@ -17,7 +17,10 @@ related:
     url: /2018/05/asynchronicznosc-async-await.html
   -
     name: "Asynchroniczność cz. 3: Iteratory i Generatory Asynchroniczne"
-    url: /2018/06/asynchronicznosc-for-await-of.html
+    url: /2018/06/asynchronicznosc-for-await-of.htm
+  -
+    name: "Asynchroniczność cz. 4: Funkcja async jako generator"
+    url: /2018/06/asynchronicznosc-funkcja-async-jako-generator.html
 ---
 
 Będzie to pierwszy wpis z serii postów o asynchronicznym kodzie w języku JavaScript. Na początek obiekty typu `Promise`,
