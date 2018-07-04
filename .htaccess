@@ -7,7 +7,7 @@ Options +FollowSymLinks
 RewriteEngine on
 
 RewriteCond %{HTTPS} off
-RewriteCond %{HTTP_HOST} ^jcubic.pl
+RewriteCond %{HTTP_HOST} ^jcubic.pl$
 RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
 RewriteCond %{HTTP_HOST} ^mail.jcubic.pl
