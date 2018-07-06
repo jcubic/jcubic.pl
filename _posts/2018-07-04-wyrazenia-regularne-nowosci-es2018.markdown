@@ -26,42 +26,42 @@ Jest to flaga oznaczająca Unicode, która jeśli użyta udostępnia, wewnątrz 
 
 * wyrażenie `\u{kod unicode}` np.:
 
-```
+{% highlight jsnext %}
 '☃'.match(/\u{2603}/u);
-```
+{% endhighlight %}
 
 * właściwości tekstu `\p{ }` (ang. Unicode property escape):
 
 To nowy sposób dopasowywania do zakresu znaków. Działa podobnie jak wyrażenie `\u{}`, z
 tym że możemy przekazywać nazwy określające jakie znaki chcemy dopasować, np:
 
-```
+{% highlight jsnext %}
 /^\p{ASCII}+$/u.test('AABB');
 // true
 /^\p{Script=Hebrew}+\s\p{Script=Hebrew}+$/u.test('העלא וועלט');
 // true
 /^[\p{Letter}\p{White_Space}]+$/u.test('Γειά σου Κόσμε');
 // true
-```
+{% endhighlight %}
 
 Wielkość znaków właściwości ma znaczenie.
 
 * flaga u wpływa także na operator kropki czyli dowolnego znaku:
 
-```
+{% highlight jsnext %}
 var string = 'a💩b';
 
 console.log(/a.b/.test(string));
 // false
 console.log(/a.b/u.test(string));
 // true
-```
+{% endhighlight %}
 
 Znak &#x1f4a9; (Pile of Poo) znajduje się w tzw. przestrzenie Symboli Astralnych
 (ang. astral symbols), tzn. że w języku JavaScript ich kod zawiera dwa znaki są to
 tzw. pary surogatów (ang. surrogate pairs).
 
-{% highlight javascript %}
+{% highlight jsnext %}
 '💩'.length;
 // 2
 {% endhighlight %}
@@ -77,7 +77,7 @@ Więcej o Unicode, w języku JavaScript, możesz przeczytać w artykule Mathiasa
 
 Do tej pory można było pobierać grupy tylko za pomocą indeksów czyli:
 
-{% highlight javascript %}
+{% highlight jsnext %}
 var input = 'var foo = bar;';
 var re = /var ([A-Za-z]+)\s*=\s*([^;]+);/;
 var m = input.match(re);
@@ -102,7 +102,7 @@ Asercje do przodu (ang. Look Ahead) są w Wyrażeniach Regularnych od dawna (mo�
 
 Ich składnia wygląda tak `(?=wyrażenie)` oraz `(?!wyrażenie)` np:
 
-{% highlight javascript %}
+{% highlight jsnext %}
 var re = /var ([A-Za-z]+)(?=\s*=\s*[0-9]+(?:.[0-9]+)?)/;
 var input = 'var foo = 10;';
 input.match(re);
@@ -120,7 +120,7 @@ wsteczne.
 
 Przykład:
 
-{% highlight javascript %}
+{% highlight jsnext %}
 var re = /(?<!var[^=]\s*=\s*)([0-9]+(?:.[0-9]+)?);/;
 'var foo = 10;'.match(re);
 // null
@@ -137,23 +137,23 @@ To nowa funkcja, niestety nie zaimplementowana jeszcze w żadnej przeglądarce, 
 Chrome (z chwilą pisanie tego artykułu), ale trzeba ją włączyć ręczenie. Funkcja ta
 upraszcza wielokrotne dopasowanie, przykład:
 
-```
+{% highlight jsnext %}
 const regex = /\b\p{ASCII_Hex_Digit}+\b/gu;
 const string = 'Ten tekst zawiera znaki DEADBEEF CAFE AAFFBB';
 let match;
 while (match = regex.exec(string)) {
    console.log(match);
 }
-```
+{% endhighlight %}
 
 ten kod zadziała ponieważ funkcja exec zachowuje indeks poprzedniego wywołania, ale tylko
 gdy wyrażenie ma flagę g, inaczej będzie to nieskończona pętla. Ten kod można jednak
 zastąpić funkcją matchAll:
 
-```
+{% highlight jsnext %}
 const regex = /\b\p{ASCII_Hex_Digit}+\b/gu;
 const string = 'Ten tekst zawiera znaki DEADBEEF CAFE AAFFBB';
 for (const match of string.matchAll(regex)) {
    console.log(match);
 }
-```
+{% endhighlight %}
