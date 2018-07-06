@@ -57,8 +57,8 @@ console.log(/a.b/u.test(string));
 // true
 {% endhighlight %}
 
-Znak &#x1f4a9; (Pile of Poo) znajduje się w tzw. przestrzenie Symboli Astralnych
-(ang. astral symbols), tzn. że w języku JavaScript ich kod zawiera dwa znaki są to
+Znak &#x1f4a9; (Pile of Poo) znajduje się w tzw. przestrzeni Symboli Astralnych
+(ang. astral symbols), tzn. że w języku JavaScript ich kod zawiera dwa znaki, są to
 tzw. pary surogatów (ang. surrogate pairs).
 
 {% highlight jsnext %}
