@@ -5,6 +5,7 @@ function hide_baner() {
 if (localStorage.getItem('cookie')) {
     hide_baner();
 }
+window.onload = function() {
 document.getElementById('ok').addEventListener('click', function() {
     localStorage.setItem('cookie', true);
     hide_baner();
@@ -16,3 +17,4 @@ for (var i in nx) {
         nx[i].className = 'k';
     }
 }
+};

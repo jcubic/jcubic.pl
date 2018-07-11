@@ -8,7 +8,18 @@ author: jcubic
 image:
   url: "/img/electronics.jpg"
   alt: "Wnętrze urządzenia elektronicznego"
+  attribution: Jakub Jankiewicz, żródło [Flickr](https://www.flickr.com/photos/jcubic/40113661275/), licencja [CC BY-SA](https://creativecommons.org/licenses/by-sa/2.0/)
+sitemap:
+  lastmod: 2018-07-10 10:11:30+0200
+related:
+  -
+    name: "Asynchroniczność cz. 3: Iteratory i Generatory Asynchroniczne"
+    url: /2018/06/asynchronicznosc-for-await-of.htm
+  -
+    name: "Generatory i Iteratory wyższego poziomu"
+    url: /2018/07/generatory-i-iteratory-wyzszego-poziomu.html
 ---
+
 Pętla `for..of` to nowy rodzaj pętli. Pętla ta działa tak jak zwykła pętla `for..in` przy czym elementy w zmiennej
 to nie indeksy jak w przypadku `for..in` tylko wartości. Razem z tą pętlą wprowadzono do języka nowy protokół czyli
 iteratory oraz cukier syntaktyczny czyli generatory.

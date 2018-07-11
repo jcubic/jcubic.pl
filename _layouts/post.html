@@ -1,106 +1,110 @@
 ---
 layout: default
 ---
-<div class="meta">
-    {% assign author = site.users[page.author] %}
-    <h3>
-      <time itemprop="pubdate" datetime="{{ page.date | date: '%Y-%m-%dT%H:%M:%S.%L%z' }}">
-        {{ page.date | date: "%Y-%m-%d" }}
-      </time>
-      by
-      <span itemscope itemtype="http://schema.org/Person">
-        <a href="{{ author.url }}" itemprop="author name url" rel="author">{{ author.name }}</a>
-      </span>
-    </h3>
-    <h2 itemprop="title">{{ page.title }}</h2>
-    {% if page.image %}
-    <figure>
-      <img src="{{ page.image.url | prepend: site.baseurl | prepend: site.url }}" alt="{{ page.image.alt }}"/>
-      {% if page.image.attribution %}
-      <figcaption class="attribution">
-        {{ page.image.attribution | markdownify | remove: '<p>' | remove: '</p>' }}
-      </figcaption>
-      {% endif %}
-    </figure>
-    {% endif %}
-</div>
-<div class="content">
-    {{ content }}
-    <div class="related">
-      {% if page.related %}
-        <p>Zobacz też:</p>
-        <ul>
-          {% for page in page.related %}
-            <li><a href="{{page.url}}">{{page.name}}</a></li>
-          {% endfor %}
-        </ul>
-      {% endif %}
-      {% if site.related %}
-        <p>{% if page.related %}Oraz {% else %}Zobacz też {% endif %}Blogi o podobnej tematyce:</p>
-        <ul>
-          {% for blog in site.related %}
-            <li><a href="{{ blog.url }}"{% if blog.title %} title="{{ blog.title }}"{% endif %}>{{blog.text}}</a></li>
-          {% endfor %}
-        </ul>
-      {% endif %}
+<section>
+    <div class="meta">
+        {% assign author = site.users[page.author] %}
+        <h3>
+            <time itemprop="pubdate" datetime="{{ page.date | date: '%Y-%m-%dT%H:%M:%S.%L%z' }}">
+                {{ page.date | date: "%Y-%m-%d" }}
+            </time>
+            by
+            <span itemscope itemtype="http://schema.org/Person">
+                <a href="{{ author.url }}" itemprop="author name url" rel="author">{{ author.name }}</a>
+            </span>
+        </h3>
+        <h2 itemprop="title">{{ page.title }}</h2>
+        {% if page.image %}
+        <figure>
+            <img src="{{ page.image.url | prepend: site.baseurl | prepend: site.url }}" alt="{{ page.image.alt }}"/>
+            {% if page.image.attribution %}
+            <figcaption class="attribution">
+                {{ page.image.attribution | markdownify | remove: '<p>' | remove: '</p>' }}
+            </figcaption>
+            {% endif %}
+        </figure>
+        {% endif %}
     </div>
-    {% if page.tags %}
+</section>
+<section>
+    <div class="content">
+        {{ content }}
+        <div class="related">
+            {% if page.related %}
+            <p>Zobacz też:</p>
+            <ul>
+                {% for page in page.related %}
+                <li><a href="{{page.url}}">{{page.name}}</a></li>
+                {% endfor %}
+            </ul>
+            {% endif %}
+            {% if site.related %}
+            <p>{% if page.related %}Oraz {% else %}Zobacz też {% endif %}Blogi o podobnej tematyce:</p>
+            <ul>
+                {% for blog in site.related %}
+                <li><a href="{{ blog.url }}"{% if blog.title %} title="{{ blog.title }}"{% endif %}>{{blog.text}}</a></li>
+                {% endfor %}
+            </ul>
+            {% endif %}
+        </div>
+        {% if page.tags %}
         <ul class="tags">
-        {% for tag in page.tags %}
-          <li><a href="/tag/{{tag | downcase | url_encode}}/">{{ tag }}</a></li>
-        {% endfor %}
+            {% for tag in page.tags %}
+            <li><a href="/tag/{{tag | downcase | url_encode}}/">{{ tag }}</a></li>
+            {% endfor %}
         </ul>
-    {% endif %}
-    <div class="source">
-        <a href="{{ page.path | prepend: site.source_url}}">
-          źródło strony
-        </a> (aby zobaczyć kod na githubie musisz kliknąć przycisk raw)
-    </div>
-    <div class="share">
-      <div class="twitter">
-        <a class="twitter-share-button"
-           href="https://twitter.com/share"
-           data-text="{{ page.title }}"
-           data-url="{{ post.url | prepend: site.baseurl }}"
-           data-via="jcubic">
-          Udostępnij
-        </a>
-      </div>
-      <div id="facebook-share" class="share-button hidden">
-        <div class="icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" class="_1pbq" color="#ffffff">
-            <path fill="#ffffff" fill-rule="evenodd" d="M8 14H3.667C2.733 13.9 2 13.167 2 12.233V3.667A1.65 1.65 0 0 1 3.667 2h8.666A1.65 1.65 0 0 1 14 3.667v8.566c0 .934-.733 1.667-1.667 1.767H10v-3.967h1.3l.7-2.066h-2V6.933c0-.466.167-.9.867-.9H12v-1.8c.033 0-.933-.266-1.533-.266-1.267 0-2.434.7-2.467 2.133v1.867H6v2.066h2V14z"></path></svg>
+        {% endif %}
+        <div class="source">
+            <a href="{{ page.path | prepend: site.source_url}}">
+                źródło strony
+            </a> (aby zobaczyć kod na githubie musisz kliknąć przycisk raw)
         </div>
-        <div class="label">
-          Udostępnij
+        <div class="share">
+            <div class="twitter">
+                <a class="twitter-share-button"
+                   href="https://twitter.com/share"
+                   data-text="{{ page.title }}"
+                   data-url="{{ post.url | prepend: site.baseurl }}"
+                   data-via="jcubic">
+                    Udostępnij
+                </a>
+            </div>
+            <div id="facebook-share" class="share-button hidden">
+                <div class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" class="_1pbq" color="#ffffff">
+                        <path fill="#ffffff" fill-rule="evenodd" d="M8 14H3.667C2.733 13.9 2 13.167 2 12.233V3.667A1.65 1.65 0 0 1 3.667 2h8.666A1.65 1.65 0 0 1 14 3.667v8.566c0 .934-.733 1.667-1.667 1.767H10v-3.967h1.3l.7-2.066h-2V6.933c0-.466.167-.9.867-.9H12v-1.8c.033 0-.933-.266-1.533-.266-1.267 0-2.434.7-2.467 2.133v1.867H6v2.066h2V14z"></path></svg>
+                </div>
+                <div class="label">
+                    Udostępnij
+                </div>
+            </div>
+            <iframe src="//www.facebook.com/plugins/like.php?href={{ page.url | prepend: site.baseurl | prepend: site.url | cgi_escape }}&amp;width&amp;layout=button_count&amp;action=like&amp;show_faces=false&amp;share=false&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; height:35px;"></iframe>
+            <script type="text/javascript">
+             var button = document.getElementById('facebook-share');
+             button.classList.remove('hidden');
+             button.addEventListener('click', function(e) {
+                 var location = window.location.href.replace('?' + window.location.search, '');
+                 var url = 'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(location);
+                 window.open(url, "pop", "width=600, height=400, scrollbars=no");
+             });
+            </script>
         </div>
-      </div>
-      <iframe src="//www.facebook.com/plugins/like.php?href={{ page.url | prepend: site.baseurl | prepend: site.url | cgi_escape }}&amp;width&amp;layout=button_count&amp;action=like&amp;show_faces=false&amp;share=false&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; height:35px;"></iframe>
-      <script type="text/javascript">
-       var button = document.getElementById('facebook-share');
-       button.classList.remove('hidden');
-       button.addEventListener('click', function(e) {
-           var location = window.location.href.replace('?' + window.location.search, '');
-           var url = 'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(location);
-           window.open(url, "pop", "width=600, height=400, scrollbars=no");
-       });
-      </script>
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+         /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+         var disqus_shortname = 'gjavascript'; // required: replace example with your forum shortname
+         var disqus_identifier = "post_{{ page.date | date: '%Y-%m-%d' }}";
+         var disqus_url = "http://jcubic.pl{{ page.url }}";
+         /* * * DON'T EDIT BELOW THIS LINE * * */
+         setTimeout(function() {
+             if (!location.href.match(/jcubic.pl/)) {
+                 return;
+             }
+             var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+             dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+             (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+         }, 0);
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
     </div>
-    <div id="disqus_thread"></div>
-    <script type="text/javascript">
-        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-        var disqus_shortname = 'gjavascript'; // required: replace example with your forum shortname
-        var disqus_identifier = "post_{{ page.date | date: '%Y-%m-%d' }}";
-        var disqus_url = "http://jcubic.pl{{ page.url }}";
-        /* * * DON'T EDIT BELOW THIS LINE * * */
-        setTimeout(function() {
-            if (!location.href.match(/jcubic.pl/)) {
-                return;
-            }
-            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-        }, 0);
-    </script>
-    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-</div>
+</section>

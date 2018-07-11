@@ -98,3 +98,13 @@ header nav li {
 header nav li:last-child {
     margin: 0;
 }
+section.intro {
+    width: 100%;
+    max-width: calc(100% - 70px);
+    margin-top: 30px;
+}
+section.intro p {
+    font-family: Lora, serif;
+    font-size: 1.4em;
+    line-height: 1.3em;
+}
