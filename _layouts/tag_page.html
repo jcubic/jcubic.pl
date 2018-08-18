@@ -1,14 +1,16 @@
 ---
 layout: default
 ---
-<header>
-  <h2>{{ page.tag }}</h2>
-</header>
-<ul>
-  {% for post in page.posts %}
-  <li>
-    <a href="{{ post.url }}">{{ post.title }}</a>
-    <span>({{ post.date | date: "%Y-%m-%d" }} | Tagi: {{ post | tags }})</span>
-  </li>
-{% endfor %}
-</ul>
+<section>
+  <header>
+    <h2>{{ page.tag }}</h2>
+  </header>
+  <ul>
+    {% for post in page.posts %}
+    <li>
+      <a href="{{ post.url }}">{{ post.title }}</a>
+      <span>({{ post.date | date: "%Y-%m-%d" }} | Tagi: {{ post | tags }})</span>
+    </li>
+    {% endfor %}
+  </ul>
+</section>

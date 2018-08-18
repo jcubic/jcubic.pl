@@ -23,6 +23,9 @@ related:
   -
     name: "Iteratory i Generatory"
     url: /2018/06/iteratory-i-generatory.html
+  -
+    name: "Generatory i Iteratory wyższego poziomu"
+    url: /2018/07/generatory-i-iteratory-wyzszego-poziomu.html
 ---
 
 W tym wpisie opiszę nową propozycje ECMAScript, która wejdzie do standardu ES2018, której już można używać w
