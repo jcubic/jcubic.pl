@@ -1,4 +1,18 @@
-
+.content ins.adsbygoogle, .content ins.adsbygoogle * {
+    width: 100% !important;
+}
+.content .ads {
+    margin-left: 20px;
+}
+.content .ads, ins.adsbygoogle, ins.adsbygoogle * {
+    box-sizing: border-box;
+}
+.content .related {
+    margin-top: 20px;
+}
+.content > p:last-of-type {
+    margin-bottom: 0;
+}
 footer p {
     margin: 0;
     text-align: center;
