@@ -116,6 +116,9 @@ section > p {
 figure {
     margin: 0;
 }
+h2 + figure, h3 + figure {
+    margin-top: 15px;
+}
 section > p code {
     white-space: nowrap;
 }
