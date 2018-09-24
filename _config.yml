@@ -21,6 +21,9 @@ users:
         url: "https://jcubic.pl/jakub-jankiewicz/"
         name: "Jakub Jankiewicz"
         twitter: "jcubic"
+    magda:
+        url: "http://www.frontend-con.io/"
+        name: "Magda Kulczycka"
 
 related:
   -

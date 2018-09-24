@@ -3,7 +3,7 @@ layout: post
 title:  "5 Parserów i Generatorów Parserów w JavaScript"
 date:   2017-11-05 11:06:47+0100
 categories:
-tags:  javascript języki parsery biblioteki
+tags:  javascript języki parsery biblioteki linki
 author: jcubic
 description: Jeśli myślałeś kiedyś o tym, aby napisać własny mini język, albo zadałeś sobie pytanie 'jak napisać parser w języku JavaScript?', odpowiedź brzmi...
 ---

@@ -13,6 +13,10 @@
 .content > p:last-of-type {
     margin-bottom: 0;
 }
+#sponsors {
+    margin: 40px 0;
+    text-align: center;
+}
 footer p {
     margin: 0;
     text-align: center;

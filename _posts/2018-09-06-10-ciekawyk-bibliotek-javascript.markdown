@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "10 Ciekawych Bibliotek w JavaScript - Linki #2"
+title:  "10 Ciekawych Bibliotek w JavaScript"
 date:   2018-09-06 21:24:29+0200
 categories:
 tags:  javascript linki biblioteki

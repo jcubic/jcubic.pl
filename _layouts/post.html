@@ -26,21 +26,25 @@ layout: default
         {% endif %}
     </div>
     <div class="content">
-        {% assign splitted = content | split: '<!-- more -->' %}
-        {{ splitted | first }}
-        <div class="ads">
-            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-            <ins class="adsbygoogle"
-                 style="display:block; text-align:center;"
-                 data-ad-layout="in-article"
-                 data-ad-format="fluid"
-                 data-ad-client="ca-pub-6153701670678834"
-                 data-ad-slot="3082200741"></ins>
-            <script type="text/javascript">
-             (adsbygoogle = window.adsbygoogle || []).push({});
-            </script>
-        </div>
-        {{ splitted[1] }}
+        {% if page.noads %}
+           {{content}}
+        {% else %}
+          {% assign splitted = content | split: '<!-- more -->' %}
+          {{ splitted | first }}
+          <div class="ads">
+              <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+              <ins class="adsbygoogle"
+                   style="display:block; text-align:center;"
+                   data-ad-layout="in-article"
+                   data-ad-format="fluid"
+                   data-ad-client="ca-pub-6153701670678834"
+                   data-ad-slot="3082200741"></ins>
+              <script type="text/javascript">
+               (adsbygoogle = window.adsbygoogle || []).push({});
+              </script>
+          </div>
+          {{ splitted[1] }}
+        {% endif %}
         <div class="related">
             {% if page.related %}
             <p>Zobacz też:</p>

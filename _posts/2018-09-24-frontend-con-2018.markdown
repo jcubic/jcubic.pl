@@ -1,0 +1,39 @@
+---
+layout: post
+title:  "FRONTEND CON 2018 zbliża się wielkimi krokami. Wśród gwiazd m.in. Harry Roberts"
+date:   2018-09-24 19:05:22+0200
+categories:
+tags:  javascript css konferencja
+author: magda
+description: Jeszcze tylko kilka tygodni dzieli nas od Frontend Con 2018!
+image:
+  url: "/img/front-end-con.jpg"
+  alt: "Grafika przedstawiająca technologie front-end jako superbaterów"
+  attribution: (c) Copyright 2018 FrontEnd Connect
+noads: true
+---
+
+Jeszcze tylko kilka tygodni dzieli nas od Frontend Con 2018! Patrząc na duży sukces zeszłorocznej edycji i listę ekspertów zaproszonych w tym roku spodziewamy się wydarzenia na światowym poziomie.
+
+Frontend Con jest jedną z największych konferencji technicznych w Europie, w pełni poświęconej technologiom frontendowym. Tegoroczna edycja odbędzie się 4 i 5 grudnia, w kultowych wnętrzach warszawskiego Pałacu Kultury i Nauki.
+
+<!-- more -->
+
+Line-up konferencji jest spektakularny. Wystąpi kilkudziesięciu ekspertów o międzynarodowej renomie. Zobaczymy m.in. Harry’ego Robertsa, który opowie o wpływie wykorzystania zewnętrznych dostawców (czcionki, analityka, reklamy etc.) na wydajność tworzonych stron, Asima Hussaina, który opowie o możliwościach, jakie daje wykorzystanie mechanizmów sztucznej inteligencji w aplikacjach javascriptowych, a Nader Dabit zaprezentuje sposoby tworzenia bezserwerowych aplikacji webowych w oparciu o AWS Amplify. Wszystkich gwiazd i tematów prelekcji nie sposób tu wymienić, znajdziecie je na [www.frontend-con.io](https://www.frontend-con.io).
+
+Nie zabraknie oczywiście sesji live coding, lightening talks, panelu Q&A, spotkań kuluarowych z prelegentami, czy okrągłych stołów technologicznych (ang. Technology Round Table). Stolik technologiczny to rozwiązanie, które zebrało bardzo dobre recenzje przy okazji zeszłorocznej edycji Frontend Con i polega na utworzeniu dla wybranych rozwiązań i frameworków frontendowych (np. Angular, Vue, React, GraphQL) stolika eksperckiego. Podczas sesji każdy z uczestników, w swobodnej atmosferze rozmów kuluarowych będzie mógł podejść do wybranych ekspertów, porozmawiać o swoich doświadczeniach, codziennych wyzwaniach oraz uzyskać poradę dotyczącą problemów które spotyka w swoich projektach.
+
+Pierwszy dzień konferencji zamyka legendarne już Frontend Heroes Afterparty.
+
+Konferencji towarzyszą jednodniowe warsztaty techniczne Tech Master Class, które odbędą się 3 grudnia. Poprowadzą je m.in. Damian Dulisz z zespołu Vue.js, Kristijan „Kitze” Ristovski z React Academy, Katerina Skroumpelou z Upstream, czy wspomniani wcześniej Harry Roberts, Asim Hussain i Nader Dabit.
+
+Zainteresowanie konferencją i warsztatami technicznymi jest duże. „Znakomita większość uczestników to polscy miłośnicy frontendu, ale część biletów na konferencję i warsztaty towarzyszące Frontend Con 2018 wykupiły firmy zagraniczne” – mówi Emilia Łuszkiewicz, współorganizująca konferencję – „Mamy zapytania z różnych krajów, szczególnie z Europy Zachodniej i Centralnej. Polacy mogą być dumni, że Frontend Con stał się ważnym punktem na międzynarodowej mapie konferencji technicznych”.
+
+Tegoroczna edycja Frontend Con stanie się kolejnym krokiem milowym dla ciągle rosnącej popularności technologii frontendowych. Jest to ważna inicjatywa dla całego community, które w dobie nieustannie zmieniających się trendów projektowych ma potrzebę śledzenia nowinek technicznych i wymiany swoich doświadczeń z kolegami z branży. Podczas tych dwóch dni każdy znajdzie wiele ciekawych tematów dla siebie, nawiąże nowe kontakty branżowe i weźmie udział w wielu interesujących dyskusjach kuluarowych z ludźmi podzielającymi jego pasję.
+
+Konferencja odbędzie się 4 – 5 grudnia 2018 w Pałacu Kultury i Nauki, pl. Defilad 1 w Warszawie. Warsztaty Tech Master Class odbędą się 3 grudnia 2018. Bilety można zakupić na stronie [www.frontend-con.io](https://www.frontend-con.io).
+
+Szerszych informacji udziela Organizator:
+
+* Tel: (+48) 608 348 444
+* Email: hello@frontend-connect.io
