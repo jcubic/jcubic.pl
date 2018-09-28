@@ -5,7 +5,7 @@ date:   2018-09-28 21:52:29+0200
 categories:
 tags: javascript es6
 author: jcubic
-description: Wpis opisujący zakres blokowy w ES6 (ES2015), który zastępuje w większości przypadków IIFE.
+description: Wpis opisujący zakres blokowy, czyli słowa kluczowe let oraz const w ES6 (ES2015), który zastępuje w większości przypadków IIFE.
 image:
  url: "/img/let-const.png"
  alt: "Grafika ze słowem kluczowe let oraz const"

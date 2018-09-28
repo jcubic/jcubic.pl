@@ -50,4 +50,12 @@
     </url>
     {% endunless %}
   {% endfor %}
+  {% assign tags = site | tagged %}
+  {% for tag in tags %}
+    <url>
+      <loc>{{ tag | prepend: '/tag/' | prepend: site.baseurl | prepend: site.url }}/</loc>
+      <changefreq>weekly</changefreq>
+      <priority>0.3</priority>
+    </url>
+  {% endfor %}
 </urlset>
