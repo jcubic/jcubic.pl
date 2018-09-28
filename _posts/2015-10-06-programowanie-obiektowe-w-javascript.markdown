@@ -96,3 +96,8 @@ Student.prototype.speak = function() {
     console.log("I'm speaking");
 };
 {% endhighlight %}
+
+**UWAGA**: Z chwilą pisania tego artykułu istniał tylko jeden sposób definicji klas w JavaScript.
+Poprzez dziedziczenie prototypowe. W ES6 doszło nowe słowo kluczowe class za pomocą istnieje
+możliwość tworzenie klas tak jak to jest realizowane w C++ lub Java. Z drobnymi różnicami jest to tylko
+cukier syntaktyczny na mechanizm prototypów.

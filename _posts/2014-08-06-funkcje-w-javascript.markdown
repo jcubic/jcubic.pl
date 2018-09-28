@@ -7,11 +7,14 @@ tags: javascript funkcje
 author: jcubic
 description: W niniejszym artykule przedstawię wszystkie aspekty używania funkcji w języku JavaScript.
 sitemap:
-  lastmod: 2018-01-09 18:06:41+0100
+  lastmod: 2018-09-28 20:42:45+0200
 related:
   -
-    name: Trampolina czyli rekurencja bez stosu
-    url: /2018/01/trampolina-czyli-rekurencja-bez-stosu.html
+    name: "Trampolina czyli rekurencja bez stosu"
+    url: "/2018/01/trampolina-czyli-rekurencja-bez-stosu.html"
+  -
+    name: "Przeciążanie funkcji i metod w JavaScript"
+    url: "/2018/03/przeciazanie-funkcji-w-javascript.html"
 ---
 
 W niniejszym artykule przedstawię wszystkie aspekty używania funkcji w języku
@@ -425,3 +428,11 @@ var jan_name = jan.getName.bind(jan);
 {% endhighlight %}
 
 Dzięki funkcji **bind** możemy przekazywać metody jako funkcje do innych funkcji.
+
+
+**UWAGA**: Z chwilą pisania tego artykułu istniał tylko jeden sposób definicji zmiennych, czyli za pomocą słowa kluczowego
+`var`. W ES6 doszły słowa kluczowe `let` oraz `const`, które w części przypadków eliminują potrzebę stosowania IIFE.
+Ponieważ wystarczy sam blok `{ }`, jak ma to miejsce np. w językach C++ albo Java. Więcej informacji o `let` oraz `const`
+we wpisie [Zakres blokowy w JavaScript](/2018/09/zakres-blokowy-javascript.html).
+
+*[IIFE]: Immediately-Invoked Function Expression
