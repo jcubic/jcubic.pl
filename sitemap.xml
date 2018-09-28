@@ -54,6 +54,9 @@
   {% for tag in tags %}
     <url>
       <loc>{{ tag | prepend: '/tag/' | prepend: site.baseurl | prepend: site.url }}/</loc>
+      {% for post in site.tags[tag] limit:1 %}
+      <lastmod>{{ post.date | date_to_xmlschema }}</lastmod>
+      {% endfor %}
       <changefreq>weekly</changefreq>
       <priority>0.3</priority>
     </url>
