@@ -5,10 +5,17 @@ date:   2017-09-08 22:56:53+0200
 categories:
 tags:  javascript praca
 author: jcubic
-description: Oto 5 pytań jakie bym zdał na rozmowie kwalifikacyjnej z języka JavaScript
+description: Oto 5 pytań jakie bym zdał na rozmowie rekrutacyjnej z języka JavaScript
+related:
+  -
+    name: "15 Pytań na rozmowę rekrutacyjną z React.js"
+    url: "/2018/10/pytania-rekrutacyjne-z-react.js.html"
+sitemap:
+  lastmod: 2018-10-04 19:36:59+0200
 ---
 
-Kilka dni temu zostałem poproszony o przygotowanie 3 pytań, dla kandydata na programistę Full Stack, z języka JavaScript. Przygotowałem 4 i potem dodałem jeszcze jedno. Oto one.
+Kilka dni temu zostałem poproszony o przygotowanie 3 pytań, dla kandydata na programistę Full Stack, z języka
+JavaScript. Przygotowałem 4 i potem dodałem jeszcze jedno. Oto one.
 
 <!-- more -->
 

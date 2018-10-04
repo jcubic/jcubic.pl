@@ -12,7 +12,7 @@ image:
 ---
 
 React.js jest to bardzo popularny framework JavaScript stworzony przez Facebook-a. W tym wpisie przedstawię 15 pytań,
-które uważam, mógłby się pojawić na rozmowie kwalifikacyjnej, tym razem z React.js. Gdybym musiał rekrutować,
+które uważam, mogłyby się pojawić na rozmowie kwalifikacyjnej, tym razem z React.js. Gdybym musiał rekrutować,
 to pewnie bym zadał któreś z tych pytań albo wszystkie.
 
 <!-- more -->
