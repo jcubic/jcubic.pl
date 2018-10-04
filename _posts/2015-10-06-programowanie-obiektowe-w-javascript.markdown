@@ -83,6 +83,21 @@ W powyższym przykładzie prototypem obiektów Student jest obiekt Person, dlate
 instancje obiektu Student posiadają dostęp do metody run zdefiniowanej w obiekcie
 Person. Obiekty utworzone za pomocą konstruktora Student dziedziczą po obiekcie Person.
 
+Jeśli nie chcesz aby wykonał się kod w konstruktorze Person, możesz utworzyć nowy obiekt bez konstruktora używając:
+
+{% highlight javascript %}
+Student.prototype = Object.create(Person.prototype);
+{% endhighlight %}
+
+
+W obu przypadkach gdy zapytamy czy obiekt `Student` jest typu Person otrzymamy prawdę:
+
+{% highlight javascript %}
+var student = new Student();
+console.lot(student instanceof Student); // true
+console.lot(student instanceof Person); // true
+{% endhighlight %}
+
 Prototypy tworzą łańcuch (ang. chain). W momencie odwołania do właściwości lub metody
 sprawdzane jest czy dana właściwość czy metoda dostępna jest w danym obiekcie, potem
 sprawdzany jest ciąg prototypów aż do obiektu `Object`, jeśli dana właściwość lub
@@ -98,6 +113,6 @@ Student.prototype.speak = function() {
 {% endhighlight %}
 
 **UWAGA**: Z chwilą pisania tego artykułu istniał tylko jeden sposób definicji klas w JavaScript.
-Poprzez dziedziczenie prototypowe. W ES6 doszło nowe słowo kluczowe class za pomocą istnieje
-możliwość tworzenie klas tak jak to jest realizowane w C++ lub Java. Z drobnymi różnicami jest to tylko
-cukier syntaktyczny na mechanizm prototypów.
+Poprzez dziedziczenie prototypowe. W ES6 doszło nowe słowo kluczowe `class`, za pomocą którego istnieje
+możliwość tworzenie klas tak jak to jest realizowane w językach C++ lub Java. Z drobnymi różnicami jest to tylko
+cukier syntaktyczny dla mechanizmu prototypów.
