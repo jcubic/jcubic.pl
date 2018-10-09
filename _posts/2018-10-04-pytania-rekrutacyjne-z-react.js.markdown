@@ -9,6 +9,8 @@ description: Tym razem 15 pytań na rozmowę kwalifikacyjną z React.js
 image:
  url: "/img/reactjs-interview.jpg"
  alt: "Grafika wektorowa przedstwiająca osobę z laptopem i logo React.js"
+ width: 800
+ height: 464
 ---
 
 React.js jest to bardzo popularny framework JavaScript stworzony przez Facebook-a. W tym wpisie przedstawię 15 pytań,

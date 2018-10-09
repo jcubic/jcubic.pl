@@ -6,6 +6,9 @@ tidy:
 build:
 	@bundle exec jekyll build
 
+watch:
+	@bundle exec jekyll serve
+
 install:
 	bundle install
 
