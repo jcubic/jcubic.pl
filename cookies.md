@@ -1,7 +1,7 @@
 ---
 layout: page
 title:  "Ciasteczka"
-description: Użycie ciasteczek na naszej stronie
+description: "Lista ciasteczek użytych na stronach Głównie JavaScript"
 ---
 
 Na stronie Głównie JavaScript używam ciasteczek:

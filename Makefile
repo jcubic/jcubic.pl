@@ -10,7 +10,7 @@ watch:
 	@bundle exec jekyll serve
 
 install:
-	bundle install
+	@bundle install
 
 now:
 	@date +"%F %T%:z"
