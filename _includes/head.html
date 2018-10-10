@@ -84,4 +84,14 @@
     {% endif %}
     {% endif %}
     <meta name="generator" content="Jekyll {{ jekyll.version }}"/>
+    {% if paginator.previous_page %}
+    {% if paginator.previous_page == 1 %}
+    <link rel="prev" href="{{ '/' | prepend: site.baseurl | prepend: site.url }}" />
+    {% else %}
+    <link rel="prev" href="{{ '/page' | prepend: site.baseurl | prepend: site.url }}{{ paginator.previous_page }}/" />
+    {% endif %}
+    {% endif %}
+    {% if paginator.next_page %}
+    <link rel="next" href="{{ '/page' | prepend: site.baseurl | prepend: site.url }}{{ paginator.next_page }}/"/>
+    {% endif %}
 </head>

@@ -48,7 +48,7 @@ sitemap:
                 {% if paginator.previous_page == 1 %}
                 <li><a href="{{ '/' | prepend: site.baseurl | prepend: site.url }}">Poprzednia</a></li>
                 {% else %}
-                <li><a href="{{ '/page' | prepend: site.baseurl | prepend: site.url }}{{ paginator.previous_page }}">Poprzednia</a></li>
+                <li><a href="{{ '/page' | prepend: site.baseurl | prepend: site.url }}{{ paginator.previous_page }}/">Poprzednia</a></li>
                 {% endif %}
                 {% else %}
                 <li><span class="disabled">Poprzednia</span></li>
@@ -56,17 +56,17 @@ sitemap:
                 {% if paginator.page == 1 %}
                 <li><span class="active">1</span></li>
                 {% else %}
-                <li><a href="{{ '/' | prepend: site.baseurl | prepend: site.url }}">1</a></li>
+                <li><a href="{{ '/' | prepend: site.baseurl | prepend: site.url }}/">1</a></li>
                 {% endif %}
                 {% for count in (2..paginator.total_pages) %}
                 {% if count == paginator.page %}
                 <li><span class="active">{{ count }}</span></li>
                 {% else %}
-                <li><a href="{{ '/page' | prepend: site.baseurl | prepend: site.url }}{{ count }}">{{ count }}</a></li>
+                <li><a href="{{ '/page' | prepend: site.baseurl | prepend: site.url }}{{ count }}/">{{ count }}</a></li>
                 {% endif %}
                 {% endfor %}
                 {% if paginator.next_page %}
-                <li><a href="{{ '/page' | prepend: site.baseurl | prepend: site.url }}{{ paginator.next_page }}">Następna</a></li>
+                <li><a href="{{ '/page' | prepend: site.baseurl | prepend: site.url }}{{ paginator.next_page }}/">Następna</a></li>
                 {% else %}
                 <li><span class="disabled">Następna</span></li>
                 {% endif %}
