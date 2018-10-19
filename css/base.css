@@ -99,7 +99,7 @@ header nav li:last-child {
     margin: 0;
 }
 section.intro {
-    width: 100%;
+    width: calc(100% - 60px);
     max-width: calc(100% - 70px);
     margin-top: 30px;
 }
