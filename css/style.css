@@ -126,14 +126,20 @@ h2 + figure, h3 + figure {
 section > p code {
     white-space: nowrap;
 }
-section > p, section ul {
+section > p, section ul, section ol {
     font-size: 16px;
     line-height: 1.5em;
+}
+section > p code, section ul code, section ol code {
+    font-size: 14px;
 }
 section li p {
     margin: 0;
     text-indent: 0;
     text-align: justify;
+}
+section p img {
+    display: block;
 }
 section p:first-child {
     margin-top: 0;
@@ -501,3 +507,10 @@ ul.tags:before {
 .highlight .vg { color: #008080 } /* Name.Variable.Global */
 .highlight .vi { color: #008080 } /* Name.Variable.Instance */
 .highlight .il { color: #009999 } /* Literal.Number.Integer.Long */
+
+/* fix for error incss variables */
+.highlight .err, .highlight .err + .k {
+    background: transparent;
+    color: #e9e9e8;
+    font-weight: normal;
+}

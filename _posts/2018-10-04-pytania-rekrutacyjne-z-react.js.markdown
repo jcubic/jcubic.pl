@@ -8,7 +8,7 @@ author: jcubic
 description: Tym razem 15 pytań na rozmowę kwalifikacyjną z React.js
 image:
  url: "/img/reactjs-interview.jpg"
- alt: "Grafika wektorowa przedstwiająca osobę z laptopem i logo React.js"
+ alt: "Grafika wektorowa przedstawiająca osobę z laptopem i logo React.js"
  width: 800
  height: 464
 ---
