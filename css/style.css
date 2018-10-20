@@ -412,6 +412,33 @@ ul.tags:before {
     .index {
         margin: 60px 1em 2em 1em;
     }
+    section ul {
+        line-height: 1em;
+    }
+    section.tag ul {
+        line-height: 1.5em;
+    }
+    section.tag li > span {
+        display: flex;
+        flex-direction: row;
+    }
+    section.tag span.label {
+        padding: 3px 5px;
+        width: 140px;
+        white-space: pre;
+    }
+    section.tag header {
+        margin-left: 30px;
+    }
+    section.tag span.tags {
+        line-height: 1em;
+    }
+    section.tag li > a {
+        padding: 10px;
+    }
+    section.tag span.tags a {
+        padding: 10px 5px 10px 10px;
+    }
 }
 @media (max-width: 340px) {
     header h1 {
@@ -433,6 +460,7 @@ ul.tags:before {
     }
     header h1 a {
         padding-left: 8px;
+        display: inline;
     }
 }
 @media (max-width: 320px) {
