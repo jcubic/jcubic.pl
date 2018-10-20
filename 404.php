@@ -1,8 +1,7 @@
 <?php
 header("HTTP/1.0 404 Not Found");
 header_remove("X-Powered-By");
-?>
-<!DOCTYPE HTML>
+?><!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8"/>
@@ -12,7 +11,8 @@ header_remove("X-Powered-By");
     <!--[if lt IE 9]>
     <script src="https://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE9.js"></script>
     <![endif]-->
-    <link rel="stylesheet" href="https://jcubic.pl/css/error.css" type="text/css" media="screen"/>
+    <link rel="stylesheet" href="css/error.css" type="text/css" media="screen"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
 <body>
     <header id="logo"><a href="https://jcubic.pl/"><img src="https://jcubic.pl/img/logo-blue.png" alt="jcubic logo"/></a></header>
@@ -21,7 +21,7 @@ header_remove("X-Powered-By");
             <div id="code">404</div>
             <div id="message">File Not Found</div>
         </header>
-        <p>Sorry, but the file "<?= $_SERVER['REQUEST_URI']; ?>"
+        <p>Sorry, but the file "<?= preg_replace("%/%", "/<wbr/>", $_SERVER['REQUEST_URI']); ?>"
    was not found on the <?= $_SERVER['HTTP_HOST']; ?> server.</p>
     </section>
     <footer>Copyright &copy; <?php  echo date('Y'); ?> Jakub Jankiewicz</footer>

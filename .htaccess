@@ -27,7 +27,7 @@ AddType application/octet-stream .doc
 AddType application/vnd.ms-fontobject eot
 AddType font/ttf                      ttf
 AddType font/otf                      otf
-AddType font/x-woff                   woff
+AddType application/font-woff         woff
 AddType image/svg+xml                 svg
 
 AddType application/vnd.google-earth.kml+xml .kml
@@ -48,6 +48,8 @@ RewriteRule ^/?map.xml$ /sitemap.xml [R=301,L]
 RewriteRule biwascheme/repl.html http://www.biwascheme.org/ [R=301,L]
 RewriteRule biwascheme/repl.php http://www.biwascheme.org/ [R=301,L]
 
+
+
 RewriteRule ^/?poezja.php /jakub-jankiewicz/poezja.php [R=301,L]
 
 RewriteRule angular.piechart https://codepen.io/jcubic/pen/xRMGZz [R=301,L]
@@ -57,6 +59,7 @@ RewriteRule 2017/08/alternatywal-dla-react-preact-redux.html /2017/08/alternatyw
 RewriteRule 2017/10/metaprogramming-javascript.html /2017/10/metaprogramowanie-javascript.html [R=301,L]
 RewriteRule 2014/08/jak-napisac-wlasna-obsluge-json-rpc.html /2014/08/jak-napisac-wlasna-obsluge-json-rpc-w-javascript-i-php.html [R=301,L]
 RewriteRule 2018/06/asynchronicznosc-for-await-of.html /2018/06/asynchronicznosc-iteratory-i-generatory-asynchroniczne.html [R=301,L]
+RewriteRule tag/jQuery/ /tag/jquery/ [R=301,L]
 
 RewriteRule wp-.*.php source.php
 
