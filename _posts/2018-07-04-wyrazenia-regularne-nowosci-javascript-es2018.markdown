@@ -1,13 +1,19 @@
 ---
 layout: post
-title:  "Co Nowego w Wyrażeniach Regularnych"
+title:  "Co Nowego w Wyrażeniach Regularnych w JavaScript"
 date:   2018-07-04 20:54:28+0200
 categories:
 tags: javascript regexp es2018
 author: jcubic
+sitemap:
+  lastmod: 2018-10-21 17:09:13+0200
+related:
+  -
+    name: "Podstawy Wyrażeń Regularnych w JavaScript"
+    url: "/2016/04/wyrazenia-regularne-javascript.html"
 ---
 
-Standard ES2018 czyli ES9 został zatwierdzony. W ramach tej wersji weszło kilka nowy funkcjonalności do wyrażeń regularnych czyli regexów (od angielskiego Regular Expressions).
+Standard ES2018 czyli ES9 został zatwierdzony. W ramach tej wersji weszło kilka nowy funkcjonalności do wyrażeń regularnych czyli regexów (od angielskiego Regular Expressions). W tym wpisie przedstawie co nowego weszło do wyrażeń regularnych w JavaScript.
 
 <!-- more -->
 

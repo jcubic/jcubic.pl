@@ -1,21 +1,21 @@
 ---
 layout: post
-title:  "Wyrażenia Regularne"
+title:  "Wyrażenia Regularne w JavaScript"
 date:   2016-04-10 22:04:28 +0200
 categories:
-tags:  javascript regexp functions replace split match
+tags:  javascript regexp
 author: jcubic
 description: Wyrażenia regularne są małym mini językiem dostępnym niemal w każdym języku programowania. JavaScript także udostępnia te wyrażenia.
 sitemap:
-  lastmod: 2018-07-04 20:53:30+0200
+  lastmod: 2018-10-21 17:09:13+0200
 related:
   -
-    name: "Co Nowego w Wyrażeniach Regularnych"
-    url: /2018/07/wyrazenia-regularne-nowosci-es2018.html
+    name: "Co Nowego w Wyrażeniach Regularnych w nowej wersji ES9 (ES2018)"
+    url: "/2018/07/wyrazenia-regularne-nowosci-javascript-es2018.html"
 ---
 
 Wyrażenia regularne są małym mini językiem dostępnym niemal w każdym języku programowania.
-JavaScript także udostępnia te wyrażenia. W tym artykule przedstawię pokrótce jak korzystać
+JavaScript także udostępnia te wyrażenia. W tym artykule przedstawię pokrótce, jak korzystać
 z wyrażeń regularnych w języku JavaScript.
 
 <!-- more -->

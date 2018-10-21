@@ -49,6 +49,9 @@ RewriteRule biwascheme/repl.html http://www.biwascheme.org/ [R=301,L]
 RewriteRule biwascheme/repl.php http://www.biwascheme.org/ [R=301,L]
 RewriteRule ^new/?$ /jakub-jankiewicz/ [R=301,L]
 
+RewriteRule ^2016/04/wyrazenia-regularne.html /2016/04/wyrazenia-regularne-javascript.html [R=301,L]
+RewriteRule ^2018/07/wyrazenia-regularne-nowosci-es2018.html /2018/07/wyrazenia-regularne-nowosci-javascript-es2018.html [R=301,L]
+
 
 
 RewriteRule ^/?poezja.php /jakub-jankiewicz/poezja.php [R=301,L]
