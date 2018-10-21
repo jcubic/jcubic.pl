@@ -53,7 +53,7 @@
   {% assign tags = site | tagged %}
   {% for tag in tags %}
     <url>
-      <loc>{{ tag | prepend: '/tag/' | prepend: site.baseurl | prepend: site.url }}/</loc>
+      <loc>{{ tag | downcase | prepend: '/tag/' | prepend: site.baseurl | prepend: site.url }}/</loc>
       {% for post in site.tags[tag] limit:1 %}
       <lastmod>{{ post.date | date_to_xmlschema }}</lastmod>
       {% endfor %}
