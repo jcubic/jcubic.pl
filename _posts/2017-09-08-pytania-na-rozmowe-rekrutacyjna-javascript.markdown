@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "5 pytań na rozmowę kwalifikacyjną z języka JavaScript"
+title:  "5 pytań na rozmowę rekrutacyjną z języka JavaScript"
 date:   2017-09-08 22:56:53+0200
 categories:
 tags:  javascript praca
@@ -15,17 +15,18 @@ related:
     url: "/2018/10/pytania-rekrutacyjne-css.html"
 
 sitemap:
-  lastmod: 2018-10-20 17:47:01+0200
+  lastmod: 2018-10-22 09:20:04+0200
 ---
 
-Kilka dni temu zostałem poproszony o przygotowanie 3 pytań, dla kandydata na programistę Full Stack, z języka
-JavaScript. Przygotowałem 4 i potem dodałem jeszcze jedno. Oto one.
+Kilka dni temu zostałem poproszony o przygotowanie 3 pytań, dla kandydata na programistę Full Stack, do zbliżającej
+się rozmowy kwalifikacyjnej, z języka JavaScript. Przygotowałem 4 i potem dodałem jeszcze jedno. Oto one.
 
 <!-- more -->
 
 ## Co to są domknięcia (ang. closures)?
 
 W skrócie, domknięcia są to funkcje które mają dostęp do środowiska, w którym zostały zdefiniowane.
+Pytanie z domknięć to chyba najpopularniejsze pytanie na rozmowach rekrutacyjnych.
 
 Popatrz na poniższy kod:
 

@@ -11,6 +11,12 @@ image:
  alt: "Grafika wektorowa przedstawiająca osobę z laptopem i logo React.js"
  width: 800
  height: 464
+related:
+  -
+    name: "5 Pytań na rozmowę rekrutacyjną z JavaScript"
+    url: "/2017/09/pytania-na-rozmowe-rekrutacyjna-javascript.html"
+sitemap:
+  lastmod: 2018-10-22 09:20:04+0200
 ---
 
 React.js jest to bardzo popularny framework JavaScript stworzony przez Facebook-a. W tym wpisie przedstawię 15 pytań,

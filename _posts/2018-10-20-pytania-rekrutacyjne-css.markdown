@@ -11,11 +11,18 @@ image:
  alt: "Grafika wektorowa przedstawiająca osobę z laptopem i tekst CSS w klamerkach"
  width: 800
  height: 464
+related:
+  -
+    name: "5 Pytań na rozmowę rekrutacyjną z JavaScript"
+    url: "/2017/09/pytania-na-rozmowe-rekrutacyjna-javascript.html"
+sitemap:
+  lastmod: 2018-10-22 09:20:04+0200
 ---
 
-Były już pytania rekrutacyjne z JavaScript oraz React.js, tym razem 15 pytań, jakie bym zadał na rozmowie rekrutacyjnej z CSS.
-Takie pytania mogłyby się pojawić na rozmowie kwalifikacyjnej na stanowisko Front-End developer, na pewno by były któreś
-z tych, gdybym ja rekrutował albo weryfikował kandydata.
+Były już [pytania rekrutacyjne z JavaScript](/2017/09/pytania-na-rozmowe-rekrutacyjna-javascript.html) oraz
+[pytania z React.js](/2018/10/pytania-rekrutacyjne-z-react.js.html), tym razem 15 pytań, jakie bym zadał na rozmowie
+rekrutacyjnej z CSS.  Takie pytania mogłyby się pojawić na rozmowie kwalifikacyjnej na stanowisko Front-End
+developer. Na pewno by były któreś z tych, gdybym ja rekrutował albo weryfikował kandydata.
 
 <!-- more -->
 

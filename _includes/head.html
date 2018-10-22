@@ -1,14 +1,8 @@
+<!DOCTYPE html>
 <head>
-    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-    <script type="text/javascript">
-      (adsbygoogle = window.adsbygoogle || []).push({
-        google_ad_client: "ca-pub-6153701670678834",
-        enable_page_level_ads: true
-      });
-    </script>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>{% if page.title %}{{ page.title }} - Blog: {{ site.title }}{% else %}Blog: {{ site.title }}{% endif %}</title>
+    <title>{% if page.title %}{{ page.title }} - Blog: {{ site.title }}{% else %}{{ site.title }} - Blog głównie o Front-Endzie{% endif %}</title>
     <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}"/>
     <link rel="shortcut icon" href="{{ '/favicon/favicon.ico' | prepend: site.baseurl | prepend: site.url }}">
     <link rel="apple-touch-icon" sizes="57x57" href="{{ '/favicon/apple-touch-icon-57x57.png' | prepend: site.baseurl | prepend: site.url }}">
