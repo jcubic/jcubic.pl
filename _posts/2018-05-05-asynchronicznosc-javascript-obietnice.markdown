@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Asynchroniczność cz. 1: Obietnice"
+title:  "Asynchroniczność w JavaScript cz. 1: Obietnice"
 date:   2018-05-05 17:02:13+0200
 categories:
 tags:  javascript es6 asynchroniczność

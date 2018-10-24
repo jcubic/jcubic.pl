@@ -52,8 +52,10 @@ RewriteRule ^new/?$ /jakub-jankiewicz/ [R=301,L]
 RewriteRule ^2016/04/wyrazenia-regularne.html /2016/04/wyrazenia-regularne-javascript.html [R=301,L]
 RewriteRule ^2018/07/wyrazenia-regularne-nowosci-es2018.html /2018/07/wyrazenia-regularne-nowosci-javascript-es2018.html [R=301,L]
 RewriteRule ^2017/09/pytania-na-rozmowe-kwalifikacyjna-z-javascript.html /2017/09/pytania-na-rozmowe-rekrutacyjna-javascript.html [R=301,L]
-
-
+RewriteRule ^2018/05/asynchronicznosc-obietnice.html /2018/05/asynchronicznosc-javascript-obietnice.html [R=301,L]
+RewriteRule ^2018/05/asynchronicznosc-async-await.html /2018/05/asynchronicznosc-javascript-async-await.html [R=301,L]
+RewriteRule ^2018/06/asynchronicznosc-iteratory-i-generatory-asynchroniczne.html /2018/06/asynchronicznosc-javascript-iteratory-i-generatory-asynchroniczne.html [R=301,L]
+RewriteRule ^2018/06/asynchronicznosc-funkcja-async-jako-generator.html /2018/06/asynchronicznosc-javascript-funkcja-async-jako-generator.html [R=301,L]
 
 RewriteRule ^/?poezja.php /jakub-jankiewicz/poezja.php [R=301,L]
 

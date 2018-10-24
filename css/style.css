@@ -22,6 +22,9 @@ footer p {
     text-align: center;
     font-size: 13px;
 }
+section.tag li > a {
+    font-weight: bold;
+}
 footer a, footer a:visited, section a, section a:visited, #tag-cloud a {
     color: #152032;
 }
