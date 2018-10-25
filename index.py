@@ -2,9 +2,6 @@
 import os, sys, re, sqlite3
 from bs4 import BeautifulSoup
 
-# pip install beautifulsoup4
-# pip install html5lib
-
 def get_data(html):
     """return dictionary with title url and content of the blog post"""
     tree = BeautifulSoup(html, 'html5lib')

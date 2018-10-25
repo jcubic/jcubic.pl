@@ -1,4 +1,7 @@
-all: build tidy
+all: build tidy index
+
+index:
+	@echo -e "Indexing..." && ./index.py _site > /dev/null && echo "            Done"
 
 tidy:
 	@./clean
@@ -11,6 +14,8 @@ watch:
 
 install:
 	@bundle install
+	@pip install beautifulsoup4
+	@pip install html5lib
 
 now:
 	@date +"%F %T%:z"
