@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Wyszukiwarka plików html w PHP i SQLite"
+title:  "Wyszukiwarka plików HTML w PHP i SQLite"
 date:   2018-10-25 20:19:56+0200
 categories:
 tags: php sqlite python jekyll
@@ -143,13 +143,16 @@ if (isset($_GET['q'])) {
   // bez tego nie można byłoby wyszukać %
   $query = str_replace("%", "\\%", preg_quote($_GET['q']));
   $re = "%(?>\S+\s*){0,10}(" . $query . ")\s*(?>\S+\s*){0,10}%i";
-
-  foreach ($data as $row) {
-    if (preg_match($re, $row['content'], $match)) {
-      echo '<h3><a href="' . $row['url'] . '">' . mark($query, $row['title']) . '</a></h2>';
-      // usunięcie zbędnych znaków interpunkcyjnych oraz białych znaków
-      $text = trim($match[0], " \t\n\r\0\x0B,.{}()-");
-      echo '<p>' . mark($query, $text) . '</p>';
+  if (count($data) == 0) {
+    echo "<p>Brak wyników</p>";
+  } else {
+    foreach ($data as $row) {
+      if (preg_match($re, $row['content'], $match)) {
+        echo '<h3><a href="' . $row['url'] . '">' . mark($query, $row['title']) . '</a></h2>';
+        // usunięcie zbędnych znaków interpunkcyjnych oraz białych znaków
+        $text = trim($match[0], " \t\n\r\0\x0B,.{}()-");
+        echo '<p>' . mark($query, $text) . '</p>';
+      }
     }
   }
 }
