@@ -114,7 +114,7 @@ section, aside {
 aside {
     width: 300px;
     margin-right: 10px;
-    padding-top: 60px;
+    padding: 60px 0;
 }
 section > p {
     text-align: justify;
@@ -149,32 +149,6 @@ section p:first-child {
 }
 section p:last-child {
     margin-bottom: 0;
-}
-.content, .index {
-    border-left: 5px solid #152032;
-}
-.content {
-    margin: 0 0 2em 0;
-}
-.index {
-    margin: 60px 0 2em 0;
-}
-.index h2 {
-    margin: 10px 0 0 0;
-}
-.index h2 a, .index h2 a:visited {
-   color: #152032;
-   text-decoration: none;
-}
-.index h3 {
-    margin-top: 0;
-}
-.index h2 a:hover {
-    text-decoration: underline;
-}
-.index header {
-    overflow: hidden; /* clearfix */
-    margin-left: 20px;
 }
 section p, .content .highlight, .content > pre code {
     margin-left: 20px;

@@ -108,12 +108,57 @@ section.intro p {
     font-size: 1.4em;
     line-height: 1.3em;
 }
+section.search {
+    padding-top: 60px;
+}
+section.search h2 {
+    margin-top: 0;
+}
+.content, .index, .search, .tag {
+    border-left: 5px solid #152032;
+}
+.content {
+    margin: 0 0 2em 0;
+}
+.index, .tag, .search {
+    margin: 60px 0 2em 0;
+}
+.index h2 {
+    margin: 10px 0 0 0;
+}
+.index h2 a, .index h2 a:visited {
+   color: #152032;
+   text-decoration: none;
+}
+.index h3 {
+    margin-top: 0;
+}
+.index h2 a:hover {
+    text-decoration: underline;
+}
+.index header, .search header, .tag header, .search h3 {
+    overflow: hidden; /* clearfix */
+    margin-left: 20px;
+}
+.search h2 {
+    font-size: 1.6em;
+}
+.search h3 {
+    font-size: 1.2em;
+}
 #search button {
     background-color: #171f32;
+    color: #E9E9E8;
+    width: 90px;
 }
 #search input {
-    border-color: #171f32;
+    border: 1px solid #171f32;
+    width: calc(100% - 106px);
 }
 #search {
     margin-bottom: 20px;
+}
+#search input, #search button {
+    padding: 3px 5px;
+    font-size: 1em;
 }
