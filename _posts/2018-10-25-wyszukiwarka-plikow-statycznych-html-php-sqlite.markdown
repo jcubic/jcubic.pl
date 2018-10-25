@@ -14,7 +14,7 @@ image:
 ---
 
 W tym wpisie przedstawię jak dodać wyszukiwarkę plików statycznych, napisaną w PHP, za pomocą Pythona oraz
-[SQLite](https://pl.wikipedia.org/wiki/SQLite).  Ja używam systemu Jekyll, ale
+[SQLite](https://pl.wikipedia.org/wiki/SQLite).  Ja używam systemu [Jekyll](https://jekyllrb.com/), ale
 [statycznych generatorów stron (ang. Static Site Generators) jest cała masa](https://www.staticgen.com/)
 rozwiązanie to powinno działać z każdym z nich. O ile serwer, na którym stoi obsługuje PHP. Nie powinno być też
 problemu, przepisanie skryptu PHP do innego języka np. Python, Node.js czy Ruby.
@@ -121,7 +121,7 @@ if __name__ == '__main__':
     conn.close()
 {% endhighlight %}
 
-Wyrażenie `re.search(r"[/\\]20[0-9]{2}", root)` filtruje pliki, które nie zaczynają się od 20, czyli te w
+Wyrażenie `re.search(r"[/\\]20[0-9]{2}", root)` filtruje pliki, które nie zaczynają się od 20, czyli te, w
 których mam wpisy (np. 2018).  `/\\` jest po to, aby działało pod systemem Windows jak i Linux/MacOSX.
 
 Mając plik bazy SQLite, mogłem napisać skrypt PHP, który by wyszukiwał i wyświetlał wyniki. Oto on
@@ -219,13 +219,13 @@ Dodałem też poprawki do wyników, aby wyglądały jak inne strony.
 
 Jedyne z czym miałem problem to wcięcia w HTML. Inne strony są przepuszczane przez
 [tidy html5](https://github.com/htacg/tidy-html5), który wypluwa sformatowany kod HTML, o którego ciężko w
-narzędziu Jekyll.  Można użyć tidy w php ale niestety nie da rady, bo musiałbym mieć skrypt tag na początku aby
-włączyć buforowanie za pomocą funkcji `ob_start()` (może dodam ją jeszcze w pliku Makefile za pomocą sed-a).
+narzędziu Jekyll.  Można użyć tidy w php, ale niestety nie da rady, bo musiałbym mieć skrypt tag na początku aby
+włączyć buforowanie za pomocą funkcji `ob_start()` (może dodam ją jeszcze, w pliku Makefile, za pomocą sed-a).
 
 I to tyle, możesz przetestować działanie skryptu na stronie, jeśli masz jakieś pytania, albo sugestie odnośnie tego
-rozwiązania zostaw je w komentarzu. Kod możesz znaleźć na GitHubie:
+rozwiązania, zostaw je w komentarzu. Kod możesz znaleźć na GitHubie:
 
 * [index.py](https://github.com/jcubic/jcubic.pl/blob/master/index.py)
 * [search.php](https://github.com/jcubic/jcubic.pl/blob/master/search.php)
 
-Plik, z baza danych SQLite, także jest w repozytorium.
+Plik, z bazą danych SQLite, także jest w repozytorium.
