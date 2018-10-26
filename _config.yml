@@ -34,6 +34,9 @@ related:
     title: "Full Stack Geek"
     text: "FSGeek"
 
+sitemap:
+  lastmod: 2018-10-26 16:20:13+0200
+
 paginate: 10
 paginate_path: "/page:num"
 

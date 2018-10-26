@@ -6,10 +6,18 @@
     {% unless post.published == false %}
     <url>
       <loc>{{ post.url | prepend: site.baseurl | prepend: site.url }}</loc>
-      {% if post.sitemap.lastmod %}
-        <lastmod>{{ post.sitemap.lastmod | date_to_xmlschema }}</lastmod>
+            {% if post.sitemap.lastmod %}
+        {% if site.sitemap.lastmod > post.sitemap.lastmod %}
+           <lastmod>{{ site.sitemap.lastmod | date_to_xmlschema }}</lastmod>
+        {% else %}
+           <lastmod>{{ post.sitemap.lastmod | date_to_xmlschema }}</lastmod>
+        {% endif %}
       {% elsif post.date %}
-        <lastmod>{{ post.date | date_to_xmlschema }}</lastmod>
+        {% if site.sitemap.lastmod > post.date %}
+           <lastmod>{{ site.sitemap.lastmod | date_to_xmlschema }}</lastmod>
+        {% else %}
+           <lastmod>{{ post.date | date_to_xmlschema }}</lastmod>
+        {% endif %}
       {% else %}
         <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
       {% endif %}
