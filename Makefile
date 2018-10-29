@@ -1,4 +1,4 @@
-all: build tidy index
+all: build tidy
 
 index:
 	@echo -e "Indexing..." && ./index.py _site > /dev/null && echo "            Done"

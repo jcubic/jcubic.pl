@@ -7,6 +7,9 @@ baseurl: ""
 url: "https://jcubic.pl"
 source_url: "https://github.com/jcubic/jcubic.pl/blob/master/"
 
+logo:
+  url: "/img/logo-glownie-javascript.png"
+
 exclude:
     -
         README.md
@@ -16,6 +19,12 @@ include:
         .htaccess
 
 exclude: [Gemfile, Gemfile.lock, Makefile, clean, date]
+
+image:
+  url: "/img/background.jpg"
+  width: 1920
+  height: 591
+
 users:
     jcubic:
         url: "https://jcubic.pl/jakub-jankiewicz/"
@@ -34,8 +43,16 @@ related:
     title: "Full Stack Geek"
     text: "FSGeek"
 
+defaults:
+  -
+    scope:
+      path: ""      # empty string for all files
+      type: posts   # limit to posts
+    values:
+      is_post: true # automatically set is_post=true for all posts
+
 sitemap:
-  lastmod: 2018-10-26 16:20:13+0200
+  lastmod: 2018-10-29 09:13:33+0100
 
 paginate: 10
 paginate_path: "/page:num"

@@ -10,7 +10,10 @@ layout: default
             </time>
             by
             <span itemscope itemtype="http://schema.org/Person">
-                <a href="{{ author.url }}" itemprop="author name url" rel="author">{{ author.name }}</a>
+                <meta itemprop="name" content="Jakub Jankiewicz"/>
+                <meta itemprop="alternateName" content="jcubic"/>
+                <a href="{{ author.url }}" itemprop="url">{{ author.name }}</a>
+                <meta itemprop="jobTitle" content="Front-End Developer"/>
             </span>
         </h3>
         <h2 itemprop="title">{{ page.title }}</h2>

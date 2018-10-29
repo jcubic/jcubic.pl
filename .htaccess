@@ -13,6 +13,9 @@ RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 RewriteCond %{HTTP_HOST} ^mail.jcubic.pl
 RewriteRule ^(.well-known.*)$ /mail/$1 [L]
 
+RewriteCond %{QUERY_STRING} fbclid=.+
+RewriteRule (.*) /$1?fbclid= [R=302,L]
+
 <FilesMatch "^.*(?<!proxy\.php)$">
 Header set Access-Control-Allow-Origin "*"
 Header set Access-Control-Allow-Methods: "GET"

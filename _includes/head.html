@@ -64,20 +64,6 @@
     <link rel="preconnect" href="https://www.facebook.com"/>
     <link rel="preconnect" href="https://pagead2.googlesyndication.com"/>
     <link rel="preconnect" href="https://piwik.jcubic.pl"/>
-
-    <!--
-    <script type="text/javascript" data-cfasync="false" src="//dsms0mj1bbhn4.cloudfront.net/assets/pub/shareaholic.js" data-shr-siteid="6d503d9769a878adc55ebee4698e4230" async="async"></script>
-    -->
-    {% if page %}
-    <link rel="schema.dc" href="http://purl.org/dc/elements/1.1/"/>
-    <meta name="DC.license" content="https://creativecommons.org/licenses/by-sa/4.0/"/>
-    <meta name="DC.created" content="{{ page.date }}"/>
-    <meta name="DC.creator" content="{% if page.author %}{{ site.users[page.author].name }}{% else %}Jakub Jankiewicz{% endif %}"/>
-    {% if page.sitemap.lastmod %}
-    <meta name="DC.modified" content="{{ page.sitemap.lastmod }}"/>
-    {% endif %}
-    {% endif %}
-    <meta name="generator" content="Jekyll {{ jekyll.version }}"/>
     {% if paginator.previous_page %}
     {% if paginator.previous_page == 1 %}
     <link rel="prev" href="{{ '/' | prepend: site.baseurl | prepend: site.url }}" />
@@ -88,4 +74,52 @@
     {% if paginator.next_page %}
     <link rel="next" href="{{ '/page' | prepend: site.baseurl | prepend: site.url }}{{ paginator.next_page }}/"/>
     {% endif %}
+    {% if page.is_post %}
+    <link rel="schema.dc" href="http://purl.org/dc/elements/1.1/"/>
+    <meta name="DC.license" content="https://creativecommons.org/licenses/by-sa/4.0/"/>
+    <meta name="DC.created" content="{{ page.date }}"/>
+    <meta name="DC.creator" content="{% if page.author %}{{ site.users[page.author].name }}{% else %}Jakub Jankiewicz{% endif %}"/>
+    {% if page.sitemap.lastmod %}
+    <meta name="DC.modified" content="{{ page.sitemap.lastmod }}"/>
+    {% endif %}
+    <script type="application/ld+json">
+     {
+         "@context": "http://schema.org",
+         "@type": "BlogPosting",
+         "datePublished": "{{ page.date }}",
+         "publisher": {
+             "@type": "Organization",
+             "name": "{{ site.title }}",
+             "logo": {
+                 "@type": "ImageObject",
+                 "url": "{{ site.logo.url | prepend: site.baseurl | prepend: site.url }}"
+             }
+         },
+         "author": {
+             "@type": "Person",
+             "name": "{{ site.users[page.author].name }}"
+         },{% if page.sitemap %}
+         "dateModified": "{{ page.sitemap.lastmod }}",{% endif %}
+         "headline": "{{ page.title }}",{% if page.image %}
+         "image": {
+             "@type": "ImageObject",
+             "url": "{{ page.image.url | prepend: site.baseurl | prepend: site.url }}"{% if page.image.width %},
+             "width": {{ page.image.width }}{% endif %}{% if page.image.height %},
+             "height": {{ page.image.height }}{% endif %}
+         }{% else %}
+         "image": {
+             "@type": "ImageObject",
+             "url": "{{ site.image.url | prepend: site.baseurl | prepend: site.url }}",
+             "width": {{ site.image.width }},
+             "height": {{ site.image.height }}
+         }{% endif %},
+         "description": "{{ page.description }}",
+         "mainEntityOfPage": {
+             "@type": "WebPage",
+             "@id": "https://google.com/article"
+         }
+     }
+    </script>
+    {% endif %}
+    <meta name="generator" content="Jekyll {{ jekyll.version }}"/>
 </head>

@@ -5,9 +5,11 @@ find _site -name '*.html' | while read file; do
     # fixed https://bitbucket.org/birkenfeld/pygments-main/issues/1254
     sed -i 's!<span></span>!!g' $file
     tidy --drop-proprietary-attributes true --tidy-mark no --show-warnings false --output-xhtml true -utf8 -indent -wrap 200 -modify -quiet "$file"
-    sed -i '/^\s*$/d' "$file"
+    # fix issue with CDATA on script tag with application/json-ld type, blank lines and trailing whitespace
+    sed -i -e 's/ <!\[CDATA\[//' -e 's/ \]\]>//' -e ':a;/=$/{N;s/\n\s*//;ba}' -e '/^\s*$/d' -e 's/\s*$//' "$file"
 done
 find _site -name '*.xml' | while read file; do
     tidy -xml -utf8 -indent -wrap 200 -modify -quiet "$file"
+    # better indent of CDATA in rss file
     sed -i 's/^<!\[CDATA\[/        <![CDATA[/g' "$file"
 done
