@@ -108,6 +108,7 @@ section {
     margin: 0 20px 0 40px;
     max-width: 800px;
 }
+
 section, aside {
     float: left;
 }
@@ -115,6 +116,11 @@ aside {
     width: 300px;
     margin-right: 10px;
     padding: 60px 0;
+}
+aside.sticky {
+    position: fixed;
+    bottom: 0;
+    left: 870px; /* section width + margin + aside margin */
 }
 section > p {
     text-align: justify;
@@ -328,6 +334,11 @@ ul.tags:before {
 }
 #disqus_thread {
     margin: 40px 0 0 20px;
+}
+@media (max-width: 1190px) {
+    aside.sticky {
+        left: calc(100vw - 330px);
+    }
 }
 @media (max-width: 850px) {
     #inner > header {
