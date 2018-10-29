@@ -9,6 +9,16 @@
       {{ site | tag_cloud }}
     </div>
     <div id="sponsors">
+      {% if paginator.next_page == 2 %}
+      <a title="Katalog-blogow.pl - Katalog Blogów Polskiej Blogosfery" href="http://katalog-blogow.pl/" target="_blank" data-wpel-link="internal">Katalog-Blogow.pl</a>
+      <!-- kod zBLOGowani.pl -->
+      <div style="text-align: center;margin: 20px 0;padding: 0">
+        <a target="_blank" href="https://zblogowani.pl/" title="Sprawdź serwis zBLOGowani.pl!">
+          <img src="//zblogowani.pl/code/160x50/blue/342587/btn.png" alt="zBLOGowani.pl">
+        </a>
+      </div>
+      <!-- koniec kodu zBLOGowani.pl -->
+      {% endif %}
       <a href="http://www.frontend-con.io/">
         <img src="{{ '/img/front-end-logo.png' | prepend: site.baseurl | prepend: site.url }}"/>
       </a>

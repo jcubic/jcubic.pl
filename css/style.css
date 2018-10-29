@@ -25,11 +25,15 @@ footer p {
 section.tag li > a {
     font-weight: bold;
 }
-footer a, footer a:visited, section a, section a:visited, #tag-cloud a {
+footer a, footer a:visited, section a, section a:visited, #tag-cloud a, #sponsors a {
     color: #152032;
 }
-footer a:hover, section a:hover, #tag-cloud a:hover {
+footer a:hover, section a:hover, #tag-cloud a:hover, #sponsors a:hover {
     color: #1520FF;
+}
+#sponsors a {
+    margin: 20px 0;
+    display: block;
 }
 #tag-cloud .set-1 { font-size: 0.7em; font-weight: 100; }
 #tag-cloud .set-2 { font-size: 0.8em; font-weight: 200; }
@@ -49,9 +53,11 @@ footer a:hover, section a:hover, #tag-cloud a:hover {
     font-size: 25px;
 }
 #tag-cloud a {
-    text-decoration: none;
     padding: 2px;
     margin: 4px;
+}
+#tag-cloud a, #sponsors a {
+    text-decoration: none;
 }
 #tag-cloud a:hover {
     text-decoration: underline;
@@ -116,11 +122,12 @@ aside {
     width: 300px;
     margin-right: 10px;
     padding: 60px 0;
+    box-sizing: border-box;
 }
 aside.sticky {
     position: fixed;
     bottom: 0;
-    left: 870px; /* section width + margin + aside margin */
+    left: 860px; /* section width + margin */
 }
 section > p {
     text-align: justify;
@@ -196,6 +203,9 @@ ul.tags:before {
     margin: 10px 0 0 20px;
     clear: both;
     overflow: hidden;
+}
+#facebook {
+    min-height: 234px;
 }
 .share iframe, .share .twitter, #facebook-share {
     float: left;
