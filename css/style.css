@@ -22,7 +22,7 @@ footer p {
     text-align: center;
     font-size: 13px;
 }
-section.tag li > a {
+section .tag li > a {
     font-weight: bold;
 }
 footer a, footer a:visited, section a, section a:visited, #tag-cloud a, #sponsors a {
@@ -414,28 +414,28 @@ ul.tags:before {
     section ul {
         line-height: 1em;
     }
-    section.tag ul {
+    section .tag ul {
         line-height: 1.5em;
     }
-    section.tag li > span {
+    section .tag li > span {
         display: flex;
         flex-direction: row;
     }
-    section.tag span.label {
+    section .tag span.label {
         padding: 3px 5px;
         width: 140px;
         white-space: pre;
     }
-    section.tag header {
+    section .tag header {
         margin-left: 30px;
     }
-    section.tag span.tags {
+    section .tag span.tags {
         line-height: 1em;
     }
-    section.tag li > a {
+    section .tag li > a {
         padding: 10px;
     }
-    section.tag span.tags a {
+    section .tag span.tags a {
         padding: 10px 5px 10px 10px;
     }
 }
