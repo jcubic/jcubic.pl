@@ -3,7 +3,7 @@ layout: post
 title:  "Rzeczownik przy liczebniku w języku Polskim w JavaScript"
 date:   2018-08-18 12:13:39+0200
 categories:
-tags:  javascript api
+tags:  javascript api i18n
 author: jcubic
 description: Do języka JavaScript weszło nowe API, które dodało obsługę rzeczowników przy odpowiednich licznościach.
 image:

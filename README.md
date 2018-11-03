@@ -52,6 +52,13 @@ make
 
 wynikowa strona znajdzie się w katalogu _site.
 
+
+Po dodaniu nowego wpisu należy dodać go do indeksu, który służy do wyszukiwania. Należy wykonać:
+
+```
+make index
+```
+
 Copyright (C) 2014-2018 [Jakub Jankiewicz](http://jcubic.pl/jakub-jankiewicz)
 
 Wszystko na licencji [CC-BY-SA](http://creativecommons.org/licenses/by-sa/4.0/), chyba że napisano inaczej

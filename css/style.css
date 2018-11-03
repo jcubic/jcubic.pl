@@ -90,6 +90,9 @@ p, .tags {
     margin: 0;
     font-size: 12px;
 }
+.meta .attribution, .meta .attribution a, .meta .attribution:visited {
+    color: #555;
+}
 h2, h3 {
     font-family: 'Scada', sans-serif;
     font-weight: bold;
@@ -104,7 +107,7 @@ h2, h3 {
     text-align: right;
 }
 h3 {
-    font-size: 1em;
+    font-size: 1.2em;
 }
 .meta h3 {
     margin: 0;
