@@ -11,7 +11,7 @@ image:
  alt: "dwa znaki chiński oraz litera A ze strzałkami"
  width: 800
  height: 500
- attribution: "Originał [Ætoms](https://commons.wikimedia.org/wiki/User:%C3%86toms), źródło [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:%C3%86toms_-_Translation.svg) licencja [CC-BY-SA](https://creativecommons.org/licenses/by-sa/4.0/deed.en)"
+ attribution: "Oryginał [Ætoms](https://commons.wikimedia.org/wiki/User:%C3%86toms), źródło [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:%C3%86toms_-_Translation.svg) licencja [CC-BY-SA](https://creativecommons.org/licenses/by-sa/4.0/deed.en)"
 ---
 
 Internacjonalizacja, czyli po angielsku Internationalization, w skrócie i18n to dodawanie do aplikacji obsługi

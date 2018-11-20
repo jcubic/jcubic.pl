@@ -1,9 +1,12 @@
 all: build tidy
 
+.PHONY: index tidy build watch install
+
 index:
-	@echo -e "Indexing..." && ./index.py _site > /dev/null && echo "            Done"
+	@echo "Indexing..." && ./index.py _site > /dev/null && echo "            Done"
 
 tidy:
+	@echo "cleaning..."
 	@./clean
 
 build:

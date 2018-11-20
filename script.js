@@ -1,14 +1,14 @@
 /* global localStorage */
-function hide_baner() {
-    document.querySelector('.cookie-baner').style.display = 'none';
+function display_baner(value) {
+    document.querySelector('.cookie-baner').style.display = value;
 }
-if (localStorage.getItem('cookie')) {
-    hide_baner();
+if (!localStorage.getItem('cookie')) {
+    display_baner('');
 }
 window.onload = function() {
     document.getElementById('ok').addEventListener('click', function() {
         localStorage.setItem('cookie', true);
-        hide_baner();
+        display_baner('none');
     });
     // jekyll+pygment+babylon lexer don't support async await
     var nx = document.querySelectorAll('.nx');

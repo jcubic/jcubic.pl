@@ -334,7 +334,7 @@ jest niezależne).
 Jeśli jest taka możliwość, należy animować tylko właściwości `transform` oraz `opacity`, które są mało zasobożerne jeśli
 chodzi o animacje.  Użycie `transform: translate`, do przesuwania elementu na ekranie, będzie bardziej płynne od zmiany
 właściwości `left` lub `top`.  Dzieje się tak ponieważ, przy zmianie `opacity` oraz `transform`, nie jest wykonywana
-operacja layoutu, czyli obliczania wszystkich styli na stronie i aplikowania ich do poszczególnych elementów.
+operacja layoutu, czyli obliczania wszystkich stylów na stronie i aplikowania ich do poszczególnych elementów.
 
 ## 15. Jak ustawić wysokość lub szerokość na 100% w odniesieniu do całego okna przeglądarki
 

@@ -2,3 +2,8 @@
 .* text eol=lf
 index.db binary
 img/* binary
+*.png binary
+*.eot binary
+*.ttf binary
+*.jpg binary
+*.gif binary
