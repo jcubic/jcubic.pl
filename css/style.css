@@ -427,7 +427,7 @@ ul.tags:before {
     section .tag span.label {
         padding: 3px 5px;
         width: 140px;
-        white-space: pre;
+        white-space: nowrap;
     }
     section .tag header {
         margin-left: 30px;
