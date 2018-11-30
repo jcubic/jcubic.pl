@@ -1,7 +1,7 @@
 # Głównie JavaScript
 
 Źródła strony korzystające z generatora stron statycznych [jekyll](http://jekyllrb.com/)
-oraz [tidy-html5](https://github.com/htacg/tidy-html5) poniewarz
+oraz [tidy-html5](https://github.com/htacg/tidy-html5) ponieważ
 [jekyll nie wypluwa kodu z poprawnymi wcięciami](https://github.com/jekyll/jekyll/issues/2640)
 
 Pod GNU/Linuxem Ubuntu lub dystrybucjami pochodnymi wykonaj:
@@ -19,9 +19,10 @@ dla dystrybucji fedora
 ```
 sudo dnf install ruby ruby-devel python gcc gcc-c++
 ```
+
 Plus komendy gem, pip oraz make install
 
-aby zaisntalować tidy html5 musisz zainstalować cmake i xsltproc:
+aby zainstalować tidy html5 musisz zainstalować cmake i xsltproc:
 
 ```
 sudo apt-get install cmake xsltproc
@@ -43,6 +44,13 @@ make
 sudo make install
 ```
 
+Musisz mieć też zainstalowany Node.js pod komendą `nodejs` jeśli masz zainstalowany pod node to musisz wykonać
+link symboliczny:
+
+```
+test -x /usr/bin/nodejs || sudo ln -s /usr/bin/node /usr/bin/nodejs
+```
+
 
 Aby zbudować stronę po zainstalowania programu jekyll oraz tidy-html5 wywołaj
 
@@ -50,7 +58,9 @@ Aby zbudować stronę po zainstalowania programu jekyll oraz tidy-html5 wywołaj
 make
 ```
 
-wynikowa strona znajdzie się w katalogu _site.
+
+
+wynikowa strona znajdzie się w katalogu `_site`.
 
 
 Po dodaniu nowego wpisu należy dodać go do indeksu, który służy do wyszukiwania. Należy wykonać:
