@@ -8,4 +8,7 @@ Na stronie Głównie JavaScript używam ciasteczek:
 * Poprzez serwis Google Adsense (reklamy).
 * Piwik w celach statystycznych (do analizy odwiedzin).
 * Facebook oraz Twitter dodają swoje własne ciasteczka.
-* Aby umożliwić dodawanie komentarzy disqus, także używa ciasteczek.
+
+Każde z tych serwisów oprócz chyba Piwik może oprócz swoich ciasteczek dodawać jakieś inne ciasteczka dodając strony firm
+trzecich, które mogą tak jak te serwisy śledzić twoje poczytania w Internecie.
+

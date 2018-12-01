@@ -544,3 +544,6 @@ ul.tags:before {
     color: #e9e9e8;
     font-weight: normal;
 }
+.hashover-title {
+    text-indent: 20px;
+}
