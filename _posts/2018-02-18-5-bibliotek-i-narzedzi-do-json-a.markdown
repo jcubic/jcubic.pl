@@ -9,6 +9,8 @@ description: 5 Bibliotek i narzędzi operujących na obiektach JavaScript i JSON
 image:
   url: "/img/lego-bricks.jpg"
   alt: "Klocki Lego"
+sitemap:
+  lastmod: 2018-12-08 20:00:32+0100
 ---
 
 JSON to standard opracowany przez Douglasa Crockforda, na początku roku 2000, służący do zapisu
@@ -50,6 +52,10 @@ json[0].commit.author.date = "2016-07-02T10:51:21Z";
 json[0].commit.author.email = "mail@tomnomnom.com";
 json[0].commit.author.name = "Tom Hudson";
 {% endhighlight %}
+
+Praktyczne zastosowanie można znaleźć na końcu wpisu
+[System komentarzy HashOver jako alternatywa dla Disqus](/2018/12/system-komentarzy-hashover-alternatywa-disqus.html)
+Gdzie pobieram pliki z JSON-a za pomocą polecenia `wget`.
 
 ### 3. json5
 
