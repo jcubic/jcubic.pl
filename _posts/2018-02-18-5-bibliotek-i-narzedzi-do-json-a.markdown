@@ -39,9 +39,9 @@ var res = qos.exec("select (id + 1) as index, name  from ${testData} where id > 
 
 [gron](https://github.com/TomNomNom/gron) to narzędzie wiersza poleceń, które konwertuje
 JSON-a do postaci tekstu, który można następnie przetwarzać za pomocą takich narzędzi jak
-grep czy sed. Następnie można, na takim tekście, wykonać operacje ungron, która skonwertuje
-obiekt z powrotem do postaci JSON-a. Dodatkową funkcją biblioteki, jest możliwość pobierania
-JSON-a z zewnętrznego źródła poprzez URL.
+grep czy sed. Następnie można, na takim tekście, wykonać operacje `gron --ungron`, która
+skonwertuje obiekt z powrotem do postaci JSON-a. Dodatkową funkcją biblioteki, jest
+możliwość pobierania JSON-a z zewnętrznego źródła poprzez URL.
 
 Przykład:
 
