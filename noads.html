@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<!-- Source: https://codepen.io/jh3y/pen/XyoQJb -->
+<html lang='en' class=''>
+<head><script src='//static.codepen.io/assets/editor/live/console_runner-ce3034e6bde3912cc25f83cccb7caa2b0f976196f2f2d52303a462c826d54a73.js'></script><script src='//static.codepen.io/assets/editor/live/css_reload-2a5c7ad0fe826f66e054c6020c99c1e1c63210256b6ba07eb41d7a4cb0d0adab.js'></script><meta charset='UTF-8'><meta name="robots" content="noindex"><link rel="shortcut icon" type="image/x-icon" href="//static.codepen.io/assets/favicon/favicon-8ea04875e70c4b0bb41da869e81236e54394d63638a1ef12fa558a4a835f1164.ico" /><link rel="mask-icon" type="" href="//static.codepen.io/assets/favicon/logo-pin-f2d2b6d2c61838f7e76325261b7195c27224080bc099486ddd6dccb469b8e8e6.svg" color="#111" /><link rel="canonical" href="https://codepen.io/jh3y/pen/XyoQJb" />
+
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css'>
+<style class="cp-pen-styles">@import url("https://fonts.googleapis.com/css?family=Passion+One");
+* {
+  box-sizing: border-box;
+}
+a {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+}
+body {
+  background-color: #111;
+  font-family: 'Passion One', cursive;
+  min-height: 100vh;
+  --unit: 5;
+}
+@media (min-width: 768px) {
+  body {
+    --unit: 10;
+  }
+}
+.badge {
+  --size: 150;
+  height: calc(var(--size) * 1px);
+  width: calc(var(--size) * 1px);
+  position: relative;
+}
+@media (min-width: 768px) {
+  .badge {
+    --size: 300;
+  }
+}
+.badge__circle {
+  background: #f00;
+  border: 10px solid #000;
+  border-radius: 100%;
+  box-shadow: 0 0 0 10px #ff0;
+  position: absolute;
+  overflow: hidden;
+  z-index: 2;
+  height: 100%;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+.badge__text {
+  --font-size: calc(var(--size) * 0.25px);
+  background: #000;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: var(--font-size);
+  line-height: var(--font-size);
+  letter-spacing: calc(var(--font-size) * 0.25px);
+  padding: 0 0.5rem;
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+  white-space: nowrap;
+  z-index: 3;
+}
+.badge__text--empty {
+  box-shadow: 0 0 0 10px #ff0;
+  color: transparent;
+  z-index: 1;
+}
+.dino {
+  width: 75%;
+  height: 75%;
+  z-index: 2;
+  position: relative;
+}
+.dino__head {
+  width: calc(var(--unit) * 10px);
+  height: calc(var(--unit) * 8px);
+  background: #000;
+  position: absolute;
+  right: 0;
+  top: calc(var(--unit) * 2px);
+  -webkit-transform-origin: 30% 100%;
+          transform-origin: 30% 100%;
+  clip-path: polygon(0 calc(var(--unit) * 1px), calc(var(--unit) * 1px) calc(var(--unit) * 1px), calc(var(--unit) * 1px) 0, calc(var(--unit) * 9px) 0, calc(var(--unit) * 9px) calc(var(--unit) * 1px), calc(var(--unit) * 10px) calc(var(--unit) * 1px), calc(var(--unit) * 10px) calc(var(--unit) * 6px), calc(var(--unit) * 5px) calc(var(--unit) * 6px), calc(var(--unit) * 5px) calc(var(--unit) * 7px), calc(var(--unit) * 8px) calc(var(--unit) * 7px), calc(var(--unit) * 8px) calc(var(--unit) * 8px), 0 calc(var(--unit) * 8px));
+  -webkit-clip-path: polygon(0 calc(var(--unit) * 1px), calc(var(--unit) * 1px) calc(var(--unit) * 1px), calc(var(--unit) * 1px) 0, calc(var(--unit) * 9px) 0, calc(var(--unit) * 9px) calc(var(--unit) * 1px), calc(var(--unit) * 10px) calc(var(--unit) * 1px), calc(var(--unit) * 10px) calc(var(--unit) * 6px), calc(var(--unit) * 5px) calc(var(--unit) * 6px), calc(var(--unit) * 5px) calc(var(--unit) * 7px), calc(var(--unit) * 8px) calc(var(--unit) * 7px), calc(var(--unit) * 8px) calc(var(--unit) * 8px), 0 calc(var(--unit) * 8px));
+  -webkit-animation: roar 4s infinite linear;
+          animation: roar 4s infinite linear;
+}
+.dino__head:after {
+  content: '';
+  height: calc(var(--unit) * 1px);
+  width: calc(var(--unit) * 1px);
+  background: #f00;
+  position: absolute;
+  top: 20%;
+  left: 20%;
+}
+.dino__body {
+  height: calc(var(--unit) * 8px);
+  width: calc(var(--unit) * 16px);
+  position: absolute;
+  background: #000;
+  right: calc(var(--unit) * 3px);
+  top: calc((((var(--unit) * 2) + (var(--unit) * 7)) * 1px) - 1px);
+  clip-path: polygon(0 0, calc(var(--unit) * 1px) 0, calc(var(--unit) * 1px) calc(var(--unit) * 2px), calc(var(--unit) * 2px) calc(var(--unit) * 2px), calc(var(--unit) * 2px) calc(var(--unit) * 3px), calc(var(--unit) * 3px) calc(var(--unit) * 3px), calc(var(--unit) * 3px) calc(var(--unit) * 4px), calc(var(--unit) * 4px) calc(var(--unit) * 4px), calc(var(--unit) * 5px) calc(var(--unit) * 4px), calc(var(--unit) * 5px) calc(var(--unit) * 3px), calc(var(--unit) * 6px) calc(var(--unit) * 3px), calc(var(--unit) * 6px) calc(var(--unit) * 2px), calc(var(--unit) * 7px) calc(var(--unit) * 2px), calc(var(--unit) * 7px) calc(var(--unit) * 1px), calc(var(--unit) * 8px) calc(var(--unit) * 1px), calc(var(--unit) * 8px) calc(var(--unit) * 2px), calc(var(--unit) * 8px) 0, calc(var(--unit) * 13.5px) 0, calc(var(--unit) * 13.5px) calc(var(--unit) * 3px), calc(var(--unit) * 15.5px) calc(var(--unit) * 3px), calc(var(--unit) * 15.5px) calc(var(--unit) * 5px), calc(var(--unit) * 14.5px) calc(var(--unit) * 5px), calc(var(--unit) * 14.5px) calc(var(--unit) * 4px), calc(var(--unit) * 13.5px) calc(var(--unit) * 4px), calc(var(--unit) * 13.5px) calc(var(--unit) * 8px), 0 calc(var(--unit) * 8px));
+  -webkit-clip-path: polygon(0 0, calc(var(--unit) * 1px) 0, calc(var(--unit) * 1px) calc(var(--unit) * 2px), calc(var(--unit) * 2px) calc(var(--unit) * 2px), calc(var(--unit) * 2px) calc(var(--unit) * 3px), calc(var(--unit) * 3px) calc(var(--unit) * 3px), calc(var(--unit) * 3px) calc(var(--unit) * 4px), calc(var(--unit) * 4px) calc(var(--unit) * 4px), calc(var(--unit) * 5px) calc(var(--unit) * 4px), calc(var(--unit) * 5px) calc(var(--unit) * 3px), calc(var(--unit) * 6px) calc(var(--unit) * 3px), calc(var(--unit) * 6px) calc(var(--unit) * 2px), calc(var(--unit) * 7px) calc(var(--unit) * 2px), calc(var(--unit) * 7px) calc(var(--unit) * 1px), calc(var(--unit) * 8px) calc(var(--unit) * 1px), calc(var(--unit) * 8px) calc(var(--unit) * 2px), calc(var(--unit) * 8px) 0, calc(var(--unit) * 13.5px) 0, calc(var(--unit) * 13.5px) calc(var(--unit) * 3px), calc(var(--unit) * 15.5px) calc(var(--unit) * 3px), calc(var(--unit) * 15.5px) calc(var(--unit) * 5px), calc(var(--unit) * 14.5px) calc(var(--unit) * 5px), calc(var(--unit) * 14.5px) calc(var(--unit) * 4px), calc(var(--unit) * 13.5px) calc(var(--unit) * 4px), calc(var(--unit) * 13.5px) calc(var(--unit) * 8px), 0 calc(var(--unit) * 8px));
+}
+.flyer {
+  height: calc(var(--unit) * 3px);
+  width: calc(var(--unit) * 7px);
+  position: absolute;
+  -webkit-animation: fly 10s infinite linear;
+          animation: fly 10s infinite linear;
+  top: 35%;
+  right: 5%;
+}
+.flyer__body {
+  height: 100%;
+  width: 100%;
+  background: #000;
+  -webkit-clip-path: polygon(0 40%, 30% 0, 35% 0, 35% 20%, 40% 20%, 40% 40%, 70% 40%, 70% 50%, 75% 50%, 75% 60%, 100% 60%, 100% 70%, 90% 70%, 90% 80%, 95% 80%, 95% 90%, 85% 90%, 85% 100%, 60% 100%, 60% 90%, 55% 90%, 55% 90%, 50% 90%, 50% 80%, 45% 80%, 45% 80%, 40% 80%, 40% 70%, 35% 70%, 30% 70%, 30% 40%);
+          clip-path: polygon(0 40%, 30% 0, 35% 0, 35% 20%, 40% 20%, 40% 40%, 70% 40%, 70% 50%, 75% 50%, 75% 60%, 100% 60%, 100% 70%, 90% 70%, 90% 80%, 95% 80%, 95% 90%, 85% 90%, 85% 100%, 60% 100%, 60% 90%, 55% 90%, 55% 90%, 50% 90%, 50% 80%, 45% 80%, 45% 80%, 40% 80%, 40% 70%, 35% 70%, 30% 70%, 30% 40%);
+}
+.flyer__wing {
+  height: 100%;
+  width: 30%;
+  background: #000;
+  position: absolute;
+  left: 40%;
+  top: 40%;
+  -webkit-transform-origin: top;
+          transform-origin: top;
+  clip-path: polygon(0 0, 0 100%, 20% 100%, 20% 90%, 40% 90%, 40% 80%, 40% 70%, 60% 70%, 60% 60%, 100% 0);
+  -webkit-clip-path: polygon(0 0, 0 100%, 20% 100%, 20% 90%, 40% 90%, 40% 80%, 40% 70%, 60% 70%, 60% 60%, 100% 0);
+  -webkit-animation: flap 2s infinite linear;
+          animation: flap 2s infinite linear;
+}
+@-webkit-keyframes roar {
+  0%, 15%, 85%, 100% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  35%, 65% {
+    -webkit-transform: rotate(-25deg);
+            transform: rotate(-25deg);
+  }
+}
+@keyframes roar {
+  0%, 15%, 85%, 100% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  35%, 65% {
+    -webkit-transform: rotate(-25deg);
+            transform: rotate(-25deg);
+  }
+}
+@-webkit-keyframes flap {
+  50% {
+    -webkit-transform: rotateX(180deg);
+            transform: rotateX(180deg);
+  }
+}
+@keyframes flap {
+  50% {
+    -webkit-transform: rotateX(180deg);
+            transform: rotateX(180deg);
+  }
+}
+@-webkit-keyframes fly {
+  0% {
+    -webkit-transform: translate(200%);
+            transform: translate(200%);
+  }
+  80%, 100% {
+    -webkit-transform: translate(-400%);
+            transform: translate(-400%);
+  }
+}
+@keyframes fly {
+  0% {
+    -webkit-transform: translate(200%);
+            transform: translate(200%);
+  }
+  80%, 100% {
+    -webkit-transform: translate(-400%);
+            transform: translate(-400%);
+  }
+}
+</style></head><body>
+<a href="https://developer.mozilla.org/pl/">
+<div class="badge">
+  <div class="badge__text badge__text--empty">No Internet</div>
+  <div class="badge__circle">
+    <div class="dino">
+      <div class="dino__head"></div>
+      <div class="dino__body"></div>
+    </div>
+    <div class="flyer">
+      <div class="flyer__body"></div>
+      <div class="flyer__wing"></div>
+    </div>
+  </div>
+  <div class="badge__text">No Internet</div>
+</div>
+</a>
+</body></html>
