@@ -16,7 +16,7 @@ Dzisiaj przedstawię wam jak programować obiektowo w języku JavaScript.
 
 ## Obiekty bezpośrednie
 
-Najprostrzym sposobem utworzenia nowego obiektu jest jego utworzenie "inline" czyli tzw. Object literal:
+Najprostszym sposobem utworzenia nowego obiektu jest jego utworzenie "inline" czyli tzw. Object literal:
 
 {% highlight javascript %}
 var jan = {

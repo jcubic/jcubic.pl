@@ -296,3 +296,40 @@ Podpięcie pobranych plików pozostawiam jako ćwiczenie dla czytelnika.
 
 Narzędzie gron można znaleźć na [GitHub-ie](https://github.com/tomnomnom/gron), opisywałem je we wpisie
 [5 Bibliotek do przetwarzania obiektów JavaScript i JSON](/2018/02/5-bibliotek-i-narzedzi-do-json-a.html).
+
+**Aktualizacja**
+
+Jeśli korzystacie z Google Webmaster Tools, warto także uniemożliwić indeksowanie przez Google (Google Indeksuje linki
+wygenerowane w JavaScript już od dość dawna), aby to uzyskać należy zmodyfikować dwa dodatkowe pliki i dodać tag nofollow.
+{% highlight diff %}
+diff --git a/hashover/backend/classes/sourcecode.php b/hashover/backend/classes/sourcecode.php
+index 7fa3bf7..f87245c 100644
+--- a/hashover/backend/classes/sourcecode.php
++++ b/hashover/backend/classes/sourcecode.php
+@@ -468,6 +468,7 @@ class SourceCode
+                                        '<html lang="en" dir="ltr">',
+                                        "\t" . '<head>',
+                                        "\t\t" . '<title>' . $name . '</title>',
++                    "\t\t" . '<meta name="robots" content="nofollow" />',
+                                        "\t" . '</head>',
+                                        "\t" . '<body>',
+                                        "\t\t" . '<pre>' . $source . '</pre>',
+diff --git a/hashover/backend/source-viewer.html b/hashover/backend/source-viewer.html
+index a1c0001..758eb14 100644
+--- a/hashover/backend/source-viewer.html
++++ b/hashover/backend/source-viewer.html
+@@ -9,6 +9,7 @@
+ 
+                <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+                <meta http-equiv="Content-Language" content="EN">
++        <meta name="robots" content="nofollow" />
+ 
+                <link type="image/x-icon" href="../images/favicon.png" rel="shortcut icon">
+                <link type="image/x-icon" href="../images/favicon.png" rel="icon">
+diff --git a/hashover/comments/threads/.gitkeep b/hashover/comments/threads/.gitkeep
+deleted file mode 100644
+index e69de29..0000000
+{% endhighlight %}
+
+Jeśli nie chce Ci się modyfikować kodu samego, napisz komentarz, a zrobię forka HashOver i dodam wszystkie swoje modyfikacje.
+Np. poprawka do zmiennej `$http_directory`, aby działało z linkiem symbolicznym (tak mam lokalnie).

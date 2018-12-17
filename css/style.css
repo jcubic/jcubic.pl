@@ -93,21 +93,24 @@ p, .tags {
 .meta .attribution, .meta .attribution a, .meta .attribution:visited {
     color: #555;
 }
-h2, h3 {
+h2, h3, h5 {
     font-family: 'Scada', sans-serif;
     font-weight: bold;
 }
 .meta h2 {
     margin: 0 0 1em 0;
 }
-h2, h3 {
+h2, h3, h4, h5 {
     font-style: italic;
 }
 .meta h2, .meta h3 {
     text-align: right;
 }
-h3 {
+h3, h4, h5 {
     font-size: 1.2em;
+}
+h4, h5 {
+    font-weight: normal;
 }
 .meta h3 {
     margin: 0;
@@ -178,7 +181,7 @@ section p, .content .highlight, .content .body > pre code {
 .excerpt h2, .content h2 {
     font-size: 1.1em;
 }
-.excerpt h2, .content h2, .content h3 {
+.excerpt h2, .content h2, .content h3, h4, h5 {
     margin: 2em 0 0 20px;
 }
 /* TAGS */
