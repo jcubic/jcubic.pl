@@ -12,6 +12,8 @@ image:
  width: 800
  height: 533
  attribution: "Autor [Tookapi](https://www.pexels.com/@tookapic) źródło [pexels.com](https://www.pexels.com/photo/blue-comments-facebook-pixels-75416/) licencja własna"
+sitemap:
+  lastmod: 2018-12-17 18:57:53+0100
 ---
 
 W zeszły miesiącu usunąłem komentarze Disqus, zastępując je aplikacją
@@ -37,11 +39,11 @@ komentarze z **Disqus**.
 
 Instalacja HashOver Next jest dość prosta. Musimy wgrać pliki na serwer i zmodyfikować plik
 `hashover/backend/classes/secret.php`. Miejsce pliku może się zmienić, we wcześniejszej wersji był w katalogu `hashover/scripts`.
-Plik powinien się raczej znajdować w katalogu `backend` bo nie jest to klasa.
+Plik powinien się raczej znajdować w katalogu `backend`, ponieważ nie jest to klasa.
 
 Do pliku musimy wpisać hasło, email i klucz szyfrujący.
 
-Jako klucz można użyć np. hasz MD5 jakiegoś słowa. Po wgraniu na serwer wystarczy na każdej
+Jako klucz można użyć np. hasz MD5 jakiegoś słowa. Po wgraniu na serwer, wystarczy na każdej
 stronie wpisu swojego bloga dodać:
 
 {% highlight html %}
@@ -50,23 +52,23 @@ stronie wpisu swojego bloga dodać:
 <noscript>You must have JavaScript enabled to use the comments.</noscript>
 {% endhighlight %}
 
-I to w zasadzie tyle, tylko jeśli wcześniej mieliśmy komentarze Disqus to stracimy stare
-komentarze. Wiec trzeba by je jakoś zaimportować.
+I to w zasadzie tyle, tylko jeśli wcześniej mieliśmy komentarze Disqus, to je stracimy.
+Wiec trzeba by je jakoś zaimportować.
 
 ### Import komentarzy z Disqus
 
 DL;DR cały kod jest na [GitHubie](https://github.com/jcubic/disqus-hashover-import).
 
 Pierwszą rzeczą jaką sprawdziłem był eksport danych z ich panelu, niestety nie ma w nich informacji
-i awatarach, więc każdy musiałby mieć jakieś randomowe. Ja chciałem mieć ikonki użytkowników więc
-postanowiłem napisać skrypt który zassie ich dane z API.  Skrypt napisałem w PHP ponieważ pomyślałem
+i awatarach, więc każdy musiałby mieć jakieś randomowe. Ja chciałem mieć ikonki użytkowników, więc
+postanowiłem napisać skrypt, który zassie ich dane z API.  Skrypt napisałem w PHP, ponieważ pomyślałem,
 że może się przydać do projektu (który jest napisany w PHP).  Mogli by dodać opcję importu do aplikacji.
 
 
 ### Oficjalna biblioteka PHP
 
 Disqus na GitHubie ma swoją oficjalną bibliotekę do PHP. Problem jest taki że nie
-obsługuje stronicowania i chyba już nie będzie bo nikt się tą biblioteką nie zajmuje.
+obsługuje stronicowania i chyba już nie będzie, ponieważ nikt się tą biblioteką nie zajmuje.
 
 Ale dzięki temu, że jest Open Source można kod poprawić, a wystarczy zmienić linijkę:
 
@@ -112,7 +114,7 @@ $treads = fetch($opts, function($payload) use ($disqus) {
 });
 {% endhighlight %}
 
-żeby nie przekroczyć limitu przy pisaniu kodu pobrałem najpierw wszystkie wątki i wpisu
+żeby nie przekroczyć limitu przy pisaniu kodu, pobrałem najpierw wszystkie wątki i wpisy
 i zapisałem je w pliku JSON.
 
 {% highlight php startinline=true %}
@@ -125,14 +127,14 @@ save('posts.json', $posts);
 save('threads.json', $treads);
 {% endhighlight %}
 
-Aby ten kod zadziałał będziesz musiał wygenerować klucz API czyli stworzyć aplikacje. Możesz spróbować bez klucza
+Aby ten kod zadziałał, będziesz musiał wygenerować klucz API, czyli stworzyć aplikacje Disqus. Możesz spróbować bez klucza
 ponieważ według konsoli do testowania API nie jest wymagany. Ale ja tego nie testowałem.
 
 ### Generowanie komentarzy
 
 Komentarze w HashOver znajdują się w katalogu `hashover/comments/threads`. Każdy wątek,
 czyli wpis na blogu, ma swój katalog, w którym znajdują się pliki xml z nazwami np.
-`1.xml` czy `1-1.xml`, oznaczający komentarz pierwszy i odpowiedź od komentarza pierwszego.
+`1.xml` czy `1-1.xml`, oznaczający komentarz pierwszy i odpowiedź do komentarza pierwszego.
 
 W każdym katalogu znajdował się też katalog z meta danymi tj. plikiem JSON, w którym była tablica z
 posortowanymi wpisami, ale HashOver dział bez tego katalogu i pliku więc go zignorowałem.
@@ -249,8 +251,8 @@ function getSafeThreadName ($name)
 {% endhighlight %}
 
 W XML-u komentarzy dodałem nowy element `avatar`, HashOver korzysta z szyfrowania, aby zapisać
-emaile. Można by zapisać email w zaszyfrowanej formie jak je czyta Disqus niestety nie ma do nich dostępu z API (pewnie
-ze względu na GDPR/RODO). Dostępne są tylko ścieżki do plików utrzymywane na serwerach Disqus.
+emaile. Można by zapisać email w zaszyfrowanej formie jak je czyta HashOver, niestety nie ma do nich dostępu z API (pewnie
+ze względu na GDPR/RODO). Dostępne są tylko ścieżki do plików miniaturek, utrzymywane na serwerach Disqus.
 
 Moja modyfikacja biblioteki HashOver wygląda tak (wynik komendy git diff):
 
@@ -279,7 +281,7 @@ index 15b5a2b..bf13c06 100644
 {% endhighlight %}
 
 
-Jak już mamy komentarzy to wystarczy je skopiować na serwer do katalogu `hashover/comments/threads/`.
+Jak już mamy komentarze, to wystarczy je skopiować na serwer do katalogu `hashover/comments/threads/`.
 I możemy się cieszyć komentarzami bez reklam, które nikogo nie szpiegują.
 
 Jeśli chciałbyś skasować swoje konto Disqus, może dobrym pomysłem byłoby, także pobranie wszystkich awatarów.
