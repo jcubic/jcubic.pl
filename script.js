@@ -25,7 +25,11 @@ window.onload = function() {
     var pos = window.scrollY || window.scrollTop || document.getElementsByTagName("html")[0].scrollTop;
     var rect = aside.getBoundingClientRect();
     var bottom = rect.bottom + pos;
+    var section = document.querySelector('#inner > section');
     window.addEventListener('scroll', function() {
+        if (section.clientHeight < aside.clientHeight) {
+            return;
+        }
         var pos = window.scrollY || window.scrollTop || document.getElementsByTagName("html")[0].scrollTop;
         if (aside.classList) {
             if (pos + height > bottom) {
