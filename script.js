@@ -25,7 +25,7 @@ window.onload = function() {
     var pos = window.scrollY || window.scrollTop || document.getElementsByTagName("html")[0].scrollTop;
     var rect = aside.getBoundingClientRect();
     var bottom = rect.bottom + pos;
-    var section = document.querySelector('#inner > section');
+    var section = document.querySelector('#inner > section:last-of-type');
     window.addEventListener('scroll', function() {
         if (section.clientHeight < aside.clientHeight) {
             return;

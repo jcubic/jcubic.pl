@@ -23,7 +23,7 @@ footer p {
     font-size: 13px;
 }
 section .tag li > a {
-    font-weight: bold;
+    font-weight: 500;
 }
 footer a, footer a:visited, section a, section a:visited, #tag-cloud a, #sponsors a {
     color: #152032;
@@ -76,9 +76,12 @@ footer, #main:after {
 #inner {
     overflow: hidden; /* clearfix */
 }
-p, .tags {
-    font-family: Lora, serif;
+p, .tags, #tag-cloud, figcaption, .source, .more, .pagination, section ul {
+    font-family: 'Fira Sans', sans-serif;
     line-height: 1.5em;
+}
+#hashover .hashover-dashed-title {
+    display: none;
 }
 .meta {
     padding: 40px 0 1em 0;
@@ -93,9 +96,17 @@ p, .tags {
 .meta .attribution, .meta .attribution a, .meta .attribution:visited {
     color: #555;
 }
-h2, h3, h5 {
-    font-family: 'Scada', sans-serif;
-    font-weight: bold;
+h3, h4, h5, h6 {
+    font-family: 'Fira Sans', sans-serif;
+}
+h3, h4 {
+    font-weight: normal;
+}
+h2, h5 {
+    font-weight: 500;
+}
+h2 {
+    font-family: 'Roboto', sans-serif;
 }
 .meta h2 {
     margin: 0 0 1em 0;
@@ -108,9 +119,6 @@ h2, h3, h4, h5 {
 }
 h3, h4, h5 {
     font-size: 1.2em;
-}
-h4, h5 {
-    font-weight: normal;
 }
 .meta h3 {
     margin: 0;
