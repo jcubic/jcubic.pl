@@ -11,8 +11,8 @@ related:
     name: Wszystko co powinieneś wiedzieć o funkcjach w JavaScript
     url: /2014/08/funkcje-w-javascript.html
 image:
-  url: /img/trampoline.jpg
-  alt: Człowiek skaczący na trampolinie
+  url: "/img/trampoline.jpg"
+  alt: "Człowiek skaczący na trampolinie"
 ---
 
 Pisanie funkcji rekurencyjnych może być wyzwaniem. Jeśli musisz napisać taką funkcje, która operuje na dużej ilości danych

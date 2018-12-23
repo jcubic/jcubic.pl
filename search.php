@@ -3,14 +3,14 @@ layout: default
 ---
 <section>
     <div class="search">
-      <header><h2>Wyszukanie "<?= isset($_GET['q']) ? strip_tags($_GET['q']) : '' ?>"</h2></header>
+      <header><h2>Wyszukanie słowa "<?= isset($_GET['q']) ? strip_tags($_GET['q']) : '' ?>"</h2></header>
 <?php
 
 function mark($query, $str) {
   return preg_replace("%(" . $query . ")%i", '<mark>$1</mark>', $str);
 }
 
-if (isset($_GET['q'])) {
+if (isset($_GET['q']) && !empty($_GET['q'])) {
   $db = new PDO('sqlite:index.db');
   $stmt = $db->prepare('SELECT * FROM page WHERE content LIKE :var OR title LIKE :var');
   $wildcarded = '%'. $_GET['q'] .'%';
@@ -31,6 +31,8 @@ if (isset($_GET['q'])) {
       }
     }
   }
+} else {
+  echo '<p>Brak wyników - Puste zapytanie spróbuj wyszukać <a href="search.php?q=javascript">javascript</a></p>';
 }
 
 ?>

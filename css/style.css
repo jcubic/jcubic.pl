@@ -23,7 +23,7 @@ footer p {
     font-size: 13px;
 }
 section .tag li > a {
-    font-weight: 500;
+    font-weight: bold;
 }
 footer a, footer a:visited, section a, section a:visited, #tag-cloud a, #sponsors a {
     color: #152032;
@@ -76,8 +76,13 @@ footer, #main:after {
 #inner {
     overflow: hidden; /* clearfix */
 }
+p {
+    font-size: 1.1em;
+}
 p, .tags, #tag-cloud, figcaption, .source, .more, .pagination, section ul {
-    font-family: 'Fira Sans', sans-serif;
+    font-family: 'Muli', sans-serif;
+}
+p, .tags, figcaption, .source, .more, .pagination, section ul {
     line-height: 1.5em;
 }
 #hashover .hashover-dashed-title {
@@ -97,31 +102,29 @@ p, .tags, #tag-cloud, figcaption, .source, .more, .pagination, section ul {
     color: #555;
 }
 h3, h4, h5, h6 {
-    font-family: 'Fira Sans', sans-serif;
+    font-family: 'Muli', sans-serif;
+    font-weight: bold;
 }
-h3, h4 {
+.meta h3, .index h3 {
     font-weight: normal;
-}
-h2, h5 {
-    font-weight: 500;
 }
 h2 {
     font-family: 'Roboto', sans-serif;
+    font-weight: 500;
 }
 .meta h2 {
     margin: 0 0 1em 0;
-}
-h2, h3, h4, h5 {
-    font-style: italic;
 }
 .meta h2, .meta h3 {
     text-align: right;
 }
 h3, h4, h5 {
-    font-size: 1.2em;
+    font-size: 1.4em;
 }
 .meta h3 {
     margin: 0;
+    font-size: 1.1em;
+    font-style: italic;
 }
 section {
     width: calc(100% - 380px);
@@ -406,6 +409,8 @@ ul.tags:before {
         width: 100%;
         max-width: 100%;
         padding-right: 20px;
+        border-radius: 0;
+        margin-top: 0;
     }
     section {
         width: 100%;

@@ -6,9 +6,14 @@ sitemap:
 {% if paginator.page == 1 %}
 <section class="intro">
     <p>
-        Witam na moim blogu &bdquo;Głównie JavaScript&rdquo;, którego tematyką jest Front-End czyli także
-        CSS ale głównym tematem jest JavaScript. Na blogu mogą się także pojawiać wpisy z technologii
-        Back-Endowych.
+      Nazywam się Jakub Jankiewicz jestem programistą, ostanio w pracy głównie zajmuję się Front-Endem, ale
+      w czasie wolnym piszę także w PHP oraz skrypty w Pythonie.</p>
+    <p>
+      Tematyką mojego bloga &bdquo;Głównie JavaScript&rdquo; jest Front-End czyli także CSS, ale głównym
+      tematem jest JavaScript. Na blogu mogą się także pojawiać wpisy z technologii Back-Endowych, tych
+      które znam i w których piszę czyli Python oraz PHP.</p>
+    <p>
+      Na blogu mogą się także pojawić informacje zwiazane z aplikacjami internetowymi jak i z samym Internetem.
     </p>
 </section>
 {% endif %}
@@ -28,10 +33,7 @@ sitemap:
                 </h3>
             </header>
             <div class="excerpt">
-                {{ post.content | split: '<!-- more -->' | first }}
-                <div class="more">
-                    <a href="{{ post.url | prepend: site.baseurl }}">więcej</a>
-                </div>
+              {{ post.content | split: '<!-- more -->' | first }}
             </div>
             {% if page.tags %}
             <ul class="tags">

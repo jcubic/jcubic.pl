@@ -36,6 +36,7 @@ header .rss {
 header > img {
     width: 100%;
     height: auto;
+    display: block;
 }
 header nav, header h1 {
     position: absolute;
@@ -102,11 +103,18 @@ section.intro {
     width: calc(100% - 60px);
     max-width: calc(100% - 70px);
     margin-top: 30px;
+    background: #152032;
+    color: white;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 10px;
 }
 section.intro p {
-    font-family: 'Fira Sans', sans-serif;
+    font-family: 'Muli', sans-serif;
     font-size: 1.4em;
     line-height: 1.3em;
+    text-indent: 0;
+    margin-left: 0;
 }
 section.search {
     padding-top: 60px;
@@ -127,16 +135,22 @@ section.search h2 {
     font-size: 24px;
 }
 .index h2 {
-    margin: 10px 0 0 0;
+    margin: 0;
+}
+.index article {
+    margin-bottom: 40px;
+}
+.index h3, .index h3 a, .index h3 a:visited {
+    color: #9898ab;
 }
 .index h2 a, .index h2 a:visited {
-   color: #152032;
-   text-decoration: none;
+    color: #152032;
 }
 .index h3 {
-    margin-top: 0;
+    margin: 0 0 0.5em;
+    font-size: 1.2em;
 }
-.index h2 a:hover {
+.index h2 a:hover, .index h3 a:hover {
     text-decoration: underline;
 }
 .index header, .search header, .tag header, .search h3 {
@@ -144,10 +158,12 @@ section.search h2 {
     margin-left: 20px;
 }
 .search h2 {
-    font-size: 1.6em;
+    font-size: 1.7em;
+    margin-top: 0;
 }
 .search h3 {
     font-size: 1.2em;
+    font-family: 'Roboto', sans-serif;
 }
 #search button {
     background-color: #171f32;
