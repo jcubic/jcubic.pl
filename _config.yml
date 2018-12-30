@@ -28,7 +28,7 @@ image:
 users:
     jcubic:
         url: "https://jcubic.pl/jakub-jankiewicz/"
-        name: "Jakub Jankiewicz"
+        name: "Jakub T. Jankiewicz"
         twitter: "jcubic"
     magda:
         url: "http://www.frontend-con.io/"
@@ -52,7 +52,7 @@ defaults:
       is_post: true # automatically set is_post=true for all posts
 
 sitemap:
-  lastmod: 2018-10-29 09:13:33+0100
+  lastmod: 2018-12-30 18:32:53+0100
 
 paginate: 10
 paginate_path: "/page:num"
