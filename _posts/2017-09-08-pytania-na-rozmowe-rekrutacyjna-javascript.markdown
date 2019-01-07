@@ -25,7 +25,7 @@ się rozmowy kwalifikacyjnej, z języka JavaScript. Przygotowałem 4 i potem dod
 
 ## Co to są domknięcia (ang. closures)?
 
-W skrócie, domknięcia są to funkcje które mają dostęp do środowiska, w którym zostały zdefiniowane.
+W skrócie, domknięcia są to funkcje, które mają dostęp do środowiska, w którym zostały zdefiniowane.
 Pytanie z domknięć to chyba najpopularniejsze pytanie na rozmowach rekrutacyjnych.
 
 Popatrz na poniższy kod:
@@ -43,11 +43,17 @@ c()
 // -> 10
 {% endhighlight %}
 
-Wywołanie funkcji `c()` zwróci liczbę 10, mimo że zakres dla zmiennej b się skończył, kiedy skończyła się funkcja a, zmienna b jest nadal dostępna wewnątrz funkcji wewnętrznej, dzięki czemuś o nazwie domknięcia.
+Wywołanie funkcji `c()` zwróci liczbę 10, mimo że zakres dla zmiennej b się skończył, kiedy skończyła się funkcja a.
+Zmienna b jest nadal jednak dostępna wewnątrz funkcji wewnętrznej, dzięki czemuś o nazwie domknięcia.
+
+
+Mówiąc dokładnie domknięcie to funkcja, która ma dostęp do środowiska, w którym została zdefiniowana.
+Co najlepiej jest widoczne, gdy zwracamy funkcje (czyli w funkcjach wyższego rzędu).
 
 ## Co to jest hoisting?
 
-Deklaracje funkcji i zmiennych są przenoszone na początek funkcji, w której zostały zdefiniowane, ale już przypisanie nie np:
+Deklaracje funkcji i zmiennych są przenoszone na początek funkcji, w której zostały zdefiniowane,
+ale już przypisanie nie np:
 
 {% highlight javascript %}
 var x = 5;
@@ -74,6 +80,12 @@ foo();
 
 Dlatego powyższe wywołanie `console.log` nie zwróci wyjątku `ReferenceError`, ani nie wyświetli wartości 5, tylko wypisze wartość `undefined`, ponieważ zmienna bez przypisania ma właśnie wartość `undefined`.
 
+
+Dokładny mechanizm wygląda tak, że interpreter "przechodzi" kod dwa razy, za pierwszym "wyciągając" wszystkie deklaracje.
+Dlatego przy drugim przejściu są na początku bloku, ponieważ są już stworzone wewnętrzne referencje. Tak naprawdę
+hoisting, nie jest to coś, co znajduje się w specyfikacji ECMAScript (nigdzie nie występuje słowo hoisting),
+oraz zaimplementowane w silnikach JavaScript, ale wyjaśnienie działania, któremu nadano taką właśnie nazwę.
+
 ## Czy taki kod wyświetli liczbę 0, jeśli nie dlaczego?
 
 {% highlight javascript %}
@@ -87,7 +99,7 @@ for (var i = 0; i < 10; ++i) {
 funs[0]();
 {% endhighlight %}
 
-Nie zadziała, wyświetli 10, tak jak wywołanie każdej z funkcji ponieważ w języku JavaScript zakres `var` nie jest blokowy (czyli tylko dal bloku for w przykładzie) tylko funkcyjny i każda pętla w forze ma tą samą zmienną dlatego na końcu jak się skończy `for` każda funkcja będzie miała referencje to tej samej zmiennej, która ma wartość 10.
+Nie zadziała, wyświetli 10, tak jak wywołanie każdej z funkcji, ponieważ w języku JavaScript zakres `var` nie jest blokowy (czyli tylko dla bloku for w przykładzie) tylko funkcyjny. Każda pętla w forze ma tą samą zmienną. Dlatego na końcu jak się skończy `for`, każda funkcja będzie miała referencje to tej samej zmiennej, która ma wartość 10.
 
 Aby to naprawić wystarczy użyć `let` z ES6:
 
@@ -132,7 +144,7 @@ var a = new Foo(10);
 console.log(a.add([1,2,3,4]));
 {% endhighlight %}
 
-Nie ponieważ `this` w funkcji `map` będzie to obiekt `window` albo zwróci wyjątek `TypeError` jeśli będzie użyty `"strict mode"`, aby to naprawić można użyć tzw. arrow function z ES6 w map:
+Nie ponieważ `this` w funkcji `map` będzie to obiekt `window` albo zwróci wyjątek `TypeError` jeśli będzie użyty `"strict mode"`, aby to naprawić można użyć tzw. funkcji strzałkowej (ang. arrow function) z ES6 w map:
 
 {% highlight javascript %}
 function Foo(number) {
@@ -179,7 +191,7 @@ Wyświetli:
 3
 ```
 
-`for..in` operuje na kluczach, w przypadku tablic są to indeksy aby iterować po wartościach tablicy można użyć normalnego fora:
+`for..in` operuje na kluczach. W przypadku tablic są to indeksy, aby iterować po wartościach tablicy, można użyć normalnego fora:
 
 {% highlight javascript %}
 var array = [2,3,4,5];
@@ -188,5 +200,18 @@ for (var i=0; i<array.length; ++i) {
 }
 {% endhighlight %}
 
+Albo użyć pętli z ES6 `for..of`:
+
+{% highlight javascript %}
+var array = [2,3,4,5];
+for (const i of array) {
+    console.log(i);
+}
+{% endhighlight %}
+
+można także użyć funkcji `forEach` z ES5.
+
+
 *[ES6]: ECMAScript 6
+*[ES5]: ECMAScript 5
 *[IIFE]: Immediately-Invoked Function Expression
