@@ -10,16 +10,18 @@ image:
   url: "/img/old-pocket-watch.jpg"
   alt: "Stary zegarek kieszonkowy"
   attribution: Źródło [maxpixel.net](https://www.maxpixel.net/Old-Digits-Time-Clock-Pocket-Watch-Nostalgia-2039822) licencja [CC0 Public Domain](https://creativecommons.org/publicdomain/zero/1.0/)
+sitemap:
+  lastmod: 2019-01-07 12:28:06+0100
 related:
   -
     name: "Asynchroniczność cz. 1: Obietnice"
-    url: /2018/05/asynchronicznosc-obietnice.html
+    url: /2018/05/asynchronicznosc-javascript-obietnice.html
   -
     name: "Asynchroniczność cz. 2: Async/Await"
-    url: /2018/05/asynchronicznosc-async-await.html
+    url: /2018/05/asynchronicznosc-javascript-async-await.html
   -
     name: "Asynchroniczność cz. 4: Funkcja async jako generator"
-    url: /2018/06/asynchronicznosc-funkcja-async-jako-generator.html
+    url: /2018/06/asynchronicznosc-javascript-funkcja-async-jako-generator.html
   -
     name: "Iteratory i Generatory"
     url: /2018/06/iteratory-i-generatory.html

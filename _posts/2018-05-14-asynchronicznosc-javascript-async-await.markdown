@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Asynchroniczność cz. 2: Async/Await"
+title:  "Asynchroniczność w JavaScript cz. 2: Async/Await"
 date:   2018-05-14 19:27:26+0200
 categories:
 tags:  javascript es8 asynchroniczność
@@ -10,17 +10,17 @@ image:
   url: "/img/ducks.jpg"
   alt: "Drewniane, kolorowe, stylizowane kaczki ustawione w kolejce"
 sitemap:
-  lastmod: 2018-06-09 09:48:37+0200
+  lastmod: 2019-01-07 12:28:06+0100
 related:
   -
     name: "Asynchroniczność cz. 1: Obietnice"
-    url: /2018/05/asynchronicznosc-obietnice.html
+    url: /2018/05/asynchronicznosc-javascript--obietnice.html
   -
     name: "Asynchroniczność cz. 3: Iteratory i Generatory Asynchroniczne"
-    url: /2018/06/asynchronicznosc-for-await-of.html
+    url: /2018/06/asynchronicznosc-javascript-for-await-of.html
   -
     name: "Asynchroniczność cz. 4: Funkcja async jako generator"
-    url: /2018/06/asynchronicznosc-funkcja-async-jako-generator.html
+    url: /2018/06/asynchronicznosc-javascript-funkcja-async-jako-generator.html
 ---
 
 Async/Await to dwa nowe słowa kluczowe dodane do języka JavaScript w wersji

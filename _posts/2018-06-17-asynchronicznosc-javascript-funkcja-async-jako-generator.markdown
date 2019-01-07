@@ -6,6 +6,8 @@ categories:
 description: Wpis opisujący mechanizm zapisu funkcji asynchronicznej jako generatora, podobnie jak to robi narzędzie Babel.
 tags: javascript es2018 es6 asynchroniczność
 author: jcubic
+sitemap:
+  lastmod: 2019-01-07 12:28:06+0100
 image:
   url: "/img/golf-ball.jpg"
   alt: "Piłka do golfa na trawie"
@@ -13,13 +15,13 @@ image:
 related:
   -
     name: "Asynchroniczność cz. 1: Obietnice"
-    url: /2018/05/asynchronicznosc-obietnice.html
+    url: /2018/05/asynchronicznosc-javascript-obietnice.html
   -
     name: "Asynchroniczność cz. 2: Async/Await"
-    url: /2018/05/asynchronicznosc-async-await.html
+    url: /2018/05/asynchronicznosc-javascript-async-await.html
   -
     name: "Asynchroniczność cz. 3: Iteratory i Generatory Asynchroniczne"
-    url: /2018/06/asynchronicznosc-iteratory-i-generatory-asynchroniczne.html
+    url: /2018/06/asynchronicznosc-javascript-iteratory-i-generatory-asynchroniczne.html
   -
     name: "Iteratory i Generatory"
     url: /2018/06/iteratory-i-generatory.html
