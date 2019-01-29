@@ -16,7 +16,7 @@ related:
     name: "5 Pytań na rozmowę rekrutacyjną z JavaScript"
     url: "/2017/09/pytania-na-rozmowe-rekrutacyjna-javascript.html"
 sitemap:
-  lastmod: 2018-10-22 09:20:04+0200
+  lastmod: 2019-01-07 13:01:14+0100
 ---
 
 React.js jest to bardzo popularny framework JavaScript stworzony przez Facebook-a. W tym wpisie przedstawię 15 pytań,
@@ -524,7 +524,9 @@ np. gdy jest to komponent opakowujący jakąś bibliotekę. Tutaj przykład
 
 Wirtualny DOM jest to reprezentacja (w pamięci) prawdziwego drzewa DOM. Operacje wykonywane są na Wirtualnym DOM i gdy
 coś się zmieni, wykonywane jest porównywanie drzew (ang. diff), a następnie najmniejsza liczba akcji potrzebna do tego
-aby oba drzewa były takie same.
+aby oba drzewa były takie same. Algorytm, który używa React w celu uaktualnienia natywnego DOM, nazywany jest
+po angielsku reconciliation, co można przetłumaczyć jako pojednanie. Więcej o algorytmie możesz przeczytać
+[w artykule z oficjalnej dokumentacji](https://reactjs.org/docs/reconciliation.html)
 
 ## 12. Jak działa obsługa zdarzeń w React
 

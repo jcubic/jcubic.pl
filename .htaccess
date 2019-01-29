@@ -61,6 +61,10 @@ RewriteRule ^2018/06/asynchronicznosc-iteratory-i-generatory-asynchroniczne.html
 RewriteRule ^2018/06/asynchronicznosc-funkcja-async-jako-generator.html /2018/06/asynchronicznosc-javascript-funkcja-async-jako-generator.html [R=301,L]
 RewriteRule ^2018/10/wyszukiwarka-plikow-statycznych-php-sqlite.html /2018/10/wyszukiwarka-plikow-statycznych-html-php-sqlite.html [R=301,L]
 
+RewriteRule ^jakub-jankiewicz/cv.pdf /jakub-jankiewicz/jakub-jankiewicz-cv.pdf [R=301,L]
+
+
+
 
 
 RewriteRule ^/?poezja.php /jakub-jankiewicz/poezja.php [R=301,L]

@@ -10,7 +10,7 @@ image:
   url: "/img/ducks.jpg"
   alt: "Drewniane, kolorowe, stylizowane kaczki ustawione w kolejce"
 sitemap:
-  lastmod: 2019-01-07 12:28:06+0100
+  lastmod: 2019-01-29 12:21:31+0100
 related:
   -
     name: "Asynchroniczność cz. 1: Obietnice"
@@ -33,8 +33,9 @@ Jeśli nie jesteś zaznajomiony z obietnicami, możesz zobaczyć
 [pierwszą część o programowaniu asynchronicznym w JavaScript](/2018/05/asynchronicznosc-obietnice.html).
 
 Słowo kluczowe `async`, służy do oznaczania funkcji jako asynchronicznych, które będą operować na obietnicach.
-Obietnice natomiast dzięki słowu `await` staja się synchroniczne. Można je przypisywać do zmiennych, wewnątrz których
-znajdą się wartości obietnic.
+Obietnice natomiast dzięki słowu `await` staja się synchroniczne (a dokładniej ich wygląd w kodzie wygląda na
+sekwencyjny i synchroniczny). Można obietnicę przypisywać do zmiennych, wewnątrz których znajdą się wartości
+obietnic, dodając słowo kluczowe `await` przed obietnicą.
 
 Poniżej przykładowy kod:
 
@@ -57,6 +58,16 @@ total('jan').then(function(total) {
 });
 {% endhighlight %}
 
+Czyli dokładnie tak jakby nasza funkcja była zapisana w taki, mniej czytelny sposób:
+
+{% highlight javascript %}
+function total(username) {
+   return fetch("/users/" + username)
+        .then((res) => res.json())
+        .then((user) => user.total);
+}
+{% endhighlight %}
+
 Można oczywiście użyć, tej funkcji, razem ze słowem `await`, w innej funkcji `async`.
 
 Tak naprawdę funkcja `async`, nie musi mieć w sobie słowa kluczowego `await`, a i tak będzie zwracała obietnicę, np:
@@ -73,6 +84,14 @@ var person = {
 getUsername(person).then(function(username) {
     console.log(username);
 });
+{% endhighlight %}
+
+Czyli jakby była zapisana w taki sposób:
+
+{% highlight javascript %}
+function getUsername(user) {
+    return Promise.resolve(user.username);
+}
 {% endhighlight %}
 
 Zadziała także pusta funkcja. Po prostu obietnicą, będzie wartość `undefined`, ponieważ w języku JavaScript, każda
@@ -139,11 +158,6 @@ bloku, w którym została zdefiniowana, czyli poza instrukcja `for`, będzie nie
 pętli będzie miała swoją zmienną. Natomiast pętla `for..of` to nowy dodatek do języka JavaScript, dzięki któremu
 iterując po tablicy, iterujemy po jej wartościach, a nie tak jak w przypadku `for..in` po kluczach/indeksach.
 
-Jeśli funkcja, która wywoływana jest ze słowem kluczowym `async`, się nie powiedzie (wywoła się funkcja `reject`
-obietnicy), wyrzucony zostanie zwykły wyjątek. Dlatego wystarczy jedna instrukcja `try..catch`, aby je
-przechwycić. Tak jak w przypadku samych obietnic wystarczy jedno miejsce obsługi błędów.
-
-
 Dla porównania [kod z funkcjami zwrotnymi, z pierwszej części](/2018/05/asynchronicznosc-obietnice.html):
 
 {% highlight javascript %}
@@ -166,6 +180,34 @@ getUsers(function(users) {
     });
 });
 {% endhighlight %}
+
+Jeśli funkcja, która wywoływana jest ze słowem kluczowym `await`, się nie powiedzie (wywoła się funkcja `reject`
+obietnicy), wyrzucony zostanie zwykły wyjątek. Dlatego wystarczy jedna instrukcja `try..catch`, aby je
+przechwycić. Tak jak w przypadku samych obietnic wystarczy jedno miejsce obsługi błędów. Wszystkie wyjątki
+wyrzucane wewnątrz funkcji `async` są konwertowane na odrzucaną obietnicę.
+
+Przykład:
+
+{% highlight javascript %}
+function rejected() {
+    return new Promise((_, reject) => reject('rejected'));
+}
+
+async function foo() {
+    try {
+        await rejected();
+    } catch (e) {
+        console.log('error');
+        throw e;
+    }
+}
+
+foo().then(() => console.log('nigdy się nie wyświetli')).catch((e) => console.log(e));
+{% endhighlight %}
+
+Powyższy kod wyświetli 'error' i 'rejected'.
+
+
 
 Słowo kluczowe `await`, może być wywoływane, tylko i wyłącznie wewnątrz funkcja `async`. Ale istnieje
 [propozycja aby dodać możliwość użycia go bez async](https://github.com/tc39/proposal-top-level-await). Z chwilą
