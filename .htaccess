@@ -63,7 +63,7 @@ RewriteRule ^2018/10/wyszukiwarka-plikow-statycznych-php-sqlite.html /2018/10/wy
 
 RewriteRule ^jakub-jankiewicz/cv.pdf /jakub-jankiewicz/jakub-jankiewicz-cv.pdf [R=301,L]
 
-RewriteRule ^2019/02/obserwujemy-wszystkow-przegladarace.html /2019/02/obserwujemy-wszystko-w-przegladarce.html [R=301,L]
+
 
 
 
