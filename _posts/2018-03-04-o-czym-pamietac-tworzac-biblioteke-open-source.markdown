@@ -653,8 +653,9 @@ Aby skorzystać z polecenia coveralls, należy zainstalować odpowiedni moduł z
 npm install coveralls --save-dev
 ```
 
-Ważna rzecz, `coveralls` nie działa lokalnie i trzeba go odpalać z travisa. Nie wiem czy to błąd czy feature.
+Ważna rzecz, `coveralls` nie działa lokalnie i trzeba go odpalać z Travisa. Nie wiem czy to błąd czy feature.
 
+Więcej informacji we wpisie [Jak dodać usługę Coveralls do projektu Open Source?](/2019/03/jak-dodac-coveralls-do-projektu-open-source.html)
 
 ## Strona internetowa
 

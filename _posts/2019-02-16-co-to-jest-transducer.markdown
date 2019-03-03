@@ -5,7 +5,7 @@ date:   2019-02-16 00:07:10+0100
 categories:
 tags: javascript programowanie-funkcyjne
 author: jcubic
-description: Transducer wcale nie jest taki straszny, w tym wpisę przedstawię co to jest. I jak go utworzyć w języku JavaScript.
+description: Transducer wcale nie jest taki straszny, w tym wpisie przedstawię co to jest i jak go utworzyć w języku JavaScript.
 image:
  url: "/img/magic_cards.jpg"
  alt: "Kobieta w Kapeluszu rzucająca karty w powietrze"

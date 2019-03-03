@@ -76,10 +76,10 @@ footer, #main:after {
 #inner {
     overflow: hidden; /* clearfix */
 }
-p {
+p, section ul, section ol {
     font-size: 1.1em;
 }
-p, .tags, #tag-cloud, figcaption, .source, .more, .pagination, section ul {
+p, .tags, #tag-cloud, figcaption, .source, .more, .pagination, section ul, section ol {
     font-family: 'Muli', sans-serif;
 }
 p, .tags, figcaption, .source, .more, .pagination, section ul {
@@ -161,7 +161,6 @@ section > p code {
     white-space: nowrap;
 }
 section > p, section ul, section ol {
-    font-size: 16px;
     line-height: 1.5em;
 }
 section > p code, section ul code, section ol code {
@@ -173,7 +172,7 @@ section li p {
     text-align: justify;
 }
 section p img {
-    display: block;
+    display: inline-block;
 }
 section p:first-child {
     margin-top: 0;
@@ -181,7 +180,7 @@ section p:first-child {
 section p:last-child {
     margin-bottom: 0;
 }
-section p, .content .highlight, .content .body > pre code {
+section p, section ol, section ul, .content .highlight, .content .body > pre code {
     margin-left: 20px;
     margin-right: 0;
     display: block;
