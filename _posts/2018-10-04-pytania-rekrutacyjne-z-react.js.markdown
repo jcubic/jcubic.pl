@@ -15,8 +15,11 @@ related:
   -
     name: "5 Pytań na rozmowę rekrutacyjną z JavaScript"
     url: "/2017/09/pytania-na-rozmowe-rekrutacyjna-javascript.html"
+  -
+    name: "Kolejne 10 pytań na rozmowę rekrutacyjną z języka JavaScript"
+    url: "/2019/03/kolejne-pytania-na-rozmowe-rekrutacyjna-javascript.html"
 sitemap:
-  lastmod: 2019-01-07 13:01:14+0100
+  lastmod: 2019-03-31 15:43:15+0200
 ---
 
 React.js jest to bardzo popularny framework JavaScript stworzony przez Facebook-a. W tym wpisie przedstawię 15 pytań,

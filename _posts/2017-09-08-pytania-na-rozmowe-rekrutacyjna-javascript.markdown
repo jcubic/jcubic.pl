@@ -13,9 +13,12 @@ related:
   -
     name: "15 Pytań na rozmowę rekrutacyjną z CSS"
     url: "/2018/10/pytania-rekrutacyjne-css.html"
+  -
+    name: "Kolejne 10 pytań na rozmowę rekrutacyjną z języka JavaScript"
+    url: "/2019/03/kolejne-pytania-na-rozmowe-rekrutacyjna-javascript.html"
 
 sitemap:
-  lastmod: 2018-10-22 09:20:04+0200
+  lastmod: 2019-03-31 15:43:15+0200
 ---
 
 Kilka dni temu zostałem poproszony o przygotowanie 3 pytań, dla kandydata na programistę Full Stack, do zbliżającej

@@ -1,4 +1,4 @@
-/* global localStorage */
+/* global localStorage, setTimeout */
 function display_baner(value) {
     document.querySelector('.cookie-baner').style.display = value;
 }
