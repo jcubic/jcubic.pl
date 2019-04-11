@@ -17,6 +17,10 @@
     margin: 40px 0;
     text-align: center;
 }
+footer {
+    position: relative;
+    z-index: 200;
+}
 footer p {
     margin: 0;
     text-align: center;
