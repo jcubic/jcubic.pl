@@ -1,8 +1,8 @@
 <header>
+  <img src="{{ "/img/background.jpg" | prepend: site.baseurl | prepend: site.url }}" alt="Computer Keyboard - {{ site.title }}"/>
     <!--
     <img src="{{ "/img/easter-background-vignette.jpg" | prepend: site.baseurl | prepend: site.url }}" alt="Jajka wielkanocne (pisanki) na sianku w trawie - {{ site.title }}"/>
-    -->
-    <img src="{{ "/img/background.jpg" | prepend: site.baseurl | prepend: site.url }}" alt="Computer Keyboard - {{ site.title }}"/>
+     -->
     <h1><a href="{{ '/' | prepend: site.baseurl | prepend: site.url }}">{{ site.title }}</a></h1>
     {% assign pages = site.pages.select {|p| p.title } %}
     {% if pages %}
