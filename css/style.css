@@ -122,8 +122,14 @@ h2 {
 .meta h2, .meta h3 {
     text-align: right;
 }
-h3, h4, h5 {
+h3 {
     font-size: 1.4em;
+}
+h4 {
+    font-size: 1.2em;
+}
+h5 {
+    font-size: 1em;
 }
 .meta h3 {
     margin: 0;
