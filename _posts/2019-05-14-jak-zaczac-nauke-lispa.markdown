@@ -14,8 +14,8 @@ image:
 ---
 
 
-Dzisiaj będzie trochę inny wpis. Nie będzie dotyczył programowania stron internetowych, czyli głównego tematy
-bloga. Postanowiłem napisać krótki wpis opisujący jak zacząć naukę programowanie w języku LISP. Jest to język,
+Dzisiaj będzie trochę inny wpis. Nie będzie dotyczył programowania stron internetowych, czyli głównego tematu
+bloga. Postanowiłem napisać krótki wpis opisujący, jak zacząć naukę programowanie w języku LISP. Jest to język,
 który powinien poznać każdy programista.
 
 <!-- more -->
@@ -24,41 +24,44 @@ który powinien poznać każdy programista.
 
 LIPS to jeden z dwóch najstarszych języków programowania, który nadal jest używany. Drugi to Fortran.
 Powstał on w latach 50 na MIT. Zaprojektował go [John McCarthy](https://pl.wikipedia.org/wiki/John_McCarthy).
-Ciekwostką może być to że miał być tylko teoretyczną (matematyczną) alternatywą dla
-[maszyny Turinag-a](https://pl.wikipedia.org/wiki/Maszyna_Turinga). Ale jeden z studentów McCarthy’ego
-([Steve Russell](https://pl.wikipedia.org/wiki/Steve_Russell)) postanowił napisać główny element języka czyli
+Ciekawostką może być to, że miał być tylko teoretyczną (matematyczną) alternatywą dla
+[maszyny Turinag-a](https://pl.wikipedia.org/wiki/Maszyna_Turinga). Ale jeden ze studentów McCarthy’ego
+([Steve Russell](https://pl.wikipedia.org/wiki/Steve_Russell)) postanowił napisać główny element języka, czyli
 funkcje `eval`. Pierwotna wersja (ta zaprojektowana przez McCarthy’ego) nie miała takiej składni
-(czyli S-Wyrażeń) ale pisząc kod Russell nie mógł użyć takich samych znaków na klawiaturze więc użył
+(czyli S-Wyrażeń), ale pisząc kod Russell nie mógł użyć takich samych znaków na klawiaturze, więc użył
 okrągłych nawiasów. Język oparty jest na [rachunku lambda](https://pl.wikipedia.org/wiki/Rachunek_lambda)
-stworzonym przez [Alonzo Churcha](https://pl.wikipedia.org/wiki/Alonzo_Church), jest matematyczny zapis,
-który powstał mniej więcej w tym samym czasie co Maszyna Turinga jako uniwersalny język opisujący
+stworzonym przez [Alonzo Churcha](https://pl.wikipedia.org/wiki/Alonzo_Church), jest to matematyczny zapis,
+który powstał mniej więcej w tym samym czasie co Maszyna Turinga, jako uniwersalny język opisujący
 dowolne obliczenia.
 
-Jako zachętę zacytuje [Erica Raymonda]():
+Jako zachętę zacytuje Erica Raymonda:
 
 > "LISP is worth learning for a different reason — the profound enlightenment experience you will
 > have when you finally get it. That experience will make you a better programmer for the rest of
 > your days, even if you never actually use LISP itself a lot."
 >
-> Eric Raymond, ["How to Become a Hacker"](http://www.catb.org/~esr/faqs/hacker-howto.html)
+> ["How to Become a Hacker"](http://www.catb.org/~esr/faqs/hacker-howto.html)
 >
 > **Tłumaczenie**: "LISP jest wart nauki dla głębokiego uczucia oświecenia, kiedy go wreszcie
 > zrozumiesz. To doświadczenie uczyni z ciebie o wiele lepszego programistę, nawet jeśli nie używasz
 > LISPa zbyt często."
 >
-> Eric Raymond, ["Jak zostać Hakerem"](http://www.mkgajwer.jgora.net/ers.html)
+> ["Jak zostać Hakerem"](http://www.mkgajwer.jgora.net/ers.html)
 
 
-Kod LISP-a skład się z S-Wyrażeń i ma notacje prefix-ową to znaczy, że nazwa funkcji jest pierwszym elementem.
+### Krótko o kodzie LISP-a
+
+Kod LISP-a skład się z S-Wyrażeń (listy w nawiasach gdzie elementy są oddzielone spacjami)
+i ma notacje prefix-ową to znaczy, że nazwa funkcji jest pierwszym elementem listy
 np.:
 
 {% highlight scheme %}
 (+ (- 10 2) 100)
 {% endhighlight %}
 
-Jest to wyrażenie które oblicza `10 - 2 + 100` Co ciekawe język nie ma operatorów tylko funkcje. Które są
-pierwszym elementem. Pierwszy element to nie musi być także nazwa. Może to być wyrażenie, które w wyniku
-zwróci nową funkcje czyli. tzw funkcja wyższego rzędu.
+Jest to wyrażenie, które oblicza `(10 - 2) + 100`. Co ciekawe język nie ma operatorów tylko funkcje,
+które są pierwszym elementem listy. Pierwszy element to nie musi być także nazwa. Może to być
+wyrażenie, które w wyniku zwróci nową funkcje czyli. tzw funkcja wyższego rzędu.
 
 Można też zapisać.:
 
@@ -66,14 +69,18 @@ Można też zapisać.:
 ((lambda (x y) (+ x y)) 10 20)
 {% endhighlight %}
 
-Pierwszym wyrażeniem jest wyrażenie lambda czyli funkcja anonimowa, która jest od razu wywoływana. Czyli
-jak w JavaScript IIFE. Jeśli znasz już JavaScript to nie będzie tak to dziwne, że funkcje mogą być typem
-danych. Ale LISP ma w sobie o wiele więcej. Głównie dzięki makrom, które operują na kodzie jak na danych.
-Tak jakbyśmy mieli dostęp do parsera wewnątrz funkcji (makra). W języku JavaScript była próba dodania
-makr (projekt [sweet.js](https://www.sweetjs.org/)). Projekt działa tak jak Babel, czyli konwertuje kod,
-który zawiera makra do postaci zwykłego kodu JavaScript.
+Pierwszym elementem jest wyrażenie `lambda`, czyli funkcja anonimowa, która jest od razu wywoływana.
+Czyli tak jak w JavaScript IIFE. Wyrażenie `lambda` jest to specjalna konstrukcja języka, która nie
+wywołuje od razu swoich argumentów, takie konstrukcje także można dodać samemu - są to makra.  Jeśli
+znasz już JavaScript to nie będzie to dziwne, że funkcje mogą być typem danych. Ale LISP ma w sobie
+o wiele więcej. Głównie dzięki makrom, które operują na kodzie jak na danych.  Tak jakbyśmy mieli
+dostęp do parsera wewnątrz funkcji (makra). W języku JavaScript była próba dodania makr (projekt
+[sweet.js](https://www.sweetjs.org/)). Projekt działa tak jak Babel, czyli konwertuje kod, który
+zawiera makra, do postaci zwykłego kodu JavaScript.
 
-### Dialekt
+### Jaki dialekt wybrać
+
+Do wyboru są 3 główne dialekty.:
 
 #### Common LISP
 
@@ -90,6 +97,14 @@ ludzom jak
 Mała biblioteka standardowa, więc jeśli chce się mieć podstawowe funkcje to trzeba je najpierw napisać.
 Jest to świetny sposób, aby poznać język - pisanie prostych funkcji do różnych celów które mogą się przydać
 w przyszłości.
+
+#### Clojure
+
+Jest to nowoczesny dialekt LISP-a, dzięki któremu LISP stał się bardziej popularny.  W Polsce można
+nawet czasami znaleźć pracę, gdzie wymagają tego języka. Działa na maszynie wirtualnej JVM (czyli to
+na czym uruchamiana jest Java). Zaprojektowany przez
+[Richa Hickeya](https://pl.wikipedia.org/wiki/Rich_Hickey). Więcej o języku na
+[Wikipedii](https://pl.wikipedia.org/wiki/Clojure).
 
 
 ### Jak zacząć?
@@ -118,6 +133,7 @@ swoja drogą zrobiłem logo) oraz [Guile](https://en.wikipedia.org/wiki/GNU_Guil
 Java a Guile jest w C. Guile jest fajny bo można go osadzić w aplikacji w C (jest biblioteka współdzielona,
 która zawiera język). Natomiast Kawa-y można np. użyć do pisania aplikacji na
 [Androida](https://www.gnu.org/software/kawa/Building-for-Android.html) (tak LISP w telefonie).
+Można także do tego celu użyć języka Clojure.
 
 ### Co powinieneś poznać?
 
