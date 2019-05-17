@@ -46,3 +46,14 @@ window.onload = function() {
         }
     });
 };
+function loadCSS(src) {
+    var link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.href = src;
+    link.type = 'text/css';
+    var head = document.getElementsByTagName('head')[0];
+    head.appendChild(link);
+}
+
+loadCSS('/css/style.css');
+loadCSS('https://fonts.googleapis.com/css?family=Muli:400,400i,700|Roboto:500&subset=latin,latin-ext&display=swap');
