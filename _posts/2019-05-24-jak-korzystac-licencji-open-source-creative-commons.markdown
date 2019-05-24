@@ -7,7 +7,7 @@ tags: creative-commons open-source
 author: jcubic
 description: Wpis o wolnych licencjach takich jak Creative Commons czy MIT oraz GNU GPL. Co można a co nie, jeśli się korzysta z tych licencji.
 image:
- url: "/img/open_source.svg"
+ url: "/img/open_source.png"
  alt: "Grafika z ikonami przedstawiającymi wolne licencje"
  width: 800
  height: 520
