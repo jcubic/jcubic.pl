@@ -221,9 +221,16 @@ header {
 }
 .meta .attribution {
     margin: 0;
+}
+.meta .attribution, section p img + em {
     font-size: 12px;
 }
-.meta .attribution, .meta .attribution a, .meta .attribution:visited {
+.meta .attribution,
+.meta .attribution a,
+.meta .attribution:visited,
+section p img + em,
+section p img + em a,
+section p img + em a:visited {
     color: #555;
 }
 h3, h4, h5, h6 {

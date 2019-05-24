@@ -90,6 +90,11 @@ section li p {
 }
 section p img {
     display: inline-block;
+    max-width: 100%;
+}
+section p img + em {
+    display: block;
+    line-height: 1em;
 }
 section p:first-child {
     margin-top: 0;
