@@ -77,17 +77,15 @@ layout: default
         <div class="source">
             <a href="{{ page.path | prepend: site.source_url}}">
                 źródło strony
-            </a> (aby zobaczyć kod na githubie musisz kliknąć przycisk raw)
+            </a> (aby zobaczyć kod na GitHubie, musisz kliknąć przycisk raw)
         </div>
         <div class="share">
             <div class="twitter">
-                <a class="twitter-share-button"
-                   href="https://twitter.com/share"
-                   data-text="{{ page.title }}"
-                   data-url="{{ post.url | prepend: site.baseurl }}"
-                   data-via="jcubic">
-                    Udostępnij
-                </a>
+                <iframe src="https://img.shields.io/twitter/url/{{ page.url | prepend: site.baseurl | prepend: site.url | replace: 'https://', 'https/' }}.svg?label=Udostępnij&style=social" style="border:none; width:87px;height: 20px"></iframe>
+            </div>
+            <div class="twitter twitter-follow">
+                <iframe src="https://img.shields.io/twitter/follow/jcubic.svg?label=Obserwuj%20@jcubic"
+                        style="border:none; width:160px;height: 20px"></iframe>
             </div>
             <div id="facebook-share" class="share-button hidden">
                 <div class="icon">

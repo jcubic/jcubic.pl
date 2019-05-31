@@ -334,9 +334,7 @@ figure {
         font-size: 10px;
     }
     a {
-        padding: 5px;
-        margin: -5px;
-        display: inline-block;
+        padding: 6px;
     }
     #inner > header > img {
         height: 200px;

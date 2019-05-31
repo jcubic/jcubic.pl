@@ -73,7 +73,7 @@ stronie domowej. Tak działa to w przypadku
 na fajny pomysł i można obejrzeć kod źródłowy klikając link pod komentarzami (chyba dodałem kilka zmian, aby
 działał na mojej stronie).
 
-## [Licencja GNU LGPL (Lesser General Public License)](https://choosealicense.com/licenses/pl-3.0/))
+## [Licencja GNU LGPL (Lesser General Public License)](https://choosealicense.com/licenses/pl-3.0/)
 
 Lekka wersja GPL, której skrót przetłumaczyć można jako pomniejszy. Skrót początkowo był rozwijany jako
 Library. I przeznaczony był głównie do kodu źródłowego bibliotek, aby można było linkować statycznie biblioteki
@@ -160,7 +160,7 @@ Te klocki w dowolnej kombinacji dają zestaw licencji Creative Commons oprócz n
 Ale jest coś jeszcze. Ze względu na to, że jest to licencja i autor ma prawo do kopiowania (posiada prawo
 autorskie) nie można takiego dzieła wziąć i udostępniać innym w innej licencji. Tak naprawdę to nawet jeśli dzieło
 trafi do domeny publicznej (ponieważ minie odpowiednia liczba lat), także nie można nadać dziełu jakiejś licencji
-(zobacz artykuł [Getty Images pozwane za pobieranie opłaty za zdjęcia z domeny publicznej](https://fotoblogia.pl/13711,getty-images-pozwane-za-pobieranie-oplaty-za-zdjecia-z-domeny-publicznej)).
+(zobacz artykuł [Getty Images pozwane za pobieranie opłaty za zdjęcia z domeny publicznej](https://fotoblogia.pl/13711,getty-images-pozwane-za-pobieranie-oplaty-za-zdjecia-z-domeny-publicznej).
 
 ## Ale czy jak dodam licencje Creative Commons to nie stracę prawa autorskiego?
 

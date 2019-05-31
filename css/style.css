@@ -276,9 +276,6 @@ ul.tags:before {
 }
 
 @media (max-width: 650px) {
-    section ul {
-        line-height: 1em;
-    }
     section .tag ul {
         line-height: 1.5em;
     }
