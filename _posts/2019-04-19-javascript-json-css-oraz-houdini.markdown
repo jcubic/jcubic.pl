@@ -11,6 +11,7 @@ image:
  alt: "Grafika z napisem {JS} w {CSS} oraz przykładowym kodem CSS"
  width: 800
  height: 450
+ attribution: Jakub T. Jankiewicz, licencja [CC-BY-SA](https://creativecommons.org/licenses/by-sa/4.0/). źródło na [GitHub-ie](https://github.com/jcubic/jcubic.pl/blob/master/img/js-in-css.svg) użyto czcionki [Racing Sans One](https://www.dafontfree.io/racing-sans-one-font/)
 ---
 
 Ten wpis nie będzie o React-cie i wstawianiu CSS-a wewnąrz kodu JavaScript. Ale o czymś

@@ -303,7 +303,7 @@ figure {
     right: 0;
     width: 100%;
     text-align: center;
-    z-index: 100;
+    z-index: 300;
     background: white;
 }
 .cookie-baner .btn {

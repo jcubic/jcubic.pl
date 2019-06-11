@@ -4,6 +4,7 @@ title:  "Co Nowego w Wyrażeniach Regularnych w JavaScript"
 date:   2018-07-04 20:54:28+0200
 categories:
 tags: javascript regexp es2018
+description: Nowe funkcje które weszły do standardu ECMAScript (ES2018) dotyczące wyrażeń regularnych czyli regexów.
 author: jcubic
 sitemap:
   lastmod: 2018-10-21 17:09:13+0200

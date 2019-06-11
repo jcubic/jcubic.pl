@@ -81,7 +81,7 @@ layout: default
         </div>
         <div class="share">
             <div class="twitter">
-                <iframe src="https://img.shields.io/twitter/url/{{ page.url | prepend: site.baseurl | prepend: site.url | replace: 'https://', 'https/' }}.svg?label=Udostępnij&style=social" style="border:none; width:87px;height: 20px"></iframe>
+                <iframe src="https://img.shields.io/twitter/url/{{ page.url | prepend: site.baseurl | prepend: site.url | replace: 'https://', 'https/' | replace: 'http://', 'http/' }}.svg?label=Udostępnij&style=social" style="border:none; width:87px;height: 20px"></iframe>
             </div>
             <div class="twitter twitter-follow">
                 <iframe src="https://img.shields.io/twitter/follow/jcubic.svg?label=Obserwuj%20@jcubic"

@@ -4,6 +4,7 @@ title:  "Generatory i Iteratory wyższego poziomu"
 date:   2018-07-10 10:11:30+0200
 categories:
 tags: javascript es6 es8 es2018
+description: Generatory i Iteratory wyższego poziomy są to byty, które służą tak jak funkcje wyżego poziomy do operowania na generatorach i iteratorach.
 author: jcubic
 image:
   url: "/img/microprocessor.jpg"
@@ -15,7 +16,7 @@ related:
     url: /2018/06/iteratory-i-generatory.html
   -
     name: "Asynchroniczność cz. 3: Iteratory i Generatory Asynchroniczne"
-    url: /2018/06/asynchronicznosc-for-await-of.htm
+    url: /2018/06/asynchronicznosc-for-await-of.html
 ---
 
 Ten wpis został zainspirowany

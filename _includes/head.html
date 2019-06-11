@@ -56,10 +56,8 @@
     <meta name="twitter:site" content="@{{ site.twitter }}"/>
     <meta name="twitter:creator" content="@{% if page.author && site.users[page.author].twitter %}{{ site.users[page.author].twitter }}{% else %}{{ site.twitter }}{% endif %}"/>
     <link rel="preload" href="{{ '/img/rss.png' | prepend: site.baseurl | prepend: site.url }}" as="image" />
-    <link rel="preload" href="{{ "/img/easter-background-vignette.jpg" | prepend: site.baseurl | prepend: site.url }}" as="image" />
-    <!--
+    <!--<link rel="preload" href="{{ "/img/easter-background-vignette.jpg" | prepend: site.baseurl | prepend: site.url }}" as="image" />-->
     <link rel="preload" href="{{ "/img/background.jpg" | prepend: site.baseurl | prepend: site.url }}" as="image" />
-     -->
     {% if page.image %}
     <link rel="preload" href="{{ page.image.url | prepend: site.baseurl | prepend: site.url }}" as="image" />
     {% endif %}

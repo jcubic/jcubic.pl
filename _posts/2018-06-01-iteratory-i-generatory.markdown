@@ -4,6 +4,7 @@ title:  "Generatory i Iteratory"
 date:   2018-06-01 11:51:09+0200
 categories:
 tags: javascript es6
+description: Wpis o nowym elemencie języka JavaScript (Standardu ECMAScript), czyli generatory i Iteratory
 author: jcubic
 image:
   url: "/img/electronics.jpg"
@@ -14,7 +15,7 @@ sitemap:
 related:
   -
     name: "Asynchroniczność cz. 3: Iteratory i Generatory Asynchroniczne"
-    url: /2018/06/asynchronicznosc-for-await-of.htm
+    url: /2018/06/asynchronicznosc-for-await-of.html
   -
     name: "Generatory i Iteratory wyższego poziomu"
     url: /2018/07/generatory-i-iteratory-wyzszego-poziomu.html

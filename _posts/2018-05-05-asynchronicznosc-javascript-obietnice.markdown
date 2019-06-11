@@ -17,7 +17,7 @@ related:
     url: /2018/05/asynchronicznosc-javascript-async-await.html
   -
     name: "Asynchroniczność cz. 3: Iteratory i Generatory Asynchroniczne"
-    url: /2018/06/asynchronicznosc-javascript-for-await-of.htm
+    url: /2018/06/asynchronicznosc-javascript-for-await-of.html
   -
     name: "Asynchroniczność cz. 4: Funkcja async jako generator"
     url: /2018/06/asynchronicznosc-javascript-funkcja-async-jako-generator.html

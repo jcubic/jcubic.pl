@@ -11,6 +11,7 @@ image:
  alt: "Grafika z ikonami przedstawiającymi wolne licencje"
  width: 800
  height: 520
+ attribution: Jakub T. Jankiewicz, licencja [CC-BY-SA](https://creativecommons.org/licenses/by-sa/4.0/). źródło na [GitHub-ie](https://github.com/jcubic/jcubic.pl/blob/master/img/open_source.svg)
 ---
 
 
