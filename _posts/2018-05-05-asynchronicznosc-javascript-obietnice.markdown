@@ -10,7 +10,7 @@ image:
   url: "/img/letter.jpg"
   alt: "List w kopercie oraz długopis"
 sitemap:
-  lastmod: 2019-01-07 12:28:06+0100
+  lastmod: 2019-06-12 10:13:27+0200
 related:
   -
     name: "Asynchroniczność cz. 2: Async/Await"

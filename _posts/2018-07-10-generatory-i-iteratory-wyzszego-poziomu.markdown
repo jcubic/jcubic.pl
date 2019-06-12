@@ -8,8 +8,10 @@ description: Generatory i Iteratory wyższego poziomy są to byty, które służ
 author: jcubic
 image:
   url: "/img/microprocessor.jpg"
-  alt: "Microprocesor"
+  alt: "Microprocesor by Jakub Jankiewicz"
   attribution: Jakub Jankiewicz, żródło [Flickr](https://www.flickr.com/photos/jcubic/12237986156), licencja [CC BY-SA](https://creativecommons.org/licenses/by-sa/2.0/)
+sitemap:
+  lastmod: 2019-06-12 10:13:27+0200
 related:
   -
     name: "Iteratory i Generatory"

@@ -12,6 +12,8 @@ image:
  width: 800
  height: 450
  attribution: Jakub T. Jankiewicz, licencja [CC-BY-SA](https://creativecommons.org/licenses/by-sa/4.0/). źródło na [GitHub-ie](https://github.com/jcubic/jcubic.pl/blob/master/img/js-in-css.svg) użyto czcionki [Racing Sans One](https://www.dafontfree.io/racing-sans-one-font/)
+sitemap:
+  lastmod: 2019-06-12 10:13:27+0200
 ---
 
 Ten wpis nie będzie o React-cie i wstawianiu CSS-a wewnąrz kodu JavaScript. Ale o czymś

@@ -16,6 +16,8 @@ related:
   -
     name: "Parser S-Wyrażeń (języka LISP) w JavaScript"
     url: "/2019/06/parser-jeyka-lisp-javascript.markdown"
+sitemap:
+  lastmod: 2019-06-12 10:13:27+0200
 ---
 
 

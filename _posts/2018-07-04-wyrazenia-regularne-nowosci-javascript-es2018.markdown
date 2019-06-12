@@ -7,7 +7,7 @@ tags: javascript regexp es2018
 description: Nowe funkcje które weszły do standardu ECMAScript (ES2018) dotyczące wyrażeń regularnych czyli regexów.
 author: jcubic
 sitemap:
-  lastmod: 2018-10-21 17:09:13+0200
+  lastmod: 2019-06-12 10:13:27+0200
 related:
   -
     name: "Podstawy Wyrażeń Regularnych w JavaScript"

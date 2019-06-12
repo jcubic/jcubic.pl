@@ -8,10 +8,10 @@ description: Wpis o nowym elemencie języka JavaScript (Standardu ECMAScript), c
 author: jcubic
 image:
   url: "/img/electronics.jpg"
-  alt: "Wnętrze urządzenia elektronicznego"
+  alt: "Wnętrze urządzenia elektronicznego autor Jakub Jankiewicz"
   attribution: Jakub Jankiewicz, żródło [Flickr](https://www.flickr.com/photos/jcubic/40113661275/), licencja [CC BY-SA](https://creativecommons.org/licenses/by-sa/2.0/)
 sitemap:
-  lastmod: 2018-07-10 10:11:30+0200
+  lastmod: 2019-06-12 10:13:27+0200
 related:
   -
     name: "Asynchroniczność cz. 3: Iteratory i Generatory Asynchroniczne"
