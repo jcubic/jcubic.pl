@@ -7,7 +7,7 @@ tags: javascript funkcje
 author: jcubic
 description: W niniejszym artykule przedstawię wszystkie aspekty używania funkcji w języku JavaScript.
 sitemap:
-  lastmod: 2018-09-28 20:42:45+0200
+  lastmod: 2019-06-17 17:46:56+0200
 related:
   -
     name: "Trampolina czyli rekurencja bez stosu"
@@ -289,8 +289,8 @@ Wewnątrz samowywołującego się wyrażenia funkcyjnego zmienna nie musi nosić
 **i** może to być np. **x** ale dzięki temu pokazujemy, że zmienna w pętli i zmienna
 w **console.log** ma tą samą wartość.
 
-Można także stosować wyrażenia funkcyjne, które mają także nazwę aby móc wewnątrz
-funkcji odwołać się do samej siebie.
+Można także stosować wyrażenia funkcyjne, które mają także nazwę, aby móc wewnątrz
+funkcji odwołać się do samej siebie (jest tzn. nazwane wyrażenie funkcyjne).
 
 {% highlight javascript %}
 (function animation() {
@@ -298,6 +298,8 @@ funkcji odwołać się do samej siebie.
     setTimeout(animation, 60);
 })();
 {% endhighlight %}
+
+Tutaj mamy nazwane wyrażenie funkcyjne wraz z IIFE.
 
 Istnieje także możliwość odwołania się do samej siebie wewnątrz funkcji za pomocą
 zmiennej **arguments.callee** ale jest ona niedozwolona w trybie **strict mode**.
@@ -430,9 +432,12 @@ var jan_name = jan.getName.bind(jan);
 Dzięki funkcji **bind** możemy przekazywać metody jako funkcje do innych funkcji.
 
 
-**UWAGA**: Z chwilą pisania tego artykułu istniał tylko jeden sposób definicji zmiennych, czyli za pomocą słowa kluczowego
-`var`. W ES6 doszły słowa kluczowe `let` oraz `const`, które w części przypadków eliminują potrzebę stosowania IIFE.
-Ponieważ wystarczy sam blok `{ }`, jak ma to miejsce np. w językach C++ albo Java. Więcej informacji o `let` oraz `const`
-we wpisie [Zakres blokowy w JavaScript](/2018/09/zakres-blokowy-javascript.html).
+**UWAGA**: Z chwilą pisania tego artykułu istniał tylko jeden sposób definicji zmiennych, czyli za
+pomocą słowa kluczowego `var`. W ES6 doszły słowa kluczowe `let` oraz `const`, które w części
+przypadków eliminują potrzebę stosowania IIFE.  Ponieważ wystarczy sam blok `{ }`, jak ma to miejsce
+np. w językach C++ albo Java. Więcej informacji o `let` oraz `const` we wpisie
+[Zakres blokowy w JavaScript](/2018/09/zakres-blokowy-javascript.html). Do ES6 doszedł także nowy typ
+funkcji a mianowicie funkcje strzałkowe (ang. arrow functions). Możesz o nich przeczytać na stronie
+MDN w artykule ["Funkcje strzałkowe"](https://developer.mozilla.org/pl/docs/Web/JavaScript/Reference/Functions/Funkcje_strzalkowe).
 
 *[IIFE]: Immediately-Invoked Function Expression

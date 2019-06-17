@@ -138,16 +138,16 @@ które daje ograniczone lub nieograniczone prawa innym do danego dzieła. Stosow
 artystycznych czyli książek, muzyki, filmów, grafiki i zdjęć. rzadziej do kodu źródłowego programów
 komputerowych.
 
-Mimo to warto znać tą licencje i wiedzieć jak ona działa. Licencje Creative Commons składa się z kloców które
-dają pewne ograniczone prawa. Np. nie pozwala na to, aby ktoś do filmu o głodujących dzieciach w Afryce, dodał
+Mimo to warto znać tą licencje i wiedzieć jak ona działa. Licencje Creative Commons składa się z klocków, które
+dają pewne ograniczone prawa. Np. nie pozwalają na to, aby ktoś do filmu o głodujących dzieciach w Afryce, dodał
 wstawkę o Hitlerze, ale pozwala na dowolne oglądanie oraz kopiowanie. Tak żeby jak najwięcej osób dany film
-obejrzało, co może być głównym celem nakręcenia takie filmu.
+obejrzało, co może być głównym celem nakręcenia takiego filmu.
 
 ## Licencja CC składa się z taki klocków:
 
-* Attribution (uznanie Autorstwa) mówi że musisz podać imie i nazwisko autora jeśli kopiujesz dane dzieło.
+* Attribution (uznanie Autorstwa) mówi że musisz podać imię i nazwisko autora jeśli kopiujesz dane dzieło.
 * Share-Alike (Na tych samych warunkach) mówi że jeśli zmodyfikujesz dzieło które ma tą licencje musisz swoją
-  kopie udostępnić na tej samej licencji (czyli tak samo jak GNU GPL do kodu źródłowego która była kiedyś
+  kopie udostępnić na tej samej licencji (czyli tak samo jak GNU GPL do kodu źródłowego, która była kiedyś
   nazywana licencją wirusową, prawdopodobnie głównie przez Microsoft, który teraz jest pro Open Source).
 * Non-Commercial (Użycie niekomercyjne) mówi że jeśli coś ma ten klocek, to nie możesz użyć tego dzieła, aby
   czerpać z tego korzyści finansowych.
@@ -158,7 +158,7 @@ Te klocki w dowolnej kombinacji dają zestaw licencji Creative Commons oprócz n
 
 * Creative Commons Zero - mówi ona że dzieło jest w domenie publicznej - a dokładnie każdy ma takie prawa
   jakby było w Domenie Publicznej. Czyli może dowolnie kopiować i modyfikować. Przy czym nie ma ona klocka
-  Attribution, czyli nie trzeba przypisywać autora do danego dzieła jeśli je kopiujemy.
+  Attribution, czyli nie trzeba przypisywać autora do danego dzieła, jeśli je kopiujemy.
 
 Ale jest coś jeszcze. Ze względu na to, że jest to licencja i autor ma prawo do kopiowania (posiada prawo
 autorskie) nie można takiego dzieła wziąć i udostępniać innym w innej licencji. Tak naprawdę to nawet jeśli dzieło

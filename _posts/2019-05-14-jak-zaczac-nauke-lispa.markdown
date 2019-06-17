@@ -17,7 +17,7 @@ related:
     name: "Parser S-Wyrażeń (języka LISP) w JavaScript"
     url: "/2019/06/parser-jeyka-lisp-javascript.markdown"
 sitemap:
-  lastmod: 2019-06-12 10:13:27+0200
+  lastmod: 2019-06-17 17:46:56+0200
 ---
 
 
@@ -29,7 +29,7 @@ który powinien poznać każdy programista.
 
 ### Wprowadzenie
 
-LIPS to jeden z dwóch najstarszych języków programowania, który nadal jest używany. Drugi to Fortran.
+LISP to jeden z dwóch najstarszych języków programowania, który nadal jest używany. Drugi to Fortran.
 Powstał on w latach 50 na MIT. Zaprojektował go [John McCarthy](https://pl.wikipedia.org/wiki/John_McCarthy).
 Ciekawostką może być to, że miał być tylko teoretyczną (matematyczną) alternatywą dla
 [maszyny Turinag-a](https://pl.wikipedia.org/wiki/Maszyna_Turinga). Ale jeden ze studentów McCarthy’ego
@@ -195,8 +195,11 @@ nawet pojedynczym klawiszem, który wstawia literę, jest jakaś funkcja w języ
 zmienić, jest też dostępna pełna dokumentacja do każdej funkcji. A jak **budujesz ze źródła**, to możesz nawet
 widzieć **kod źródłowy funkcji** samego edytora z **wewnątrz edytora**).
 
-Możesz też spróbować sam napisać interpreter tego języka ja sam napisałem w JavaScript. Jest udostępniony na
-licencji MIT i nazywa się LIPS (ang. usta) czyli "LIPS Is Pretty Simple"
+Możesz też spróbować sam napisać interpreter tego języka. Ja sam napisałem w języku JavaScript. Jest
+udostępniony na licencji MIT i nazywa się LIPS (ang. usta, skrót rekurencyjny "LIPS Is Pretty Simple")
 ([link tutaj](https://jcubic.github.io/lips/)). Aktualnie próbuje go przepiać w PHP, aby móc pisać aplikacje
-WWW całe w LISP-ie mam nadzieje, że mi się uda. Projekt nazywa się LIP (czyli warga), a jest to skrót
-rekurencyjny (tak jak LIPS) "LIP is Lips In Php" [link tutaj](https://github.com/jcubic/lip).
+WWW całe w LISP-ie, mam nadzieje, że mi się uda. Projekt nazywa się LIP (czyli warga), a jest to skrót,
+też rekurencyjny "LIP is Lips In Php" [link tutaj](https://github.com/jcubic/lip).
+
+Jeśli chciałbyś napisać własny interpreter Lispa, możesz zacząć od tego artykułu:
+[Parser S-Wyrażeń (języka LISP) w JavaScript](/2019/06/parser-jezyka-lisp-javascript.html).
