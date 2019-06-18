@@ -87,6 +87,17 @@ layout: default
                 <iframe src="https://img.shields.io/twitter/follow/jcubic.svg?label=Obserwuj%20@jcubic"
                         style="border:none; width:160px;height: 20px"></iframe>
             </div>
+            <div class="linkedin">
+              <!-- Sharingbutton LinkedIn -->
+              <a class="resp-sharing-button__link" href="https://www.linkedin.com/shareArticle?mini=true&amp;url={{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}&title={% if page.title %}{{ page.title | url_encode }}{% else %}{{ site.title | url_encode }}{% endif %}&summary={% if page.description %}{{ page.description | url_encode }}{% else %}{{ site.description | url_encode }}{% endif %}&source=https%3A%2F%2Fjcubic.pl" target="_blank" rel="noopener" aria-label="LinkedIn">
+                <span class="resp-sharing-button resp-sharing-button--linkedin resp-sharing-button--medium">
+                  <span aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6.5 21.5h-5v-13h5v13zM4 6.5C2.5 6.5 1.5 5.3 1.5 4s1-2.4 2.5-2.4c1.6 0 2.5 1 2.6 2.5 0 1.4-1 2.5-2.6 2.5zm11.5 6c-1 0-2 1-2 2v7h-5v-13h5V10s1.6-1.5 4-1.5c3 0 5 2.2 5 6.3v6.7h-5v-7c0-1-1-2-2-2z"/></svg>
+                  </span>
+                  Udostępnij
+                </span>
+              </a>
+            </div>
             <div id="facebook-share" class="share-button hidden">
                 <div class="icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" class="_1pbq" color="#ffffff">
@@ -96,7 +107,7 @@ layout: default
                     Udostępnij
                 </div>
             </div>
-            <iframe src="//www.facebook.com/plugins/like.php?href={{ page.url | prepend: site.baseurl | prepend: site.url | cgi_escape }}&amp;width&amp;layout=button_count&amp;action=like&amp;show_faces=false&amp;share=false&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; height:35px;"></iframe>
+            <iframe src="//www.facebook.com/plugins/like.php?href={{ page.url | prepend: site.baseurl | prepend: site.url | cgi_escape }}&amp;width&amp;layout=button_count&amp;action=like&amp;show_faces=false&amp;share=false&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; height:35px; width: 150px"></iframe>
             <script type="text/javascript">
              var button = document.getElementById('facebook-share');
              button.classList.remove('hidden');
