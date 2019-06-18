@@ -3,9 +3,11 @@ layout: post
 title:  "Parser S-Wyrażeń (języka LISP) w JavaScript"
 date:   2019-06-11 21:52:53+0200
 categories:
-tags: javascript lisp
+tags: javascript lisp języki
 description: Do parsowania można użyć generatra parserów, ale łatwiej napisać ręcznie parser S-Wyrażeń, co wcale nie jest takie trudne. W tym wpisie parser języka Lisp W JavaScript.
 author: jcubic
+sitemap:
+  lastmod: 2019-06-18 21:45:45+0200
 image:
   url: "/img/lisp-parser.png"
   alt: "Grafika Wektorwa z Tekstem Parser Lisp-a w JavaScript oraz grafika wektorowa przedstawiająca strukturę kodu LISP-a "
@@ -16,7 +18,7 @@ related:
     url: /2019/05/jak-zaczac-nauke-lispa.html
 ---
 
-S-Wyrażenia to podstawa języków rodziny [LISP](/2019/05/jak-zaczac-nauke-lispa.html). W tym wpisie
+S-Wyrażenia to podstawa języków rodziny [Lisp](/2019/05/jak-zaczac-nauke-lispa.html). W tym wpisie
 przedstawie, jak napisać prosty parser S-Wyrażeń krok po kroku. Czyli właściwie podstawę dla parsera
 Lispa.  Można by użyć do tego celu
 [generatora parserów](/2017/11/parsery-i-generatory-parserow-w-javascript.html), ale prościej jest

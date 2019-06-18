@@ -5,10 +5,13 @@ Options +FollowSymLinks
 #AddHandler cgi-script .cgi
 
 RewriteEngine on
+RewriteCond %{HTTP_HOST} ^\d+\.
+RewriteRule (.*) https://jcubic.pl/$1 [R=301,L]
 
 RewriteCond %{HTTPS} off
 RewriteCond %{HTTP_HOST} ^jcubic.pl$
 RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
 
 RewriteCond %{HTTP_HOST} ^mail.jcubic.pl
 RewriteRule ^(.well-known.*)$ /mail/$1 [L]
