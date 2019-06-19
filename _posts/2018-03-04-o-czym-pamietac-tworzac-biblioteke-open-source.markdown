@@ -9,6 +9,12 @@ description: Pisząc nową bibliotekę Open Source w JavaScript warto pamiętać
 image:
   url: "/img/javascript-tools.jpg"
   alt: "Logos for JavaScript tools"
+related:
+  -
+    name: "Jak dodać usługę Coveralls do projektu Open Source?"
+    url: "/2019/03/jak-dodac-coveralls-do-projektu-open-source.html"
+sitemap:
+  lastmod: 2019-06-19 08:39:09+0200
 ---
 
 Jeśli masz zamiar napisać swoją własną bibliotekę Open Source w JavaScript, jest kilka rzeczy, o których
@@ -26,7 +32,7 @@ umieszczonego na wielu serwerach. Dodatkową fajną opcją jest to że można na
 wgrywać swoich zmian na serwer.
 
 Git posiada aplikacje wiersza poleceń, ja korzystam tylko z niej, ale istnieją także wtyczki do popularnych
-narzędzi programistycznych IDE.
+narzędzi programistycznych IDE oraz narzędzia GUI.
 
 Jeśli chodzi o komendy to najczęstsze to:
 
@@ -70,7 +76,7 @@ Następnie podbijam wersje, jeśli są same bugi to wersja 1.1.0 zamienia się n
 wchodzą nowe funkcje to wersja to 1.2.0. Jeśli są zmiany, które zmieniają API to nową wersją będzie
 2.0.0. Jest to konwencja `BRAKING.FEATURE.BUG`.
 
-## Licencja
+## Licencja Open Source
 
 Licencja jest bardzo ważna, określa kto i jak może korzystać z tworzonej biblioteki. Osobiście
 korzystam z [Licencji MIT](https://opensource.org/licenses/MIT), ale nic nie stoi na przeszkodzie
@@ -288,10 +294,10 @@ describe('bar', function() {
 {% endhighlight %}
 
 
-Pełną dokomentacje na temat dostępnych funkcji w bibliotece `Jest` można znaleźć na
-[stronie projektu](https://facebook.github.io/jest/). Ciekawe jest, że w dokumentacji nie ma uwzględnionej
-funkcji `it` tylko `test` ale powyższy kod działa. `it` jest to funkcja z `Jasmine`, pewnie chcieli być
-bardziej kompatybilni.
+Pełną dokumentacje na temat dostępnych funkcji w bibliotece `Jest` można znaleźć na
+[stronie projektu](https://facebook.github.io/jest/). Ciekawe jest, że w dokumentacji nie ma
+uwzględnionej funkcji `it` tylko `test` ale powyższy kod działa. `it` jest to funkcja z `Jasmine`,
+pewnie chcieli być bardziej kompatybilni.
 
 Aby uruchomić test wystarczy wykonać:
 
@@ -711,3 +717,5 @@ ustawionym Travisem, Coveralls oraz GitHub pages wraz z pakietem na npm o nazwie
 elementami. Pakiet NPM możesz znaleźć
 [tutaj](https://www.npmjs.com/package/open-source-library).
 
+*[IDE]: Integrated Development Environment
+*[GUI]: Graphical User Interface
