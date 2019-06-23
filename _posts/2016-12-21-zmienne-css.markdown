@@ -7,7 +7,7 @@ tags:  css css3 properties javascript
 author: jcubic
 description: Zmienne CSS, a dokładniej customowe właściwości (ang. custom properties) są nowym modułem standardu CSS, w tym poście przedstawię jak ich używać
 sitemap:
-  lastmod: 2017-09-08 20:35:15+0200
+  lastmod: 2019-06-23 13:07:34+0200
 ---
 
 Zmienne CSS, a dokładniej customowe właściwości (ang. custom properties) są [nowym modułem standardu CSS](https://www.w3.org/TR/css-variables/), w tym poście przedstawię jak ich używać.
@@ -22,9 +22,11 @@ p {
 }
 {% endhighlight %}
 
-Możecie się zastanawiać, dlaczego nie `$color`. Składnie tą użyto, ponieważ dolara używają preprocesory CSS takie jak
-[Less](https://pl.wikipedia.org/wiki/Less_(j%C4%99zyk_arkuszy_styl%C3%B3w)) czy [Sass](https://en.wikipedia.org/wiki/Sass_(stylesheet_language))
-więc skorzystano z innej składni, aby było możliwe użycie zmiennych Less/Sass w tym samym arkuszu razem ze zmiennymi css.
+Możecie się zastanawiać, dlaczego nie `$color`. Składnie tą użyto, ponieważ dolara używają
+preprocesory CSS takie jak
+[Less](https://pl.wikipedia.org/wiki/Less_(j%C4%99zyk_arkuszy_styl%C3%B3w)) czy
+[Sass](https://en.wikipedia.org/wiki/Sass_(stylesheet_language)) więc skorzystano z innej składni,
+aby było możliwe użycie zmiennych Less/Sass w tym samym arkuszu razem ze zmiennymi CSS.
 
 Aby użyć zmiennej CSS, korzystamy z funkcji var np.:
 
@@ -104,7 +106,7 @@ Zmiennych można także używać jako style inline np.:
 {% endhighlight %}
 
 
-Zmiennych CSS można użyć, aby skrócić zapis nowych włąściwości z prefixami np:
+Zmiennych CSS można użyć, aby skrócić zapis nowych właściwości z prefixami np:
 
 {% highlight css %}
 * {
@@ -149,6 +151,8 @@ może nawet używać tej właściwości inline, np.:
 {% endhighlight %}
 
 Powyższy kod wyświetli tekst "hello world!".
+
+## Zmienne CSS w JavaScript
 
 Można definiować zmienne w JavaScript. Aby pobrać wartość można użyć:
 
@@ -198,6 +202,12 @@ input[type="range"] {
 }
 {% endhighlight %}
 
-Możecie się zastanawiać czy można używać zmiennych css już dzisiaj. Okazuje się, że zmienne css są dostępne w większości
-nowoczesnych przeglądarek oprócz Internet Exportera i Edge, chociaż wiadomo (w chwili pisania tego artykułu), że ich obsługa ma zostać dodana w nowej wersji 15 przeglądarki Edge.
-Możecie zobaczyć jakie przeglądarki już je zaimplementowały na stronie [can I use](http://caniuse.com/#feat=css-variables).
+## Podsumowanie
+
+Możecie się zastanawiać czy można używać zmiennych css już dzisiaj. Okazuje się, że zmienne css są
+dostępne w większości nowoczesnych przeglądarek oprócz Internet Explorera i Edge, chociaż wiadomo (w
+chwili pisania tego artykułu), że ich obsługa ma zostać dodana w nowej wersji 15 przeglądarki Edge.
+Możecie zobaczyć jakie przeglądarki już je zaimplementowały na stronie
+[can I use](http://caniuse.com/#feat=css-variables).
+
+*[CSS]: Cascading Style Sheets
