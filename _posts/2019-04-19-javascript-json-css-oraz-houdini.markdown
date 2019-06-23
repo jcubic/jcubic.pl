@@ -13,10 +13,10 @@ image:
  height: 450
  attribution: Jakub T. Jankiewicz, licencja [CC-BY-SA](https://creativecommons.org/licenses/by-sa/4.0/). źródło na [GitHub-ie](https://github.com/jcubic/jcubic.pl/blob/master/img/js-in-css.svg) użyto czcionki [Racing Sans One](https://www.dafontfree.io/racing-sans-one-font/)
 sitemap:
-  lastmod: 2019-06-12 10:13:27+0200
+  lastmod: 2019-06-23 13:17:54+0200
 ---
 
-Ten wpis nie będzie o React-cie i wstawianiu CSS-a wewnąrz kodu JavaScript. Ale o czymś
+Ten wpis nie będzie o React-cie i wstawianiu CSS-a wewnątrz kodu JavaScript. Ale o czymś
 zupełnie odwrotnym.  Będzie to o sposobie wstawiania kodu JS wewnątrz plików CSS. Dokładnie
 chodzi o obiekty JSON, ale pewnie gdy zastosujemy pojedyncze wyrażenie bez średników to
 też będzie działać. Pokaże też jak użyć części specyfikacji o nazwie Houdini do rysowania w CSS
@@ -34,6 +34,10 @@ są w planach lub w trakcie definiowania specyfikacji.  Specyfikacja i implement
 się jeszcze zmienić. Na stronie [ishoudinireadyyet.com](https://ishoudinireadyyet.com/)
 możesz sprawdzić status prac nad Houdini, w różnych przeglądarkach.
 
+> **UWAGA:** z chwilą pisania tego artykułu, aby móc użyć niektórych przykładów w Google Chrome,
+> trzeba włączyć opcje "Experimental Web Platform features" otwierając link:
+> chrome://flags/.
+
 ### Workery
 
 Workers czyli z angielskiego robotnicy jest to sposób dodawania nowego wątku do języka
@@ -44,11 +48,11 @@ Mamy kilka rodzaji workerów czyli:
 
 * Web Workers - zwykły wątek.
 * Shared Workers - jest to worker do którego można się odwoływać z różnych kontekstów np. stron, iframów czy innych workerów.
-* Service Workers - pisałem tym workerze we wpisie Serwer WWW w przeglądarce jest to Worker który działa po zamknięciu strony i może być np. odpowiedzialny za cachowanie stron (np. w aplikacji typu PWA) lub wysyłać powiadomienia ze strony (nawet jak zamknęliśmy stronę, a wyraziliśmy zgdodę na powiadomienia).
+* Service Workers - pisałem tym workerze we wpisie Serwer WWW w przeglądarce jest to Worker który działa po zamknięciu strony i może być np. odpowiedzialny za cachowanie stron (np. w aplikacji typu PWA) lub wysyłać powiadomienia ze strony (nawet jak zamknęliśmy stronę, a wyraziliśmy zgodę na powiadomienia).
 
 ### Data URI
 
-Jest to sposób do definiowania kodu html z danymi jako URI (rozwijąc nazwę URL dostajemy
+Jest to sposób do definiowania kodu html z danymi jako URI (rozwijając nazwę URL dostajemy
 Locator, a tutaj dane nie wskazują na lokalizacje, więc używamy URI czyli Identifier), który
 zaczyna się od `data:` i może wyglądać tak:
 
@@ -57,12 +61,12 @@ data:text/html,<button>click</button><script>document.querySelector('button').ad
 ```
 
 Dzięki temu możemy np. testować sobie kod JavaScript mając prosty edytor (czyli pasek
-adresu). Zdarza mi się testować w tem sposób proste właściwości JS albo CSS.
+adresu). Zdarza mi się testować w ten sposób proste właściwości JS albo CSS.
 
 Data URI jest ograniczone co do długości, ale można utworzyć go z obiektu Blob. Nie posiada
 wtedy naszego kodu, ale ma tylko identyfikator (hash), który wskazuje na obiekt w pamięci.
 
-Tutaj przykład funkcji blobify (nazwa może nie dokońca poprawna powinno być coś
+Tutaj przykład funkcji blobify (nazwa może nie do końca poprawna powinno być coś
 nawiązujące do URI) Bazuje ona na kodzie z tego pytania na Stack Overflow:
 ["How to create a Web Worker from a string"](https://stackoverflow.com/a/10372280/387194)
 
@@ -93,10 +97,10 @@ zmienimy zakładkę. Używa do tego celu workera, który trzeba było dodać w t
 ponieważ ciężko by było użyć ścieżki, gdy używa się np. CDN).
 
 
-Dalej w kodzie będziemy używać tej funkcji, aby utworzyć worker (a dokołanie paint
-worklet).  Dlaczego nie użyjemy osobnego pliku? Moim zdaniem nadmierne rodzielanie całej
+Dalej w kodzie będziemy używać tej funkcji, aby utworzyć worker (a dokładnie paint
+worklet).  Dlaczego nie użyjemy osobnego pliku? Moim zdaniem nadmierne rozdzielanie całej
 aplikacji na pliki jest błędem. Ciężko cokolwiek potem znaleźć, gdy trzeba skakać między
-plikami, a czasami nawet katalogami. Więc warto zależne funkcjionalności mieć w jednym
+plikami, a czasami nawet katalogami. Więc warto zależne funkcjonalności mieć w jednym
 pliku. Przydaje się to też, gdy brakuje innej możliwości np. na Codpen (link na końcu).
 
 
@@ -109,7 +113,7 @@ Przykładowy URL wygląda tak:
 Więc nie jest to do końca data URI, ale działa dokładnie tak samo, tylko dane mogą mieć
 nieograniczoną długość, ponieważ nie ma ich w URL-u.
 
-**UWAGA:** coś takiego nie zadziała z Service Workerem, który wymaga fizycznego pliku na dysku.
+> **UWAGA:** coś takiego nie zadziała z Service Workerem, który wymaga fizycznego pliku na dysku.
 
 ### Paint Worklet
 
@@ -120,7 +124,7 @@ CSS.paintWorklet.addModule('plik.js');
 {% endhighlight %}
 
 Wewnątrz workera mamy dostęp do API, takiego samego jak API Canvas, gdzie mamy możliwość
-dowolnego rysowania. Możemy zarejestorwać specjalnego Rysownika (ang. Paint), którym jest
+dowolnego rysowania. Możemy zarejestrować specjalnego Rysownika (ang. Paint), którym jest
 klasa i użyć go w CSS.
 
 {% highlight css %}
