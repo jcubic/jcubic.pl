@@ -4,7 +4,7 @@ title:  "Upload Katalogów i Plików poprzez Drag & Drop"
 date:   2019-06-29 15:21:18+0200
 categories:
 tags: javascript API upload
-description: Wpis o tym jak użyć nowych API aby wgrać pliki i katalogi na serwer. Upload plików i katalogów jest teraz możliwy poprzez Drag & Drop.
+description: Wpis o tym jak użyć nowych API, aby wgrać pliki i katalogi na serwer. Upload plików i katalogów jest teraz możliwy poprzez Drag & Drop.
 author: jcubic
 image:
   url: "/img/office-folders.jpg"
@@ -97,18 +97,18 @@ for (file of files) {
 const url = 'upload.php';
 fetch(url, {
     method: 'post',
-    body: form,
-}).fetch(function() {
+    body: form
+}).then(function() {
     alert('Upload Done');
 });
 {% endhighlight %}
 
 Zamiast php może być dowolny inny język, użyte zostało nowe API `fetch`. Warto z niego korzystać, ponieważ
-jest to prostsze API niż XHR, [wsparcie jest duże](https://caniuse.com/#feat=fetch), a w przeglądarkach
+jest to prostsze API niż XHR, [wsparcie jest duże](https://caniuse.com/#feat=fetch), a w przeglądarkach,
 które nie zaimplementowały tego API, można użyć polyfill, na przykład minimalistyczny
 [unfetch](https://github.com/developit/unfetch).
 
-W przypadku wielu plików warto także podzielić upload i wgrywać pliki po jednym, ponieważ większość
+W przypadku wielu plików, warto także podzielić upload i wgrywać pliki po jednym, ponieważ większość
 technologii back-end'owych posiada limity na ilość danych, jaką można przesłać.
 
 ## Upload Katalogów
@@ -116,7 +116,7 @@ technologii back-end'owych posiada limity na ilość danych, jaką można przes�
 W przypadku katalogów proces jest nieco bardziej skomplikowany, mamy też dwa różne API z prefiksami.
 Inne funkcje w przeglądarce Chrome a inne w FireFox.
 
-### Przeglądarka Google Chrome or Chromium
+### Przeglądarka Google Chrome oraz Chromium
 
 W przeglądarce Chrome mamy funkcje o nazwie `webkitGetAsEntry`, która zwraca właściwy obiekt. Musimy
 wywołać tą funkcję dla każdego elementu item.
@@ -173,7 +173,7 @@ if (event.dataTransfer.getFilesAndDirectories) {
 
 ## Upload jednego pliku
 
-Pierwsza funkcja której nam brakuje to zwykły upload, który może wyglądać tak:
+Pierwsza funkcja, której nam brakuje to zwykły upload, który może wyglądać tak:
 
 {% highlight javascript %}
 function upload_file(file, path) {
