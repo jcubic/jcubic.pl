@@ -4,7 +4,7 @@ title:  "Dzielenie i Upload Plików na Części"
 date:   2019-08-15 13:39:56+0200
 categories:
 tags: javascript API upload php
-description: Wpis o tym jak użyć nowych API, aby wgrać pliki i katalogi na serwer. Upload plików i katalogów jest teraz możliwy poprzez Drag & Drop.
+description: Wpis o tym jak użyć nowych API, aby podzielić i wgrać pliki na serwer. Upload plików na części.
 author: jcubic
 image:
   url: "/img/knife-cut.jpg"
