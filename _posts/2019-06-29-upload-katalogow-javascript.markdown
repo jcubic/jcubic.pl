@@ -12,6 +12,12 @@ image:
   height: 519
   alt: "Segregatory (Katalogi) na półce"
   attribution: źródło [pxhere](https://pxhere.com/en/photo/1234357), licencja [CC0 Public Domain](https://creativecommons.org/publicdomain/zero/1.0/)
+related:
+  -
+    name: "Dzielenie i Upload Plików na Części"
+    url: /2019/08/dzielenie-pliku-na-czesci.html
+sitemap:
+  lastmod: 2019-08-15 13:39:56+0200
 ---
 
 Do niedawna możliwy był upload tylko pojedynczych plików. Przeglądarki jednak (Chrome oraz Firefox)

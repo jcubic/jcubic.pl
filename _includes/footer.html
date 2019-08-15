@@ -1,5 +1,6 @@
 <footer>
   <script async defer src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <script async defer src="{{ '/script.js' | prepend: site.baseurl | prepend: site.url }}"></script>
   <script async defer type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
   <div id="fb-root"></div>
   <script type="text/javascript">
@@ -11,6 +12,26 @@
      fjs.parentNode.insertBefore(js, fjs);
    }(document, 'script', 'facebook-jssdk'));
   </script>
+  <!-- Matomo -->
+  <script type="text/javascript">
+   var _paq = window._paq || [];
+   /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+   _paq.push(['trackPageView']);
+   _paq.push(['enableLinkTracking']);
+   (function() {
+       var u="//piwik.jcubic.pl/";
+       _paq.push(['setTrackerUrl', u+'matomo.php']);
+       _paq.push(['setSiteId', '2']);
+       var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+       g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+   })();
+  </script>
+  <!-- End Matomo Code -->
+  <noscript>
+  <!-- Matomo Image Tracker-->
+  <img src="https://piwik.jcubic.pl/matomo.php?idsite=2&amp;rec=1" style="border:0" alt="" />
+  <!-- End Matomo -->
+  </noscript>
   <p>Copyright &copy; 2014-{{ 'now' | date: "%Y" }} <a href="/jakub-jankiewicz">Jakub Jankiewicz</a></p>
   <p>Wszystko na licencji <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA</a>, chyba że napisano inaczej</p>
   <p>Powered by <a href="https://jekyllrb.com/">Jekyll</a>, źródła na <a href="https://github.com/jcubic/jcubic.pl">githubie</a></p>

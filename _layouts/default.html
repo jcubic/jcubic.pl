@@ -32,26 +32,5 @@ MM.    `7MMF'm'MM 8M     M8  VA ,V  VA ,V     MM    MM    MM 8M""""""
     </div>
     {% include footer.html %}
     {% include cookie.html %}
-    <script defer async src="{{ '/script.js' | prepend: site.baseurl | prepend: site.url }}"></script>
-    <!-- Piwik -->
-    <script type="text/javascript">
-    if (location.host == 'jcubic.pl') {
-      var _paq = _paq || [];
-      _paq.push(["trackPageView"]);
-      _paq.push(["enableLinkTracking"]);
-
-      setTimeout(function() {
-        var u=(("https:" == document.location.protocol) ? "https" : "http") + "://piwik.jcubic.pl/";
-        _paq.push(["setTrackerUrl", u+"piwik.php"]);
-        _paq.push(["setSiteId", "2"]);
-        var d=document, g=d.createElement("script"), s=d.getElementsByTagName("script")[0]; g.type="text/javascript";
-        g.defer=true; g.async=true; g.src=u+"piwik.js"; s.parentNode.insertBefore(g,s);
-      }, 0);
-    }
-    </script>
-    <noscript>
-        <img src="http://piwik.jcubic.pl/piwik.php?idsite=2&amp;rec=1" style="border:0" alt="" />
-    </noscript>
-    <!-- End Piwik Code -->
 </body>
 </html>
