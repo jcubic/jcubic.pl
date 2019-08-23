@@ -27,7 +27,7 @@ lub hasło.  Może to być kod JavaScript ale również [CSS](https://typeofweb.
 
 Istnieją jego dwa rodzaje:
 
-## Reflected, czyli odwzorowany
+### Reflected, czyli odwzorowany
 Polega na tym, że w parametrze zapytania HTTP, możemy wstawić kod JavaScript, który zostanie odwzorowany
 w wygenerowanym kodzie. Nie musi to być zapytanie typu GET, w przypadku POST atakujący może utworzyć stronę na innym serwerze,
 która wyśle formularz do atakowanej strony. Wtedy URL takiej strony musiałby zostać przesłany ofierze np. w emailu. Aby taki

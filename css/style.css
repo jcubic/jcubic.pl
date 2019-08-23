@@ -110,7 +110,10 @@ section p, section ol, section ul, .content .highlight, .content .body > pre cod
 .more {
     margin: 0 0 20px 20px;
 }
-.excerpt h2, .content h2 {
+.content h2 {
+    font-size: 1.4em;
+}
+.excerpt h2 {
     font-size: 1.1em;
 }
 .excerpt h2, .content h2, .content h3, h4, h5 {
