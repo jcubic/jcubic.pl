@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Dzielenie i Upload Plików na Części"
+title:  "Dzielenie i upload plików na części"
 date:   2019-08-15 13:39:56+0200
 categories:
 tags: javascript API upload php

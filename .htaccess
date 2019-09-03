@@ -4,13 +4,13 @@ Options +FollowSymLinks
 #Options +ExecCGI
 #AddHandler cgi-script .cgi
 
-RewriteEngine on
-RewriteCond %{HTTP_HOST} ^\d+\.
-RewriteRule (.*) https://jcubic.pl/$1 [R=301,L]
+#RewriteCond %{HTTPS} off
+#RewriteCond %{HTTP_HOST} ^jcubic.pl$
+#RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
-RewriteCond %{HTTPS} off
-RewriteCond %{HTTP_HOST} ^jcubic.pl$
-RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+RewriteEngine on
+RewriteCond %{SERVER_PORT} ^80$
+RewriteRule ^(.*)$ https://%{SERVER_NAME}%{REQUEST_URI} [L,R]
 
 
 RewriteCond %{HTTP_HOST} ^mail.jcubic.pl
@@ -100,7 +100,7 @@ RewriteRule .* /404.php
 
 #Header set Referer
 
-#ErrorDocument 404 /404.php
+ErrorDocument 404 /404.php
 ErrorDocument 400 /400.shtml
 ErrorDocument 401 /401.shtml
 ErrorDocument 403 /403.shtml

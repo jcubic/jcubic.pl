@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Upload Katalogów i Plików poprzez Drag & Drop"
+title:  "Upload katalogów i plików poprzez Drag & Drop"
 date:   2019-06-29 15:21:18+0200
 categories:
 tags: javascript API upload
