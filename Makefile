@@ -7,7 +7,7 @@ index:
 
 tidy:
 	@echo "cleaning..."
-	@./clean
+	@clean
 
 build:
 	@bundle exec jekyll build
