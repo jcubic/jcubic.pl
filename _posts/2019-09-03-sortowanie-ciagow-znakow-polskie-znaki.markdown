@@ -35,7 +35,7 @@ Nie jest to dokładnie to, o co nam chodzi. W poprawnie posortowanej tablicy "Ą
 powinno być drugie na liście (przed "Baro"). Takie posortowanie naszych ciągów znaków
 wynika z faktu, że brane są pod uwagę kody znaków (ang. CodePoints), które w tablicy
 znaków nie są w tych samych miejscach, co w Polskim alfabecie. Polskie znaki są na końcu,
-(zobacz [tabelę Unicode](https://unicode-table.com/pl/).
+(zobacz [tabelę Unicode](https://unicode-table.com/pl/)).
 
 A oto rozwiązanie, które poprawnie posortuje tablicę:
 
