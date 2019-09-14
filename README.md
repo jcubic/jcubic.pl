@@ -69,6 +69,24 @@ Po dodaniu nowego wpisu należy dodać go do indeksu, który służy do wyszukiw
 make index
 ```
 
+## Docker
+
+W repozytorium znaduje się plik Dockerfile, dzięki któremu możesz zbudować obraz dockerowy z wszystkimi
+potrzebnymi zależnościami. Aby zbydować obraz wykonaj:
+
+```
+docker build -t jcubic.pl .
+```
+
+aby uruchomić kontener:
+
+```
+docker run --rm -ti -v $(pwd):/tmp/www -e "JEKYLL_ENV=docker" -p 127.0.0.1:8080:4000 jcubic.pl
+```
+
+W przeglądarce pod adress http://localhost:8080 będzie odpalony blog, który zostanie przebudownay
+przy każdej zmianie pliku lub dodaniu artykułu.
+
 Copyright (C) 2014-2018 [Jakub Jankiewicz](http://jcubic.pl/jakub-jankiewicz)
 
 Wszystko na licencji [CC-BY-SA](http://creativecommons.org/licenses/by-sa/4.0/), chyba że napisano inaczej

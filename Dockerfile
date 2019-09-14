@@ -35,4 +35,4 @@ RUN apk --no-cache del cmake build-base python-dev ruby-dev
 RUN rm -rf /root/.gem
 
 WORKDIR /tmp/www/
-CMD ["jekyll", "serve"]
+CMD jekyll serve --host 0.0.0.0 --config _config.yml,_config_docker.yml
