@@ -87,6 +87,6 @@ docker run --rm -ti -v $(pwd):/tmp/www -e "JEKYLL_ENV=docker" -p 8080:4000 jcubi
 W przeglądarce pod adress http://localhost:8080 będzie odpalony blog, który zostanie przebudownay
 przy każdej zmianie pliku lub dodaniu artykułu.
 
-Copyright (C) 2014-2018 [Jakub Jankiewicz](http://jcubic.pl/jakub-jankiewicz)
+Copyright (C) 2014-2019 [Jakub Jankiewicz](http://jcubic.pl/jakub-jankiewicz)
 
 Wszystko na licencji [CC-BY-SA](http://creativecommons.org/licenses/by-sa/4.0/), chyba że napisano inaczej
