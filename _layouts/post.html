@@ -80,6 +80,7 @@ layout: default
             </a> (aby zobaczyć kod na GitHubie, musisz kliknąć przycisk raw)
         </div>
         <div class="share">
+            {% if jekyll.environment == "production" %}
             <div class="twitter">
                 <iframe src="https://img.shields.io/twitter/url/{{ page.url | prepend: site.baseurl | prepend: site.url | replace: 'https://', 'https/' | replace: 'http://', 'http/' }}.svg?label=Udostępnij&style=social" style="border:none; width:87px;height: 20px"></iframe>
             </div>
@@ -118,13 +119,16 @@ layout: default
                  window.open(url, "pop", "width=600, height=400, scrollbars=no");
              });
             </script>
+            {% endif %}
         </div>
         <h5>Komentarze</h5>
         <p>
           Hasło, które podasz umożliwi ponowne zalogowanie się i np. usunięcie komentarza, jest dobrowolne. Email jest szyfrowany i używany do wysyłania powiadomień o odpowiedziach do komentarzy oraz do pobierania awatara dzięki usłudze <a href="https://pl.gravatar.com/">Gravatar.com</a>.
         </p>
+        {% if jekyll.environment == "production" %}
         <script type="text/javascript"
                 src="/hashover-next/hashover/comments.php"></script>
         <noscript>You must have JavaScript enabled to use the comments.</noscript>
+        {% endif %}
     </div>
 </section>

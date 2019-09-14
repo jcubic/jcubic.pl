@@ -81,7 +81,7 @@ docker build -t jcubic.pl .
 aby uruchomić kontener:
 
 ```
-docker run --rm -ti -v $(pwd):/tmp/www -e "JEKYLL_ENV=docker" -p 127.0.0.1:8080:4000 jcubic.pl
+docker run --rm -ti -v $(pwd):/tmp/www -e "JEKYLL_ENV=docker" -p 8080:4000 jcubic.pl
 ```
 
 W przeglądarce pod adress http://localhost:8080 będzie odpalony blog, który zostanie przebudownay

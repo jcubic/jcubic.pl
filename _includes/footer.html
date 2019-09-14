@@ -1,5 +1,7 @@
 <footer>
+  {% if jekyll.environment == "production" %}
   <script async defer src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  {% endif %}
   <script async defer src="{{ '/script.js' | prepend: site.baseurl | prepend: site.url }}"></script>
   <script async defer type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
   <div id="fb-root"></div>
@@ -13,6 +15,7 @@
    }(document, 'script', 'facebook-jssdk'));
   </script>
   <!-- Matomo -->
+  {% if jekyll.environment == "production" %}
   <script type="text/javascript">
    var _paq = window._paq || [];
    /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
@@ -32,6 +35,7 @@
   <img src="https://piwik.jcubic.pl/matomo.php?idsite=2&amp;rec=1" style="border:0" alt="" />
   <!-- End Matomo -->
   </noscript>
+  {% endif %}
   <p>Copyright &copy; 2014-{{ 'now' | date: "%Y" }} <a href="/jakub-jankiewicz">Jakub Jankiewicz</a></p>
   <p>Wszystko na licencji <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA</a>, chyba że napisano inaczej</p>
   <p>Powered by <a href="https://jekyllrb.com/">Jekyll</a>, źródła na <a href="https://github.com/jcubic/jcubic.pl">githubie</a></p>
