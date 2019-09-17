@@ -1,11 +1,11 @@
 ---
 layout: post
 title:  "Prosty Czat w JavaScript, PHP i SQLite"
-date:   2019-09-17 19:58:39+0200
+date:   2019-09-17 22:22:30+0200
 categories:
 tags: php sqlite javascript ajax http
 author: jcubic
-description: Jak napisać prosty czat (ang. chat) w JavaScript za pomocą Server Side Events oraz PHP i SQLite.
+description: Jak napisać prosty czat w JavaScript za pomocą Server-sent events, PHP, AJAX i SQLite.
 image:
  url: "/img/phone-chat-app.png"
  alt: "Grafika Wektorowa przedstawiająca symbloliczną aplikacje czatu na telefonie"
@@ -13,11 +13,11 @@ image:
  height: 599
 ---
 
-Server Side Events (SSE) to alternatywa dla Web Sockets (gniazd) dla serwerów, które
-nie mają możliwości odpalania nic na portach. Czy np. w przypadku zwykłych
+Server-sent events (SSE) to alternatywa dla Web Sockets (gniazd) dla serwerów, które
+nie mają możliwości odpalania nic na portach. Czyli np. w przypadku zwykłych
 kont współdzielonych (ang. shared hosting), które najczęściej udostępniają tylko PHP.
-W tym wpisie przedstawię jak napisać prosty nowoczesny czat w JavaScript i PHP,
-korzystając z Server Side Events, przy wykorzystaniu popularnej bazy danych SQLite.
+W tym wpisie przedstawię jak napisać prosty, nowoczesny czat w JavaScript i PHP,
+korzystając z Server-sent events oraz AJAX, przy wykorzystaniu popularnej bazy danych SQLite.
 
 <!-- more -->
 
@@ -80,7 +80,7 @@ Potrzebne nam będą tylko trzy tagi, formularz, pole tekstowe `textarea` oraz p
 
 Potrzebujemy formularza, aby łatwiej obsłużyć wysyłanie wiadomości na telefonie.
 
-Teraz musimy trochę ostylować ten formularz, ale tylko trochę bo jest to minimalistyczny
+Teraz musimy trochę ostylować ten formularz, ale tylko trochę, bo jest to minimalistyczny
 przykład czatu.
 
 {% highlight css %}
@@ -152,7 +152,7 @@ który odbiera dane strumieniowe z serwera.
 
 Teraz najważniejsza rzecz, czyli pobieranie strumienia zdarzeń z serwera za pomocą
 Server Side Events. Jeśli chciałbyś stworzyć czat np. we framework-u Angular lub React.
-To jest kod który musisz użyć. Obiekt EventSource, to główna magia SSE w przeglądarce.
+To poniżej jest kod, który musisz użyć. Obiekt EventSource, to główna magia SSE w przeglądarce.
 
 {% highlight javascript %}
 const textarea = document.getElementsByTagName('textarea')[0];
@@ -165,7 +165,7 @@ eventSource.addEventListener('chat', (e) => {
 });
 {% endhighlight %}
 
-I to tyle cały front-end naszej bardzo podstawowej aplikacji do czatu w JavaScript i PHP.
+I to tyle cały front-end, naszej bardzo prostej aplikacji do czatu w JavaScript i PHP.
 
 ## Back-End
 
@@ -174,20 +174,20 @@ Kod php, ponieważ jest go trochę więcej, będzie bardziej ustrukturyzowany.
 ### Baza danych SQLite i nasz model danych
 
 SQLite to bardzo prosta baza danych, która wszystko zapisuje w jednym pliku,
-jest bardzo popularna jako sposób zapisu konfiguracji. Korzysta z niej np.
+jest bardzo popularna, jako sposób zapisu konfiguracji. Korzysta z niej np.
 Chrome/Chromium do zapisu m.i. ciasteczek. Popularna jest także w aplikacjach
-wbudowanych które mają ograniczone sposoby. Jest bardzo powszechna jeśli używasz
-współdzielonego hostingu (ang. shared hosting) sprawdź czy jest dostępna,
+wbudowanych, które mają ograniczone zasoby. Jest bardzo powszechna, jeśli używasz
+współdzielonego hostingu (ang. shared hosting), sprawdź czy jest dostępna,
 bardzo fajnie się z nią pracuje.
 
 
 Poniżej klasa, która zwiera obsługę bazy danych SQLite. Czyli nasz model danych.
 
 > Komentarze w kodzie, oczywiście po angielsku, jeśli zaczynasz przygodę
-> z programowaniem zalecam pisanie po angielsku. Nie ma sensu pisać ich po polsku,
-> cały kod, czyli słowa kluczowe są w tym języku. Ma to znaczenie zwłaszcza w
+> z programowaniem zalecam pisanie po angielsku. Nie ma sensu pisać ich po polsku.
+> Cały kod, czyli słowa kluczowe są w tym języku. Ma to znaczenie zwłaszcza w
 > zespołach międzynarodowych (jeśli będziesz pracował jako programista).
-> Kod Open Source także powinien mieć komentarze po angielsku. No i można się
+> Kod Open Source, także powinien mieć komentarze po angielsku. No i można się
 > też podszkolić pisząc w tym języku.
 
 {% highlight php startinline=true %}
@@ -385,9 +385,11 @@ while (true) {
 {% endhighlight %}
 
 I to cały kod aplikacji. Kod czatu dostępny GitHub-ie pod adresem
-https://github.com/jcubic/chat licencja kodu to MIT.
+[https://github.com/jcubic/chat](https://github.com/jcubic/chat)
+licencja kodu to MIT.
 
-Demo aplikacji możesz zobaczyć pod linkiem https://jcubic.pl/chat/
+Demo aplikacji możesz zobaczyć pod linkiem
+[https://jcubic.pl/chat/](https://jcubic.pl/chat/)
 
 ## Co dalej
 
@@ -403,23 +405,23 @@ Jeśli tak generujemy kolorek. Z pomocą przychodzi Stack Overflow
 Potem należy pobierać dane z kolorkami używając złączenia tabel (SQL join).
 
 I na koniec wyświetlić dane użytkowników z kolorkami. Warto też zapisać użytkownika
-do localStorage. Aby nie pytać go za każdym razem o imię. Można też dodawać komendy,
-np. `/nick` może zmienić imię a `/me` wyświetlić wiadomość kursywą i bez znaku `>` tak
+do localStorage, aby nie pytać go za każdym razem o imię. Można też dodawać komendy,
+np. `/nick` może zmienić imię a `/me` wyświetlić wiadomość kursywą i bez znaku `>`, tak
 jak na IRC.
 
 ## Podsumowanie
 
-Server Side Events to doskonałe rozwiązanie, gdy nie musimy obsługiwać IE oraz Edge (nowa
+Server-sent events to doskonałe rozwiązanie, gdy nie musimy obsługiwać IE oraz Edge (nowa
 wersja na bazie Chromium, będzie już obsługiwała SSE) oraz gdy nie możemy z jakiegoś
 powodu używać Web Sockets.
 
 Alternatywą dla Server-sent events jest tzw. long pulling za pomocą AJAX-a, jest to dokładnie
-to czym jest Server Side Events, ale bez fajnej abstrakcji, więc wszystko trzeba zrobić samemu.
+to czym jest Server-sent events, ale bez fajnej abstrakcji, więc wszystko trzeba zrobić samemu.
 Jest to dość stara technologia, której już się nie używa. Pamięta ktoś
 [Comet](https://en.wikipedia.org/wiki/Comet_(programming))?
 
 
 *[HTTP]: HyperText Transfer Protocol
-*[SSE]: Server Side Events
+*[SSE]: Server-sent events
 *[HTML]: HyperText Markup Language
 *[IRC]: Internet Relay Chat

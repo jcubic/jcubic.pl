@@ -3,10 +3,10 @@ FROM alpine
 LABEL maintainer "Jakub T. Jankiewicz <jcubic@onet.pl>"
 
 RUN apk add --update --no-cache git ruby ruby-dev python \
-    cmake libxslt nodejs build-base py-pip python-dev bash \
-    libffi libxml2 zlib
+    cmake libxslt nodejs make build-base py-pip python-dev bash \
+    libffi libxml2 zlib sed
 
-RUN git clone https://github.com/htacg/tidy-html5 /tmp/tidy-html5 && \
+RUN git clone https://github.com/htacg/tidy-html5 --depth 1 /tmp/tidy-html5 && \
     cd /tmp/tidy-html5/build/cmake && \
     cmake ../.. -DCMAKE_BUILD_TYPE=Release && \
     make && make install
@@ -30,7 +30,9 @@ RUN bundle config --global silence_root_warning 1 && \
     pip install --user --no-warn-script-location \
     https://github.com/jcubic/pygments-lexer-babylon/zipball/master
 
-RUN apk --no-cache del cmake python-dev ruby-dev
+RUN pip install bs4 html5lib
+
+RUN apk --no-cache del cmake python-dev ruby-dev build-base
 
 RUN rm -rf /root/.gem
 

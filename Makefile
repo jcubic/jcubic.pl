@@ -7,9 +7,9 @@ index:
 
 tidy:
 	@echo "cleaning..."
-	@clean
+	@./clean
 
-build:
+build: prod
 	@bundle exec jekyll build
 
 watch:
@@ -22,3 +22,6 @@ install:
 
 now:
 	@date +"%F %T%:z"
+
+prod:
+  export JEKYLL_ENV=production
