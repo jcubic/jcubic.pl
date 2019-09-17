@@ -30,7 +30,7 @@ RUN bundle config --global silence_root_warning 1 && \
     pip install --user --no-warn-script-location \
     https://github.com/jcubic/pygments-lexer-babylon/zipball/master
 
-RUN apk --no-cache del cmake build-base python-dev ruby-dev
+RUN apk --no-cache del cmake python-dev ruby-dev
 
 RUN rm -rf /root/.gem
 
