@@ -102,10 +102,18 @@ section p:first-child {
 section p:last-child {
     margin-bottom: 0;
 }
-section p, section ol, section ul, .content .highlight, .content .body > pre code {
+section p,
+section ol,
+section ul,
+.content .highlight,
+.content .body > pre code,
+.body iframe {
     margin-left: 20px;
     margin-right: 0;
     display: block;
+}
+.body iframe {
+    width: calc(100% - 20px);
 }
 .more {
     margin: 0 0 20px 20px;
