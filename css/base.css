@@ -308,6 +308,10 @@ figure {
 }
 .cookie-baner .btn {
     margin-left: 10px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 @media (max-width: 850px) {
     #inner > header {

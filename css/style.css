@@ -4,6 +4,9 @@
 .content .ads {
     margin-left: 20px;
 }
+.content .ads iframe {
+    margin-left: -10px;
+}
 .content .ads, ins.adsbygoogle, ins.adsbygoogle * {
     box-sizing: border-box;
 }
