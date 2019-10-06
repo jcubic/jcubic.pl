@@ -115,6 +115,9 @@ section ul,
 .body iframe {
     width: calc(100% - 20px);
 }
+.body iframe + iframe {
+    margin-top: 20px;
+}
 .more {
     margin: 0 0 20px 20px;
 }
@@ -523,6 +526,52 @@ ul.tags:before {
 .resp-sharing-button--linkedin:active {
   background-color: #046293;
   border-color: #046293;
+}
+/* CODEPEN DEMO */
+.sticky .content {
+    padding-bottom: 270px;
+}
+#codepen {
+    margin: 20px 0 0 20px;
+}
+.sticky #codepen {
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    width: calc(100% - 380px);
+    max-width: 800px;
+    margin: 0 20px 0 40px;
+    bottom: 64px;
+}
+#codepen iframe {
+    width: 100%;
+    margin: 0;
+}
+.btn {
+	  box-shadow:inset 0px 1px 0px 0px #54a3f7;
+	  background:linear-gradient(to bottom, #007dc1 5%, #0061a7 100%);
+	  background-color:#007dc1;
+	  border-radius:3px;
+	  border:1px solid #124d77;
+	  display:inline-block;
+	  cursor:pointer;
+	  color:#ffffff;
+	  font-family:Arial;
+	  font-size:13px;
+	  padding:6px 24px;
+	  text-decoration:none;
+	  text-shadow:0px 1px 0px #154682;
+}
+.btn:hover {
+	  background:linear-gradient(to bottom, #0061a7 5%, #007dc1 100%);
+	  background-color:#0061a7;
+}
+.btn:active {
+	  position:relative;
+	  top:1px;
+}
+#codepen button {
+    float: right;
 }
 @keyframes falling {
     0% {

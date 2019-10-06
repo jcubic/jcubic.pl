@@ -417,8 +417,16 @@ powodu używać Web Sockets.
 
 Alternatywą dla Server-sent events jest tzw. long pulling za pomocą AJAX-a, jest to dokładnie
 to czym jest Server-sent events, ale bez fajnej abstrakcji, więc wszystko trzeba zrobić samemu.
-Jest to dość stara technologia, której już się nie używa. Pamięta ktoś
+Jest to dość stara technika, której już się nie używa. Pamięta ktoś
 [Comet](https://en.wikipedia.org/wiki/Comet_(programming))?
+
+## Aktualizacja
+
+Musiałem dodać jedną zmianę do kodu (limit znaków wiadomości), bo ktoś wpisał bardzo duży
+tekst (same xxxx). Słabo to wyglądało w tej mini apce, więc usunąłem ten wpis z bazy
+i ograniczyłem do 400 znaków. Zobacz zmiany na [GitHubie](https://github.com/jcubic/chat).
+Jeden z powodów dlaczego istnieją testerzy oprogramowania. Jest to też dowód, na to że często
+pierwszy kod ma błędy, nawet gdy jest tak mały jak ten czat.
 
 
 *[HTTP]: HyperText Transfer Protocol

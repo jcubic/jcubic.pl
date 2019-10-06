@@ -8,7 +8,9 @@ Pod GNU/Linuxem Ubuntu lub dystrybucjami pochodnymi wykonaj:
 
 ```
 sudo apt-get install ruby ruby-dev python
-sudo gem install jekyll jekyll-paginate pygments.rb bundler
+sudo gem bundler
+bundle install
+## mój fork, który obsługuje nową składnie JavaScript, której czasami używam
 pip install --user  https://github.com/jcubic/pygments-lexer-babylon/zipball/master
 cd jcubic.pl
 make install
@@ -20,7 +22,7 @@ dla dystrybucji fedora
 sudo dnf install ruby ruby-devel python gcc gcc-c++
 ```
 
-Plus komendy gem, pip oraz make install
+Plus komendy gem, bundle, pip oraz make install
 
 aby zainstalować tidy html5 musisz zainstalować cmake i xsltproc:
 
@@ -44,21 +46,23 @@ make
 sudo make install
 ```
 
-Musisz mieć też zainstalowany Node.js pod komendą `nodejs` jeśli masz zainstalowany pod node to musisz wykonać
-link symboliczny:
+Musisz mieć też zainstalowany Node.js pod komendą `nodejs` jeśli masz zainstalowany pod node
+to musisz wykonać link symboliczny:
 
 ```
 test -x /usr/bin/nodejs || sudo ln -s /usr/bin/node /usr/bin/nodejs
 ```
 
+wszystko przez lexer do JavaScript-u (to taki Frankenstein).
 
-Aby zbudować stronę po zainstalowania programu jekyll oraz tidy-html5 wywołaj
+
+Aby zbudować stronę po zainstalowania wszystkich zależności wykonaj:
 
 ```
 make
 ```
 
-
+(jak nie działa możesz spróbować dockera poniżej).
 
 wynikowa strona znajdzie się w katalogu `_site`.
 
@@ -71,22 +75,36 @@ make index
 
 ## Docker
 
-W repozytorium znaduje się plik Dockerfile, dzięki któremu możesz zbudować obraz dockerowy z wszystkimi
-potrzebnymi zależnościami. Aby zbydować obraz wykonaj:
+W repozytorium znajduje się plik Dockerfile, dzięki któremu możesz zbudować obraz dockerowy
+z wszystkimi potrzebnymi zależnościami. Aby zbudować obraz wykonaj (budowanie trochę trwa,
+więc można iść na kawę albo obiad):
 
 ```
 docker build -t jcubic.pl .
 ```
 
-aby uruchomić kontener:
+aby uruchomić kontener, trzeba wykonać polecenie (z katalogu z repozytorium, ponieważ
+pliki z blogiem nie są zapisane w obrazie):
 
 ```
 docker run --rm -ti -v $(pwd):/tmp/www -e "JEKYLL_ENV=docker" -p 8080:4000 jcubic.pl
 ```
 
-W przeglądarce pod adress http://localhost:8080 będzie odpalony blog, który zostanie przebudownay
-przy każdej zmianie pliku lub dodaniu artykułu.
+W przeglądarce pod adresem http://localhost:8080 będzie odpalony blog, który zostanie
+przebudowany przy każdej zmianie pliku lub dodaniu artykułu. Można też podać komendy
+`bash` (do poprzedniego polecenia), aby uzyskać wiersz poleceń.
 
-Copyright (C) 2014-2019 [Jakub Jankiewicz](http://jcubic.pl/jakub-jankiewicz)
+Aby zbudować wersje produkcyjną strony z adresem z `_config.yml` wykonaj:
 
-Wszystko na licencji [CC-BY-SA](http://creativecommons.org/licenses/by-sa/4.0/), chyba że napisano inaczej
+```
+docker run --rm -ti -v $(pwd):/tmp/www -p 8080:4000 jcubic.pl make
+```
+
+To samo polecenie co wcześniej, tylko bez zmiennej środowiskowej i z komendą `make`.
+
+## Licencja
+
+Copyright (C) 2014-2019 [Jakub Jankiewicz](https://jcubic.pl/jakub-jankiewicz)
+
+Wszystko na licencji [CC-BY-SA](https://creativecommons.org/licenses/by-sa/4.0/),
+chyba że napisano inaczej

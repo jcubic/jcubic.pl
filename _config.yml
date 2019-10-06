@@ -36,12 +36,12 @@ users:
 
 related:
   -
-    url: "http://algosmart.pl"
+    url: "http://www.algosmart.pl/"
     text: "AlgoSmart. Blog o sprytnym podejściu do nauki ReactJS"
   -
     url: "https://fsgeek.pl/"
     title: "Full Stack Geek"
-    text: "FSGeek"
+    text: "FSGeek. Blog pasjonata technologii webowych"
 
 defaults:
   -
