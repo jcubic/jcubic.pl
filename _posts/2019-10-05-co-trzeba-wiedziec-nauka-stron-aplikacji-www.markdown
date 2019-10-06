@@ -7,7 +7,7 @@ tags: www podstawy internet
 author: jcubic
 description: O czym warto pamiętać ucząć się tworzenia stron internetowych i aplikacji www. Aplikacje internetowe to nie tylko HTML, CSS oraz JavaScript, ale też wiele informacji dodatkowych, które trzeba znać.
 image:
- url: "/img/html-css-laptop-tworzenie-stron.jpg"
+ url: "/img/html-css-javascript-tworzenie-stron.jpg"
  alt: "Zdjęcie z książką o CSS i HTML, laptopem i notatnikiem z napisem: 20 rzeczy, które warto znać ucząc się tworzenia stron i aplikacji www"
  attribution: Źródło [Pixabay](https://pixabay.com/pl/photos/projektowanie-stron-internetowych-2038872/), autor [vanmarciano](https://pixabay.com/pl/users/vanmarciano-1310286/) [licencja Pixabay](https://pixabay.com/pl/service/license/)
  width: 800
