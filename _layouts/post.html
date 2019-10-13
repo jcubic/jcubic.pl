@@ -84,10 +84,6 @@ layout: default
             <div class="twitter">
                 <iframe src="https://img.shields.io/twitter/url/{{ page.url | prepend: site.baseurl | prepend: site.url | replace: 'https://', 'https/' | replace: 'http://', 'http/' }}.svg?label=Udostępnij&style=social" style="border:none; width:87px;height: 20px"></iframe>
             </div>
-            <div class="twitter twitter-follow">
-                <iframe src="https://img.shields.io/twitter/follow/jcubic.svg?label=Obserwuj%20@jcubic"
-                        style="border:none; width:160px;height: 20px"></iframe>
-            </div>
             <div class="linkedin">
               <!-- Sharingbutton LinkedIn -->
               <a class="resp-sharing-button__link" href="https://www.linkedin.com/shareArticle?mini=true&amp;url={{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}&title={% if page.title %}{{ page.title | url_encode }}{% else %}{{ site.title | url_encode }}{% endif %}&summary={% if page.description %}{{ page.description | url_encode }}{% else %}{{ site.description | url_encode }}{% endif %}&source=https%3A%2F%2Fjcubic.pl" target="_blank" rel="noopener" aria-label="LinkedIn">

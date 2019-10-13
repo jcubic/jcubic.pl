@@ -52,7 +52,7 @@ defaults:
       is_post: true # automatically set is_post=true for all posts
 
 sitemap:
-  lastmod: 2018-12-30 18:32:53+0100
+  lastmod: 2019-10-13 19:58:56+0200
 
 paginate: 10
 paginate_path: "/page:num"
