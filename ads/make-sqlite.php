@@ -25,7 +25,6 @@ function validate_files() {
             echo "File $file is required to generate sqlite database\n";
             flush();
             $missing = true;
-            
         }
     }
     if ($missing) {
@@ -80,7 +79,7 @@ function categories($book) {
             $attr = $category->attributes();
             $site = (string)$attr['serwis'];
             $id = intval($attr['id']);
-            
+
             if ($site == 'helion') {
                 $categories[] = array(
                     'id' => $id,
@@ -113,7 +112,6 @@ function build_categories() {
     $child_query = "INSERT INTO categories(code, parent_id, key, label) SELECT".
         " ?, id, ?, ? FROM categories WHERE code = ?";
     foreach($categories as $cat) {
-        
         if (!in_array($cat['id_nad'], $parents)) {
             $parents[] = $cat['id_nad'];
             query($db, $parent_query, array(
@@ -158,10 +156,10 @@ function build_books() {
                 query($db, $author_query, array($author));
                 $authors[] = $author;
             }
+            // debug message
             echo json_encode(array(
                 'code' => $code,
                 'title' => $title,
-                'cover' => $cover,
                 'categories' => $categories
             )) . "\n";
             flush();
@@ -173,10 +171,10 @@ function build_books() {
                 intval($status['status_online']),
                 $status['cena_online'], $author
             ));
+
             foreach($categories as $category) {
                 query($db, $cat_query, array($category['id'], $code));
             }
-
         }
     }
 }

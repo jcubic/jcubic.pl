@@ -641,3 +641,18 @@ ul.tags:before {
     margin-top: 5px;
     margin-bottom: 0;
 }
+@media (max-width: 1040px) {
+    .book-buy:nth-child(1) {
+        display: none;
+    }
+}
+@media (max-width: 900px) {
+    .book-buy:nth-child(2) {
+        display: none;
+    }
+}
+@media (max-width: 450px) {
+    .book-buy:nth-child(3) {
+        display: none;
+    }
+}
