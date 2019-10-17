@@ -585,3 +585,59 @@ ul.tags:before {
         transform: translate3D(7.5%, 100%, 0);
     }
 }
+/* reklama kasiążek helion.pl */
+.book-ads-wrapper {
+    display: flex;
+    justify-content: center;
+}
+.book-buy {
+    font-size: 12px;
+    text-align: center;
+    font-family: sans-serif;
+    vertical-align: top;
+    align-items: center;
+    display: inline-flex;
+    flex-direction: column;
+    width: 170px;
+}
+.book-buy header {
+    margin: 0.5em 0;
+    flex: 1;
+    font-size: inherit;
+}
+.book-buy img {
+    max-width: 200px;
+    width: 80%;
+}
+.book-buy p {
+    margin: 0;
+}
+.book-buy .title {
+    font-weight: bold;
+    font-size: 1.2em;
+    max-width: 250px;
+    padding: 0 1em;
+}
+.book-buy .buy {
+    background: #008000;
+    color: #fff;
+    font-size: 1.5em;
+    padding: 0.3em 0.4em;
+    display: inline-block;
+    border-radius: 4px;
+
+    margin: 0.3em 0;
+}
+.book-buy a {
+    text-decoration: none;
+    color: #1520FF;
+}
+.book-buy a:hover {
+    text-decoration: underline;
+}
+.book-buy .price {
+    font-size: 2em;
+    font-weight: bold;
+    margin-top: 5px;
+    margin-bottom: 0;
+}
