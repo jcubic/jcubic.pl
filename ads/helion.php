@@ -12,7 +12,7 @@ function validate_code($code) {
     return implode(",", array_slice($items, 0, 5));
 }
 
-header('Content-Type: application/javascript');
+header('Content-Type: application/javascript; charset=utf-8');
 
 $partner = '12418M';
 
@@ -20,17 +20,34 @@ require('db.php');
 
 $db = new PDO("sqlite:helion.db");
 $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+function like($column, $q) {
+    $q = explode(",", $q);
+    return implode(" or ", array_map(function($column) use ($q) {
+        $cond = array_map(function($q) use ($column) {
+            return "$column like '%$q%'";
+        }, $q);
+        return implode(" or ", $cond);
+    }, $column));
+}
     
 if (isset($_GET['code'])) {
     $code = validate_code($_GET['code']);
     $query = "SELECT title, books.code, name as author, price FROM books left " .
         "join authors on author_id = authors.id where code in (" . $code . ")";
-} else if ($_GET['category']) {
-    $query = "SELECT title, books.code, name as author, price FROM books left " .
+} elseif (isset($_GET['category'])) {
+    $query = "SELECT DISTINCT title, books.code, name as author, price FROM books " .
+        "left join authors on author_id = authors.id left join book_categories on " .
+        "books.id = book_id left join categories on categories.id = cat_id " .
+        "WHERE (" . like(array('categories.label'), $_GET['category']) . " )" .
+        " and status = 1 ORDER BY RANDOM() LIMIT 5";
+} elseif (isset($_GET['q'])) {
+    $query = "SELECT DISTINCT title, books.code, name as author, price FROM books left " .
         "join authors on author_id = authors.id left join book_categories on " .
         "books.id = book_id left join categories on categories.id = cat_id " .
-        "WHERE categories.label like '%" . $_GET['category'] . "%' and status = 1
-        ORDER BY RANDOM() LIMIT 5";
+        "WHERE (" . like(array('title'), $_GET['q']) .
+        ") and status = 1 ORDER BY RANDOM() limit 5";
+    //echo "/* $query */";
 }
 
 if (isset($query)) {
