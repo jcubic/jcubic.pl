@@ -651,8 +651,14 @@ ul.tags:before {
         display: none;
     }
 }
+@media (max-width: 850px) {
+    .book-buy:nth-child(2) {
+        display: inline-flex; /* sidebar removed - so we have room for 3 books */
+    }
+}
 @media (max-width: 450px) {
     .book-buy:nth-child(3) {
         display: none;
     }
 }
+
