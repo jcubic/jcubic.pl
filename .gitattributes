@@ -1,6 +1,7 @@
 * text eol=lf
 .* text eol=lf
 *.db binary
+ads/*.xml binary
 img/* binary
 *.png binary
 *.eot binary

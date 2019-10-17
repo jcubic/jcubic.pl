@@ -1,8 +1,21 @@
 <?php
+/*
+ * Ads serving script, the file is using like JavaScript
+ *
+ * Copyright (C) 2019 Jakub T. Jankiewicz
+ * released under Creative Commons Attribution Share-Alike license (CC-BY-SA)
+ */
+define('__PARTNER__', '12418M'); // Helion partner Code
+define('__LIMIT__', 5); // limit number of books
+define('__DEBUG__', false);
+
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
+// -----------------------------------------------------------------------------
+// :: return list of strings to be used with 'in' sql operator
+// -----------------------------------------------------------------------------
 function validate_code($code) {
     $items = array_filter(array_map(function($code) {
         if (preg_match("/^[a-z0-9]+$/i", $code)) {
@@ -11,18 +24,12 @@ function validate_code($code) {
     }, explode(",", $code)));
     return implode(",", array_slice($items, 0, 5));
 }
-
-header("Cache-Control: no-cache, must-revalidate");
-header("Expires: Mon, 26 Jul 1997 05:00:00 GMT");
-header('Content-Type: application/javascript; charset=utf-8');
-
-$partner = '12418M';
-
-require('db.php');
-
-$db = new PDO("sqlite:helion.db");
-$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
+// -----------------------------------------------------------------------------
+// :: function that return list of OR condition to be used in where
+// :: it need to be in parenthesis if using and after the call
+// :: the sql code will check if any colum match any of the strings in $q
+// :: $q is string with comma sparated values
+// -----------------------------------------------------------------------------
 function like($column, $q) {
     $q = explode(",", $q);
     return implode(" or ", array_map(function($column) use ($q) {
@@ -32,7 +39,24 @@ function like($column, $q) {
         return implode(" or ", $cond);
     }, $column));
 }
-    
+// -----------------------------------------------------------------------------
+// :: remove cache - script tags are cached even if it's php file
+// -----------------------------------------------------------------------------
+header("Cache-Control: no-cache, must-revalidate");
+header("Expires: Mon, 26 Jul 1997 05:00:00 GMT");
+header('Content-Type: application/javascript; charset=utf-8');
+
+// -----------------------------------------------------------------------------
+// :: init db
+// -----------------------------------------------------------------------------
+require('db.php');
+
+$db = new PDO("sqlite:helion.db");
+$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+// -----------------------------------------------------------------------------
+// :: generate query
+// -----------------------------------------------------------------------------
 if (isset($_GET['code'])) {
     $code = validate_code($_GET['code']);
     $query = "SELECT title, books.code, name as author, price FROM books left " .
@@ -42,18 +66,24 @@ if (isset($_GET['code'])) {
         "left join authors on author_id = authors.id left join book_categories on " .
         "books.id = book_id left join categories on categories.id = cat_id " .
         "WHERE (" . like(array('categories.label'), $_GET['category']) . " )" .
-        " and status = 1 ORDER BY RANDOM() LIMIT 5";
+        " and status = 1 ORDER BY RANDOM() LIMIT " . __LIMIT__;
 } elseif (isset($_GET['q'])) {
     $query = "SELECT DISTINCT title, books.code, name as author, price FROM books left " .
         "join authors on author_id = authors.id left join book_categories on " .
         "books.id = book_id left join categories on categories.id = cat_id " .
         "WHERE (" . like(array('title'), $_GET['q']) .
-        ") and status = 1 ORDER BY RANDOM() limit 5";
-    //echo "/* $query */";
+        ") and status = 1 ORDER BY RANDOM() LIMIT " . __LIMIT__;
+}
+if (__DEBUG__) {
+    echo "/* $query */";
 }
 
+// -----------------------------------------------------------------------------
+// :: run query and create list of books (based on query) as JavaScript code
+// -----------------------------------------------------------------------------
 if (isset($query)) {
-   $rows = query($db, $query);
+    $partner = __PARTNER__;
+    $rows = query($db, $query);
     $html = "<div class=\"book-ads-wrapper\">";
     foreach ($rows as $row) {
         $url = "http://helion.pl/view/$partner/${row['code']}.htm";

@@ -1,4 +1,10 @@
 <?php
+/* common PDO query function
+ *
+ * Copyright (C) 2019 Jakub T. Jankiewicz
+ * released under Creative Commons Attribution Share-Alike license (CC-BY-SA)
+ *
+ */
 
 
 function query($db, $query, $data = null) {
