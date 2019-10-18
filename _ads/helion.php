@@ -7,7 +7,7 @@
  */
 define('__PARTNER__', '12418M'); // Helion partner Code
 define('__LIMIT__', 5); // limit number of books
-define('__DEBUG__', false);
+define('__DEBUG__', true);
 
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);

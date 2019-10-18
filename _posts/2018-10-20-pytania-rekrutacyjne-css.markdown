@@ -312,7 +312,7 @@ Odpowiedź:
 ![Model Pudełkowy CSS](/img/Css_box_model.svg)
 <small>Źródło: [Wikimedia commons](https://commons.wikimedia.org/wiki/File:Css_box_model.svg) autor
 [Felix.leg](https://commons.wikimedia.org/wiki/User:Felix.leg) Licencja
-[CSS-BY-SA](https://creativecommons.org/licenses/by-sa/3.0/deed.en)
+[CC-BY-SA](https://creativecommons.org/licenses/by-sa/3.0/deed.en)
 </small>
 
 Każdy element składa się z pudełka według standardu W3C, który nie jest zaimplementowany poprawnie w starszej wersji IE.
@@ -334,7 +334,7 @@ jest niezależne).
 Jeśli jest taka możliwość, należy animować tylko właściwości `transform` oraz `opacity`, które są mało zasobożerne jeśli
 chodzi o animacje.  Użycie `transform: translate`, do przesuwania elementu na ekranie, będzie bardziej płynne od zmiany
 właściwości `left` lub `top`.  Dzieje się tak ponieważ, przy zmianie `opacity` oraz `transform`, nie jest wykonywana
-operacja layoutu, czyli obliczania wszystkich stylów na stronie i aplikowania ich do poszczególnych elementów.
+operacja layoutu, czyli obliczania wszystkich styli na stronie i aplikowania ich do poszczególnych elementów.
 
 ## 15. Jak ustawić wysokość lub szerokość na 100% w odniesieniu do całego okna przeglądarki
 
