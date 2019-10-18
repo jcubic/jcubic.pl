@@ -64,15 +64,17 @@ if (isset($_GET['code'])) {
 } elseif (isset($_GET['category'])) {
     $query = "SELECT DISTINCT title, books.code, name as author, price FROM books " .
         "left join authors on author_id = authors.id left join book_categories on " .
-        "books.id = book_id left join categories on categories.id = cat_id " .
-        "WHERE (" . like(array('categories.label'), $_GET['category']) . " )" .
-        " and status = 1 ORDER BY RANDOM() LIMIT " . __LIMIT__;
+        "books.id = book_id left join categories c1 on c1.id = cat_id " .
+        "inner join categories c2 on c2.id = c1.parent_id " .
+        "WHERE (" . like(array('c1.label', 'c2.label'), $_GET['category']) . " ) " .
+        "and status = 1 ORDER BY RANDOM() LIMIT " . __LIMIT__;
 } elseif (isset($_GET['q'])) {
     $query = "SELECT DISTINCT title, books.code, name as author, price FROM books left " .
         "join authors on author_id = authors.id left join book_categories on " .
-        "books.id = book_id left join categories on categories.id = cat_id " .
-        "WHERE (" . like(array('title'), $_GET['q']) .
-        ") and status = 1 ORDER BY RANDOM() LIMIT " . __LIMIT__;
+        "books.id = book_id left join categories c1 on c1.id = cat_id " .
+        "inner join categories c2 on c2.id = c1.parent_id " .
+        "WHERE (" . like(array('title'), $_GET['q']) . " ) " .
+        "and status = 1 ORDER BY RANDOM() LIMIT " . __LIMIT__;
 }
 if (__DEBUG__) {
     echo "/* $query */";
