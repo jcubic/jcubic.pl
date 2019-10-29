@@ -75,32 +75,30 @@ make index
 
 ## Docker
 
-W repozytorium znajduje się plik Dockerfile, dzięki któremu możesz zbudować obraz dockerowy
-z wszystkimi potrzebnymi zależnościami. Aby zbudować obraz wykonaj (budowanie trochę trwa,
-więc można iść na kawę albo obiad):
+W repozytorium znajduje się plik Dockerfile oraz skrypt bash'a `docker.sh`, dzięki któremu
+możesz zbudować obraz dockerowy z wszystkimi potrzebnymi zależnościami. Aby zbudować obraz
+wykonaj (budowanie trochę trwa, więc można iść na kawę albo obiad):
 
 ```
-docker build -t jcubic.pl .
+./docker.sh build
 ```
 
 aby uruchomić kontener, trzeba wykonać polecenie (z katalogu z repozytorium, ponieważ
 pliki z blogiem nie są zapisane w obrazie):
 
 ```
-docker run --rm -ti -v $(pwd):/tmp/www -e "JEKYLL_ENV=docker" -p 8080:4000 jcubic.pl
+./docker.sh
 ```
 
 W przeglądarce pod adresem http://localhost:8080 będzie odpalony blog, który zostanie
-przebudowany przy każdej zmianie pliku lub dodaniu artykułu. Można też podać komendy
+przebudowany przy każdej zmianie pliku lub dodaniu artykułu. Można też dodać
 `bash` (do poprzedniego polecenia), aby uzyskać wiersz poleceń.
 
 Aby zbudować wersje produkcyjną strony z adresem z `_config.yml` wykonaj:
 
 ```
-docker run --rm -ti -v $(pwd):/tmp/www -p 8080:4000 jcubic.pl make
+./docker.sh make
 ```
-
-To samo polecenie co wcześniej, tylko bez zmiennej środowiskowej i z komendą `make`.
 
 ## Licencja
 
