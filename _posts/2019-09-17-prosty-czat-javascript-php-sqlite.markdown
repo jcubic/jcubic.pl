@@ -38,10 +38,10 @@ Mamy pojedyncze zapytania AJAX-em (nie interesuje nas co zwraca serwer) oraz
 Pojedyncze zapytanie do serwera o strumień danych i potem już tylko dostajemy
 dane z serwera, bez potrzeby ponownego zapytania.
 
-W JavaScript API wygląda dokładnie tak na ilustracji, że tworzymy pojedynczą
+W JavaScript API wygląda dokładnie tak jak na ilustracji. Tworzymy pojedynczą
 instancje strumienia SSE, a całością zajmuje się przeglądarka. Jeśli połączenie
-zostanie przerwane (zazwyczaj czas działania skryptu php jest ograniczony),
-zostanie wysłane nowe zapytanie HTTP do serwera, ale to już nie musimy się martwić.
+zostanie przerwane (zazwyczaj czas działania skryptu PHP jest ograniczony),
+zostanie wysłane nowe zapytanie HTTP do serwera, ale o to już nie musimy się martwić.
 Dla nas najważniejsza jest ta abstrakcja, że mamy jeden strumień i tak
 powinniśmy o nim myśleć.
 
@@ -384,7 +384,7 @@ while (true) {
 }
 {% endhighlight %}
 
-I to cały kod aplikacji. Kod czatu dostępny GitHub-ie pod adresem
+I to cały kod aplikacji. Kod czatu dostępny na GitHub-ie pod adresem
 [https://github.com/jcubic/chat](https://github.com/jcubic/chat)
 licencja kodu to MIT.
 
@@ -406,7 +406,7 @@ Potem należy pobierać dane z kolorkami używając złączenia tabel (SQL join)
 
 I na koniec wyświetlić dane użytkowników z kolorkami. Warto też zapisać użytkownika
 do localStorage, aby nie pytać go za każdym razem o imię. Można też dodawać komendy,
-np. `/nick` może zmienić imię a `/me` wyświetlić wiadomość kursywą i bez znaku `>`, tak
+np. `/nick` może zmienić imię, a `/me` wyświetlić wiadomość kursywą i bez znaku `>`, tak
 jak na IRC.
 
 ## Podsumowanie
