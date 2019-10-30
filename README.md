@@ -75,19 +75,19 @@ make index
 
 ## Docker
 
-W repozytorium znajduje się plik Dockerfile oraz skrypt bash'a `docker.sh`, dzięki któremu
+W repozytorium znajduje się plik Dockerfile oraz skrypt bash'a `dock`, dzięki któremu
 możesz zbudować obraz dockerowy z wszystkimi potrzebnymi zależnościami. Aby zbudować obraz
 wykonaj (budowanie trochę trwa, więc można iść na kawę albo obiad):
 
 ```
-./docker.sh build
+./dock build
 ```
 
 aby uruchomić kontener, trzeba wykonać polecenie (z katalogu z repozytorium, ponieważ
 pliki z blogiem nie są zapisane w obrazie):
 
 ```
-./docker.sh
+./dock
 ```
 
 W przeglądarce pod adresem http://localhost:8080 będzie odpalony blog, który zostanie
@@ -97,7 +97,7 @@ przebudowany przy każdej zmianie pliku lub dodaniu artykułu. Można też doda�
 Aby zbudować wersje produkcyjną strony z adresem z `_config.yml` wykonaj:
 
 ```
-./docker.sh make
+./dock make
 ```
 
 ## Licencja
