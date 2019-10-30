@@ -1,6 +1,6 @@
 all: build tidy
 
-.PHONY: index tidy build watch install
+.PHONY: index tidy build watch install sitemap
 
 index:
 	@echo "Indexing..." && ./index.py _site > /dev/null && echo "            Done"
@@ -25,3 +25,6 @@ now:
 
 prod:
   export JEKYLL_ENV=production
+
+sitemap:
+	@sed -i "s/lastmod: .*/lastmod: `./date`/" _config.yml
