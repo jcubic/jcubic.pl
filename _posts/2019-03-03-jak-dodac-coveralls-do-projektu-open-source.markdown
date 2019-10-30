@@ -27,7 +27,7 @@ projektu Open Source (o Otwartym Kodzie Źródłowym), czytaj dalej.
 
 <!-- more -->
 
-### Co to jest Code Coverage?
+## Co to jest Code Coverage?
 
 Po polsku to pokrycie kodu źródłowego testami. Działa to tak, że program, który testuje
 nasz kod, **uruchamia testy jednostkowe** (lub integracyjne, które można odpalić z poziomy np. node.js)
@@ -46,7 +46,7 @@ Do pisania testów jednostkowych w JavaScript, najlepiej użyć narzędzia
 [**jest od Facebooka**](https://jestjs.io/), jego fajną funkcją jest to, że **code coverage**, można uzyskać
 (dzięki Istanbul) **w jednym przebiegu** testów, jednocześnie ze statystykami poszczególnych testów.
 
-### Co to jest Travis?
+## Co to jest Travis?
 
 TravisCI jest to **usługa ciągłej integracji** (ang. Continuous integration) dostępna pod adresem
 [travis-ci.org](https://travis-ci.org) (jest też druga wersja w domenie .com). W skrócie można powiedzieć, że
@@ -98,7 +98,7 @@ wiedzieć czy nasz projekt się zbudował i czy testy wykonały się pomyślnie.
 zmergować czyjś PR (lub swój), i czy ostanie zmiany nie wymagają poprawek. Travis wyśle nam także email, gdy
 ostanie zmiany spowodują "wysypanie" się testów oraz gdy zostaną naprawione lub nadal się wywalają.
 
-### Jak dodać Travisa do projektu?
+## Jak dodać Travisa do projektu?
 
 Dodanie do projektu jest proste, oto kolejne kroki (nie dodawałem zdjęć, ponieważ nie mogę już założyć konta,
 bo już mam, a nie chciałem tworzyć fikcyjnego ani nie chciałem usuwać aplikacji Travisa bo stracił bym
@@ -119,14 +119,14 @@ budowania projektu, aby było co sprawdzać.
 > nie na **.org**, dokumentacja jest na stronie **.com**. Jeśli raz się logowałeś, nie powinno cię wylogować,
 > więc jeśli nie jesteś zalogowany, to musisz sprawdzić czy jesteś na właściwej stronie.
 
-### Co to jest Coveralls?
+## Co to jest Coveralls?
 
 Coveralls to jeszcze jedna usługa. **Śledzi ona zmiany pokrycia testami**. Ciekawą funkcją Travisa i Coveralls
 jest to, że wyświetlają się przy każdym **Pull Request-cie** dlatego będziemy wiedzieć, że **nie należy
 merge'ować PR**, gdy projekt się nie zbuduje lub gdy procent pokrycia testami zmniejszy się za dużo.  (często
 się zdarza, że zmniejsza się o 0.01% a i tak jest czerwona lampka).
 
-### Jak dodać Coveralls do projektu?
+## Jak dodać Coveralls do projektu?
 
 Dodawanie do projektu jest bardzo proste. Wystarczy się **zarejestrować na stronie**
 [coveralls.io](https://coveralls.io/), można się **zalogować przez GitHuba** jak i **GitLab** oraz
@@ -163,7 +163,7 @@ yarn add coveralls --dev
 Ważne jest także, aby wywoływać `npm install` lub `yarn install` z poziomy Travisa, inaczej nie będzie katalogu
 node_modules i polecenia zwrócą błąd.
 
-### Podsumowanie
+## Podsumowanie
 
 I to by było na tyle. Jeśli wykonałeś te kroki, to powinieneś móc teraz **dodać odznaki** (ang. badges) do
 pliku README, które będą wskazywać, czy **projekt się zbudował pomyślenie** i ile ma **procent pokrycia

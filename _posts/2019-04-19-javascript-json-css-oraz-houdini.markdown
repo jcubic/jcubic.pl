@@ -24,7 +24,7 @@ za pomocą języka JavaScript.
 
 <!-- more -->
 
-### Houdini
+## Houdini
 
 Jest to zestaw API, dzięki którym można się podpiąć pod silnik CSS. Za ich pomocą będziemy
 mogli dodawać nowe funkcjonalności do CSS, których nie ma jeszcze w przeglądarkach lub
@@ -38,7 +38,7 @@ możesz sprawdzić status prac nad Houdini, w różnych przeglądarkach.
 > trzeba włączyć opcje "Experimental Web Platform features" otwierając link:
 > chrome://flags/.
 
-### Workery
+## Workery
 
 Workers czyli z angielskiego robotnicy jest to sposób dodawania nowego wątku do języka
 JavaScript. Więc tak na prawdę nie jest jedno-wątkowy i można tworzyć nowe. Nowy worker
@@ -50,7 +50,7 @@ Mamy kilka rodzaji workerów czyli:
 * Shared Workers - jest to worker do którego można się odwoływać z różnych kontekstów np. stron, iframów czy innych workerów.
 * Service Workers - pisałem tym workerze we wpisie Serwer WWW w przeglądarce jest to Worker który działa po zamknięciu strony i może być np. odpowiedzialny za cachowanie stron (np. w aplikacji typu PWA) lub wysyłać powiadomienia ze strony (nawet jak zamknęliśmy stronę, a wyraziliśmy zgodę na powiadomienia).
 
-### Data URI
+## Data URI
 
 Jest to sposób do definiowania kodu html z danymi jako URI (rozwijając nazwę URL dostajemy
 Locator, a tutaj dane nie wskazują na lokalizacje, więc używamy URI czyli Identifier), który
@@ -115,7 +115,7 @@ nieograniczoną długość, ponieważ nie ma ich w URL-u.
 
 > **UWAGA:** coś takiego nie zadziała z Service Workerem, który wymaga fizycznego pliku na dysku.
 
-### Paint Worklet
+## Paint Worklet
 
 Jest to rodzaj Workera, do zdań specjalnych. Tworzy się go za pomocą:
 
@@ -171,7 +171,7 @@ CSS.paintWorklet.addModule(blobify(function() {
 }));
 {% endhighlight %}
 
-### JSON w CSS
+## JSON w CSS
 
 Jak może zauważyłeś, w powyższym kodzie mamy:
 

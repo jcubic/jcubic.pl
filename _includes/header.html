@@ -3,7 +3,11 @@
     <!--
     <img src="{{ "/img/easter-background-vignette.jpg" | prepend: site.baseurl | prepend: site.url }}" alt="Jajka wielkanocne (pisanki) na sianku w trawie - {{ site.title }}"/>
      -->
-    <h1><a href="{{ '/' | prepend: site.baseurl | prepend: site.url }}">{{ site.title }}</a></h1>
+    {% if paginator.next_page %}
+    <h1 class="h"><a href="{{ '/' | prepend: site.baseurl | prepend: site.url }}">{{ site.title }}</a></h1>
+    {% else %}
+    <div class="h"><a href="{{ '/' | prepend: site.baseurl | prepend: site.url }}">{{ site.title }}</a></div>
+    {% endif %}
     {% assign pages = site.pages.select {|p| p.title } %}
     {% if pages %}
     <nav>

@@ -27,7 +27,7 @@ nie w jakimś framework-u architektonicznym jak React, Angular czy Vue.js.
 
 <!-- more -->
 
-### Konstruktor
+## Konstruktor
 
 Pierwsza rzecz to konstruktor, który będzie znajdował i opakowywał elementy na stronie.
 
@@ -55,7 +55,7 @@ argumentem jest ciąg znaków (3) wywołujemy funkcje `find`, która znajdzie el
 drzewie DOM (napiszemy ja za chwilę).  Funkcja obsługuje też przypadek, gdy przekażemy do
 niej obiekt DOM Node (4).
 
-### Prototyp
+## Prototyp
 
 Następnie zdefiniujemy prototyp naszego konstruktora, jeśli wolisz możesz zastąpić ten kod
 klasą ES6, ale ja użyje prototypu.
@@ -95,7 +95,7 @@ konwersji do ES5. Można także użyć funkcji `Array.from`.
 Jeśli nie ma żadnych elementów czyli używamy np. `DOM('body ul');`, to wywoływany jest
 `querySelectorAll` na obiekcie `document` (3).
 
-### Obsługa Zdarzeń
+## Obsługa Zdarzeń
 
 Przydała by nam się obsługa zdarzeń (ang. events). Oto prosta funkcja:
 
@@ -134,7 +134,7 @@ Funkcje `addEventListener` oraz `removeEventListener` są dostępne w każdej pr
 nawet IE9, więc nie trzeba pisać już kodu z `attachEvent` dla IE, szczegóły na
 [MDN](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener).
 
-### Dodawanie nowych elementów do drzewa DOM
+## Dodawanie nowych elementów do drzewa DOM
 
 Teraz fajnie by było móc dodawać nowe elementy do HTML.
 
@@ -170,7 +170,7 @@ zadziała, ponieważ element posiada to pole z obiektu `Node`, po którym dziedz
 tworzymy nowy element za pomocą funkcji `createElement` (3). W obu przypadkach funkcja
 zwraca nową instancje obiektu DOM.
 
-### Tworzenie elementów DOM
+## Tworzenie elementów DOM
 
 Jedyny problem z tym rozwiązaniem to tworzenie html `<td>foo</td>`, w przeglądarce IE, bez
 rodzica `table`.  W tej przeglądarce zostanie utworzony sam tekst bez elementu, tak jest z
@@ -235,7 +235,7 @@ function DOM(arg) {
 }
 {% endhighlight %}
 
-### Metody statyczne
+## Metody statyczne
 
 Funkcje find oraz create zwracają nowy obiekt DOM i można je używać bez obiektu,
 zakładając że nie używamy strict mode lub gdy nie mamy w obiekcie `window` zmiennej
@@ -270,7 +270,7 @@ DOM.fn = DOM.prototype = {
 };
 {% endhighlight %}
 
-### Funkcja html
+## Funkcja html
 
 Kiedy mamy funkcje `create` i chcemy utworzyć tag html za pomocą nazwy taga, to może nam się
 przydać funkcja `html`.
@@ -299,7 +299,7 @@ Teraz możemy użyć np.:
 DOM.create('li').html('Hello')
 {% endhighlight %}
 
-### Dodawanie do drzewa
+## Dodawanie do drzewa
 
 Następnym krokiem, jest dodanie utworzonego elementu do drzewa, a oto dwie funkcje znane z
 jQuery:
@@ -337,7 +337,7 @@ DOM('body').find('ul').on('click', function(e) {
 }).append(DOM.create('li').html('Hello'));
 {% endhighlight %}
 
-### Delegacja zdarzeń
+## Delegacja zdarzeń
 
 Nasz mechanizm zdarzeń, niestety nie działa dla nowych elementów, ponieważ zdarzenia są
 dodawane bezpośrednio do elementu.  Aby rozwiązać ten problem, musimy zmodyfikować naszą
@@ -451,7 +451,7 @@ DOM('body').find('ul').on('click', function(e) {
 }).append(DOM.create('li').html('Hello'));
 {% endhighlight %}
 
-### Obsługa stylów
+## Obsługa stylów
 
 Użycie style trochę źle wygląda, napiszmy funkcje do zmieniania css.
 
@@ -520,7 +520,7 @@ zadziała). W bibliotece jQuery, są też wyjątki takie jak np. `zIndex`. Lista
 kodzie źródłowym jQuery
 [w pliku css.js linia 190](https://github.com/jquery/jquery/blob/354f6036f251a3ce9b24cd7b228b4c7a79001520/src/css.js#L190).
 
-### Pluginy
+## Pluginy
 
 Teraz czas na prosty plugin:
 
@@ -542,7 +542,7 @@ DOM('body').find('ul').on('click', 'li', function(e) {
 Właściwie już z funkcją `css`, mogliśmy mieć praktycznie to samo, ale to jest tylko
 przykład użycia pluginu.
 
-### Usuwanie elementów z drzewa DOM
+## Usuwanie elementów z drzewa DOM
 
 Ostatnia funkcja, jaka została do dodania, to `remove`:
 
@@ -613,7 +613,7 @@ Jeśli klikniemy na którymś z elementów li, dostanie on atrybut `style="color
 nie użyto funkcji `getComputedStyle`, lub `style="color: rgb(255,0,0)"` w przypadku gdy
 jej użyto.
 
-### Podsumowanie
+## Podsumowanie
 
 Można powiedzieć, że podstawa biblioteki jest gotowa, ale na pewno brakuje wielu
 funkcji. Najlepiej użyć tej biblioteki w jakimś projekcie i dodawać nowe funkcje jak będą

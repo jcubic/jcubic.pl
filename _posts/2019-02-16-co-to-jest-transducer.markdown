@@ -19,7 +19,7 @@ według Wikipedii przetwornik.
 
 <!-- more -->
 
-### Wstęp
+## Wstęp
 
 Transducer'y są częścią programowania funkcyjnego. Dzięki nim możemy zawierać skomplikowane
 operacje, które normalnie wymagają takich funkcji jak map czy filter, które ze względu na różne
@@ -56,7 +56,7 @@ Uwaga: Wszędzie w kodzie używam var zamiast const aby nie utrudniać życia gd
 chce się jeszcze raz zdefiniować daną funkcje. W docelowym kodzie można użyć const dla definiowanych
 funkcji.
 
-### Kompozycja funkcji
+## Kompozycja funkcji
 
 Na początek w skrócie co to jest składanie. Może pamiętasz z matematyki w szkole średniej, jest to
 łączenie dwóch funkcji w jedną funkcje. Zazwyczaj w matematyce zaznacza się to tak:
@@ -109,7 +109,7 @@ reduceRight to funkcja, która działa jak `reduce`, ale zwija wyniki w odwrotne
 > najpierw artykuł
 > [Wszystko co powinieneś wiedzieć o funkcjach w JavaScript](/2014/08/funkcje-w-javascript.html).
 
-### Funkcje map oraz filter jako reducer
+## Funkcje map oraz filter jako reducer
 
 Wracając do transducer'ów i naszego pierwszego przykładu:
 
@@ -192,7 +192,7 @@ var concat = (xs, x) => xs.concat(x);
     // [2, 4, 6, 8, 10]
 {% endhighlight %}
 
-### Łączenie reducer'ów
+## Łączenie reducer'ów
 
 Zauważ że sygnatura funkcji `concat`, która występuje jako parametr `reducing`, czyli nasz łącznik
 wynikowy:
@@ -231,7 +231,7 @@ można więc ją użyć w funkcji `reduce`:
 
 teraz już jest fajniej, ponieważ mamy tylko jedną iteracje po tablicy.
 
-### Transducer
+## Transducer
 
 Możemy uprościć ten kod używając funkcji `compose`:
 

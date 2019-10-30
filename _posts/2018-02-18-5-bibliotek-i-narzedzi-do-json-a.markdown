@@ -20,7 +20,7 @@ na obiektach JSON lub obiektach JavaScript.
 
 <!-- more -->
 
-### 1. go-sql
+## 1. go-sql
 
 [go-sql](https://github.com/timtian/qo-sql) to biblioteka, która korzysta
 z lodash. Przetwarza ona obiekty JavaScript za pomocą języka SQL. Ciekawą funkcją jest dodatek
@@ -35,7 +35,7 @@ var res = qos.exec("select (id + 1) as index, name  from ${testData} where id > 
 });
 {% endhighlight %}
 
-### 2. Narzędzie gron
+## 2. Narzędzie gron
 
 [gron](https://github.com/TomNomNom/gron) to narzędzie wiersza poleceń, które konwertuje
 JSON-a do postaci tekstu, który można następnie przetwarzać za pomocą takich narzędzi jak
@@ -57,7 +57,7 @@ Praktyczne zastosowanie można znaleźć na końcu wpisu
 [System komentarzy HashOver jako alternatywa dla Disqus](/2018/12/system-komentarzy-hashover-alternatywa-disqus.html)
 Gdzie pobieram pliki z JSON-a za pomocą polecenia `wget`.
 
-### 3. json5
+## 3. json5
 
 [json5](https://github.com/json5/json5) jest to biblioteka, która rozszerza możliwości JSON-a.
 Dodaje takie funkcje jak np.
@@ -69,7 +69,7 @@ Dodaje takie funkcje jak np.
 * przecinek za ostatnim elementem
 
 
-### 4. json-dry
+## 4. json-dry
 
 [json-dry](https://github.com/skerit/json-dry) to jeszcze jedna biblioteka rozszerzająca
 możliwości JSON-a, jest moim zdaniem o wiele bardziej użyteczna. Dodaje takie funkcje jak,
@@ -81,6 +81,6 @@ zapisywanie i odczytywanie:
 * własnych klas
 
 
-### 5. Edytor JSON-a
+## 5. Edytor JSON-a
 
 [jsoneditor](https://github.com/josdejong/jsoneditor) to ciekawy projekt który umożliwia podgląd struktury JSON-a w postaci drzewa. Na oficjalnej stronie można znaleźć [demo edytora](http://jsoneditoronline.org/).

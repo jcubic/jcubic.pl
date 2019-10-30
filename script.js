@@ -55,5 +55,7 @@ function loadCSS(src) {
     head.appendChild(link);
 }
 
-loadCSS('/css/style.css');
 loadCSS('https://fonts.googleapis.com/css?family=Muli:400,400i,700|Roboto:500&subset=latin,latin-ext&display=swap');
+Array.from(document.querySelectorAll('link[data-href]')).forEach(function(link) {
+    link.href = link.getAttribute('data-href');
+});

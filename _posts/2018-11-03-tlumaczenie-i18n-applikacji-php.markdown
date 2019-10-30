@@ -35,7 +35,7 @@ który potrafi wyciągnąć z kodu źródłowego różnych języków wywołanie 
 Nie będę jednak opisywał jak generować plik dla oryginalnego języka. Jeśli jesteś tym zainteresowany możesz
 przeczytać o tym w [dokumentacji gettext](https://www.gnu.org/software/gettext/).
 
-### Plik z tłumaczeniem
+## Plik z tłumaczeniem
 
 Oto przykład składni pliki `.po`:
 
@@ -76,7 +76,7 @@ być inny katalog np. `lang` albo `i18n`, ale wewnątrz muszą być katalogi dla
 Najlepiej jak język jest w formacie locale dla standardu POSIX, czyli tego w systemach GNU/Linux. Nie próbowałem
 innego formatu i nie wiem czy działa.
 
-### Kompilacja
+## Kompilacja
 
 Jak mamy już przygotowany plik `.po` musimy wygenerować jego binarny odpowiednik, czyli plik `.mo`. Do tego
 służy program `msgfmt`, aby go wywołać należy wykonać takie polecenie, testowałem tylko z systemem GNU/Linux.
@@ -89,7 +89,7 @@ msgfmt site.po -o site.mo
 jeśli znajdujemy się w którymś z katalogów `LC_MESSAGES` i jest w nim plik `site.po` wygenerowany zostanie plik
 `site.mo`.
 
-### Interfejs PHP
+## Interfejs PHP
 
 Teraz jak już mamy plik `.mo` możemy skonfigurować PHP, aby można było używać tej biblioteki.
 Kod inicjujący wygląda tak.
@@ -143,7 +143,7 @@ strony głównej. Możesz mieć też mieć tak, że każdy url korzysta z innego
 na przeszkodzie, aby mieć jeden plik z wszystkimi tłumaczeniami, i aby wywołanie `textdomain` także było
 w konstruktorze, jeśli takowego używasz.
 
-### Tłumaczenie ciągów znaków
+## Tłumaczenie ciągów znaków
 
 Teraz główna część czyli tłumaczenie stringów. Aby przetłumaczyć zwykły tekst można użyć funkcji `_` np.
 
@@ -189,7 +189,7 @@ msgstr[1] "to było %s tygodni temu"
 msgstr[2] "to było %s tygodnie temu"
 ```
 
-### Przeładowywanie pliku po kompilacji
+## Przeładowywanie pliku po kompilacji
 
 Jedyny problem z gettext w PHP, jest to, że po wygenerowaniu pliku `.mo` należy zrestartować serwer apache.
 Nie wiem jak jest z innymi serwerami. Jeśli chcesz się dowiedzieć jak wyczyścić cache bez przeładowywania
@@ -199,7 +199,7 @@ strony możesz sprawdzić na StackOverflow odpowiedź na pytanie:
 W moim przypadku dodanie wywołanie `clearstatcache();` przed inicjacją gettext pomogło. Ale czasami,
 jak odświeża się cache po kompilacji, serwer zwraca 503, ale może to nie ma związku.
 
-### Podsumowanie
+## Podsumowanie
 
 Gettext jest bardzo użytecznym narzędziem. A po skonfigurowaniu jego używanie jest bardzo proste.
 Przy generowaniu plików z kodu źródłowego, czego jeszcze nie robiłem, można pisać całą aplikacje w języku

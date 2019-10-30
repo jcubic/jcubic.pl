@@ -27,7 +27,7 @@ który powinien poznać każdy programista.
 
 <!-- more -->
 
-### Wprowadzenie
+## Wprowadzenie
 
 LISP to jeden z dwóch najstarszych języków programowania, który nadal jest używany. Drugi to Fortran.
 Powstał on w latach 50 na MIT. Zaprojektował go [John McCarthy](https://pl.wikipedia.org/wiki/John_McCarthy).
@@ -56,7 +56,7 @@ Jako zachętę zacytuje Erica Raymonda:
 > ["Jak zostać Hakerem"](http://www.mkgajwer.jgora.net/ers.html)
 
 
-### Krótko o kodzie LISP-a
+## Krótko o kodzie LISP-a
 
 Kod LISP-a skład się z S-Wyrażeń (listy w nawiasach gdzie elementy są oddzielone spacjami)
 i ma notacje prefix-ową to znaczy, że nazwa funkcji jest pierwszym elementem listy
@@ -85,17 +85,17 @@ dostęp do parsera wewnątrz funkcji (makra). W języku JavaScript była próba 
 [sweet.js](https://www.sweetjs.org/)). Projekt działa tak jak Babel, czyli konwertuje kod, który
 zawiera makra, do postaci zwykłego kodu JavaScript.
 
-### Jaki dialekt wybrać
+## Jaki dialekt wybrać
 
 Do wyboru są 3 główne dialekty.:
 
-#### Common LISP
+### Common LISP
 
 Przez programistów LISP-a jest polecany jako najpotężniejszy dialekt. Ale nie polecam go na początek, ponieważ
 można się zagubić w masie funkcji z biblioteki standardowej, które są w nim dostępne, a traci się możliwość
 poznania istoty LISP-a.
 
-#### Scheme
+### Scheme
 
 Jest bardzo prosty dialekt razem z Common LISP-em dwa najczęściej używane. Powstał w latach 70 dzięki takim
 ludzom jak
@@ -105,7 +105,7 @@ Mała biblioteka standardowa, więc jeśli chce się mieć podstawowe funkcje to
 Jest to świetny sposób, aby poznać język - pisanie prostych funkcji do różnych celów które mogą się przydać
 w przyszłości.
 
-#### Clojure
+### Clojure
 
 Jest to nowoczesny dialekt LISP-a, dzięki któremu LISP stał się bardziej popularny.  W Polsce można
 nawet czasami znaleźć pracę, gdzie wymagają tego języka. Działa na maszynie wirtualnej JVM (czyli to
@@ -114,7 +114,7 @@ na czym uruchamiana jest Java). Zaprojektowany przez
 [Wikipedii](https://pl.wikipedia.org/wiki/Clojure).
 
 
-### Jak zacząć?
+## Jak zacząć?
 
 Aby zacząć naukę polecam napierw obejrzenie wykładów ok 20 godzin oglądania (10 dwu częściowych lekcji)
 prowadzonego przez Abelsona i Sussmana (ten drugi zaprojektował język Scheme) prowadzone na MIT dla
@@ -127,7 +127,7 @@ Jeśli studiowałeś informatykę na uczelni wyższej, to nie powinno być dla c
 programowania to możesz też znaleźć masę dobrych wykładów w sieci z programowania i ogólnie informatyki z
 różnych uczelni wyższych z USA.
 
-### Pisanie kodu
+## Pisanie kodu
 
 Jeśli chcesz wypróbować dialekt scheme podczas oglądania wykładów, to możesz skorzystać ze strony
 [repl.it](https://repl.it/languages/scheme).  Strona korzysta z jezyka scheme napisanego w JavaScript.
@@ -142,14 +142,14 @@ która zawiera język). Natomiast Kawa-y można np. użyć do pisania aplikacji 
 [Androida](https://www.gnu.org/software/kawa/Building-for-Android.html) (tak LISP w telefonie).
 Można także do tego celu użyć języka Clojure.
 
-### Co powinieneś poznać?
+## Co powinieneś poznać?
 
 Powinieneś poznać takie koncepcje jak domknięcia leksykalne (ang. closures), funkcje jako typ pierwszo-klasowy
 oraz pisanie funkcji wyższego rzędu (funkcje, które zwracają funkcje, albo pobierają je jako argument).
 
 Wszystko to jest dostępne w języku JavaScript, który dużo zapożyczył z języka Scheme.
 
-### Kolejny krok
+## Kolejny krok
 
 Jak już masz to za sobą to znaczy, że znasz już trochę LISP-a, a dokładnie dialekt scheme. Teraz polecam
 książki np. wspomniana Struktura i Interpretacja Programów Komputerowych. Nie jestem pewien czy można ją
@@ -161,7 +161,7 @@ Warto sięgnąć po książkę [Practical Common Lisp](http://www.gigamonkeys.co
 za darmo w wersji elektornicznej). Możesz też przeczytać książkę ["Successful Lisp: How to Understand and Use Common Lisp"](https://psg.com/~dlamkins/sl/contents.html), trzeba się przedrzeć przez linki,
 ale na GDrive powinien być plik z książką (nie linkuje do GDrive, bo strona może się zmienić).
 
-### Makra
+## Makra
 
 Jak już poznasz Common LISP-a i znasz scheme to możesz zacząć naukę makr, chociaż możesz też po nie sięgnąć
 już po obejrzeniu wykładów SICP (ang. Structure and Interpretation of Computer Programs). Makra to jest
@@ -181,7 +181,7 @@ wydrukować na lulu.com [tutaj artykuł](http://www.lurklurk.org/onlisp/onlisp.h
 udało mi się wydrukować swoją na [LuluXpress](https://xpress.lulu.com/) - koszt 15 dolarów wraz z wysyłką
 (w Polsce chcieli za druk ok 200zł).
 
-### Co dalej?
+## Co dalej?
 
 Teraz to już tylko możesz dużo pisać i dużo czytać. Jak z każdym językiem. Chodzi głównie o kod. Chociaż
 czytać można też artykuły. Z rzeczy które możesz jeszcze chcieć poznać to **kontynuacje** (których sam jeszcze

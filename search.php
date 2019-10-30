@@ -3,7 +3,7 @@ layout: default
 ---
 <section>
     <div class="search">
-      <header><h2>Wyszukanie słowa "<?= isset($_GET['q']) ? strip_tags($_GET['q']) : '' ?>"</h2></header>
+      <header><h1>Wyszukanie słowa "<?= isset($_GET['q']) ? strip_tags($_GET['q']) : '' ?>"</h1></header>
 <?php
 
 function mark($query, $str) {
@@ -25,7 +25,7 @@ if (isset($_GET['q']) && !empty($_GET['q'])) {
   } else {
     foreach ($data as $row) {
       if (preg_match($re, $row['content'], $match)) {
-        echo '<h3><a href="' . $row['url'] . '">' . mark($query, $row['title']) . '</a></h3>';
+        echo '<h2><a href="' . $row['url'] . '">' . mark($query, $row['title']) . '</a></h2>';
         $text = trim($match[0], " \t\n\r\0\x0B,.{}()-");
         echo '<p>' . mark($query, $text) . '</p>';
       }

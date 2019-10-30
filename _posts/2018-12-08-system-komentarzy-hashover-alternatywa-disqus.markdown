@@ -35,7 +35,7 @@ komentarze z **Disqus**.
 
 <!-- more -->
 
-### Instalacja
+## Instalacja
 
 Instalacja HashOver Next jest dość prosta. Musimy wgrać pliki na serwer i zmodyfikować plik
 `hashover/backend/classes/secret.php`. Miejsce pliku może się zmienić, we wcześniejszej wersji był w katalogu `hashover/scripts`.
@@ -55,7 +55,7 @@ stronie wpisu swojego bloga dodać:
 I to w zasadzie tyle, tylko jeśli wcześniej mieliśmy komentarze Disqus, to je stracimy.
 Wiec trzeba by je jakoś zaimportować.
 
-### Import komentarzy z Disqus
+## Import komentarzy z Disqus
 
 DL;DR cały kod jest na [GitHubie](https://github.com/jcubic/disqus-hashover-import).
 
@@ -65,7 +65,7 @@ postanowiłem napisać skrypt, który zassie ich dane z API.  Skrypt napisałem 
 że może się przydać do projektu (który jest napisany w PHP).  Mogli by dodać opcję importu do aplikacji.
 
 
-### Oficjalna biblioteka PHP
+## Oficjalna biblioteka PHP
 
 Disqus na GitHubie ma swoją oficjalną bibliotekę do PHP. Problem jest taki że nie
 obsługuje stronicowania i chyba już nie będzie, ponieważ nikt się tą biblioteką nie zajmuje.
@@ -130,7 +130,7 @@ save('threads.json', $treads);
 Aby ten kod zadziałał, będziesz musiał wygenerować klucz API, czyli stworzyć aplikacje Disqus. Możesz spróbować bez klucza
 ponieważ według konsoli do testowania API nie jest wymagany. Ale ja tego nie testowałem.
 
-### Generowanie komentarzy
+## Generowanie komentarzy
 
 Komentarze w HashOver znajdują się w katalogu `hashover/comments/threads`. Każdy wątek,
 czyli wpis na blogu, ma swój katalog, w którym znajdują się pliki xml z nazwami np.
@@ -262,7 +262,7 @@ index 15b5a2b..bf13c06 100644
 --- a/hashover/backend/classes/commentparser.php
 +++ b/hashover/backend/classes/commentparser.php
 @@ -106,10 +106,16 @@ class CommentParser
- 
+
                 // Get avatar icons
                 if ($this->setup->iconMode !== 'none') {
 +
@@ -319,11 +319,11 @@ index a1c0001..758eb14 100644
 --- a/hashover/backend/source-viewer.html
 +++ b/hashover/backend/source-viewer.html
 @@ -9,6 +9,7 @@
- 
+
                 <meta http-equiv="Content-type" content="text/html; charset=utf-8">
                 <meta http-equiv="Content-Language" content="EN">
 +        <meta name="robots" content="nofollow" />
- 
+
                 <link type="image/x-icon" href="../images/favicon.png" rel="shortcut icon">
                 <link type="image/x-icon" href="../images/favicon.png" rel="icon">
 diff --git a/hashover/comments/threads/.gitkeep b/hashover/comments/threads/.gitkeep

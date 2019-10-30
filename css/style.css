@@ -74,7 +74,7 @@ p, .tags, figcaption, .source, .more, .pagination, section ul {
 #hashover .hashover-dashed-title {
     display: none;
 }
-h2 + figure, h3 + figure {
+h2 + figure, h3 + figure, h1 + figure {
     margin-top: 15px;
 }
 section > p code {

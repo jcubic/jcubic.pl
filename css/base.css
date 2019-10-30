@@ -9,7 +9,7 @@
     font-weight: normal;
     font-style: normal;
 }
-header h1 {
+header .h {
     top: 0;
     left: 0;
     margin: 20px;
@@ -56,29 +56,29 @@ header > img {
     height: auto;
     display: block;
 }
-header nav, header h1 {
+header nav, header .h {
     position: absolute;
 }
 header {
     font-size: 14px;
 }
-header h1, header h1:before, header h1:after {
+header .h, header .h:before, header .h:after {
     font-weight: normal;
 }
-header h1:before, header h1:after {
+header .h:before, header .h:after {
     display: inline;
     font-size: 1.6em;
     font-family: sans-serif;
     position: relative;
     top: 0.05em;
 }
-header h1:before {
+header .h:before {
     content: "{";
 }
-header h1:after {
+header .h:after {
     content: "}";
 }
-header nav a, header h1 {
+header nav a, header .h {
     text-shadow: 1px 1px 3px rgba(0,0,0,50);
 }
 header nav {
@@ -90,10 +90,10 @@ header nav {
 #inner {
     overflow: hidden; /* clearfix */
 }
-#inner > header h1, #inner > header a, #inner > header a:visited {
+#inner > header .h, #inner > header a, #inner > header a:visited {
     color: #e9e9e8;
 }
-header h1 a:hover {
+header .h a:hover {
     text-decoration: underline;
 }
 header a {
@@ -140,7 +140,7 @@ section.intro p {
 section.search {
     padding-top: 60px;
 }
-section.search h2 {
+section.search h1 {
     margin-top: 0;
 }
 .content, .index, .search, .tag {
@@ -152,10 +152,10 @@ section.search h2 {
 .index, .tag, .search {
     margin: 60px 0 2em 0;
 }
-.tag h2 {
+.tag h1 {
     font-size: 24px;
 }
-.index h2 {
+.index h1 {
     margin: 0;
 }
 .index article {
@@ -164,25 +164,25 @@ section.search h2 {
 .index h3, .index h3 a, .index h3 a:visited {
     color: #9898ab;
 }
-.index h2 a, .index h2 a:visited {
+.index h1 a, .index h1 a:visited {
     color: #152032;
 }
 .index h3 {
     margin: 0 0 0.5em;
     font-size: 1.2em;
 }
-.index h2 a:hover, .index h3 a:hover {
+.index h1 a:hover, .index . a:hover {
     text-decoration: underline;
 }
-.index header, .search header, .tag header, .search h3 {
+.index header, .search header, .tag header, .search h2 {
     overflow: hidden; /* clearfix */
     margin-left: 20px;
 }
-.search h2 {
+.search h1 {
     font-size: 1.7em;
     margin-top: 0;
 }
-.search h3 {
+.search h2 {
     font-size: 1.2em;
     font-family: 'Roboto', sans-serif;
 }
@@ -190,6 +190,14 @@ section.search h2 {
     background-color: #171f32;
     color: #E9E9E8;
     width: 90px;
+}
+.tag h2 {
+    font-size: 1.1em;
+    margin: 0;
+    display: inline-block;
+}
+.tag li {
+    line-height: 1.8em;
 }
 #search input {
     border: 1px solid #171f32;
@@ -233,21 +241,21 @@ section p img + em a,
 section p img + em a:visited {
     color: #555;
 }
-h3, h4, h5, h6 {
+.a, h2, h3, h4, h5, h6 {
     font-family: 'Muli', sans-serif;
     font-weight: bold;
 }
-.meta h3, .index h3 {
+.meta .a, .index h3 {
     font-weight: normal;
 }
-h2 {
+h1 {
     font-family: 'Roboto', sans-serif;
     font-weight: 500;
 }
-.meta h2 {
+.meta h1 {
     margin: 0 0 1em 0;
 }
-.meta h2, .meta h3 {
+.meta h1, .meta .a {
     text-align: right;
 }
 h3 {
@@ -259,7 +267,7 @@ h4 {
 h5 {
     font-size: 1em;
 }
-.meta h3 {
+.meta .a {
     margin: 0;
     font-size: 1.1em;
     font-style: italic;
@@ -369,30 +377,30 @@ figure {
         height: 200px;
         width: auto;
     }
-    #inner > header h1 {
+    #inner > header .h {
         right: 0;
         text-align: center;
     }
 }
 @media (max-width: 340px) {
-    header h1 {
+    header .h {
         text-indent: -2.8em;
         margin-left: 1.2em;
         line-height: 1em;
         width: 200px;
         margin: 20px auto;
     }
-    header h1::after, header h1::before {
+    header .h::after, header .h::before {
         font-size: 2.4em;
     }
-    header h1::after {
+    header .h::after {
         top: -0.2em;
         margin-left: 4px;
     }
-    header h1::before {
+    header .h::before {
         top: 0.4em;
     }
-    header h1 a {
+    header .h a {
         padding-left: 8px;
         display: inline;
     }
@@ -401,7 +409,7 @@ figure {
     #inner > header > img {
         margin-left: -10em;
     }
-    .meta h2, .index h2 {
+    .meta h1, .index ha {
         font-size: 1.3em;
     }
 }

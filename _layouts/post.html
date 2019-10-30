@@ -4,7 +4,7 @@ layout: default
 <section>
     <div class="meta">
         {% assign author = site.users[page.author] %}
-        <h3>
+        <div class="a">
             <time itemprop="pubdate" datetime="{{ page.date | date: '%Y-%m-%dT%H:%M:%S.%L%z' }}">
                 {{ page.date | date: "%Y-%m-%d" }}
             </time>
@@ -15,8 +15,8 @@ layout: default
                 <a href="{{ author.url }}" itemprop="url">{{ author.name }}</a>
                 <meta itemprop="jobTitle" content="Front-End Developer"/>
             </span>
-        </h3>
-        <h2 itemprop="title">{{ page.title }}</h2>
+        </div>
+        <h1 itemprop="title">{{ page.title }}</h1>
         {% if page.image %}
         <figure>
             <img src="{{ page.image.url | prepend: site.baseurl | prepend: site.url }}" alt="{{ page.image.alt }}"/>
