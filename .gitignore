@@ -1,6 +1,7 @@
 _site
 Gemfile.lock
-ads/*.xml
+_ads/*.xml
 *~
 \#*
 .\#*
+.jekyll-cache
