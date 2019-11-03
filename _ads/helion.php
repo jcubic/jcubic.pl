@@ -95,7 +95,7 @@ if (isset($query)) {
         $html .= "<img src=\"$img\" alt=\"Okładka książki: ${row['title']}\"/>";
         $html .= "</a><header><a href=\"$url\"><p class=\"title\">${row['title']}</p></a>";
         $html .= "<p class=\"author\">${row['author']}</p></header>";
-        $html .= "<a href=\"$url\" class=\"buy\">Kup książkę</a>";
+        $html .= "<a href=\"$url\" class=\"buy\">Zobacz</a>";
         $html .= "<p class=\"price\">${price}zł</p>";
         $html .= "</div>";
     }

@@ -40,7 +40,7 @@ Front-End to głównie CSS i JavaScript. A oto lista pytań:
 </html>
 {% endhighlight %}
 
-Nie, ponieważ body ma `padding 10px`, więc będzie biała ramka, ale to i tak nie ma znaczenie, ponieważ wysokość body
+Nie, ponieważ body ma `margin: 10px`, więc będzie biała ramka, ale to i tak nie ma znaczenie, ponieważ wysokość body
 zawiera tylko kontent, dlatego jego wysokość będzie równa 0, div też będzie miał wysokość 0. W CSS wysokość 100% jest
 zawsze w odniesieniu do rodzica.  (jeśli musimy ustawić wysokość w procentach, nigdzie w drzewie rodziców nie może być
 `height: auto`, a taka wartość jest na body).
@@ -58,6 +58,20 @@ body {
 
 Co ciekawe jeśli nie użyjemy `<!DOCTYPE html>` czyli html5, to cała strona będzie czerwona, oprócz marginesu na body
 (przynajmniej w Google Chrome).
+
+Można także zastosować jednostkę `vh`, które działa podobnie jak `%` ale odnosi się do okna przeglądarki.
+
+{% highlight html %}
+<!DOCTYPE html>
+<html>
+<body style="margin:0">
+  <div style="height:100vh;background:red;"></div>
+</body>
+</html>
+{% endhighlight %}
+
+Nie powinno się jednak stosować styli inline, czyli w HTML, który powinien zawierać samą strukturę a nie wygląd.
+Tutaj chciałem pokazać najprostszy przykład dlatego użyłem jednego pliku.
 
 ## 2. Jak wycentrować element w pionie i w poziomie
 
@@ -157,7 +171,7 @@ właściwości włączając style inline.
 ## 4. Wymień 4 selektory, które zaznaczają element z konkretnym indeksem
 
 * `:nth-child(1)` - wybiera kolejny element
-* :nth-last-child(1)` - kolejny element od końca
+* `:nth-last-child(1)` - kolejny element od końca
 * `:nth-of-type(1)` - kolejny element danego typu np. `div:nth-of-type(1)` zaznaczy pierwszy `div`, nawet jeśli jest przed
  nim `header`
 * `:nth-last-of-type(1)` - to samo co poprzednie, ale od końca

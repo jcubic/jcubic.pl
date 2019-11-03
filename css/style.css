@@ -105,6 +105,9 @@ section p:first-child {
 section p:last-child {
     margin-bottom: 0;
 }
+.body p small {
+    display: block;
+}
 section p,
 section ol,
 section ul,

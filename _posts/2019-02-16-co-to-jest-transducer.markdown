@@ -246,8 +246,8 @@ var transducer = compose(map(x => x + 1), filter(x => x % 2 === 0));
 **Więc czym dokładnie jest transducer?** Jest to funkcja, która opisuje jakiś algorytm, utworzona za
 pomocą pojedynczej funkcji lub za pomocą ich składania (ang. function composition). Transducer jest
 uniwersalny i abstrakcyjny ponieważ dopiero funkcja z jaką go wywołamy określa co transducer
-przetwarza. W tym przykładnie transducer został wywołany z funkcją `concat` i operuje na tablicach
-ale nic nie szkodzi na przykładnie aby transducer operował np. na obietnicach. Oto przykład:
+przetwarza. W tym przykładzie transducer został wywołany z funkcją `concat` i operuje na tablicach,
+ale nic nie szkodzi na przeszkodzie, aby transducer operował np. na obietnicach. Oto przykład:
 
 {% highlight javascript %}
 var promise_resolver => (acc, promise) => {
@@ -332,7 +332,7 @@ Poniżej przedstawiam trochę bardziej skomplikowany kod, który sprawdza typ i 
 gdy wartością nie są obietnice:
 
 {% highlight javascript %}
-// funkcja pmocnicza wyższego rzędu, wywołująca funkcje fn z aktualną wartością
+// funkcja pomocnicza wyższego rzędu, wywołująca funkcje fn z aktualną wartością
 var resolve = (value, fn) => {
     if (value instanceof Promise) {
          return value.then(fn);
@@ -346,8 +346,8 @@ var map = fn => reducing => (result, input) => {
 };
 
 var filter =  predicate => reducing => (result, input) => {
-    const ret = cond => cond ? reducing(result, input) : result;
-    return resolve(resolve(input, predicate), ret);
+    const next = cond => cond ? reducing(result, input) : result;
+    return resolve(resolve(input, predicate), next);
 }
 
 // connector to też funkcja wyższego rzędu,
