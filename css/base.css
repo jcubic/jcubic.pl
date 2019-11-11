@@ -46,10 +46,16 @@ body {
 header {
     position: relative;
 }
-header .rss {
+header > .rss, header .icons {
     position: absolute;
-    right: 5px;
-    bottom: 5px;
+    right: 10px;
+    bottom: 10px;
+}
+header a.twitter:hover path {
+    fill: #1DA1F2 !important;
+}
+header .icons a + a {
+    margin-left: 5px;
 }
 header > img {
     width: 100%;
