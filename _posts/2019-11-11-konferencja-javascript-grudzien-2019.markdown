@@ -57,3 +57,9 @@ Jeśli nie czujesz się na siłach, albo nie chcesz ryzykować, poniżej kupon n
 **jcubic-25**
 
 Ważny także dla biletów VIP oraz workshop.
+
+## Aktualizacja 2019-11-17
+
+Konkurs wygrał Daniel K., który nie może się doczekać
+[właściwości all w CSS](https://developer.mozilla.org/en-US/docs/Web/CSS/all), dzięki której będzie
+można zmienić wszystkie właściwości danego elementu.
