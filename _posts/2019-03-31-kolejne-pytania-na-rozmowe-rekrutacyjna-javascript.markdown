@@ -21,6 +21,11 @@ related:
   -
     name: "5 pytań na rozmowę rekrutacyjną z języka JavaScript"
     url: "/2017/09/pytania-na-rozmowe-rekrutacyjna-javascript.html"
+  -
+    name: "15 Pytań na rozmowę rekrutacyjną z HTML5"
+    url: "/2019/11/pytania-rekrutacyjne-html5.html"
+sitemap:
+  lastmod: 2019-11-30 13:17:22+0100
 ---
 
 Pytania na rozmowę rekrutacyjne były bardzo popularne. Do [CSS](/2018/10/pytania-rekrutacyjne-css.html) i

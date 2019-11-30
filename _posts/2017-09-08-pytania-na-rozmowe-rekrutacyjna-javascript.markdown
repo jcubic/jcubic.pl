@@ -8,17 +8,17 @@ author: jcubic
 description: Oto 5 pytań jakie bym zadał na rozmowie rekrutacyjnej z języka JavaScript, czyli najważniejsza część Front-Endu. Takie pytania mogą pojawić się na rozmowie kwalifikacyjnej z JS.
 related:
   -
-    name: "15 Pytań na rozmowę rekrutacyjną z React.js"
-    url: "/2018/10/pytania-rekrutacyjne-z-react.js.html"
-  -
     name: "15 Pytań na rozmowę rekrutacyjną z CSS"
     url: "/2018/10/pytania-rekrutacyjne-css.html"
   -
     name: "Kolejne 10 pytań na rozmowę rekrutacyjną z języka JavaScript"
     url: "/2019/03/kolejne-pytania-na-rozmowe-rekrutacyjna-javascript.html"
+  -
+    name: "15 Pytań na rozmowę rekrutacyjną z HTML5"
+    url: "/2019/11/pytania-rekrutacyjne-html5.html"
 
 sitemap:
-  lastmod: 2019-03-31 15:43:15+0200
+  lastmod: 2019-11-30 13:17:22+0100
 ---
 
 Kilka dni temu zostałem poproszony o przygotowanie 3 pytań, dla kandydata na programistę Full Stack, do zbliżającej

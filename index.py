@@ -22,7 +22,7 @@ def get_data(html):
       text = text[0].get_text(separator='\n')
     else:
       text = None
-    title = tree.findAll("h2", {"itemprop" : "title"})
+    title = tree.findAll("h1", {"itemprop" : "title"})
     url = tree.findAll("link", {"rel": "canonical"})
     if len(title) > 0:
       title = title[0].get_text()

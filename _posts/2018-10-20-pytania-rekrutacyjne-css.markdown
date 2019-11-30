@@ -15,8 +15,14 @@ related:
   -
     name: "5 Pytań na rozmowę rekrutacyjną z JavaScript"
     url: "/2017/09/pytania-na-rozmowe-rekrutacyjna-javascript.html"
+  -
+    name: "Kolejne 10 pytań na rozmowę rekrutacyjną z języka JavaScript"
+    url: "/2019/03/kolejne-pytania-na-rozmowe-rekrutacyjna-javascript.html"
+  -
+    name: "15 Pytań na rozmowę rekrutacyjną z HTML5"
+    url: "/2019/11/pytania-rekrutacyjne-html5.html"
 sitemap:
-  lastmod: 2018-10-22 09:20:04+0200
+  lastmod: 2019-11-30 13:17:22+0100
 ---
 
 Były już [pytania rekrutacyjne z JavaScript](/2017/09/pytania-na-rozmowe-rekrutacyjna-javascript.html) oraz
