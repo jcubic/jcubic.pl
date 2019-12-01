@@ -16,6 +16,9 @@
 .content .body > p:last-of-type {
     margin-bottom: 0;
 }
+abbr, acronym {
+    cursor: help;
+}
 #sponsors {
     margin: 40px 0 20px 0;
     text-align: center;
