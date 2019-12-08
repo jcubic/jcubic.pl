@@ -35,16 +35,11 @@ layout: default
             {% else %}
               {% assign splitted = content | split: '<!-- more -->' %}
               {{ splitted | first }}
-              <div class="ads">
-                  <ins class="adsbygoogle"
-                       style="display:block; text-align:center;"
-                       data-ad-layout="in-article"
-                       data-ad-format="fluid"
-                       data-ad-client="ca-pub-6153701670678834"
-                       data-ad-slot="3082200741"></ins>
-                  <script type="text/javascript">
-                   (adsbygoogle = window.adsbygoogle || []).push({});
-                  </script>
+              <div class="ads ads-atthost">
+                <a href="https://ref.atthost.pl/?id=10912" rel="nofollow noopener" target="_new">
+                  <img src="https://atthost.pl/banery/750-x-300.gif"
+                       alt="Reklama Hostingu Atthost" />
+                </a>
               </div>
               {{ splitted[1] }}
             {% endif %}
