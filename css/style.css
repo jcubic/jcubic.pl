@@ -674,4 +674,18 @@ ul.tags:before {
         display: none;
     }
 }
-
+@media (prefers-color-scheme: dark) {
+    .pagination ul {
+        color: #9d9ca9;
+    }
+    .pagination .disabled {
+        color: #4a4a4a;
+    }
+    .pagination li a, .pagination li span, .pagination li a:visited {
+        color: #818a98;
+    }
+    .pagination li .active, .pagination li a:hover {
+        color: #9c9c9c;
+        background-color: #484848;
+    }
+}
