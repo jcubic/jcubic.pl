@@ -17,7 +17,7 @@ related:
     name: "Parser S-Wyrażeń (języka LISP) w JavaScript"
     url: "/2019/06/parser-jeyka-lisp-javascript.markdown"
 sitemap:
-  lastmod: 2019-06-17 17:46:56+0200
+  lastmod: 2019-12-16 22:35:50+0100
 ---
 
 
@@ -58,36 +58,40 @@ Jako zachętę zacytuje Erica Raymonda:
 
 ## Krótko o kodzie LISP-a
 
-Kod LISP-a skład się z S-Wyrażeń (listy w nawiasach gdzie elementy są oddzielone spacjami)
-i ma notacje prefix-ową to znaczy, że nazwa funkcji jest pierwszym elementem listy
-np.:
+Kod LISP-a skład się z [S-Wyrażeń](https://pl.wikipedia.org/wiki/S-wyra%C5%BCenie) (listy w
+nawiasach gdzie elementy są oddzielone spacjami) i ma notacje prefix-ową to znaczy, że nazwa funkcji
+jest pierwszym elementem listy, np.:
 
 {% highlight scheme %}
 (+ (- 10 2) 100)
 {% endhighlight %}
 
 Jest to wyrażenie, które oblicza `(10 - 2) + 100`. Co ciekawe język nie ma operatorów tylko funkcje,
-które są pierwszym elementem listy. Pierwszy element to nie musi być także nazwa. Może to być
-wyrażenie, które w wyniku zwróci nową funkcje czyli. tzw funkcja wyższego rzędu.
+które są pierwszym elementem listy. `+` nie jest to operator dodawania, ale funkcja, która jest
+przypisana do symbolu plus. Pierwszy element to nie musi być także nazwa. Może to być wyrażenie,
+które w wyniku zwróci nową funkcje czyli. tzw funkcja wyższego rzędu.
 
-Można też zapisać.:
+Przykład funkcji obliczającej silnię w języku Scheme:
 
 {% highlight scheme %}
-((lambda (x y) (+ x y)) 10 20)
+(define (! n)
+   (if (= n)
+       1
+       (* n (! (- n 1)))))
 {% endhighlight %}
 
-Pierwszym elementem jest wyrażenie `lambda`, czyli funkcja anonimowa, która jest od razu wywoływana.
-Czyli tak jak w JavaScript IIFE. Wyrażenie `lambda` jest to specjalna konstrukcja języka, która nie
-wywołuje od razu swoich argumentów, takie konstrukcje także można dodać samemu - są to makra.  Jeśli
-znasz już JavaScript to nie będzie to dziwne, że funkcje mogą być typem danych. Ale LISP ma w sobie
-o wiele więcej. Głównie dzięki makrom, które operują na kodzie jak na danych.  Tak jakbyśmy mieli
-dostęp do parsera wewnątrz funkcji (makra). W języku JavaScript była próba dodania makr (projekt
-[sweet.js](https://www.sweetjs.org/)). Projekt działa tak jak Babel, czyli konwertuje kod, który
-zawiera makra, do postaci zwykłego kodu JavaScript.
+Może wyglądać dziwnie i odstraszać ale po chwili nauki języka, można się przyzwyczaić, a jak pozna się
+makra, to już taki zapis jest oczywisty i zaczyna go brakować w innych językach.
+
+Tak samo jak są definiowane funkcje wbudowane jak `+`, tak samo można definiować własne funkcje, jak
+np. wykrzyknik. W niektórych dialektach nie ma różnicy między wbudowaną funkcją, a tą z biblioteki
+standardowej. Można np, napisać sobie funkcje `+` która odejmuje liczby (nie żebym zachęcał, ale
+można). Ale już użyteczniejsze może być użycie funkcji `+`, która operuje na innych obiektach
+jak np. [macierzach](https://pl.wikipedia.org/wiki/Macierz) w programie do grafiki 3D.
 
 ## Jaki dialekt wybrać
 
-Do wyboru są 3 główne dialekty.:
+Do wyboru są 3 główne dialekty:
 
 ### Common LISP
 
@@ -98,7 +102,7 @@ poznania istoty LISP-a.
 ### Scheme
 
 Jest bardzo prosty dialekt razem z Common LISP-em dwa najczęściej używane. Powstał w latach 70 dzięki takim
-ludzom jak
+ludziom jak
 [Guy L. Steele](https://en.wikipedia.org/wiki/Guy_L._Steele_Jr.) i
 [Gerald Jay Sussman](https://en.wikipedia.org/wiki/Gerald_Jay_Sussman). Jego zaletą jest prostota.
 Mała biblioteka standardowa, więc jeśli chce się mieć podstawowe funkcje to trzeba je najpierw napisać.
@@ -113,7 +117,6 @@ na czym uruchamiana jest Java). Zaprojektowany przez
 [Richa Hickeya](https://pl.wikipedia.org/wiki/Rich_Hickey). Więcej o języku na
 [Wikipedii](https://pl.wikipedia.org/wiki/Clojure).
 
-
 ## Jak zacząć?
 
 Aby zacząć naukę polecam napierw obejrzenie wykładów ok 20 godzin oglądania (10 dwu częściowych lekcji)
@@ -126,6 +129,42 @@ Jeśli studiowałeś informatykę na uczelni wyższej, to nie powinno być dla c
 (chyba, że jesteś z tych co olewali studia).  Jeśli nie studiowałeś i wytrzymasz wykłady i zaczynasz naukę
 programowania to możesz też znaleźć masę dobrych wykładów w sieci z programowania i ogólnie informatyki z
 różnych uczelni wyższych z USA.
+
+Jeśli chcesz wypróbować kilka wyrażeń, możesz zobaczyć mój interpreter, o nazwie LIPS na
+[stronie projektu](https://jcubic.github.io/lips/) (nazwa jest to rekurencyjny skrót: LIPS Is Pretty
+Simple), nie jest to w 100% Scheme, ale ma taka samą składnie. Główne różnice to brak
+biblioteki standardowej (dzięki czemu interpreter jest mały),  brak kontynuacji oraz obsługi
+rekurencji ogonowej. Więc nie można napisać prostej funkcji do silni i obliczyć np. silnię z 10 000.
+Ale obsługuje liczby typu BigInt, dzięki czemu można obliczyć silnię ze 100 za pomocą prostej funkcji.
+Fajnie się integruje z językiem JavaScript i obsługuje automatycznie kod asynchroniczny, tzn. jak masz
+[obietnicę](/2018/05/asynchronicznosc-javascript-obietnice.html), to jest ona automatycznie odwijana,
+jakby jej nie było. Tak jak w JavaScript, gdy stosujesz
+[async/await](/2018/05/asynchronicznosc-javascript-async-await.html). Wyrażenia Regularne są też typem
+pierwszo-klasowym tzn. można je wstawiać bezpośrednio, nie jak w PHP wewnątrz ciągów znaków.
+
+Jeśli wolisz bardziej formalny Scheme, możesz wypróbować projekt [BiwaScheme](https://www.biwascheme.org/).
+Dodam, że terminal na stronie jest mojego autorstwa, taki sam jak na stronie projektu LIPS.
+Także logo projektu, niezbyt udane, jest mojego autorstwa.
+
+Możesz porównać oba interpretery:
+
+**LIPS**
+```
+lips> (! 100)
+93326215443944152681699238856266700490715968264381621468592963895217599993229915608941463976156518286253697920827223758251185210916864000000000000000000000000
+```
+
+**BiwaScheme**
+```
+biwascheme> (! 100)
+=> 9.33262154439441e+157
+```
+
+LIPS jest o wiele prostszy (jeśli chodzi o kod), dzięki czemu łatwo dodawać nowe funkcje i poprawki.
+To samo w BiwaScheme jest problematyczne, ze względu na zastosowaną architekturę. A napisanie funkcji
+ze specyfikacji, aby mieć w 100 procentach Scheme, jest całkiem możliwe w języku LIPS, tylko trzeba
+dodać kontynuacje i optymalizacje rekurencji ogonowej.
+
 
 ## Pisanie kodu
 
@@ -158,22 +197,24 @@ jeszcze kupić po polsku ale jest
 Jak już dobrze pozasz język scheme to warto poznać Common LISP-a, możesz przeczytać mój
 [kurs Common LISP-a](https://jcubic.pl/jakub-jankiewicz/lisp_tutorial.php), który kiedyś napisałem.
 Warto sięgnąć po książkę [Practical Common Lisp](http://www.gigamonkeys.com/book/) (w oryginale dostępna
-za darmo w wersji elektornicznej). Możesz też przeczytać książkę ["Successful Lisp: How to Understand and Use Common Lisp"](https://psg.com/~dlamkins/sl/contents.html), trzeba się przedrzeć przez linki,
-ale na GDrive powinien być plik z książką (nie linkuje do GDrive, bo strona może się zmienić).
+za darmo w wersji elektornicznej). Możesz też przeczytać książkę
+["Successful Lisp: How to Understand and Use Common Lisp"](https://psg.com/~dlamkins/sl/contents.html), trzeba
+się przedrzeć przez linki, ale na GDrive powinien być plik z książką (nie linkuje do GDrive, bo
+strona może się zmienić).
 
 ## Makra
 
-Jak już poznasz Common LISP-a i znasz scheme to możesz zacząć naukę makr, chociaż możesz też po nie sięgnąć
+Jak już poznasz Common LISP-a lub Scheme to możesz zacząć naukę makr, chociaż możesz też po nie sięgnąć
 już po obejrzeniu wykładów SICP (ang. Structure and Interpretation of Computer Programs). Makra to jest
-nalepsza rzecz jaka jest w języku LISP. Do ich nauki polecam książkę
+najlepsza rzecz jaka jest w języku LISP. Do ich nauki polecam książkę
 [Let Over Lambda](https://letoverlambda.com/). Można też kupić wersje papierową z
 [amazon.co.uk](https://www.amazon.co.uk/s?k=let+over+lambda&ref=nb_sb_noss). Osobiście wole czytać książki
 fizyczne. Książka jest bardzo zaawansowana. Na stronie opisywana jako książka hardcorowa, ale warto. Tylko
 muszę dodać, że jest poświęcona prawie w całości makrom.
 
-Muszę też wymienić książkę, którą ostanio udało mi się dostać w wersji papierowej, a mianowicie On LISP Paula
+Muszę też wymienić książkę, którą ostatnio udało mi się dostać w wersji papierowej, a mianowicie On LISP Paula
 Grahama (jest to gość od książki
-[Hakerzy i Malarze](https://helion.pl/search?qa=&serwisyall=&szukaj=Hakerzy+i+malarze&wprzyg=&wsprzed=&wyczerp=),
+[Hakerzy i Malarze](http://helion.pl/view/12418M/hakmal.htm),
 którą polecam. Jest też założycielem inkubatora "Y Combinator" dzięki, któremu mamy stronę
 [Hacker news](https://news.ycombinator.com/)). Książka jest już dawno nie drukowana i można tylko kupić
 jej wersje używaną za setki złotych, ale na szczęście autor udostępnił wersje elektroniczną. Można ją
@@ -183,23 +224,20 @@ udało mi się wydrukować swoją na [LuluXpress](https://xpress.lulu.com/) - ko
 
 ## Co dalej?
 
-Teraz to już tylko możesz dużo pisać i dużo czytać. Jak z każdym językiem. Chodzi głównie o kod. Chociaż
+Teraz już tylko możesz dużo pisać i dużo czytać. Jak z każdym językiem. Chodzi głównie o kod. Chociaż
 czytać można też artykuły. Z rzeczy które możesz jeszcze chcieć poznać to **kontynuacje** (których sam jeszcze
 do końca nie rozumiem - chciałbym je dodać do swojej implementacji
 [LISP-a w JavaScript](https://jcubic.github.io/lips), ale nie jestem pewien czy znam je na tyle, aby je
-zaimplementować). W common LISP jest jeszcze **CLOS** czyli wbudowany system obiektowy.
+zaimplementować). W Common Lisp jest jeszcze **CLOS**, czyli wbudowany system obiektowy.
 
 Polecam też używanie edytora **GNU Emacs**, który jest częściowo napisany w języku Emacs LISP (w skrócie
 ELisp) i można go rozszerzać za pomocą tego języka (fajną funkcją jest to że pod każdym skrótem klawiszowym,
-nawet pojedynczym klawiszem, który wstawia literę, jest jakaś funkcja w języka ELisp, którą można dowolnie
+nawet pojedynczym klawiszem, który wstawia literę, jest jakaś funkcja w języku ELisp, którą można dowolnie
 zmienić, jest też dostępna pełna dokumentacja do każdej funkcji. A jak **budujesz ze źródła**, to możesz nawet
-widzieć **kod źródłowy funkcji** samego edytora z **wewnątrz edytora**).
+widzieć **kod źródłowy funkcji** samego edytora **wewnątrz edytora**).
 
-Możesz też spróbować sam napisać interpreter tego języka. Ja sam napisałem w języku JavaScript. Jest
-udostępniony na licencji MIT i nazywa się LIPS (ang. usta, skrót rekurencyjny "LIPS Is Pretty Simple")
-([link tutaj](https://jcubic.github.io/lips/)). Aktualnie próbuje go przepiać w PHP, aby móc pisać aplikacje
-WWW całe w LISP-ie, mam nadzieje, że mi się uda. Projekt nazywa się LIP (czyli warga), a jest to skrót,
-też rekurencyjny "LIP is Lips In Php" [link tutaj](https://github.com/jcubic/lip).
-
-Jeśli chciałbyś napisać własny interpreter Lispa, możesz zacząć od tego artykułu:
+Możesz też spróbować sam napisać interpreter tego języka. Ja sam napisałem taki w języku JavaScript, link
+do tego projektu podałem wcześniej. Jeśli chciałbyś napisać własny interpreter Lispa. możesz zacząć
+od tego artykułu:
 [Parser S-Wyrażeń (języka LISP) w JavaScript](/2019/06/parser-jezyka-lisp-javascript.html).
+

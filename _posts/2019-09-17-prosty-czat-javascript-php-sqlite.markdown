@@ -428,6 +428,31 @@ i ograniczyłem do 400 znaków. Zobacz zmiany na [GitHubie](https://github.com/j
 Jeden z powodów dlaczego istnieją testerzy oprogramowania. Jest to też dowód, na to że często
 pierwszy kod ma błędy, nawet gdy jest tak mały jak ten czat.
 
+## Aktualizacja 2
+
+Musiałem dodać jeszcze jedną rzecz. Serwer gdy nie będzie żadnych wiadomości po upływie
+limitu 300 sekund zwracał błąd 503. Gdy cokolwiek było wysłane przez HTTP, skrypt po prostu
+kończył działanie i nawiązywane było nowe (dzięki SSE). Rozwiązanie, które powinno działać,
+to pusta testowa wiadomość na początku, aby nie było pustej odpowiedzi.
+
+### UWAGI
+Muszę dodać jeszcze jedną rzecz, którą ominąłem w tekście. W tym przykładowym czacie,
+pewnie niektórzy zauważyli, występuje lekkie opóźnienie przy wysyłaniu wiadomości. W gotowym
+rozwiązaniu powinno być tak, że wiadomość jest wysyłana do innych użytkowników, a dla osoby,
+która wysyła wiadomość, jest ona dodawana w JS, a nie przez serwer. W tej mini apce jest to
+zrobione w ten sposób, dla uproszczenia kodu.
+
+I jeszcze druga rzecz, jest nią to, że nazwy użytkowników nie są unikalne, więc jeśli ktoś
+będzie filtrował wiadomości po nazwach użytkowników, to może nie dostać wszystkich wiadomości.
+Należałoby dodać unikalność imion, aby to uzyskać dobrym pomysłem byłoby dodanie sprawdzania
+kto jest online. Można to uzyskać na dwa sposoby, albo robić tzw. heathcheck lub heartbeat,
+czyli co kilka sekund wysyłać wiadomość AJAXem, że użytkownik jest online. Lub przy połączeniu
+wysyłać jedną wiadomość, a przy zamknięciu przeglądarki drugą. Aby to uzyskać trzeba wysłać zapytanie
+do serwera, przy zdarzeniu unload, do tego celu można zastosować API sendBeacon, szczegóły na
+[MDN](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/sendBeacon) (to rozwiązanie
+nie zadziała w IE, ponieważ ta przeglądarka nie udostępnia tego API, nie można także zastosować
+zwykłego AJAX-a ponieważ jest ono przerywane, gdy zamyka się okno przeglądarki).
+
 
 *[HTTP]: HyperText Transfer Protocol
 *[SSE]: Server-sent events
