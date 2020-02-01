@@ -3,7 +3,7 @@ layout: post
 title:  "15 Pytań na rozmowę rekrutacyjną z React.js"
 date:   2018-10-04 18:26:30+0200
 categories:
-tags: javascript praca
+tags: javascript praca react
 author: jcubic
 description: Tym razem 15 pytań na rozmowę kwalifikacyjną z React.js
 image:
@@ -19,16 +19,52 @@ related:
     name: "Kolejne 10 pytań na rozmowę rekrutacyjną z języka JavaScript"
     url: "/2019/03/kolejne-pytania-na-rozmowe-rekrutacyjna-javascript.html"
 sitemap:
-  lastmod: 2019-03-31 15:43:15+0200
+  lastmod: 2020-02-01 20:23:48+0100
 ---
 
-React.js jest to bardzo popularny framework JavaScript stworzony przez Facebook-a. W tym wpisie przedstawię 15 pytań,
-które uważam, mogłyby się pojawić na rozmowie kwalifikacyjnej, tym razem z React.js. Gdybym musiał rekrutować,
-to pewnie bym zadał któreś z tych pytań albo wszystkie.
+React.js jest to bardzo popularny framework JavaScript, stworzony przez jednego z programistów
+Facebook'a, dalej rozwijany jako projekt Open Source, gdzie głównymi osobami rozwijającymi projekt,
+są programiści Facebook'a. W tym wpisie przedstawię 15 pytań, które uważam, mogłyby się pojawić na
+rozmowie kwalifikacyjnej na programistę Front-End, tym razem z React.js. Gdybym musiał rekrutować,
+to pewnie bym zadał któreś z tych pytań albo wszystkie. Koniecznie przeczytaj przed rozmową rekrutacyjną.
+Jeśli jesteś rekruterem warto też tutaj zajrzeć.
 
 <!-- more -->
 
 ## 1. Podaj sposoby definiowania komponentów w React
+
+* Jako klasa ES6:
+
+{% highlight jsx %}
+class List extends React.Component {
+    constructor(props) {
+        super(props);
+        this.sate = {label: 'React'};
+    }
+    render() {
+        return <ul>{
+              this.props.items.map(function(item) {
+                  return <li>{item.name}</li>;
+              })
+        }</ul>
+    }
+}
+{% endhighlight %}
+
+* Jako komponent bez stanu (ang. state) za pomocą funkcji.
+
+{% highlight jsx %}
+function List(props) {
+    return <ul>{
+            props.items.map(function(item) {
+                return <li>{item.name}</li>;
+            })
+        }</ul>
+}
+{% endhighlight %}
+
+Trzeba jednak dodać że od wersji React 16.8 mogą mieć stan dzięki Hakom (ang. Hooks).  Tutaj chodzi
+o stan komponentu, który zapisuje się za pomocą funkcji `setState`.
 
 * składnia ES5 za pomocą pakietu npm `create-react-class`:
 
@@ -62,36 +98,6 @@ var List = createReactClass({
 
 Kiedyś była możliwość skorzystania z funkcji `React.createClass`, ale została usunięta na rzecz osobnego modułu npm.
 
-* Jako klasa ES6:
-
-{% highlight jsx %}
-class List extends React.Component {
-    constructor(props) {
-        super(props);
-        this.sate = {label: 'React'};
-    }
-    render() {
-        return <ul>{
-              this.props.items.map(function(item) {
-                  return <li>{item.name}</li>;
-              })
-        }</ul>
-    }
-}
-{% endhighlight %}
-
-* Jako komponent bez stanu (ang. state) za pomocą funkcji:
-
-{% highlight jsx %}
-function List(props) {
-    return <ul>{
-            props.items.map(function(item) {
-                return <li>{item.name}</li>;
-            })
-        }</ul>
-}
-{% endhighlight %}
-
 Wszystkich trzech komponentów można użyć w ten sposób:
 
 {% highlight jsx %}
@@ -101,39 +107,15 @@ ReactDOM.render(
 );
 {% endhighlight %}
 
-## 2. Co to są komponenty wyższego poziomy i jak je zdefiniować
+Co ciekawe istnieje możliwość napisania aplikacji w ES5 bez JSX i kompilacji.
 
-Komponenty wyższego poziomy (ang. Higher Order Component - HOC) dodają jakąś dodatkową funkcjonalność, opakowując swoje
-dzieci (ang. child props).
+## 2. Co to są komponenty wyższego rzędu
 
-Przykład takiego komponentu:
+Komponenty wyższego rzędu (ang. Higher Order Component - HOC), zasada jest podobna do funkcji
+wyższego rzędu. Komponenty tego typu do funkcje, które przyjmują komponenty jako argument oraz
+zwracają nowy argument.
 
-{% highlight jsx %}
-class Details extends React.Component {
-   constructor(...args) {
-       super(...args)
-       this.state = {collapsed: false};
-       this.toggle = this.toggle.bind(this);
-   }
-   toggle() {
-       this.setState({collapsed: !this.state.collapsed});
-   }
-   render() {
-      return <div>
-           <h2 onClick={this.toggle}>{this.props.title}</h2>
-           <div>
-              { this.state.collapsed && this.props.children }
-           </div>
-      </div>
-   }
-}
-ReactDOM.render(
-    <Details>
-        <p>Lorem Ipsum Dolor Sit Amet</p>
-    </Details>,
-    document.getElementById('root')
-);
-{% endhighlight %}
+Przykładem może być funkcja connect z biblioteki Redux.
 
 ## 3. Co to są render props
 
@@ -163,9 +145,9 @@ ReactDOM.render(
 
 ## 4. Jak działa JSX
 
-React parsuje kod JavaScript (JSX), znajduje wszystkie odwołania do tagów html i zastępuje je wywołaniem funkcji
-`React.createElement` lub w przypadku, gdy nazwa tagu jest z dużej litery, stworzona jest instancja komponentu,
-o takiej samej nazwie.
+Kompilator JSX, np. [Babel](https://babeljs.io/) parsuje kod JavaScript (JSX), znajduje wszystkie
+odwołania do tagów html i zastępuje je wywołaniem funkcji `React.createElement` lub w przypadku, gdy
+nazwa tagu jest z dużej litery, kompilator używa zmiennej komponentu.
 
 Kod JSX
 
@@ -185,7 +167,7 @@ ReactDOM.render(
     document.getElementById('root'));
 {% endhighlight %}
 
-JSX to nie tylko React, ale także inne frameworki. Takie jak np. [Preact](https://preactjs.com/), które mogą korzystać
+z JSX nie korzysta tylko React, ale także inne frameworki. Takie jak np. [Preact](https://preactjs.com/), które mogą korzystać
 z innej funkcji do tworzenia elementów w wynikowym kodzie JavaScript, dlatego np. [Babel](https://babeljs.io/)
 posiada dyrektywę, za pomocą której można np. zmienić domyślny `React.createElement` na funkcje `h`,
 z której korzysta Preact:
@@ -194,7 +176,7 @@ z której korzysta Preact:
 /** @jsx h */
 {% endhighlight %}
 
-## 5. Jak się odwoływać do elementów w render
+## 5. Jak się odwoływać do elementów w komponencie
 
 Do tworzenia referencji w react służy atrybut `ref`, a jeśli dodaje się eventy do tego samego elementu, można skorzystać
 z `e.target`, gdzie `e` jest to event (argument funkcji obsługi zdarzenia).
@@ -261,6 +243,26 @@ const ref = React.createRef();
 {% endhighlight %}
 
 Gdy przycisk zostanie utworzony i ref podpięty, `ref.current` będzie zawierał odwołanie do elementu button.
+
+`React.createRef()` można także stosować wewnątrz jednego komponentu, przykład:
+
+{% highlight jsx%}
+class MyInput extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.inputRef = React.createRef();
+  }
+
+  render() {
+    return <input type="text" ref={this.inputRef} />;
+  }
+
+  componentDidMount() {
+    this.inputRef.current.focus();
+  }
+}
+{% endhighlight %}
 
 ## 6. Omów cykl życia komponentu w React.js
 
@@ -350,12 +352,16 @@ ReactDOM.render(
 
 ## 7. Co to jest Flux i jaka jest różnica między Flux a Redux
 
-Flux jest to architektura aplikacji zaproponowana przez Facebook-a, autora frameworka React.js. Natomiast Redux jest to
-biblioteka, która implementuje tą architekturę.
+Flux jest to architektura aplikacji zaproponowana przez Facebook-a, twórcy frameworka React.js.
+Flux nie jest to konkretna biblioteka ale architektura, której głównym elementem jest funkcja Dispatcher,
+A całość używa architektury podobnej do Publish/Subscribe lub EventEmitter. Flux korzysta z jedno kierunkowego
+przepływu danych w celu utrzymywania stanu aplikacji.
+
+I ile Flux jest to nazwa architektury to Redux jest to już biblioteka, która implementuje ją tą.
 
 ## 8. Jak działa Redux
 
-Biblioteka ta składa się z takich komponentów jak Stan aplikacji (ang. Store), Reducer-y oraz Akcje.
+Biblioteka ta składa się z takich elementów jak Stan aplikacji (ang. Store), Reducer-y oraz Akcje.
 * Reducer jest to funkcja, która zwraca nowy stan bazując na starym. Przyjmuje dwa argumenty, poprzedni stan oraz akcje,
 * Akcje są to obiekty, które zostają przekazane do reducer-a, na podstawie ich typu powinien być zwrócony inny nowy stan
   aplikacji,
@@ -367,14 +373,15 @@ Biblioteka ta składa się z takich komponentów jak Stan aplikacji (ang. Store)
 Biblioteka działa niezależnie od jakiegokolwiek frameworka. Można jej np. używać z Angular-em. Aby użyć biblioteki razem
 z React-em, należy dodatkowo użyć biblioteki ReactRedux oraz użyć jej dwóch funkcji `connect` oraz `Provider`.
 
-`Provider` jest to komponent, który posiada właściwość o nazwie `store`, który udostępnia stan aplikacji komponentom,
-działa tak jak ErrorBoundary i korzysta z Context API React-a. Natomiast funkcja `connect`, służy jako wrapper komponentów.
+`Provider` jest to komponent, który posiada właściwość o nazwie `store`, który udostępnia stan
+aplikacji komponentom, działa tak jak ErrorBoundary (tzn. że `Provider` to komponent, który
+opakowuje inne komponenty) i korzysta z Context API React-a. Natomiast funkcja `connect`, służy jako
+wrapper komponentów.
 Przekazuje się do niej dwie funkcje:
 * mapStateToProps - jest to funkcja, która dostaje jako argument, stan aplikacji i zwraca obiekt bazujący na stanie,
 * mapDispatchToProps - jest to funkcja, która dostaje `dispatch` Reduxa jako argument i zwraca obiekt z funkcjami, które wywołują `dispatch` z odpowiednimi akcjami czyli dodają funkcje zmiany stanu aplikacji.
 
-Funkcja connect zwraca funkcje, do której należy przekazać komponent. Zwróci ona nowy komponent, który dostanie jako
-właściwości (ang. props) dane z mapStateToProps oraz mapDispatchToProps.
+Funkcja connect, jest to komponent wyższego poziomu czyli jest to funkcja która przyjmuje zwykły komponent i zwraca nowy komponent, który ma dostęp do stanu z Reduxa, poprzez dwie funkcje `mapStateToProps` oraz `mapDispatchToProps`.
 
 {% highlight jsx %}
 const {connect, Provider} = ReactRedux;
@@ -428,9 +435,13 @@ ReactDOM.render(
 
 ## 9. Jak działa Context API
 
-Context API oraz Redux, który w nowszej wersji korzysta z Context API, służą do zminimalizowania wielokrotnego
-dziedziczenia propsów. Nazwane po angielsku prop drilling albo threading. Context API umożliwia stworzenie globalnego
-stanu, który będzie dziedziczony przez inne komponenty w drzewie, pomijając komponenty, które go nie potrzebują.
+Context API oraz Redux, który w nowszej wersji korzysta z Context API, można używać do
+zminimalizowania wielokrotnego dziedziczenia propsów (Nazwane po angielsku prop drilling albo
+threading), gdy jest potrzeba utrzymywania stanu w aplikacji w wielu komponentach. Context API
+umożliwia stworzenie lokalnego stanu, który będzie dziedziczony przez inne komponenty w drzewie,
+pomijając komponenty, które go nie potrzebują. Dlatego właśnie z został użyty w bibliotece Redux.
+Działa tak jak zasięg funkcyjny (ang. `scope`), wszystkie funkcje wewnątrz mają dostęp do wszystkich
+zasięgów powyżej.
 
 Context API udostępnia funkcje `React.createContext`, która tworzy obiekt z dwoma komponentami:
 `obiekt.Provider` oraz `obiekt.Consumer`. Przykładem niech będzie przypadek, gdy musimy dodać internacjonalizacje
@@ -539,13 +550,22 @@ Zdarzenia w React działają podobnie do tych w natywnym DOM, z pewnymi róznica
 * argument do funkcji obsługi zdarzenia dostaje obiekt klasy `SyntheticEvent`, który posiada odwołanie do oryginalnego
 zdarzenia w polu `nativeEvent` oraz `target` wskazujący obiekt, który wywołał zdarzenie.
 
+Ważną rzeczą jest to że zdarzenia w React nie są unikalne, tylko używane ponownie z innymi wartościami.
+Ta właściwość nazywa się Event Pooling, tzn. że nie można używać zdarzeń wewnątrz funkcji asynchronicznej np. `fetch`,
+ponieważ w momencie gdy asynchroniczna akcja się wywoła obiekt zdarzenia może się zmienić. Zastosowano taki mechanizm
+ze względów optymalizacyjnych. Można jednak ten mechanizm wyłączyć poprzez wywołanie `event.persist()`.
+
 ## 13. Czym się różni komponent od elementu
 
-Komponent jest to funkcja albo klasa dziedzicząca po `React.Component`, która ma jakąś logikę lub/i zawiera inne
-komponenty oraz elementy.  Natomiast element jest to obiekt, który ma swój odpowiednik w DOM np. div, span albo
-input. Elementem będzie także Web Komponent, ponieważ on także będzie miał swój odpowiednik w DOM. Elementy występują
-tylko w JSX, w wynikowym JavaScript-cie zostają zastąpione przez wywołanie funkcji `React.createElement`, gdzie pierwszy
-argument to nazwa taga.
+Komponent jest to funkcja albo klasa dziedzicząca po `React.Component`, która ma jakąś logikę lub/i
+zawiera inne komponenty oraz elementy.  Natomiast element jest to obiekt, który ma swój odpowiednik
+w DOM np. div, span albo input. Jest to jednak uproszczenie myślowe ponieważ sam React nie używa DOM
+dopiero dodatkowa biblioteka ReactDOM dodaje taką możliwość (jeśli jesteś zainteresowany dokładnym
+znaczeniem elementu w react musiałbyś zajrzeć do kodu źródłowego React'a, ale jedna wydaje mi się, że
+element jako element w DOM jest właściwym wyjaśnieniem chociaż nieprecyzyjnym), jednak nie ma
+wątpliwości że Elementem będzie także Web Komponentem, ponieważ on także będzie miał swój odpowiednik
+w DOM. Elementy występują tylko w JSX, w wynikowym JavaScript-cie zostają zastąpione przez wywołanie
+funkcji `React.createElement`, gdzie pierwszy argument to nazwa taga.
 
 ## 14. Do czego służy `setState`
 
@@ -562,12 +582,20 @@ główną cechą jest tzw. przyrostowe renderowanie, dzięki któremu można roz
 realizowane jest to dzięki temu, że możliwe jest zatrzymania i wznowienie renderowania. Dało możliwość szybszego
 wysłania zmian na ekran.
 
-Referencje:
+---
+
+**Referencje:**
 * [2 Minutes to Learn React 16's componentDidCatch Lifecycle Method](https://medium.com/@sgroff04/2-minutes-to-learn-react-16s-componentdidcatch-lifecycle-method-d1a69a1f753)
 * [componentDidMakeSense — React Component Lifecycle Explanation](https://levelup.gitconnected.com/componentdidmakesense-react-lifecycle-explanation-393dcb19e459)
 * [Oficjalna dokumentacja Context API](https://reactjs.org/docs/context.html)
 * [Oficjalna dokumentacja Forwarding Refs](https://reactjs.org/docs/forwarding-refs.html)
+* [Oficjalna dokumentacja SyntheticEvent](https://reactjs.org/docs/events.html)
+* [Oficjalna dokumentacja Higher Order Components](https://reactjs.org/docs/higher-order-components.html)
 * [Flux i Redux](https://typeofweb.com/2018/03/29/flux-i-redux/)
+
+**Specjalne Podziękowania**
+
+Dla Michała Miszczyszyna, autora bloga [typeofweb](https://typeofweb.com/), za sugestie odnoście odpowiedzi.
 
 *[npm]: Node Package Manger
 *[ES5]: ECMAScript 5

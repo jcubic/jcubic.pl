@@ -674,6 +674,9 @@ ul.tags:before {
         display: none;
     }
 }
+#hashover {
+    margin-left: 20px;
+}
 @media (prefers-color-scheme: dark) {
     .pagination ul {
         color: #9d9ca9;
@@ -688,4 +691,12 @@ ul.tags:before {
         color: #9c9c9c;
         background-color: #484848;
     }
+    abbr, acronym {
+      border-color: #797979;
+    }
+    #hashover a, #hashover a:link, #hashover .hashover-fake-link {
+        color: #5d5da6;
+    }
 }
+
+

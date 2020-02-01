@@ -88,7 +88,7 @@ header nav a, header .h {
     text-shadow: 1px 1px 3px rgba(0,0,0,50);
 }
 header nav {
-    right: 0;
+    left: 0;
     bottom: 0;
     margin: 20px;
     font-family: 'Scada', sans-serif;
@@ -427,6 +427,7 @@ figure {
     #search input {
         background-color: #2b2b2b;
         border-color: #797979;
+        color: #797979;
     }
     footer a, footer a:visited, section a, section a:visited, #tag-cloud a, #sponsors a, .cookie-baner a {
         color: #776e8e;
@@ -445,5 +446,4 @@ figure {
         background-color: #393a3c;
         color: #afafaf;
     }
-
 }

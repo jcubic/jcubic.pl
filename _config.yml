@@ -51,6 +51,11 @@ defaults:
     values:
       is_post: true # automatically set is_post=true for all posts
 
+#links:
+#  -
+#    name: "Mentoring"
+#    url: "https://kodmentor.pl/"
+
 sitemap:
   lastmod: 2019-10-30 16:38:53+0000
 

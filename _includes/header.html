@@ -8,12 +8,15 @@
     {% else %}
     <div class="h"><a href="{{ '/' | prepend: site.baseurl | prepend: site.url }}">{{ site.title }}</a></div>
     {% endif %}
-    {% assign pages = site.pages.select {|p| p.title } %}
-    {% if pages %}
+    {% assign pages = site.pages | where: 'type', 'main' %}
+    {% if pages or site.links %}
     <nav>
         <ul>
         {% for page in pages %}
-          <li><a href="{{ page.url | prepend: site.baseurl | prepend: site.url }}">{{ page.title }}</a></li>
+          <li><a href="{{ page.url | prepend: site.baseurl | prepend: site.url }}.html">{{ page.title }}</a></li>
+        {% endfor %}
+        {% for link in site.links %}
+          <li><a href="{{ link.url }}">{{ link.name }}</a></li>
         {% endfor %}
         </ul>
     </nav>
@@ -30,7 +33,7 @@
         <img src="{{ '/img/rss.png' | prepend: site.baseurl | prepend: site.url }}" alt="rss feed icon"/>
       </a>
     </div>
-    <!-- TODO: włączyć w Grudniu
+    <!-- TODO: włączyć w Grudniu -->
     <div class="winter-is-coming">
         <div class="snow snow--near"></div>
         <div class="snow snow--near snow--alt"></div>
@@ -41,5 +44,4 @@
         <div class="snow snow--far"></div>
         <div class="snow snow--far snow--alt"></div>
     </div>
-    -->
 </header>

@@ -83,7 +83,7 @@ RewriteRule 2014/08/jak-napisac-wlasna-obsluge-json-rpc.html /2014/08/jak-napisa
 RewriteRule 2018/06/asynchronicznosc-for-await-of.html /2018/06/asynchronicznosc-iteratory-i-generatory-asynchroniczne.html [R=301,L]
 RewriteRule tag/jQuery/ /tag/jquery/ [R=301,L]
 
-RewriteRule wp-.*.php source.php
+RewriteRule ^wp- source.php
 
 RewriteCond %{query_string} ^=PHP.{36}$
 RewriteRule (.*) - [F]
