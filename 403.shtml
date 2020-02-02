@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8"/>
     <title>403 - Forbidden</title>
-    <meta name="description" content="JCubic Server Error - Forbidden"/>
+    <meta name="description" content="jcubic Server Error - Forbidden"/>
     <link rel="shortcut icon" href="/favicon/favicon.ico"/>
     <!--[if lt IE 9]>
     <script src="https://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE9.js"></script>
@@ -18,25 +18,28 @@
             <div id="code">403</div>
             <div id="message">Forbidden</div>
         </header>
-        <p>Sorry, but you don't have permission to access <!--#echo var="REQUEST_URI" --> on this server.</p>
+        <p>Sorry, but you don't have permission to access this URL.</p>
     </section>
-    <footer>Copyright &copy; 2018 Jakub Jankiewicz</footer>
+    <footer>Copyright &copy; 2014-2020 Jakub Jankiewicz</footer>
+    <!-- Matomo -->
     <script type="text/javascript">
-  //<![CDATA[
-    if (location.host == 'jcubic.pl') {
-      var _paq = _paq || [];
-      _paq.push(["trackPageView"]);
-      _paq.push(["enableLinkTracking"]);
-
-      setTimeout(function() {
-        var u=(("https:" == document.location.protocol) ? "https" : "http") + "://piwik.jcubic.pl/";
-        _paq.push(["setTrackerUrl", u+"piwik.php"]);
-        _paq.push(["setSiteId", "2"]);
-        var d=document, g=d.createElement("script"), s=d.getElementsByTagName("script")[0]; g.type="text/javascript";
-        g.defer=true; g.async=true; g.src=u+"piwik.js"; s.parentNode.insertBefore(g,s);
-      }, 0);
-    }
-  //]]>
-  </script> <noscript><img src="https://piwik.jcubic.pl/piwik.php?idsite=2&amp;rec=1" style="border:0" alt="" /></noscript> <!-- End Piwik Code -->
+      var _paq = window._paq || [];
+      /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+      _paq.push(['trackPageView']);
+      _paq.push(['enableLinkTracking']);
+      (function() {
+          var u="//piwik.jcubic.pl/";
+          _paq.push(['setTrackerUrl', u+'matomo.php']);
+          _paq.push(['setSiteId', '2']);
+          var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+          g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+      })();
+    </script>
+    <!-- End Matomo Code -->
+    <noscript>
+      <!-- Matomo Image Tracker-->
+      <img src="https://piwik.jcubic.pl/matomo.php?idsite=2&amp;rec=1" style="border:0" alt="" />
+      <!-- End Matomo -->
+    </noscript>
 </body>
 </html>
