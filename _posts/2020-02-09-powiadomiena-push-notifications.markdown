@@ -13,16 +13,16 @@ image:
  height: 533
 ---
 
-W tym wpisie dodamy fajną nową funkcje, którą dodałem już jakiś czas temu do
-prostej aplikacji czatu, dzięki niej wiem jak ktoś używa tej mini aplikacji.
+W tym wpisie pokażę jak dodałem, już jakiś czas temu, fajną funkcje do prostej aplikacji czatu.
+Funkcją tą są powiadomienia, gdy ktoś coś napisze na czacie.
+
 Jeśli jesteś zainteresowany jak napisać taki czat, polecam najpierw przeczytać artykuł
 ["Prosty Czat w JavaScript, PHP i SQLite"](/2019/09/prosty-czat-javascript-php-sqlite.html).
-Rozwiązanie to używa technologii Server Sent Event (SSE), której można używać, gdy
-za jakiegoś powodu nie możemy użyć gniazd (ang. Web Sockets).
+Rozwiązanie to używa technologii Server-sent events (SSE), której można używać, gdy
+z jakiegoś powodu nie możemy użyć gniazd (ang. Web Sockets).
 
-Funkcje którą dodamy, to powiadomienia gdy dowolny użytkownik coś napisze na czacie.
-Użyjemy powiadomień Push (ang. Push Notifications), service workera oraz
-Firebase, aby uprościć sobie życie.
+W celu dodania funkcji powiadomień użyłem powiadomień typu Push (ang. Push Notifications),
+service workera oraz Firebase, aby uprościć sobie życie.
 
 <!-- more -->
 
