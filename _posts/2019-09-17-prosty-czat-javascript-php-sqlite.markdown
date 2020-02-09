@@ -11,6 +11,12 @@ image:
  alt: "Grafika Wektorowa przedstawiająca symbloliczną aplikacje czatu na telefonie"
  width: 800
  height: 599
+related:
+  -
+    name: "Powiadomienia - Push Notifications (aplikacja czatu)"
+    url: /2020/02/powiadomiena-push-notifications.html
+sitemap:
+  lastmod: 2020-02-09 20:45:25+0100
 ---
 
 Server-sent events (SSE) to alternatywa dla Web Sockets (gniazd) dla serwerów, które
@@ -362,7 +368,6 @@ class EventStream {
 Teraz wystarczy tylko ją użyć w pętli, możemy utworzyć nieskończoną pętle,
 która będzie nasłuchiwała, czy są nowe wiadomości za pomocą klasy `Messages`:
 
-
 {% highlight php startinline=true %}
 require_once('Messages.php');
 
@@ -384,6 +389,17 @@ while (true) {
 }
 {% endhighlight %}
 
+Potrzebne nam będzie także wyświetlenie poprzednich wiadomości, przy uruchomieniu strony.
+
+
+```
+<textarea readonly><?php
+foreach ($data as $row) {
+  echo $row['username'] . "> " . $row['message'] . "\n";
+}
+?></textarea>
+```
+
 I to cały kod aplikacji. Kod czatu dostępny na GitHub-ie pod adresem
 [https://github.com/jcubic/chat](https://github.com/jcubic/chat)
 licencja kodu to MIT.
@@ -391,10 +407,39 @@ licencja kodu to MIT.
 Demo aplikacji możesz zobaczyć pod linkiem
 [https://jcubic.pl/chat/](https://jcubic.pl/chat/)
 
+## Bezpieczeństwo aplikacji
+Aplikacja którą napisaliśmy do tej pory jest podatna, tzn. że jest w niej błąd, który może
+wykorzystać cracker (czyli hacker w sensie bezpieczeństwa komputerowego,
+szczegóły na Wikipedii w artykule
+[Hacker (bezpieczeństwo komputerowe)](https://pl.wikipedia.org/wiki/Haker_(bezpiecze%C5%84stwo_komputerowe))).
+
+Błąd o którym mowa jest spowodowany tym, że nie filtrujemy poprawnie wiadomości wstawiane
+do elementu textarea. Może być to nie oczywiste ponieważ do elementu tekstarea można wstawiać
+znaczniki html i będą one wyświetlane jako tekst, a nie jako html. Więc wygląda, że wszystko jest ok.
+Ale wystarczy wysłać wiadomość `</textarea><script>alert('xss')</script>`. Znacznik zamykający
+textarea jest to jedyny znacznik, który działa jako html wewnątrz pola tekstowego.
+Jeśli twój czat nie korzysta z pola tekstowego możliwe, że nie będzie można wstawić żadnego znacznika,
+i każdy html będzie powodował jego wyrenderowanie, czyli XSS będzie o wiele prostszy.
+
+Aby się zabezpieczyć przed tym zagrożeniem wystarczy odpowiednio zakodować tekst. Wystarczy taki kod:
+
+```
+<textarea readonly><?php
+foreach ($data as $row) {
+  $msg = htmlentities($row['message'], ENT_QUOTES, 'UTF-8');
+  echo $row['username'] . "> " . $msg . "\n";
+}
+?></textarea>
+```
+
+Warto zawsze się zastanowić czy aplikacja nie jest podatna na zhakowanie, polecam
+przeczytać artykuł:
+[10 błędów aplikacji www, wykorzystywanych przez Hakerów](/2018/01/bledy-aplikacji-internetowych.html).
+
 ## Co dalej
 
 Jest to oczywiście bardzo prosty przykład. Co można dodać to np. kolorki dla tych samych
-użytkowników, aby działały trzeba by zmienić `textarea` na coś innego (np. zwykły div
+użytkowników, aby działały trzeba by było zmienić `textarea` na coś innego (np. zwykły div
 z `overflow: auto` lub `scroll`, będzie działał tak samo). Aby dodać kolorki w bazie,
 najlepiej dodać nową tabele z użytkownikami (aby nie mieć redundancji w bazie).
 W drugiej tabeli warto też dać `username`, a w pierwszej tylko id użytkownika.

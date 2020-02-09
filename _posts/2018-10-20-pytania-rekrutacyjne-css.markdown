@@ -321,6 +321,7 @@ Odpowiedź:
 {% highlight css %}
 .logo {
     background: url(logo.png);
+    display: block;
     width: 100px;
     height: 50px;
     text-indent: -99999em;
