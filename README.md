@@ -1,8 +1,10 @@
 # Głównie JavaScript
 
+![powered by Jekyll](https://img.shields.io/badge/powered_by-Jekyll-blue.svg)
+
 Źródła strony korzystające z generatora stron statycznych [jekyll](http://jekyllrb.com/)
 oraz [tidy-html5](https://github.com/htacg/tidy-html5) ponieważ
-[jekyll nie wypluwa kodu z poprawnymi wcięciami](https://github.com/jekyll/jekyll/issues/2640)
+[jekyll nie wypluwa kodu z poprawnymi wcięciami](https://github.com/jekyll/jekyll/issues/2640).
 
 Pod GNU/Linuxem Ubuntu lub dystrybucjami pochodnymi wykonaj:
 
