@@ -96,6 +96,9 @@ W przeglądarce pod adresem http://localhost:8080 będzie odpalony blog, który 
 przebudowany przy każdej zmianie pliku lub dodaniu artykułu. Można też dodać
 `bash` (do poprzedniego polecenia), aby uzyskać wiersz poleceń.
 
+**UWAGA**: wyszukiwarka nie będzie działać, ponieważ `jekyll serve` używa prostego
+serwera, który nie obsługuje PHP.
+
 Aby zbudować wersje produkcyjną strony z adresem z `_config.yml` wykonaj:
 
 ```
