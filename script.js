@@ -59,3 +59,27 @@ loadCSS('https://fonts.googleapis.com/css?family=Muli:400,400i,700|Roboto:500&su
 Array.from(document.querySelectorAll('link[data-href]')).forEach(function(link) {
     link.href = link.getAttribute('data-href');
 });
+(function() {
+    if (navigator.share) {
+        var button = document.querySelector('.share .mobile');
+        if (button) {
+            button.style.display = '';
+            var web = document.querySelector('.mobile + .web');
+            if (web) {
+                web.style.display = 'none';
+            }
+            button.addEventListener('click', function() {
+                var url = document.querySelector('head link[rel="canonical"]').href;
+                var title = document.querySelector('head title').innerText;
+                var text = "Zobacz ten wpis: ";
+
+                navigator.share({
+                    title: title,
+                    text: text,
+                    url: url
+                }).then(function() { console.log('Successful share'); })
+                    .catch(function(error) { console.log('Error sharing', error); });
+            });
+        }
+    }
+})();

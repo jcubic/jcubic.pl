@@ -173,6 +173,12 @@ ul.tags:before {
     clear: both;
     overflow: hidden;
 }
+.share .mobile {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 210px;
+}
 #facebook {
     min-height: 234px;
 }
