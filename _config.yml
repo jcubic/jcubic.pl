@@ -34,6 +34,12 @@ users:
         url: "http://www.frontend-con.io/"
         name: "Magda Kulczycka"
 
+links:
+  -
+    url: "https://pl.jooble.org/praca-javascript"
+    text: "Oferty pracy w JavaScript"
+    target: "_blank"
+
 related:
   -
     url: "http://www.algosmart.pl/"

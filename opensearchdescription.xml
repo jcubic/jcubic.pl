@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/"
+                       xmlns:moz="http://www.mozilla.org/2006/browser/search/">
+ <ShortName>Głównie JavaScript</ShortName>
+ <Description>Przeszukaj Bloga Głównie JavaScript</Description>
+ <Image width="16" height="16" type="image/x-icon">https://jcubic.pl/favicon/favicon.ico</Image>
+ <Url type="application/opensearchdescription+xml"
+      rel="self"
+      template="https://jcubic.pl/opensearchdescription.xml" />
+ <Url type="text/html"
+      template="https://jcubic.pl/search.php?q={searchTerms}"/>
+</OpenSearchDescription>

@@ -16,7 +16,9 @@
           <li><a href="{{ page.url | prepend: site.baseurl | prepend: site.url }}.html">{{ page.title }}</a></li>
         {% endfor %}
         {% for link in site.links %}
-          <li><a href="{{ link.url }}">{{ link.name }}</a></li>
+          <li>
+            <a href="{{ link.url }}"{% if link.target %} target="{{ link.target }}"
+               rel="noopener noreferrer"{% endif %}>{{ link.text }}</a></li>
         {% endfor %}
         </ul>
     </nav>

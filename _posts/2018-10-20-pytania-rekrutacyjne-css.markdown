@@ -49,7 +49,7 @@ Front-End to głównie CSS i JavaScript. A oto lista pytań:
 Nie, ponieważ body ma `margin: 10px`, więc będzie biała ramka, ale to i tak nie ma znaczenie, ponieważ wysokość body
 zawiera tylko kontent, dlatego jego wysokość będzie równa 0, div też będzie miał wysokość 0. W CSS wysokość 100% jest
 zawsze w odniesieniu do rodzica.  (jeśli musimy ustawić wysokość w procentach, nigdzie w drzewie rodziców nie może być
-`height: auto`, a taka wartość jest na body).
+`height: auto`, a taka wartość jest domyślnie na każdym elemencie, włączająć to html i body).
 
 Aby rozwiązać te problemy należy ustawić:
 
@@ -240,6 +240,21 @@ Robi się tak ponieważ konwersja w drugą stronę jest niemożliwa:
 }
 {% endhighlight %}
 
+Poniższy kod też zadziała, ale jak pisałem wyżej, nie można go potem zamienić potem na inną jednostkę.
+
+{% highlight css %}
+.item.selected {
+   --width: 200px;
+}
+.item {
+    width: var(--width, 100px);
+}
+.other {
+    /* to nie zadziała */
+    line-height: calc((var(--width) / 100) * 1em);
+}
+{% endhighlight %}
+
 Jako bonus można wspomnieć, że nie można animować zmiennych CSS, ale niedługo dostępne będzie nowe API, które jest
 częścią specyfikacji [Houdini](https://ishoudinireadyyet.com/) (a dokładnie Properties & Values API), dzięki któremu
 będzie można animować zmienne CSS. Realizowane będzie to w ten sposób, że zmienną CSS będzie można zarejestrować i podać
@@ -249,6 +264,10 @@ API jak to od elementu `canvas`).
 
 Tutaj [moje proste demko Paint API](https://codepen.io/jcubic/pen/KBQxjO) (według podlinkowanej strony powinno działać
 w przeglądarkach Google Chrome/Chromium oraz Opera).
+
+Jeśli chcesz zobaczyć jak działa Paint API, oraz ciekawy trick z nim związany,
+przeczytaj artykuł:
+["JS w CSS oraz rysowanie w CSS"](/2019/04/javascript-json-css-oraz-houdini.html).
 
 ## 9. Jak ustawić i pobrać zmienną CSS z poziomu JavaScript-u
 
@@ -360,7 +379,7 @@ operacja layoutu, czyli obliczania wszystkich styli na stronie i aplikowania ich
 ## 15. Jak ustawić wysokość lub szerokość na 100% w odniesieniu do całego okna przeglądarki
 
 Stary sposób polegałby na ustawieniu `body, html` na `100%` oraz każdego kontenera, aż do elementu, którego wysokość lub
-szerokości musimy ustawić.  Inny sposób jest to użycie nowych jednostek `vh` oraz `vw`; które działają jak procent, ale w
+szerokości musimy ustawić.  Inny sposób jest to użycie nowych jednostek `vh` oraz `vw,`, które działają tak jak procent, ale w
 odniesieniu do całego okna przeglądarki.
 
 {% highlight css %}
