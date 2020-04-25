@@ -302,8 +302,8 @@ ul.tags:before {
 .source {
     margin: 20px;
 }
-#disqus_thread {
-    margin: 40px 0 0 20px;
+.hashover .hashover-deleted:not(.hashover-has-replies) {
+    display: none;
 }
 @media (max-width: 1190px) {
     aside.sticky {

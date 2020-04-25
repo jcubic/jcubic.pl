@@ -15,3 +15,8 @@ Publikowane w [ITNext](https://itnext.io/).
 Na moim starym blogu na wordpress.com (też po angielsku), też jest kilka artykułów.
 
 Adres bloga to [https://jcubic.wordpress.com/](https://jcubic.wordpress.com/).
+
+Kiedyś napisałem też dwa tutoriale:
+
+* [Kurs języka Common Lisp](https://jcubic.pl/jakub-jankiewicz/lisp_tutorial.php) (właściwie to język Lisp, a CL to dialekt)
+* [Kurs Dojo Toolkit](https://jcubic.pl/jakub-jankiewicz/dojo_tutorial.php)

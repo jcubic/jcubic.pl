@@ -3,7 +3,7 @@ layout: post
 title:  "Parser S-Wyrażeń (języka LISP) w JavaScript"
 date:   2019-06-11 21:52:53+0200
 categories:
-tags: javascript lisp języki
+tags: javascript lisp języki parsery
 description: Do parsowania można użyć generatra parserów, ale łatwiej napisać ręcznie parser S-Wyrażeń, co wcale nie jest takie trudne. W tym wpisie parser języka Lisp W JavaScript.
 author: jcubic
 sitemap:
@@ -16,6 +16,9 @@ related:
   -
     name: "Jak zacząć uczyć się języka LISP"
     url: /2019/05/jak-zaczac-nauke-lispa.html
+  -
+    name: "Jak parować nawiasy lub inne znaki w JavaScript?"
+    url: /2020/04/parowanie-nawiasow-javascript.html
 ---
 
 S-Wyrażenia to podstawa języków rodziny [Lisp](/2019/05/jak-zaczac-nauke-lispa.html). W tym wpisie
@@ -162,7 +165,7 @@ literals), aby można było zapisać znaki nowej linii wewnątrz kodu.
 To co jest wewnątrz ciągu znaków nam się już rozsypie (czyli
 `"funkcja square wywołanie (square 10) zwraca 100"`).
 
-## Wyrażenie regularna dla ciągów znaków
+## Wyrażenie regularne dla ciągów znaków
 
 Należy dodać ciągi znaków jako wyjątek, najlepiej jako pierwszy element naszego wyrażenia regularnego.
 
@@ -463,7 +466,7 @@ Pair.prototype.toString = function() {
     if (this.head) {
         var value;
         if (typeof this.head === 'string') {
-            value = JSON.stringify(this.head).reaplce(/\\n/g, '\n');
+            value = JSON.stringify(this.head).replace(/\\n/g, '\n');
         } else {
             value = this.head.toString(); // any object including Pair and LSymbol
         }
