@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Jak parować nawiasy lub inne znaki w JavaScript?"
-date:   2020-04-25 02:20:24+0200
+date:   2020-04-25 10:12:37+0200
 categories:
 tags: javascript parsery
 description: Czasami musimy sprawdzić czy mamy poprawnie otwarte i zamknięte nawiasy. Tak jak w przypadku parsowania HTML, nie powinno się do tego używać wyrażeń Regularnych.
@@ -110,11 +110,11 @@ function balanced(str) {
                 stack.pop();
             } else {
                 // nie pasujący znak
-                throw new Error(`Sytnax error: missing closing ${closing_token}`);
+                throw new Error(`Syntax error: missing closing ${closing_token}`);
             }
         } else {
             // jest to jeszcze jeden przypadek gdy mamy znak zamykający, ale nie było otwierajacego
-            throw new Error(`Sytnax error: not matched closing ${token.token}`);
+            throw new Error(`Syntax error: not matched closing ${token.token}`);
         }
     }
     return stack.is_empty();
