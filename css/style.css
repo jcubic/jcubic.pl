@@ -683,6 +683,7 @@ ul.tags:before {
 #hashover {
     margin-left: 20px;
 }
+/*
 @media (prefers-color-scheme: dark) {
     .pagination ul {
         color: #9d9ca9;
@@ -704,5 +705,6 @@ ul.tags:before {
         color: #5d5da6;
     }
 }
+*/
 
 

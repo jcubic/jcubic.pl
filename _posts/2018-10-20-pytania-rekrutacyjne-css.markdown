@@ -224,7 +224,9 @@ tam także zmienne CSS)
 }
 {% endhighlight %}
 
-Nie ma znaczenia jaką zmienną i jaką wartość podamy może być np. `@supports (--color: red)`
+Nie ma znaczenia jaką zmienną i jaką wartość podamy może być np. `@supports (--color: red)`.
+
+Jeśli nie znasz zmiennych CSS, możesz o nich przeczytać w artykule ["Zmienne CSS"](/2016/12/zmienne-css.html).
 
 ## 8. Jak używać zmiennych CSS z liczbowymi wartościami
 

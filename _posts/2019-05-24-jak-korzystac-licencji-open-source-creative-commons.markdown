@@ -16,8 +16,6 @@ sitemap:
   lastmod: 2019-06-12 10:13:27+0200
 ---
 
-
-
 W tym wpisie przedstawię jak działa Creative Commons. Co można zrobić z programem, jeśli ma licencję MIT oraz
 GNU GPL. Opowiem także jak używać treści (głównie zdjęć), którymi można się dzielić, dzięki licencji Creative
 Commons. Jak podpisać zdjęcie, które ma licencje Creative Commons, gdy użyje się je na swojej stronie.
@@ -37,7 +35,7 @@ wpis. Przynajmniej drugą jego część dotyczącą Creative Commons.
 
 Jak każda twórcza działalność, tak samo kod źródłowy posiada autora (lub wielu autorów). Jeśli autorzy
 zdecydują się udostępnić swój kod światu, jako wolne oprogramowanie, muszą użyć jakiejś licencji.  Licencja
-jest to akt prawny który z założenia miał nadawać dodatkowe restrykcje na dane dzieło. Jednak dzięki takiemu
+jest to akt prawny, który z założenia miał nadawać dodatkowe restrykcje na dane dzieło. Jednak dzięki takiemu
 osobnikowi jak [Richard Stallman](https://pl.wikipedia.org/wiki/Richard_Stallman), który jako pierwszy
 stworzył licencję, która umożliwia kopiowanie dzieła bez ograniczeń, mamy Wolne Oprogramowanie, nazywane także
 Otwartym (ang Free and Open Source Software).  Mechanizm ten, który został nazwany Copyleft, jest to odwrócenie
@@ -48,7 +46,11 @@ modyfikowania kodu.
 ![Conference by Richard Stallman "Free Software: Human Rights in Your Computer", 2014](/img/Richard_Stallman.jpg)
 *Autor [Thesupermat](https://commons.wikimedia.org/wiki/User:Thesupermat); Źródło [Wikipedia](https://commons.wikimedia.org/wiki/File:Richard_Stallman_-_F%C3%AAte_de_l%27Humanit%C3%A9_2014_-_010_-_small.jpg); Licencja [CC-BY-SA-3.0](https://creativecommons.org/licenses/by-sa/3.0/deed.en)*
 
-## [Licencja MIT](https://choosealicense.com/licenses/mit/)
+## Rodzaje licencji Open Source
+
+Poniżej lista najpopularniejszych licencji Open Source:
+
+### [Licencja MIT](https://choosealicense.com/licenses/mit/)
 
 Jeśli chodzi o kod źródłowy bibliotek Open Source w JavaScript jest to najczęściej stosowana licencja. Mówi
 ona, że każdy może zmodyfikować lub kopiować do woli tylko musi dodać notkę o prawie autorskim oraz
@@ -56,7 +58,7 @@ licencji. Można używać biblioteki w celach komercyjnych. Można też taką bi
 inną licencje. Można także użyć jej w większej aplikacji.  Nie wymaga abyśmy udostępniali kod źródłowy
 wynikowej aplikacji, która używa biblioteki lub ją modyfikuje.
 
-## [Licencja GNU GPL (czyli GNU General Public License)](https://choosealicense.com/licensegpl-3.0/)
+### [Licencja GNU GPL (czyli GNU General Public License)](https://choosealicense.com/licensegpl-3.0/)
 
 Bardzo popularna licencja napisana przez wspomnianego wcześniej Richarda Stallmana, doczekała się wersji 3,
 która współgra z prawem patentowym (w USA można opatentować oprogramowanie w odróżnieniu od Polski).  Wersja
@@ -66,7 +68,7 @@ Licencja zezwala na dowolne kopiowanie, ale każda kopia musi mieć informacje o
 woli modyfikować kod źródłowy, ale zmodyfikowana wersja musi mieć tą samą licencje i musi być zapewniony
 dostęp do kodu źródłowego w zmodyfikowanej wersji.
 
-## [Licencja GNU AGPL (Affero General Public License)](https://choosealicense.com/licenses/agpl-3.0/)
+### [Licencja GNU AGPL (Affero General Public License)](https://choosealicense.com/licenses/agpl-3.0/)
 
 Rzadko używana jest to wersja licencji GPL, ale z klauzulą, która mówi, że udostępnianie pliku źródłowego na
 serwerze (nawet w wersji skompilowanej) jest już traktowane jako kopiowanie. Czyli jeśli coś ma taką licencje
@@ -76,23 +78,23 @@ stronie domowej. Tak działa to w przypadku
 na fajny pomysł i można obejrzeć kod źródłowy klikając link pod komentarzami (chyba dodałem kilka zmian, aby
 działał na mojej stronie).
 
-## [Licencja GNU LGPL (Lesser General Public License)](https://choosealicense.com/licenses/pl-3.0/)
+### [Licencja GNU LGPL (Lesser General Public License)](https://choosealicense.com/licenses/pl-3.0/)
 
 Lekka wersja GPL, której skrót przetłumaczyć można jako pomniejszy. Skrót początkowo był rozwijany jako
 Library. I przeznaczony był głównie do kodu źródłowego bibliotek, aby można było linkować statycznie biblioteki
-z programem napisanym w języku C. Wynikowy program który zawiera w sobie podlinkowana bibliotekę nie musi
+z programem napisanym w języku C. Wynikowy program, który zawiera w sobie podlinkowana bibliotekę nie musi
 udostępniać swojego kodu źródłowego.
 
-## [Licencja Apacche 2.0](https://choosealicense.com/licenses/apache-2.0/)
+### [Licencja Apacche 2.0](https://choosealicense.com/licenses/apache-2.0/)
 
 Licencja podobna do MIT, z wyjątkiem tego, że udziela praw do patentów oraz wymaga, aby modyfikacje były udokumentowane.
 
 ## [Webpack](https://webpack.js.org/) oraz [NPM](https://www.npmjs.com/)
 
-Technicznie rzecz biorąc nie jest łamaniem licencji jeśli ktoś używa dowolnej biblioteki JavaScript z
-npm. Chyba że jest to licencja AGPL, co chyba jest rzadkością i byłoby problematyczne ze względu na to, że
+Technicznie rzecz biorąc nie jest łamaniem licencji, jeśli ktoś używa dowolnej biblioteki JavaScript z
+NPM. Chyba że jest to licencja AGPL, co chyba jest rzadkością i byłoby problematyczne ze względu na to, że
 wszystko, nawet to co linkuje do projektu z tą licencja, musi być na tej licencji (czyli kod źródłowy samej
-aplikacji). Nawet nie chce myśleć co by było gdyby jakiś projekt na tej licencji był w npm i był używany.
+aplikacji). Nawet nie chce myśleć co by było, gdyby jakiś projekt na tej licencji był w NPM i był używany.
 Jeśli znasz jakiś taki projekt napisz w komentarzu.
 
 ## Usuwanie notki z licencją z kodu, który wypluwa Webpack
@@ -133,15 +135,16 @@ książki, ale także wpisy na blogu czy inny tekst)
 
 ## Co to jest Creative Commons?
 
-Jest to zestaw licencji dających pewne prawa do kopiowania (po angielsku nazywa się to Copyright License),
-które daje ograniczone lub nieograniczone prawa innym do danego dzieła. Stosowana głównie do dzieł
-artystycznych czyli książek, muzyki, filmów, grafiki i zdjęć. rzadziej do kodu źródłowego programów
-komputerowych.
+Creative Commons jest to zestaw licencji, dających pewne prawa do kopiowania (po angielsku nazywa się
+to Copyright License), które daje ograniczone lub nieograniczone prawa innym do danego
+dzieła. Stosowana głównie do dzieł artystycznych, czyli książek, muzyki, filmów, grafiki i
+zdjęć. Rzadziej do kodu źródłowego programów komputerowych.
 
-Mimo to warto znać tą licencje i wiedzieć jak ona działa. Licencje Creative Commons składa się z klocków, które
-dają pewne ograniczone prawa. Np. nie pozwalają na to, aby ktoś do filmu o głodujących dzieciach w Afryce, dodał
-wstawkę o Hitlerze, ale pozwala na dowolne oglądanie oraz kopiowanie. Tak żeby jak najwięcej osób dany film
-obejrzało, co może być głównym celem nakręcenia takiego filmu.
+Mimo to warto znać tą licencje i wiedzieć jak ona działa. Licencje Creative Commons składa się z
+klocków, które dają pewne ograniczone prawa. Np. nie pozwalają na to, aby ktoś do filmu o
+głodujących dzieciach w Afryce, dodał wstawkę o Hitlerze, ale pozwala na dowolne oglądanie oraz
+kopiowanie. Tak żeby jak najwięcej osób dany film obejrzało, co może być głównym celem nakręcenia
+takiego filmu.
 
 ## Licencja CC składa się z taki klocków:
 
@@ -154,16 +157,23 @@ obejrzało, co może być głównym celem nakręcenia takiego filmu.
 * Non-Derivative (Bez utworów zależnych) mówi że nie można modyfikować dzieła (czyli tak jak przykład z filmem
   o dzieciach w Afryce).
 
-Te klocki w dowolnej kombinacji dają zestaw licencji Creative Commons oprócz nich jest jeszcze:
+Te klocki w dowolnej kombinacji dają zestaw licencji Creative Commons, oprócz nich jest jeszcze:
 
-* Creative Commons Zero - mówi ona że dzieło jest w domenie publicznej - a dokładnie każdy ma takie prawa
-  jakby było w Domenie Publicznej. Czyli może dowolnie kopiować i modyfikować. Przy czym nie ma ona klocka
-  Attribution, czyli nie trzeba przypisywać autora do danego dzieła, jeśli je kopiujemy.
+* Creative Commons Zero - mówi ona że dzieło jest w
+  [domenie publicznej](https://pl.wikipedia.org/wiki/Domena_publiczna) - a dokładnie każdy ma takie prawa
+  jakby było w Domenie Publicznej. Czyli może dowolnie kopiować i modyfikować utwór. Przy czym nie ma ona
+  klocka Attribution, czyli nie trzeba przypisywać autora do danego dzieła, jeśli je kopiujemy.
 
 Ale jest coś jeszcze. Ze względu na to, że jest to licencja i autor ma prawo do kopiowania (posiada prawo
-autorskie) nie można takiego dzieła wziąć i udostępniać innym w innej licencji. Tak naprawdę to nawet jeśli dzieło
+autorskie) nie można takiego dzieła wziąć i udostępniać innym na innej licencji. Tak naprawdę to nawet jeśli dzieło
 trafi do domeny publicznej (ponieważ minie odpowiednia liczba lat), także nie można nadać dziełu jakiejś licencji
 (zobacz artykuł [Getty Images pozwane za pobieranie opłaty za zdjęcia z domeny publicznej](https://fotoblogia.pl/13711,getty-images-pozwane-za-pobieranie-oplaty-za-zdjecia-z-domeny-publicznej).
+
+Domena publiczna wpływa tylko na prawo autorskie majątkowe i prawo do kopiowania utworu. Nie można sobie
+przypisać autorstwa czyjegoś utworu. Np. nikt nie może napisać że jest autorem
+[Sonaty Księżycowej](https://pl.wikipedia.org/wiki/Sonata_Ksi%C4%99%C5%BCycowa), ponieważ autorem jest
+Beethoven, mimo że prawo autorskie już nie działa (ten utwór jak wszystko Beethovena jest w domenie publicznej).
+Tak samo będzie działać licencja Creative Commons Zero.
 
 ## Ale czy jak dodam licencje Creative Commons to nie stracę prawa autorskiego?
 
