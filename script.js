@@ -83,3 +83,24 @@ Array.from(document.querySelectorAll('link[data-href]')).forEach(function(link) 
         }
     }
 })();
+// baner
+if (console && console.log) {
+    console.log([
+        "%c               ,,      ,,                                 ,,",
+        "  .g8\"\"\"bgd  `7MM     db                                  db",
+        ".dP'     `M    MM'm",
+        "dM'       `    MMm ,pW\"Wq.`7M'    ,A    `MF'`7MMpMMMb.  `7MM  .gP\"Ya",
+        "MM            mMM 6W'   `Wb VA   ,VAA   ,V    MM    MM    MM ,M'   Yb",
+        "MM.    `7MMF'm'MM 8M     M8  VA ,V  VA ,V     MM    MM    MM 8M\"\"\"\"\"\"",
+        "`Mb.     MM    MM YA.   ,A9   VVV    VVV      MM    MM    MM YM.    ,",
+        "  `\"bmmmdPY  .JMML.`Ybmd9'     W      W     .JMML  JMML..JMML.`Mbmmd'",
+        "                                                               ,,",
+        "   `7MMF'                          .M\"\"\"bgd                    db             mm",
+        "     MM                           ,MI    \"Y                                   MM",
+        "     MM  ,6\"Yb.`7M'   `MF',6\"Yb.  `MMb.      ,p6\"bo `7Mb,od8 `7MM `7MMpdMAo.mmMMmm",
+        "     MM 8)   MM  VA   ,V 8)   MM    `YMMNq. 6M'  OO   MM' \"'   MM   MM   `Wb  MM",
+        "     MM  ,pm9MM   VA ,V   ,pm9MM  .     `MM 8M        MM       MM   MM    M8  MM",
+        "(O)  MM 8M   MM    VVV   8M   MM  Mb     dM YM.    ,  MM       MM   MM   ,AP  MM",
+        " Ymmm9  `Moo9^Yo.   W    `Moo9^Yo.P\"Ybmmd\"   YMbmd' .JMML.   .JMML. MMbmmd'   `Mbmo"
+    ].join('\n'), 'font-weight: bold; color: #152032');
+}
