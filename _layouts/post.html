@@ -35,12 +35,14 @@ layout: default
             {% else %}
               {% assign splitted = content | split: '<!-- more -->' %}
               {{ splitted | first }}
+              <!--
               <div class="ads ads-atthost">
                 <a href="https://ref.atthost.pl/?id=10912" rel="nofollow noopener" target="_new">
                   <img src="https://atthost.pl/banery/750-x-300.gif"
                        alt="Reklama Hostingu Atthost" />
                 </a>
               </div>
+              -->
               {{ splitted[1] }}
             {% endif %}
         </div>
