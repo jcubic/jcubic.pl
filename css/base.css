@@ -169,7 +169,8 @@ section.search h1 {
     margin: 60px 0 2em 0;
 }
 .tag h1 {
-    font-size: 24px;
+    font-size: 2em;
+    font-family: 'Muli', sans-serif;
 }
 .index h1 {
     margin: 0;
@@ -246,13 +247,16 @@ header {
 .meta .attribution {
     margin: 0;
 }
-.meta .attribution, section p img + em {
+.meta .attribution, section p img + em, section p img + small {
     font-size: 12px;
 }
 .meta .attribution,
 .meta .attribution a,
 .meta .attribution:visited,
 section p img + em,
+section p img + small,
+section p img + small a,
+section p img + small a:visited,
 section p img + em a,
 section p img + em a:visited {
     color: #555;
