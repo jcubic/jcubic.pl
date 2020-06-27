@@ -18,12 +18,7 @@ Zastanawiałeś się kiedyś jak najlepiej opisać, czym jest istota programowan
 programują? Co byś odpowiedział, gdyby ktoś cię zapytał "Co to jest programowanie?" albo
 "Co tak naprawdę robią programiści?".?
 
-Od jakiegoś czasu zabieram się za pisanie książki o programowaniu, główny motyw książki to analogia
-między programowanie a matematyką, gdzie zaczynam od funkcji i wyrażeń arytmetycznych. Mam już kilka
-rozdziałów, ale postanowiłem przerwać i poznać lepiej jak ludzie się uczą oraz jak inni uczą
-podstaw.
-
-W tym wpisie przedstawie jednak, inny sposób w jaki można opisać programowanie osobom, które
+W tym wpisie przedstawie, ciekawy sposób w jaki można opisać programowanie osobom, które
 nie programują.
 
 <!-- more -->
@@ -88,8 +83,8 @@ var kawa = express('gorąca', 'zimne', 'ziarna', '220V');
 
 Jeśli express zrobi coś nie tak jak powinien, będziemy musieli ten expres naprawić np. oddając do
 serwisu. Tak samo jest z funkcją, należy znaleźć w niej błąd i go poprawić. Proces ten nazywa się
-debugowaniem, od słowa angielskiego bug czyli błąd (a dokładnie robal, nazwa wzięła się od
-[historii Grace Hopper](https://tech.wp.pl/dlaczego-bug-to-blad-oprogramowania-zawdzieczamy-to-niezwyklej-kobiecie-6165067729332353a)).
+debugowaniem, od słowa angielskiego bug czyli błąd (a dokładnie robal, nazwa prawdopodobnie wzięła
+się od [historii Grace Hopper](https://pl.wikipedia.org/wiki/B%C5%82%C4%85d_(informatyka)).
 Takie nadawanie nazw i pomijanie szczegółów nazywa się
 [abstrakcją](https://pl.wikipedia.org/wiki/Abstrakcja_(programowanie)).
 

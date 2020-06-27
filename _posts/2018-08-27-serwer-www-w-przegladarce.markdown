@@ -3,7 +3,7 @@ layout: post
 title:  "Server WWW w przeglądarce"
 date:   2018-08-27 20:25:43+0200
 categories:
-tags:  javascript html5 pwa api service-worker
+tags:  javascript html5 pwa api service-worker www
 author: jcubic
 description: Użycie Service Worker-a w celu serwowania plików statyczncych, tworzonych w przeglądarce, tak jakby znajdowały się na serwerze.
 image:

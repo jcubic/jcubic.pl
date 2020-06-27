@@ -5,7 +5,7 @@ type: "main"
 description: Moje artykuły nie koniecznie związane z JavaScript.
 ---
 
-Poniżej linki do moich artykułó (w języku angielskim) napisanych dla platrofmy Medium.
+Poniżej linki do moich artykułów (w języku angielskim) napisanych dla platformy Medium.
 Publikowane w [ITNext](https://itnext.io/).
 
 * [How to create interactive terminal like website?](https://itnext.io/how-to-create-interactive-terminal-like-website-888bb0972288?)
