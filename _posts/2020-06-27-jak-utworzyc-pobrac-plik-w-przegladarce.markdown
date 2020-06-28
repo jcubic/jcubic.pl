@@ -64,3 +64,6 @@ Poniżej wsparcie przeglądarek dla użytych API:
 * [atrybut download](https://caniuse.com/#feat=download)
 * [konstruktor Blob](https://caniuse.com/#feat=blobbuilder)
 
+Istnieje także bardziej zaawansowany sposób tworzenia plików, które można otworzyć
+poprzez pasek adresu przeglądarki jak normalne pliki. Przeczytasz o tym we wpisie:
+[Server WWW w przeglądarce](/2018/08/serwer-www-w-przegladarce.html).
