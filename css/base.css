@@ -159,6 +159,9 @@ section.search {
 section.search h1 {
     margin-top: 0;
 }
+.index h2 a {
+    padding: 0;
+}
 .content, .index, .search, .tag {
     border-left: 5px solid #152032;
 }
