@@ -119,10 +119,11 @@ na czym uruchamiana jest Java). Zaprojektowany przez
 
 ## Jak zacząć?
 
-Aby zacząć naukę polecam napierw obejrzenie wykładów ok 20 godzin oglądania (10 dwu częściowych lekcji)
+Aby zacząć naukę polecam napierw obejrzenie wykładów SICP ok 20 godzin oglądania (10 dwu częściowych lekcji)
 prowadzonego przez Abelsona i Sussmana (ten drugi zaprojektował język Scheme) prowadzone na MIT dla
-pracowników HP w latach 80. Wykładowcy razem napisali książkę
-[Struktura i Implementacja Programów Komputerowych](http://lubimyczytac.pl/ksiazka/135282/struktura-i-interpretacja-programow-komputerowych). Która jest obowiązkowa na studiach na MIT. Można też znaleźć w
+pracowników HP w latach 80 ([link MIT](http://groups.csail.mit.edu/mac/classes/6.001/abelson-sussman-lectures/)
+oraz [link YouTube](https://www.youtube.com/playlist?list=PL8FE88AA54363BC46)). Wykładowcy razem napisali książkę
+[Struktura i Implementacja Programów Komputerowych](http://lubimyczytac.pl/ksiazka/135282/struktura-i-interpretacja-programow-komputerowych), która była obowiązkowa na studiach na MIT (nie wiem czy nadal jest). Można też znaleźć w
 [sieci wykłady z uniwersytetu w Berkley z roku 2010](https://www.youtube.com/watch?v=4leZ1Ca4f0g&list=PLhMnuBfGeCDNgVzLPxF9o5UNKG1b-LFY9). Osobiście oglądałem tylko te Sussmana i Abelsona.
 
 Jeśli studiowałeś informatykę na uczelni wyższej, to nie powinno być dla ciebie problemem obejrzenie wykładów
@@ -204,13 +205,12 @@ strona może się zmienić).
 
 ## Makra
 
-Jak już poznasz Common LISP-a lub Scheme to możesz zacząć naukę makr, chociaż możesz też po nie sięgnąć
-już po obejrzeniu wykładów SICP (ang. Structure and Interpretation of Computer Programs). Makra to jest
-najlepsza rzecz jaka jest w języku LISP. Do ich nauki polecam książkę
-[Let Over Lambda](https://letoverlambda.com/). Można też kupić wersje papierową z
-[amazon.co.uk](https://www.amazon.co.uk/s?k=let+over+lambda&ref=nb_sb_noss). Osobiście wole czytać książki
-fizyczne. Książka jest bardzo zaawansowana. Na stronie opisywana jako książka hardcorowa, ale warto. Tylko
-muszę dodać, że jest poświęcona prawie w całości makrom.
+Jak już poznasz Common LISP-a lub Scheme to możesz zacząć naukę makr, chociaż możesz też po nie
+sięgnąć już po obejrzeniu wykładów SICP. Makra to jest najlepsza rzecz jaka jest w języku LISP. Do
+ich nauki polecam książkę [Let Over Lambda](https://letoverlambda.com/). Można też kupić wersje
+papierową z [amazon.co.uk](https://www.amazon.co.uk/s?k=let+over+lambda&ref=nb_sb_noss). Osobiście
+wole czytać książki fizyczne. Książka jest bardzo zaawansowana. Na stronie opisywana jako książka
+hardcorowa, ale warto. Tylko muszę dodać, że jest poświęcona prawie w całości makrom.
 
 Muszę też wymienić książkę, którą ostatnio udało mi się dostać w wersji papierowej, a mianowicie On LISP Paula
 Grahama (jest to gość od książki
@@ -241,3 +241,4 @@ do tego projektu podałem wcześniej. Jeśli chciałbyś napisać własny interp
 od tego artykułu:
 [Parser S-Wyrażeń (języka LISP) w JavaScript](/2019/06/parser-jezyka-lisp-javascript.html).
 
+*[SICP]: Structure and Interpretation of Computer Programs

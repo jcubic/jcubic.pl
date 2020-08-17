@@ -5,7 +5,7 @@ date:   2019-12-08 22:39:14+0100
 categories:
 tags: książki interent linux open-source unix www hacking
 author: jcubic
-description: Tym razem 15 pytań na rozmowę kwalifikacyjną z HTML5
+description: Historia komputerów, internetu oraz UNIXa/LINUXa na 50-tą rocznicę powstania internetu.
 image:
   url: "/img/ken-thompson-dennis-ritchie-pdp-11.jpg"
   alt: "Zdjecie przedstawiające Kena Thmpsona oraz Denisa Riche przed komputerem PDP-11"
