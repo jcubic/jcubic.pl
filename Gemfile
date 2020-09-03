@@ -15,3 +15,4 @@ gem 'json', '~> 2.0'
 gem "webrick", "~> 1.4"
 gem "etc", "~> 1.0"
 gem "rouge", "~> 3.10"
+gem "kramdown-parser-gfm", "~> 1.1"

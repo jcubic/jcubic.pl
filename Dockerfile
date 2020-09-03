@@ -1,10 +1,10 @@
-FROM alpine
+FROM alpine:3.10
 
 LABEL maintainer "Jakub T. Jankiewicz <jcubic@onet.pl>"
 
 RUN apk add --update --no-cache git ruby ruby-dev python \
     cmake libxslt nodejs make build-base py-pip python-dev bash \
-    libffi libxml2 zlib sed
+    libffi libxml2 zlib zlib-dev sed
 
 RUN git clone https://github.com/htacg/tidy-html5 --depth 1 /tmp/tidy-html5 && \
     cd /tmp/tidy-html5/build/cmake && \
@@ -12,6 +12,8 @@ RUN git clone https://github.com/htacg/tidy-html5 --depth 1 /tmp/tidy-html5 && \
     make && make install
 
 RUN rm -rf /tmp/tidy-html5
+
+RUN gem install rdoc --no-document
 
 RUN echo "gem: --no-ri --no-rdoc" > ~/.gemrc
 
