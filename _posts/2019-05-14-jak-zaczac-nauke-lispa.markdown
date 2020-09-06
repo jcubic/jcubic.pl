@@ -17,7 +17,7 @@ related:
     name: "Parser S-Wyrażeń (języka LISP) w JavaScript"
     url: "/2019/06/parser-jeyka-lisp-javascript.markdown"
 sitemap:
-  lastmod: 2019-12-16 22:35:50+0100
+  lastmod: 2020-09-06 10:54:45+0200
 ---
 
 
@@ -133,19 +133,22 @@ różnych uczelni wyższych z USA.
 
 Jeśli chcesz wypróbować kilka wyrażeń, możesz zobaczyć mój interpreter, o nazwie LIPS na
 [stronie projektu](https://jcubic.github.io/lips/) (nazwa jest to rekurencyjny skrót: LIPS Is Pretty
-Simple), nie jest to w 100% Scheme, ale ma taka samą składnie. Główne różnice to brak
-biblioteki standardowej (dzięki czemu interpreter jest mały),  brak kontynuacji oraz obsługi
-rekurencji ogonowej. Więc nie można napisać prostej funkcji do silni i obliczyć np. silnię z 10 000.
-Ale obsługuje liczby typu BigInt, dzięki czemu można obliczyć silnię ze 100 za pomocą prostej funkcji.
-Fajnie się integruje z językiem JavaScript i obsługuje automatycznie kod asynchroniczny, tzn. jak masz
-[obietnicę](/2018/05/asynchronicznosc-javascript-obietnice.html), to jest ona automatycznie odwijana,
-jakby jej nie było. Tak jak w JavaScript, gdy stosujesz
-[async/await](/2018/05/asynchronicznosc-javascript-async-await.html). Wyrażenia Regularne są też typem
-pierwszo-klasowym tzn. można je wstawiać bezpośrednio, nie jak w PHP wewnątrz ciągów znaków.
+Simple), aktualnie pracuje nad wersją 1.0, która ma być 100% zgodna z językiem Scheme.  Na razie
+główne różnice to brak kontynuacji oraz obsługi rekurencji ogonowej (nie wiem czy wejdą do wersji
+1.0). Więc nie można napisać prostej funkcji do silni i obliczyć np. silnię z 10 000.  Ale obsługuje
+liczby typu BigInt, dzięki czemu można obliczyć silnię ze 100 za pomocą prostej funkcji.  Fajnie się
+integruje z językiem JavaScript i obsługuje automatycznie kod asynchroniczny, tzn. jak masz
+[obietnicę](/2018/05/asynchronicznosc-javascript-obietnice.html), to jest ona automatycznie
+odwijana, jakby jej nie było. Tak jak w JavaScript, gdy stosujesz
+[async/await](/2018/05/asynchronicznosc-javascript-async-await.html). Wyrażenia Regularne są też
+typem pierwszo-klasowym tzn. można je wstawiać bezpośrednio, nie jak w PHP wewnątrz ciągów znaków.
 
-Jeśli wolisz bardziej formalny Scheme, możesz wypróbować projekt [BiwaScheme](https://www.biwascheme.org/).
-Dodam, że terminal na stronie jest mojego autorstwa, taki sam jak na stronie projektu LIPS.
-Także logo projektu, niezbyt udane, jest mojego autorstwa.
+Inną ciekawą funkcji jest napisany przeze mnie Bookmarklet który uruchamia Interpreter języka Scheme na
+dowolnej stronie.
+
+Jeśli wolisz bardziej zgodny ze standardem język Scheme, możesz wypróbować projekt
+[BiwaScheme](https://www.biwascheme.org/).  Dodam, że terminal na stronie jest mojego autorstwa,
+taki sam jak na stronie projektu LIPS.  Także logo projektu, jest mojego autorstwa.
 
 Możesz porównać oba interpretery:
 
@@ -170,16 +173,16 @@ dodać kontynuacje i optymalizacje rekurencji ogonowej.
 ## Pisanie kodu
 
 Jeśli chcesz wypróbować dialekt scheme podczas oglądania wykładów, to możesz skorzystać ze strony
-[repl.it](https://repl.it/languages/scheme).  Strona korzysta z jezyka scheme napisanego w JavaScript.
-Zapewne wiele razy przerwiesz oglądanie, żeby wypróbować jakiś kod samemu. Jeśli nie to powinieneś chociaż
-spróbować.
+[repl.it](https://repl.it/languages/scheme).  Strona korzysta z języka Scheme napisanego w
+JavaScript (dokładnie interpreter BiwaScheme). Zapewne wiele razy przerwiesz oglądanie, żeby
+wypróbować jakiś kod samemu. Jeśli nie to powinieneś chociaż spróbować.
 
 Jeśli chcesz spróbować napisać i wypróbować jakiś program na swoim komputerze, to polecam dwa programy
 [Kawa](https://www.gnu.org/software/kawa/index.html) (do której
-swoja drogą zrobiłem logo) oraz [Guile](https://en.wikipedia.org/wiki/GNU_Guile). Kawa to Scheme w języku
-Java a Guile jest w C. Guile jest fajny bo można go osadzić w aplikacji w C (jest biblioteka współdzielona,
+swoja drogą też zrobiłem logo) oraz [Guile](https://en.wikipedia.org/wiki/GNU_Guile). Kawa to Scheme w języku
+Java, a Guile jest w języku C. Guile jest fajny bo można go osadzić w aplikacji w C (jest biblioteka współdzielona,
 która zawiera język). Natomiast Kawa-y można np. użyć do pisania aplikacji na
-[Androida](https://www.gnu.org/software/kawa/Building-for-Android.html) (tak LISP w telefonie).
+[Androida](https://www.gnu.org/software/kawa/Building-for-Android.html) (tak Lisp w telefonie).
 Można także do tego celu użyć języka Clojure.
 
 ## Co powinieneś poznać?
