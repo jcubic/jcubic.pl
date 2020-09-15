@@ -17,7 +17,7 @@ related:
     name: "Parser S-Wyrażeń (języka LISP) w JavaScript"
     url: "/2019/06/parser-jeyka-lisp-javascript.markdown"
 sitemap:
-  lastmod: 2020-09-06 10:54:45+0200
+  lastmod: 2020-09-15 14:00:23+0200
 ---
 
 
@@ -185,6 +185,30 @@ która zawiera język). Natomiast Kawa-y można np. użyć do pisania aplikacji 
 [Androida](https://www.gnu.org/software/kawa/Building-for-Android.html) (tak Lisp w telefonie).
 Można także do tego celu użyć języka Clojure.
 
+Oglądając wykłady Abelsona i Sussmana na Youtube możesz skorzystać z
+[bookmarka](https://pl.wikipedia.org/wiki/Bookmarklet), który napisałem.
+Dodaje on interaktywny interpreter języka Scheme do dowolnej strony (chyba że jest zabezpieczenie o nazwie
+[CSP](https://en.wikipedia.org/wiki/Content_Security_Policy)). Link do bookmarka na stronie projektu
+[LIPS Scheme](https://jcubic.github.io/lips/#bookmark). O ile np. strony GitHub, StackOverflow czy Google
+są zabezpieczone przez CSP i tyle np. Wikipedia czy YouTube pozwalają na dowolne uruchamianie zewnętrznych
+skryptów (takich jak zakładki z kodem).
+
+Fajną funkcją YouTube jest to że nie przeładowuje strony przy otwieraniu filmów więc można odpalić
+bookmark i mieć go cały czas dostępnego.
+
+Tak wygląda interpreter języka Scheme na stronie YouTube:
+
+![LIPS Scheme bookmark with YouTube video](/img/lips-scheme-bookmark.png)
+
+Jeśli wolisz książki możesz np. skorzystać z darmowych pozycji na temat języka Scheme. Możesz po nie sięgnąć,
+także gdy przebrniesz już przez wykłady lub w trakcie ich oglądania.
+
+Kilka pozycji które udało mi się znaleźć (w języku angielskim):
+
+* [Scheme WikiBook](https://en.wikibooks.org/wiki/Scheme_Programming)
+* [sketchy LISP](https://archive.org/details/sketchy-lisp/page/n17/mode/2up)
+* [Teach Yourself Scheme in Fixnum Days](https://ds26gte.github.io/tyscheme/)
+
 ## Co powinieneś poznać?
 
 Powinieneś poznać takie koncepcje jak domknięcia leksykalne (ang. closures), funkcje jako typ pierwszo-klasowy
@@ -245,3 +269,4 @@ od tego artykułu:
 [Parser S-Wyrażeń (języka LISP) w JavaScript](/2019/06/parser-jezyka-lisp-javascript.html).
 
 *[SICP]: Structure and Interpretation of Computer Programs
+*[CSP]: Content Security Policy
