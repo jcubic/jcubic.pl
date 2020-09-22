@@ -199,12 +199,17 @@ section.search h1 {
     margin-left: 20px;
 }
 .search h1 {
-    font-size: 1.7em;
+    font-size: 1.8em;
     margin-top: 0;
+}
+.search h1, .search h2 {
+    font-family: 'Roboto', sans-serif;
+}
+.search h1 {
+    font-size: 1.3em;
 }
 .search h2 {
     font-size: 1.2em;
-    font-family: 'Roboto', sans-serif;
 }
 #search button {
     background-color: #171f32;
