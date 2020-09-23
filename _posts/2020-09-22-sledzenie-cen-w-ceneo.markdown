@@ -313,6 +313,8 @@ def get_shop(shops, name):
     return find(shops, lambda x: x[1] == name)
 {% endhighlight %}
 
+
+
 To co jeszcze warto dodać to obsługa wiersza poleceń, aby łatwiej wywoływać skrypt.
 
 Po dodaniu wiersza poleceń można dodać skrypt do crona (czyli programu w systemach
@@ -356,3 +358,43 @@ danych bezpośrednio ze strony, to jedyna opcja. Jak widać nie jest to wcale ta
 
 W jednym z następnych wpisów, pokażę jak wyświetlić dane z bazy w postaci wykresu. Tym razem
 użyje pewnie do tego celu jedną z bibliotek języka JavaScript.
+
+## Aktualizacja 2020-09-23
+
+Dopiero teraz zauważyłem, że skrypt przestał działać. Zmieniła się klasa elementu z opinią (teraz to
+`link--accent`) i skrypt zaczął zwracał wyjątek. Początkowo miałem zaplanowane wysyłanie emaili, gdy
+cena spadnie. Dodałem jednak wysyłanie wiadomości, gdy skrypt zwróci wyjątek, dzięki temu na
+przyszłość będzie można poprawić skrypt, gdy coś się zmieni na stronie.
+
+Dodany został taki kod (dodatkowo na GitHubie jest jeszcze obsługa opcji pocztowy z wiersza poleceń):
+
+{% highlight python %}
+import smtplib
+
+message = """From: Me <YOUR EMAIL>
+To: Me <YOUR EMAIL>
+Subject: Price Error
+
+There is error in price.py
+
+%s
+"""
+
+def error(e, email = True):
+    logger.error(e)
+    exc_type, exc_value, exc_tb = sys.exc_info()
+    stack = ''.join(traceback.format_exception(exc_type, exc_value, exc_tb))
+    print(stack)
+    try:
+        if email:
+            s = smtplib.SMTP('<SERVER>')
+            s.login('<USER>', '<PASSWORD>')
+            s.sendmail('<FROM email>', '<TO EMAIL>', message % stack)
+            s.quit()
+    except Exception as e:
+        error(e, False)
+
+{% endhighlight %}
+
+W głównym kodzie programu, gdy zostanie wyrzucony wyjątek zostanie on zalogowany i wysłany email.
+
