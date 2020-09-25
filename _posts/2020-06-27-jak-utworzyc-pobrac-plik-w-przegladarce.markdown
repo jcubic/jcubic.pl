@@ -49,10 +49,10 @@ strony, kliknąć o potem można go usunąć. Wykona się to tak szybko, że naw
 coś zostało dodane do strony.
 
 {% highlight javascript %}
-function downoad(url, filename) {
+function download(url, filename) {
     var link = document.createElement('a');
     link.setAttribute('href', url);
-    setAttribute('download', filename);
+    link.setAttribute('download', filename);
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);

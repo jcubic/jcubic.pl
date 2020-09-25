@@ -381,7 +381,6 @@ There is error in price.py
 """
 
 def error(e, email = True):
-    logger.error(e)
     exc_type, exc_value, exc_tb = sys.exc_info()
     stack = ''.join(traceback.format_exception(exc_type, exc_value, exc_tb))
     print(stack)
@@ -396,5 +395,8 @@ def error(e, email = True):
 
 {% endhighlight %}
 
-W głównym kodzie programu, gdy zostanie wyrzucony wyjątek zostanie on zalogowany i wysłany email.
+W głównym kodzie programu, gdy zostanie wyrzucony wyjątek zostanie on wysłany przez email.  Gdy z
+jakiegoś powodu wyrzucony zostanie wyjątek w kodzie który wysyła maile nie zostanie on drugi raz
+wysłany więc trzeba będzie zajrzeć do logów programu.  Kod logowania błędów dostępny na
+[GitHubie](https://github.com/jcubic/price.py).
 
