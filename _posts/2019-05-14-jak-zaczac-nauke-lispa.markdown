@@ -75,7 +75,7 @@ Przykład funkcji obliczającej silnię w języku Scheme:
 
 {% highlight scheme %}
 (define (! n)
-   (if (= n)
+   (if (zero? n)
        1
        (* n (! (- n 1)))))
 {% endhighlight %}
