@@ -1,3 +1,4 @@
+
 Options +Indexes
 Options +FollowSymLinks
 
@@ -57,6 +58,7 @@ RewriteRule biwascheme/repl.php http://www.biwascheme.org/ [R=301,L]
 RewriteRule ^new/?$ /jakub-jankiewicz/ [R=301,L]
 
 RewriteRule ^2016/04/wyrazenia-regularne.html /2016/04/wyrazenia-regularne-javascript.html [R=301,L]
+RewriteRule ^2018/11/prosta-biblioteka-dom-zamiast-jquery.html /2018/11/prosta-biblioteka-javascript-dom-zamiast-jquery.html [R=301,L]
 RewriteRule ^2018/07/wyrazenia-regularne-nowosci-es2018.html /2018/07/wyrazenia-regularne-nowosci-javascript-es2018.html [R=301,L]
 RewriteRule ^2017/09/pytania-na-rozmowe-kwalifikacyjna-z-javascript.html /2017/09/pytania-na-rozmowe-rekrutacyjna-javascript.html [R=301,L]
 RewriteRule ^2018/05/asynchronicznosc-obietnice.html /2018/05/asynchronicznosc-javascript-obietnice.html [R=301,L]

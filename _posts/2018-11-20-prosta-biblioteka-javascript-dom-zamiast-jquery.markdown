@@ -1,33 +1,40 @@
 ---
 layout: post
-title:  "Jak napisać prostą bibliotekę obsługi DOM zamiast jQuery"
+title:  "Jak napisać prostą bibliotekę JavaScript do obsługi DOM"
 date:   2018-11-20 22:13:31+0100
 categories:
 tags: javascript dom jquery biblioteki
 author: jcubic
-description: Mimo że biblioteka jQuery jest nadal polularna przeglądarki www udsotąpniają miej więcej takie same API. Napisanie własnej biblioteki do obłsugi DOM, nie jest wcale takie trudne.
+description: Mimo że biblioteka jQuery jest nadal polularna przeglądarki www udsotąpniają miej więcej takie same API. Napisanie własnej biblioteki JavaScript do obłsugi DOM, nie jest wcale takie trudne.
 image:
- url: "/img/document-object-model.png"
- alt: "Ikona przedstawiajaca strukturę drzewa oraz słowo DOM"
- width: 800
- height: 500
- attribution: "Oryginał [WHATWG](https://whatwg.org/), [źródło](https://resources.whatwg.org/) licencja [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/)"
+  url: "/img/document-object-model.png"
+  alt: "Ikona przedstawiajaca strukturę drzewa wewnątrz okręu oraz słowo DOM"
+  width: 800
+  height: 500
+  attribution: "Oryginał [WHATWG](https://whatwg.org/), [źródło](https://resources.whatwg.org/) licencja [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/)"
+related:
+  -
+    name: "O czym pamiętać tworząc bibliotekę Open Source w JavaScript"
+    url: "/2018/03/o-czym-pamietac-tworzac-biblioteke-open-source.html"
 ---
 
 Główną siłą biblioteki jQuery, było to, że poprawiała błędy przeglądarek i różnice w ich
 API. Ale to już w większości przypadków nie jest potrzebne, ponieważ nowoczesne
 przeglądarki udostępniają prawie taki samo API. W innych przypadkach jQuery nie poprawia
 wszystkich błędów, które znajdują się w implementacjach DOM i tak trzeba pisać kod, który
-łata te bugi.
+łata te bugi. Inną super cechą jQuery jest prostota API, którym można się inspirować, aby
+pisać własne biblioteki JavaScript.
 
 
-W tym wpisie przedstawię, jak można zacząć pisać prostą bibliotekę DOM, która może zastąpić
-jQuery. Oczywiście tylko wtedy, gdy chcemy pisać aplikację w czystym JS (tzw. Vanilla), a
-nie w jakimś framework-u architektonicznym jak React, Angular czy Vue.js.
+W tym wpisie przedstawię, jak można zacząć pisać prostą bibliotekę JavaScript do obsługi DOM,
+która może zastąpić jQuery. Oczywiście tylko wtedy, gdy chcemy pisać aplikację w czystym JS
+(tzw. Vanilla), a nie w jakimś framework-u architektonicznym jak React, Angular czy Vue.
 
 <!-- more -->
 
 ## Konstruktor
+
+Przejdźmy od razu do kodu naszej biblioteki JavaScript.
 
 Pierwsza rzecz to konstruktor, który będzie znajdował i opakowywał elementy na stronie.
 

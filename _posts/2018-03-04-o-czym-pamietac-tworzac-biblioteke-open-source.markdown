@@ -13,8 +13,11 @@ related:
   -
     name: "Jak dodać usługę Coveralls do projektu Open Source?"
     url: "/2019/03/jak-dodac-coveralls-do-projektu-open-source.html"
+  -
+    name: "Jak napisać prostą bibliotekę JavaScript do obsługi DOM"
+    url: "2018/11/prosta-biblioteka-javascript-dom-zamiast-jquery.html"
 sitemap:
-  lastmod: 2019-06-19 08:39:09+0200
+  lastmod: 2020-11-04 12:05:07+0100
 ---
 
 Jeśli masz zamiar napisać swoją własną bibliotekę Open Source w JavaScript, jest kilka rzeczy, o których
