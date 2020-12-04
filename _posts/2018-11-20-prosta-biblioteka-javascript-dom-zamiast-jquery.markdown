@@ -510,9 +510,9 @@ if (typeof value !== 'undefined') {
 {% endhighlight %}
 
 Będzie to uniwersalne i działało z normalnymi właściwościami jak i ze zmiennymi css. (dla
-porównania funkcja `css()` w bibliotece jQuery nie działa, ze zmiennymi CSS). To
-rozwiązanie spowoduje inny problem, a mianowicie kolory, będą konwertowane do
-znormalizowanej postaci (może być problematyczne porównywanie z przypisaną
+porównania funkcja `css()` w bibliotece jQuery nie działała, ze zmiennymi CSS
+aż do wersji bodajże 3.4). To rozwiązanie spowoduje inny problem, a mianowicie kolory,
+będą konwertowane do znormalizowanej postaci (może być problematyczne porównywanie z przypisaną
 wartością jak w naszym przykładzie). W przypadku Google Chrome będzie to ciąg znaków
 `rgb(255, 0, 0)` dla koloru czerwonego. Rozwiązanie tego problemu zostawiam czytelnikowi.
 
