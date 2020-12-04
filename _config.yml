@@ -29,6 +29,7 @@ users:
     jcubic:
         url: "https://jcubic.pl/jakub-jankiewicz/"
         name: "Jakub T. Jankiewicz"
+        job: "Software Engineer - Front-End Developer"
         twitter: "jcubic"
     magda:
         url: "http://www.frontend-con.io/"
