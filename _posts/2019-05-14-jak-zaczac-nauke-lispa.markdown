@@ -5,7 +5,7 @@ date:   2019-05-14 01:05:54+0200
 categories:
 tags: lisp języki
 author: jcubic
-description: Wpis o tym jak zacząć naukę programowania w jęzuku LISP. Jaki dialekt wybrać Scheme czy Common LISP. Czy są jakieś kursy wideo i czy są książki o języku LISP.
+description: Wpis o tym jak zacząć naukę programowania w języku LISP. Jaki dialekt wybrać Scheme, Clojure czy Common LISP. Czy są jakieś kursy wideo i czy są książki o języku programowania LISP.
 image:
  url: "/img/lisp-alien.png"
  alt: "Grafika z obcym z pięcioma oczami, flagą LISP oraz napisem Made with secret alien technology"
@@ -22,7 +22,7 @@ sitemap:
 
 
 Dzisiaj będzie trochę inny wpis. Nie będzie dotyczył programowania stron internetowych, czyli głównego tematu
-bloga. Postanowiłem napisać krótki wpis opisujący, jak zacząć naukę programowanie w języku LISP. Jest to język,
+bloga. Postanowiłem napisać krótki wpis opisujący, jak zacząć naukę programowania w języku LISP. Jest to język,
 który powinien poznać każdy programista.
 
 <!-- more -->
@@ -71,7 +71,7 @@ które są pierwszym elementem listy. `+` nie jest to operator dodawania, ale fu
 przypisana do symbolu plus. Pierwszy element to nie musi być także nazwa. Może to być wyrażenie,
 które w wyniku zwróci nową funkcje czyli. tzw funkcja wyższego rzędu.
 
-Przykład funkcji obliczającej silnię w języku Scheme:
+Przykład funkcji obliczającej silnię w języku programowania Scheme:
 
 {% highlight scheme %}
 (define (! n)
@@ -119,7 +119,8 @@ na czym uruchamiana jest Java). Zaprojektowany przez
 
 ## Jak zacząć?
 
-Aby zacząć naukę polecam napierw obejrzenie wykładów SICP ok 20 godzin oglądania (10 dwu częściowych lekcji)
+Naukę programowania w języku LISP zacząłbym od dialektu Scheme, który jest prosty w nauce.
+Polecam najpierw obejrzenie wykładów SICP ok 20 godzin oglądania (10 dwu częściowych lekcji)
 prowadzonego przez Abelsona i Sussmana (ten drugi zaprojektował język Scheme) prowadzone na MIT dla
 pracowników HP w latach 80 ([link MIT](http://groups.csail.mit.edu/mac/classes/6.001/abelson-sussman-lectures/)
 oraz [link YouTube](https://www.youtube.com/playlist?list=PL8FE88AA54363BC46)). Wykładowcy razem napisali książkę
@@ -132,7 +133,7 @@ programowania to możesz też znaleźć masę dobrych wykładów w sieci z progr
 różnych uczelni wyższych z USA.
 
 Jeśli chcesz wypróbować kilka wyrażeń, możesz zobaczyć mój interpreter, o nazwie LIPS na
-[stronie projektu](https://jcubic.github.io/lips/) (nazwa jest to rekurencyjny skrót: LIPS Is Pretty
+[stronie projektu](https://lips.js.org) (nazwa jest to rekurencyjny skrót: LIPS Is Pretty
 Simple), aktualnie pracuje nad wersją 1.0, która ma być 100% zgodna z językiem Scheme.  Na razie
 główne różnice to brak kontynuacji oraz obsługi rekurencji ogonowej (nie wiem czy wejdą do wersji
 1.0). Więc nie można napisać prostej funkcji do silni i obliczyć np. silnię z 10 000.  Ale obsługuje
@@ -143,7 +144,7 @@ odwijana, jakby jej nie było. Tak jak w JavaScript, gdy stosujesz
 [async/await](/2018/05/asynchronicznosc-javascript-async-await.html). Wyrażenia Regularne są też
 typem pierwszo-klasowym tzn. można je wstawiać bezpośrednio, nie jak w PHP wewnątrz ciągów znaków.
 
-Inną ciekawą funkcji jest napisany przeze mnie Bookmarklet który uruchamia Interpreter języka Scheme na
+Inną ciekawą funkcją jest napisany przeze mnie Bookmarklet, który uruchamia Interpreter języka Scheme na
 dowolnej stronie.
 
 Jeśli wolisz bardziej zgodny ze standardem język Scheme, możesz wypróbować projekt
