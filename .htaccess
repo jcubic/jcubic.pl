@@ -12,8 +12,14 @@ Options +FollowSymLinks
 RewriteEngine on
 RewriteCond %{SERVER_PORT} ^80$
 RewriteCond %{HTTP_HOST} !localhost
+RewriteCond %{HTTP_HOST} ^jcubic.pl$
 RewriteRule ^(.*)$ https://%{SERVER_NAME}%{REQUEST_URI} [L,R]
 
+RewriteCond %{HTTP_HOST} ^([^.]+)\.jcubic\.pl$
+RewriteRule ^/?(.*)/?$ /%1/$1 [END,QSA]
+
+RewriteCond %{HTTP_HOST} ^jcubic.atthost24.pl$
+RewriteRule ^(.*)$ https://jcubic.pl/%{REQUEST_URI}
 
 RewriteCond %{HTTP_HOST} ^mail.jcubic.pl
 RewriteRule ^(.well-known.*)$ /mail/$1 [L]
