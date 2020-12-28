@@ -27,12 +27,13 @@
     <!--
     <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,700|Roboto:500&amp;subset=latin,latin-ext&display=swap" rel="stylesheet"/>
     -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link rel="search" type="application/opensearchdescription+xml" title="Głównie JavaScript"
           href="{{ site.baseurl | prepend: site.url }}/opensearchdescription.xml"/>
     <link rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/"/>
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}"/>
     <link rel="stylesheet" href="{{ "/css/base.css" | prepend: site.baseurl | prepend: site.url }}?{{ "css/base.css" | nocache }}"/>
+    <link rel="preload" href="{{ "/css/style.css" | prepend: site.baseurl | prepend: site.url }}?{{ "css/style.css" | nocache }}" as="style"/>
     <link rel="stylesheet" data-href="{{ "/css/style.css" | prepend: site.baseurl | prepend: site.url }}?{{ "css/style.css" | nocache }}"/>
     <!--<link rel="stylesheet" href="{{ "/css/style.css" | prepend: site.baseurl | prepend: site.url }}"/>-->
     <link rel="alternate" type="application/rss+xml" title="Głównie JavaScript - RSS" href="{{ '/feed.xml' | prepend: site.baseurl | prepend: site.url }}"/>
@@ -60,6 +61,7 @@
     <meta name="twitter:site" content="@{{ site.twitter }}"/>
     <meta name="twitter:creator" content="@{% if page.author && site.users[page.author].twitter %}{{ site.users[page.author].twitter }}{% else %}{{ site.twitter }}{% endif %}"/>
     <link rel="preload" href="{{ '/img/rss.png' | prepend: site.baseurl | prepend: site.url }}" as="image" />
+    <link rel="preload" href="{{ '/img/rss.png' | prepend: site.baseurl | prepend: site.url }}" as="image" />
     <!--<link rel="preload" href="{{ "/img/easter-background-vignette.jpg" | prepend: site.baseurl | prepend: site.url }}" as="image" />-->
     <link rel="preload" href="{{ "/img/background.jpg" | prepend: site.baseurl | prepend: site.url }}" as="image" />
     {% if page.image %}
@@ -79,6 +81,10 @@
     <link rel="next" href="{{ '/page' | prepend: site.baseurl | prepend: site.url }}{{ paginator.next_page }}/"/>
     {% endif %}
     {% if page.is_post %}
+    <link rel="preload" href="https://jcubic.pl/hashover-next/hashover/themes/default/comments.css" as="style" />
+    {% if jekyll.environment == "production" %}
+    <link rel="preload" href="/hashover-next/hashover/comments.php" as="script"/>
+    {% endif %}
     <link rel="schema.dc" href="http://purl.org/dc/elements/1.1/"/>
     <meta name="DC.license" content="https://creativecommons.org/licenses/by-sa/4.0/"/>
     <meta name="DC.created" content="{{ page.date }}"/>

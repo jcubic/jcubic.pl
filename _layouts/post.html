@@ -129,7 +129,7 @@ layout: default
           Hasło, które podasz umożliwi ponowne zalogowanie się i np. usunięcie komentarza, jest dobrowolne. Email jest szyfrowany i używany do wysyłania powiadomień o odpowiedziach do komentarzy oraz do pobierania awatara dzięki usłudze <a href="https://pl.gravatar.com/">Gravatar.com</a>.
         </p>
         {% if jekyll.environment == "production" %}
-        <script type="text/javascript"
+        <script type="text/javascript" defer
                 src="/hashover-next/hashover/comments.php"></script>
         <noscript>You must have JavaScript enabled to use the comments.</noscript>
         {% endif %}

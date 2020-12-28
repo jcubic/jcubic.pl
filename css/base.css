@@ -9,6 +9,11 @@
     font-weight: normal;
     font-style: normal;
 }
+#hashover {
+    /* https://web.dev/content-visibility/ */
+    content-visibility: auto;
+    contain-intrinsic-size: 0 429px;
+}
 /* from user-agent h1 */
 header .h {
     display: block;

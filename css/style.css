@@ -122,6 +122,11 @@ section ul,
     margin-right: 0;
     display: block;
 }
+.content .body figure pre {
+    /* https://web.dev/content-visibility/ */
+    content-visibility: auto;
+    contain-intrinsic-size: 0 14px;
+}
 .body iframe {
     width: calc(100% - 20px);
 }
