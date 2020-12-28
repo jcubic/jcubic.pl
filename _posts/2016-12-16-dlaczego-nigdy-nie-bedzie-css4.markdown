@@ -26,3 +26,7 @@ Tak naprawdę standardem CSS3 zwykło nazywać się wszystko opublikowane przez 
 po standardzie [CSS 2.1](https://www.w3.org/TR/CSS2/). Niektóre moduły już mają wersje 4, tak jak
 [Selectors Level 4](https://www.w3.org/TR/selectors4/), który już jest implementowany w nowych przeglądarkach,
 ale z pewnością nie będzie nigdy CSS4.
+
+Poniżej wideo które wyjaśnia to dokładnie.
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/Jtmkk6odggs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
