@@ -81,10 +81,10 @@
     <link rel="next" href="{{ '/page' | prepend: site.baseurl | prepend: site.url }}{{ paginator.next_page }}/"/>
     {% endif %}
     {% if page.is_post %}
-    <link rel="preload" href="https://jcubic.pl/hashover-next/hashover/themes/default/comments.css" as="style" />
-    {% if jekyll.environment == "production" %}
-    <link rel="preload" href="/hashover-next/hashover/comments.php" as="script"/>
-    {% endif %}
+      <!-- <link rel="preload" href="https://jcubic.pl/hashover-next/hashover/themes/default/comments.css" as="style" /> -->
+      {% if jekyll.environment == "production" %}
+      <link rel="preload" href="/hashover-next/hashover/comments.php" as="script"/>
+      {% endif %}
     <link rel="schema.dc" href="http://purl.org/dc/elements/1.1/"/>
     <meta name="DC.license" content="https://creativecommons.org/licenses/by-sa/4.0/"/>
     <meta name="DC.created" content="{{ page.date }}"/>
