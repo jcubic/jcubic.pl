@@ -16,6 +16,8 @@ related:
   -
     name: "Upload Katalogów i Plików poprzez Drag & Drop"
     url: /2019/06/upload-katalogow-javascript.html
+sitemap:
+  lastmod: 2021-01-20 09:44:25+0100
 ---
 
 Trochę czasu minęło od ostatniego wpisu, ale spowodowane był to tym, że wakacje i urlopy. Ale
@@ -26,7 +28,7 @@ ominąć limit danych (np. ten w PHP).
 <!-- more -->
 
 Dzielenie pliku na części nie jest tak skomplikowane jak
-[upload katalogów](2019/06/upload-katalogow-javascript.html). Mamy jedną funkcje a właściwie metodę o nazwie
+[upload katalogów](/2019/06/upload-katalogow-javascript.html). Mamy jedną funkcje a właściwie metodę o nazwie
 `slice`, która wycina pewną część pliku. Metoda `slice` ma swoje prefiksy w różnych przeglądarkach. Należy ona
 do interface'u [Blob](https://developer.mozilla.org/en-US/docs/Web/API/Blob), po którym dziedziczy obiekt File
 (więcej o funkcji `slice` na [MDN](https://developer.mozilla.org/en-US/docs/Web/API/Blob/slice)). Wywołanie

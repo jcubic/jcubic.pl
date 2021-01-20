@@ -15,9 +15,9 @@ image:
 related:
   -
     name: "Parser S-Wyrażeń (języka LISP) w JavaScript"
-    url: "/2019/06/parser-jeyka-lisp-javascript.markdown"
+    url: "/2019/06/parser-jezyka-lisp-javascript.html"
 sitemap:
-  lastmod: 2020-09-15 14:00:23+0200
+  lastmod: 2021-01-20 09:44:25+0100
 ---
 
 

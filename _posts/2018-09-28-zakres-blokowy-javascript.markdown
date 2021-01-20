@@ -9,6 +9,8 @@ description: Wpis opisujący zakres blokowy, czyli słowa kluczowe let oraz cons
 image:
  url: "/img/let-const.png"
  alt: "Grafika ze słowem kluczowe let oraz const"
+sitemap:
+  lastmod: 2021-01-20 09:44:25+0100
 ---
 
 Ponieważ wpis o [funkcjach w JavaScript](/2014/08/funkcje-w-javascript.html) na moim blogu

@@ -9,18 +9,18 @@ description: Obiekty typu Promise czyli obietnice, są sposobem na zwięzłą im
 image:
   url: "/img/letter.jpg"
   alt: "List w kopercie oraz długopis"
-sitemap:
-  lastmod: 2019-06-12 10:13:27+0200
 related:
   -
     name: "Asynchroniczność cz. 2: Async/Await"
     url: /2018/05/asynchronicznosc-javascript-async-await.html
   -
     name: "Asynchroniczność cz. 3: Iteratory i Generatory Asynchroniczne"
-    url: /2018/06/asynchronicznosc-javascript-for-await-of.html
+    url: /2018/06/asynchronicznosc-javascript-iteratory-i-generatory-asynchroniczne.html
   -
     name: "Asynchroniczność cz. 4: Funkcja async jako generator"
     url: /2018/06/asynchronicznosc-javascript-funkcja-async-jako-generator.html
+sitemap:
+  lastmod: 2021-01-20 09:44:25+0100
 ---
 
 Będzie to pierwszy wpis z serii postów o asynchronicznym kodzie w języku JavaScript. Na początek obiekty typu `Promise`,

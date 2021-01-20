@@ -7,7 +7,7 @@ tags: javascript front-end
 author: jcubic
 description: Jest to pierwszy post na blogu Głównie JavaScript. Od czasu do czasu będę zamieszczał wpisy na tematy związane głównie z Front-Endem
 sitemap:
-  lastmod: 2017-09-08 20:35:15+0200
+  lastmod: 2021-01-20 09:44:25+0100
 ---
 
 Jest to pierwszy post na blogu Głównie JavaScript. Od czasu do czasu
@@ -27,6 +27,4 @@ Jestem programistą, pracującym głównie w języku JavaScript. W pracy korzyst
 
 Źródła strony korzystające z systemu [Jekyll](http://jekyllrb.com/) są dostępne na
 [githubie](https://github.com/jcubic/jcubic.pl). Wszystko co będzie opublikowane na blogu będzie
-udostępnione na licencji [Creative Commons Uznanie autorstwa-Na tych samych warunkach 4.0 Międzynarodowe](cc-by-sa)
-
-[cc-by-sa]: http://creativecommons.org/licenses/by-sa/4.0/
+udostępnione na licencji [Creative Commons Uznanie autorstwa-Na tych samych warunkach 4.0 Międzynarodowe](http://creativecommons.org/licenses/by-sa/4.0/)
