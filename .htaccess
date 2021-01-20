@@ -15,6 +15,9 @@ RewriteCond %{HTTP_HOST} !localhost
 RewriteCond %{HTTP_HOST} ^jcubic.pl$
 RewriteRule ^(.*)$ https://%{SERVER_NAME}%{REQUEST_URI} [L,R]
 
+RewriteCond %{HTTP_HOST} ^www.jcubic.pl [NC]
+RewriteRule ^(.*)$ http://jcubic.pl/$1 [L,R=301]
+
 RewriteCond %{HTTP_HOST} ^([^.]+)\.jcubic\.pl$
 RewriteRule ^/?(.*)/?$ /%1/$1 [END,QSA]
 
