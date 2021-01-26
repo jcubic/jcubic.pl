@@ -1,8 +1,9 @@
-# Głównie JavaScript
+# [Blog Głównie JavaScript](https://jcubic.pl)
 
 ![powered by Jekyll](https://img.shields.io/badge/powered_by-Jekyll-blue.svg)
 
-Źródła strony korzystające z generatora stron statycznych [jekyll](http://jekyllrb.com/)
+Źródła strony (bloga głównie JavaScript) korzystające z generatora stron statycznych
+[jekyll](http://jekyllrb.com/)
 oraz [tidy-html5](https://github.com/htacg/tidy-html5) ponieważ
 [jekyll nie wypluwa kodu z poprawnymi wcięciami](https://github.com/jekyll/jekyll/issues/2640).
 
