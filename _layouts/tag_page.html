@@ -6,6 +6,10 @@ layout: default
     <header>
       <h1>{{ page.tag }}</h1>
     </header>
+    {% if page.content and page.content != "" and page.content != nil %}
+      {{ page.content | markdownify }}
+      <h2>Lista Artykułów:</h2>
+    {% endif %}
     <ul>
       {% for post in page.posts %}
       <li>

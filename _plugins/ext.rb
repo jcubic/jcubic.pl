@@ -1,5 +1,11 @@
 # coding: utf-8
+
+## Copyright © 2010-2012 University of Cologne, Albertus-Magnus-Platz, 50923 Cologne, Germany
+## Copyright © 2014-2021 Jakub Jankiewicz <https://jcubic.pl/me>
+## Relased under The MIT License
+
 ## this is modified gem 'jekyll/tagging' with title and description
+## it also read content from _includes/tags and generate sitemap
 
 require 'nuggets/range/quantile'
 require 'nuggets/i18n'
@@ -37,6 +43,7 @@ module Jekyll
 
       generate_tag_pages
       add_tag_cloud
+      add_sitemap
     end
 
     private
@@ -54,10 +61,21 @@ module Jekyll
           data = {
             'layout' => layout,
             'posts' => posts.sort.reverse!,
-            'tag' => tag,
-            'title' => "Tag #{tag}",
-            'description' => "Podstrona z wpisami dla taga #{tag} na stronie Głównie JavaScript"
+            'tag' => tag
           }
+
+          if tag != nil then
+            data['title'] = "Tag #{tag}"
+            data['description'] = "Podstrona z wpisami dla taga #{tag} na stronie Głównie JavaScript"
+
+            fname = "_includes/tags/#{tag}.md"
+
+            if File.exist?(fname) then
+              data['content'] = File.read(fname)
+            end
+          end
+
+
           data.merge!(site.config["tag_#{type}_data"] || {})
 
           name = yield data if block_given?
@@ -74,6 +92,26 @@ module Jekyll
           )
         end
       }
+    end
+
+    def add_sitemap()
+      tag_dir = site.config["tag_page_dir"]
+      if tag_dir != nil then
+        tags = active_tags.map{|tag, posts|
+          name = tag.strip
+          {
+            "tag" => name,
+            "url" => "/#{tag_dir}/#{name}/"
+          }
+        }
+        data = {
+          "layout" => site.config["tag_sitemap_layout"],
+          "tags" => tags
+        }
+        site.pages << TagPage.new(
+            site, site.source, site.config["tag_sitemap_dir"], site.config["tag_sitemap_name"], data
+        )
+      end
     end
 
     def add_tag_cloud(num = 5, name = 'tag_data')
@@ -114,7 +152,7 @@ module Jekyll
     def initialize(site, base, dir, name, data = {})
       self.content = data.delete('content') || ''
       self.data    = data
-
+      self.data['date'] = Time.now
       super(site, base, dir[-1, 1] == '/' ? dir : '/' + dir, name)
     end
 

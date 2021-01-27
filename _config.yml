@@ -68,9 +68,11 @@ sitemap:
 
 paginate: 10
 paginate_path: "/page:num"
-
+tag_sitemap_layout: tag_sitemap
 tag_page_layout: tag_page
 tag_page_dir: tag
+tag_sitemap_name: "tag_sitemap.xml"
+tag_sitemap_dir: .
 tag_permalink_style: pretty
 
 # Build settings
