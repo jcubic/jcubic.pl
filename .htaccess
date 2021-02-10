@@ -65,6 +65,9 @@ RewriteRule ^/?map.xml$ /sitemap.xml [R=301,L]
 RewriteRule biwascheme/repl.html http://www.biwascheme.org/ [R=301,L]
 RewriteRule biwascheme/repl.php http://www.biwascheme.org/ [R=301,L]
 RewriteRule ^new/?$ /jakub-jankiewicz/ [R=301,L]
+RewriteRule ^tag/API/ /tag/api/ [R=301,L]
+
+
 
 RewriteRule ^2016/04/wyrazenia-regularne.html /2016/04/wyrazenia-regularne-javascript.html [R=301,L]
 RewriteRule ^2018/11/prosta-biblioteka-dom-zamiast-jquery.html /2018/11/prosta-biblioteka-javascript-dom-zamiast-jquery.html [R=301,L]
