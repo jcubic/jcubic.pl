@@ -12,6 +12,8 @@ image:
  attribution: Źródło [PxHere](https://pxhere.com/en/photo/931338), [licencja CC0](https://creativecommons.org/publicdomain/zero/1.0/)
  width: 800
  height: 400
+sitemap:
+  lastmod: 2019-08-15 13:39:56+0200
 ---
 
 Zastanawiałeś się kiedyś jak najlepiej opisać, czym jest istota programowania dla osób, które nie
@@ -44,7 +46,7 @@ mleka, prądu i wody. Następnie włączasz przycisk, czekasz chwilę i masz got
 wypić. Nie musisz się zastanawiać co dokładnie ekspres robi w środku. Możesz o tym zapomnieć,
 tak samo możesz zapomnieć o tym jak robi się kawę samemu mając tylko kubek i gorącą wodę.
 
-## Funkcje
+## Co to są funkcje w programowaniu?
 
 Tak samo wygląda sprawa z funkcjami. W matematyce zazwyczaj (jeśli to nie jest matematyka wyższa)
 masz funkcje o nazwie `f(x)` lub `g(x)`, ale w kodzie programu, możesz mieć dowolną nazwę, np. ekspres,
@@ -79,7 +81,7 @@ nam to wystarcza. Możemy używać jej wszędzie:
 var kawa = express('gorąca', 'zimne', 'ziarna', '220V');
 {% endhighlight %}
 
-## Debugowanie
+## Co to jest debugowanie?
 
 Jeśli express zrobi coś nie tak jak powinien, będziemy musieli ten expres naprawić np. oddając do
 serwisu. Tak samo jest z funkcją, należy znaleźć w niej błąd i go poprawić. Proces ten nazywa się
@@ -115,7 +117,7 @@ function makeCoffee(caffee) {
 }
 {% endhighlight %}
 
-## Co to jest algorytm?
+## Co to jest Algorytm? Czyli Algorytm robienia kanapki.
 
 Wyobraź sobie że robisz sobie kanapkę na śniadanie. Jest to czynność, nad którą nie musisz się
 specjalnie zastanawiać. Ale co jeśli być musiał opisać sposób w jaki robot musiałby zrobić taką
@@ -142,16 +144,16 @@ Taka lista kroków nazywa się algorytmem. Algorytm jest to rozwiązanie jakiego
 przypadku robienie kanapki przez robota. Jeśli funkcja `makeCoffee` odpowiada temu co robi barista w
 miejscu `// ...` musiałby być algorytm, czyli lista kroków, które robi barista, aby zrobić kawę.
 
-![Kanapka](/img/sandwich.jpg)
+![Zdjęcie Kanapki: Algorytm robienia kanapki](/img/sandwich.jpg)
 <small>
 Autor [Marco Verch](https://www.flickr.com/photos/30478819@N08/);
 Źródło [Flickr](https://www.flickr.com/photos/30478819@N08/47173760532);
 Licencja [CC-BY](https://creativecommons.org/licenses/by/2.0/)
 </small>
 
-## Refaktoryzacja, czyli naprawianie kodu
+## Co to jest Refaktoryzacja?
 
-Czasami potrzeba jest także poprawić program, aby łatwiej było go zrozumieć innym programistom,
+Refaktoryzacja to inaczej naprawianie kodu. Czasami potrzeba jest poprawić program, aby łatwiej było go zrozumieć innym programistom,
 ponieważ [jak powiedział Hal Abelson](https://en.wikiquote.org/wiki/Programming_languages):
 
 > Programy muszą być pisane dla ludzi do czytania, i tylko przy okazji dla maszyn do uruchomienia.
