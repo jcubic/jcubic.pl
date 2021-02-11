@@ -81,12 +81,6 @@ nam to wystarcza. Możemy używać jej wszędzie:
 var kawa = express('gorąca', 'zimne', 'ziarna', '220V');
 {% endhighlight %}
 
-## Co to jest debugowanie?
-
-Jeśli express zrobi coś nie tak jak powinien, będziemy musieli ten expres naprawić np. oddając do
-serwisu. Tak samo jest z funkcją, należy znaleźć w niej błąd i go poprawić. Proces ten nazywa się
-debugowaniem, od słowa angielskiego bug czyli błąd (a dokładnie robal, nazwa prawdopodobnie wzięła
-się od [historii Grace Hopper](https://pl.wikipedia.org/wiki/B%C5%82%C4%85d_(informatyka)).
 Takie nadawanie nazw i pomijanie szczegółów nazywa się
 [abstrakcją](https://pl.wikipedia.org/wiki/Abstrakcja_(programowanie)).
 
@@ -117,32 +111,55 @@ function makeCoffee(caffee) {
 }
 {% endhighlight %}
 
+## Co to jest debugowanie?
+
+Jeśli express zrobi coś nie tak jak powinien, będziemy musieli ten expres naprawić np. oddając do
+serwisu. Tak samo jest z funkcją, należy znaleźć w niej błąd i go poprawić. Proces ten nazywa się
+debugowaniem, od słowa angielskiego bug czyli błąd (a dokładnie robal, nazwa prawdopodobnie wzięła
+się od [historii Grace Hopper](https://pl.wikipedia.org/wiki/B%C5%82%C4%85d_(informatyka)).
+
+W programowaniu najczęściej nie oddajemy programu komuś innemu, aby go naprawił. Sami musimy
+znaleźć usterkę. Najczęściej wygląda to tak, że stawiasz hipotezę, że błąd jest spowodowany tym
+albo tym i sprawdzasz tą hipotezę.  Jeśli to nie jest faktyczny błąd, musisz wymyślić inną
+hipotezę. Stawianie takich hipotez jest łatwiejsze, gdy już znasz mniej więcej kod
+programu. Tak samo wygląda sprawa, gdy serwisant naprawia express, gdy zna się na tego typu
+expressie lub generalnie na expressach, domyśla się gdzie może być błąd. Może się też zdarzyć,
+że będzie sprawdzać kilka rzeczy, zanim znajdzie faktyczny powód usterki.
+
 ## Co to jest Algorytm? Czyli Algorytm robienia kanapki.
 
 Wyobraź sobie że robisz sobie kanapkę na śniadanie. Jest to czynność, nad którą nie musisz się
 specjalnie zastanawiać. Ale co jeśli być musiał opisać sposób w jaki robot musiałby zrobić taką
-kanapkę. Zakładając że robot nie jest inteligenty i wykonuje instrukcje, czyli program komputerowy,
-musiałbyś wziąć wiele spraw pod uwagę. Np. gdzie znajduje się robot aktualnie, w jaki ma trafić
-do kuchni, w jaki sposób trzymać i używać noża oraz jak otwierać lodówkę. Ale nawet zakładając że jest to
-robot który wie jak to robić, musiałbyś mu potem powiedzieć jakie są konkretne kroki do
-zrobienia kanapki. Przykład takiej listy może wyglądać tak:
+kanapkę. Zakładając że robot nie jest inteligenty i wykonuje instrukcje, czyli program
+komputerowy, musiałbyś wziąć wiele spraw pod uwagę. Np. gdzie znajduje się robot aktualnie, w
+jaki ma trafić do kuchni, w jaki sposób trzymać i używać noża oraz jak otwierać lodówkę. Ale
+nawet zakładając że jest to robot który wie jak to robić, musiałbyś mu potem powiedzieć jakie
+są konkretne kroki do zrobienia kanapki.
+
+Przykład takiej listy (czyli faktyczny algorytm kanapki) może wyglądać tak:
 
 * Otwórz lodówkę.
 * Wyjmij żółty ser oraz masło.
+* Zamknij lodówkę.
 * Wyjmij deskę do krojenia.
 * Wyjmij chleb.
 * Weź nóż.
 * Połóż chleb na desce.
 * Ukrój kromkę chleba.
-* Odpakuj masło jeśli zapakowane.
+* Odpakuj masło, jeśli zapakowane.
 * Nożem weź trochę masła.
 * Posmaruj nożem z masłem kanapkę.
 * Weź plasterek sera (zakładając że ser jest w plasterkach).
-* Połóż na chlebie z masłem.
+* Połóż plaster sera na chlebie z masłem.
+* Schowaj resztę chleba, jeśli coś zostało.
+* Otwórz lodówkę.
+* Schowaj masło i żółty ser, jeśli jeszcze coś zostało. W przeciwnym wypadku wyrzuć opakowania.
+* Zamknij lodówkę.
 
 Taka lista kroków nazywa się algorytmem. Algorytm jest to rozwiązanie jakiegoś problemu, w tym
-przypadku robienie kanapki przez robota. Jeśli funkcja `makeCoffee` odpowiada temu co robi barista w
-miejscu `// ...` musiałby być algorytm, czyli lista kroków, które robi barista, aby zrobić kawę.
+przypadku robienie kanapki przez robota. Jeśli funkcja `makeCoffee` odpowiada temu co robi
+barista w miejscu `// ...` musiałby być algorytm, czyli lista kroków, które robi barista, aby
+zrobić kawę.
 
 ![Zdjęcie Kanapki: Algorytm robienia kanapki](/img/sandwich.jpg)
 <small>
@@ -163,11 +180,11 @@ Proces poprawiania istniejącego kodu programu nazywa się
 
 ## Ciągła nauka
 
-Istnieje powiedzenie, że człowiek uczy się całe życie. Jeśli chodzi o programistów to wiedzy jest
-naprawdę dużo i każdy programista musi cały czas aktywnie się uczyć, szczególnie że wszystko szybko
-się zmienia.  Nie można zostawać w miejscu. Oczywiście pewnie nie wszyscy to robią. Ale nauka to
-podstawa. Nie jest to praca jak np. takiego baristy, który umie robić kawę i nie musi uczyć się niczego
-nowego.
+Istnieje powiedzenie, że człowiek uczy się całe życie. Jeśli chodzi o programistów to wiedzy
+jest naprawdę dużo i każdy programista musi cały czas aktywnie się uczyć, szczególnie że
+wszystko szybko się zmienia.  Nie można zostawać w miejscu. Oczywiście pewnie nie wszyscy to
+robią. Ale nauka to podstawa. Nie jest to praca jak np. takiego baristy, który umie robić kawę
+i nie musi uczyć się niczego nowego.
 
 ## Podsumowanie
 
