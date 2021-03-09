@@ -17,7 +17,7 @@ related:
     name: "Parser S-Wyrażeń (języka LISP) w JavaScript"
     url: "/2019/06/parser-jezyka-lisp-javascript.html"
 sitemap:
-  lastmod: 2021-01-20 09:44:25+0100
+  lastmod: 2021-02-12 14:03:00+0100
 ---
 
 
@@ -132,13 +132,15 @@ Jeśli studiowałeś informatykę na uczelni wyższej, to nie powinno być dla c
 programowania to możesz też znaleźć masę dobrych wykładów w sieci z programowania i ogólnie informatyki z
 różnych uczelni wyższych z USA.
 
-Jeśli chcesz wypróbować kilka wyrażeń, możesz zobaczyć mój interpreter, o nazwie LIPS na
-[stronie projektu](https://lips.js.org) (nazwa jest to rekurencyjny skrót: LIPS Is Pretty
-Simple), aktualnie pracuje nad wersją 1.0, która ma być 100% zgodna z językiem Scheme.  Na razie
-główne różnice to brak kontynuacji oraz obsługi rekurencji ogonowej (nie wiem czy wejdą do wersji
-1.0). Więc nie można napisać prostej funkcji do silni i obliczyć np. silnię z 10 000.  Ale obsługuje
-liczby typu BigInt, dzięki czemu można obliczyć silnię ze 100 za pomocą prostej funkcji.  Fajnie się
-integruje z językiem JavaScript i obsługuje automatycznie kod asynchroniczny, tzn. jak masz
+Jeśli chcesz wypróbować kilka wyrażeń, możesz zobaczyć mój
+[interpreter języka lips w JavaScript](https://lips.js.org), o nazwie LIPS (nazwa jest to
+rekurencyjny skrót: LIPS Is Pretty Simple), aktualnie pracuje nad wersją 1.0, która ma być 100%
+zgodna z językiem Scheme (specyfikacjami R5RS i R7RS).  Na razie główne różnice to brak kontynuacji
+oraz obsługi rekurencji ogonowej (nie wiem czy wejdą do wersji 1.0). Więc nie można napisać prostej
+rekurencyjnej funkcji obliczającej silnię (jest to najprostszy przykład rekurencji) i obliczyć
+np. silnię z 10 000.  Ale obsługuje liczby typu BigInt, dzięki czemu można obliczyć silnię ze 100 za
+pomocą prostej funkcji.  Fajnie się integruje z językiem JavaScript i obsługuje automatycznie kod
+asynchroniczny, tzn. jak masz
 [obietnicę](/2018/05/asynchronicznosc-javascript-obietnice.html), to jest ona automatycznie
 odwijana, jakby jej nie było. Tak jak w JavaScript, gdy stosujesz
 [async/await](/2018/05/asynchronicznosc-javascript-async-await.html). Wyrażenia Regularne są też
@@ -147,9 +149,9 @@ typem pierwszo-klasowym tzn. można je wstawiać bezpośrednio, nie jak w PHP we
 Inną ciekawą funkcją jest napisany przeze mnie Bookmarklet, który uruchamia Interpreter języka Scheme na
 dowolnej stronie.
 
-Jeśli wolisz bardziej zgodny ze standardem język Scheme, możesz wypróbować projekt
-[BiwaScheme](https://www.biwascheme.org/).  Dodam, że terminal na stronie jest mojego autorstwa,
-taki sam jak na stronie projektu LIPS.  Także logo projektu, jest mojego autorstwa.
+Jeśli wolisz bardziej zgodny ze standardem język Scheme (czytaj obsługujący kontynuacje i rekurencje ogonową),
+możesz wypróbować projekt [BiwaScheme](https://www.biwascheme.org/).  Dodam, że terminal na stronie jest mojego
+autorstwa, taki sam jak na stronie projektu LIPS.  Także logo projektu, jest moim dziełem.
 
 Możesz porównać oba interpretery:
 
@@ -168,7 +170,7 @@ biwascheme> (! 100)
 LIPS jest o wiele prostszy (jeśli chodzi o kod), dzięki czemu łatwo dodawać nowe funkcje i poprawki.
 To samo w BiwaScheme jest problematyczne, ze względu na zastosowaną architekturę. A napisanie funkcji
 ze specyfikacji, aby mieć w 100 procentach Scheme, jest całkiem możliwe w języku LIPS, tylko trzeba
-dodać kontynuacje i optymalizacje rekurencji ogonowej.
+dodać kontynuacje i optymalizacje rekurencji ogonowej. Duża część standardowej biblioteki LIPS to kod Scheme.
 
 
 ## Pisanie kodu

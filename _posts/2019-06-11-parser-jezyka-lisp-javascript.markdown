@@ -4,13 +4,13 @@ title:  "Parser S-Wyrażeń (języka LISP) w JavaScript"
 date:   2019-06-11 21:52:53+0200
 categories:
 tags: javascript lisp języki parsery
-description: Do parsowania można użyć generatra parserów, ale łatwiej napisać ręcznie parser S-Wyrażeń, co wcale nie jest takie trudne. W tym wpisie parser języka Lisp W JavaScript.
+description: Do parsowania można użyć generatora parserów, ale łatwiej napisać ręcznie parser S-Wyrażeń, co wcale nie jest takie trudne. W tym wpisie parser języka Lisp W JavaScript.
 author: jcubic
 sitemap:
   lastmod: 2019-06-18 21:45:45+0200
 image:
   url: "/img/lisp-parser.png"
-  alt: "Grafika Wektorwa z Tekstem Parser Lisp-a w JavaScript oraz grafika wektorowa przedstawiająca strukturę kodu LISP-a "
+  alt: "Grafika Wektorowa z Tekstem Parser Lisp-a w JavaScript oraz grafika wektorowa przedstawiająca strukturę kodu LISP-a "
   attribution: Jakub T. Jankiewicz, licencja [CC-BY-SA](https://creativecommons.org/licenses/by-sa/4.0/). Grafika bazuje na schematach blokowych z książki Struktura i Interpretacja Programów Komputerowych (SICP), źródło na [GitHub-ie](https://github.com/jcubic/jcubic.pl/blob/master/img/lisp-parser.svg)
 related:
   -
@@ -19,6 +19,8 @@ related:
   -
     name: "Jak parować nawiasy lub inne znaki w JavaScript?"
     url: /2020/04/parowanie-nawiasow-javascript.html
+sitemap:
+  lastmod: 2021-02-12 13:54:37+0100
 ---
 
 S-Wyrażenia to podstawa języków rodziny [Lisp](/2019/05/jak-zaczac-nauke-lispa.html). W tym wpisie
@@ -487,6 +489,29 @@ Pair.prototype.toString = function() {
 I oto cały parser. Pozostały nam jeszcze wartości `true` oraz `false` (oraz ewentualnie `null`).
 Zostawiam to jako ćwiczenie dla czytelnika.
 
+## Inne rozwiązanie parsera języka Lisp w JavaScript
+
+Tego typu kod nadaje się do prostej implementacji języka Lisp. Aby mieć bardziej zaawansowany Parser i Lexer,
+możesz zerknąć na moją implementacje w projekcie
+[LIPS: czyli interpreterze języka Scheme w Javascript](https://lips.js.org/), gdzie z powodu trudności w
+modyfikowaniu parsera bazującego na stosie, zastosowałem inne rozwiązanie. Bazuje ono na implementacji z projektu
+[BiwaScheme](https://github.com/biwascheme/biwascheme). Także tokenizer został zastąpiony przez przyrostowy
+lexer, który umożliwia modyfikowanie kodu parsera, przez kod użytkownika, w tym samym pliku. W przypadku
+tokenizera, tokeny są generowane na samym początku, w przypadku projektu LIPS, parser używa Lexera, który
+czyta każde S-Wyrażenie oddzielnie i każde wyrażenie jest następnie parsowane. Dzięki temu w jednym pliku może
+znajdować się kod, który dodaje nowe tokeny do parsera (dokładnie do Lexera).
+
+Zwróć uwagę na:
+* [klasę Parser](https://github.com/jcubic/lips/blob/ba2b20b951ed5f23b35168f9c31d27c7d8f6d7f4/src/lips.js#L1278)
+* [klasę Lexer](https://github.com/jcubic/lips/blob/ba2b20b951ed5f23b35168f9c31d27c7d8f6d7f4/src/lips.js#L901)
+
+Lexer jest to prosta implementacja [maszyny stanów](https://pl.wikipedia.org/wiki/Automat_sko%C5%84czony)
+(czyli automatu skończonego) z regułami zdefiniowanymi
+[tutaj](https://github.com/jcubic/lips/blob/ba2b20b951ed5f23b35168f9c31d27c7d8f6d7f4/src/lips.js#L1163).
+Główny algorytm maszyny stanów znajduje w
+[metodzie next_token](https://github.com/jcubic/lips/blob/ba2b20b951ed5f23b35168f9c31d27c7d8f6d7f4/src/lips.js#L1043).
+
+Jest to o wiele bardzie eleganckie rozwiązanie, głównie dzięki swojej prostocie (w porównaniu z wersją poprzednią).
 
 *[WASM]: WebAssembly
 *[GNU]: GNU's Not Unix
