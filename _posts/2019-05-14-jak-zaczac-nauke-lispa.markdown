@@ -133,7 +133,7 @@ programowania to możesz też znaleźć masę dobrych wykładów w sieci z progr
 różnych uczelni wyższych z USA.
 
 Jeśli chcesz wypróbować kilka wyrażeń, możesz zobaczyć mój
-[interpreter języka lips w JavaScript](https://lips.js.org), o nazwie LIPS (nazwa jest to
+[interpreter języka lisp w JavaScript](https://lips.js.org), o nazwie LIPS (nazwa jest to
 rekurencyjny skrót: LIPS Is Pretty Simple), aktualnie pracuje nad wersją 1.0, która ma być 100%
 zgodna z językiem Scheme (specyfikacjami R5RS i R7RS).  Na razie główne różnice to brak kontynuacji
 oraz obsługi rekurencji ogonowej (nie wiem czy wejdą do wersji 1.0). Więc nie można napisać prostej
@@ -192,7 +192,7 @@ Oglądając wykłady Abelsona i Sussmana na Youtube możesz skorzystać z
 [bookmarka](https://pl.wikipedia.org/wiki/Bookmarklet), który napisałem.
 Dodaje on interaktywny interpreter języka Scheme do dowolnej strony (chyba że jest zabezpieczenie o nazwie
 [CSP](https://en.wikipedia.org/wiki/Content_Security_Policy)). Link do bookmarka na stronie projektu
-[LIPS Scheme](https://jcubic.github.io/lips/#bookmark). O ile np. strony GitHub, StackOverflow czy Google
+[LIPS Scheme](https://lips.js.org#bookmark). O ile np. strony GitHub, StackOverflow czy Google
 są zabezpieczone przez CSP i tyle np. Wikipedia czy YouTube pozwalają na dowolne uruchamianie zewnętrznych
 skryptów (takich jak zakładki z kodem).
 
@@ -257,7 +257,7 @@ udało mi się wydrukować swoją na [LuluXpress](https://xpress.lulu.com/) - ko
 Teraz już tylko możesz dużo pisać i dużo czytać. Jak z każdym językiem. Chodzi głównie o kod. Chociaż
 czytać można też artykuły. Z rzeczy które możesz jeszcze chcieć poznać to **kontynuacje** (których sam jeszcze
 do końca nie rozumiem - chciałbym je dodać do swojej implementacji
-[LISP-a w JavaScript](https://jcubic.github.io/lips), ale nie jestem pewien czy znam je na tyle, aby je
+[LISP-a w JavaScript](https://lips.js.org), ale nie jestem pewien czy znam je na tyle, aby je
 zaimplementować). W Common Lisp jest jeszcze **CLOS**, czyli wbudowany system obiektowy.
 
 Polecam też używanie edytora **GNU Emacs**, który jest częściowo napisany w języku Emacs LISP (w skrócie
