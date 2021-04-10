@@ -97,19 +97,17 @@
          "@context": "http://schema.org",
          "@type": "BlogPosting",
          "datePublished": "{{ page.date }}",
+         "dateModified": {% if page.sitemap.lastmod %}"{{ page.sitemap.lastmod }}"{% else %}"{{ page.date }}"{% endif %},
          "publisher": {
              "@type": "Organization",
              "name": "{{ site.title }}",
+             "url": "{{ site.baseurl | prepend: site.url }}",
              "logo": {
                  "@type": "ImageObject",
                  "url": "{{ site.logo.url | prepend: site.baseurl | prepend: site.url }}"
              }
          },
-         "author": {
-             "@type": "Person",
-             "name": "{{ site.users[page.author].name }}"
-         },{% if page.sitemap %}
-         "dateModified": "{{ page.sitemap.lastmod }}",{% endif %}
+         "author": {{ site.users[page.author].ld | jsonify }},
          "headline": "{{ page.title }}",{% if page.image %}
          "image": {
              "@type": "ImageObject",

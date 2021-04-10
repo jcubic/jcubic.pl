@@ -27,13 +27,72 @@ image:
 
 users:
     jcubic:
-        url: "https://jcubic.pl/jakub-jankiewicz/"
+        url: "https://jcubic.pl/me/"
         name: "Jakub T. Jankiewicz"
         job: "Software Engineer - Front-End Developer"
         twitter: "jcubic"
+        ld:
+          "@type": "Person"
+          url: "https://jcubic.pl/me/"
+          name: "Jakub T. Jankiewicz"
+          givenName: "Jakub"
+          familyName: "Jankiewicz"
+          additionalName: "T."
+          alternateName: "jcubic"
+          image: "https://live.staticflickr.com/65535/50132910231_73d867794f_k_d.jpg"
+          gender: "https://schema.org/Male"
+          jobTitle: "Software Engineer - Front-End Developer"
+          sameAs:
+            - "https://twitter.com/jcubic"
+            - "https://www.facebook.com/jcubic/"
+            - "https://www.instagram.com/jcubic/"
+            - "https://www.flickr.com/photos/jcubic"
+            - "https://www.reddit.com/user/jcubic"
+            - "https://github.com/jcubic"
+            - "https://dribbble.com/jcubic"
+            - "https://stackoverflow.com/users/387194/jcubic"
+          knowsAbout:
+            - "Front-End"
+            - "JavaScript"
+            - "NodeJS"
+            - "Python"
+            - "R"
+            - "PHP"
+            - "TypeScript"
+            - "Bash"
+            - "SVG"
+            - "CSS"
+            - "Shiny"
+            - "Jekyll"
+            - "GIT"
+            - "GNU Emacs"
+            - "GNU/Linux"
+            - "Inkscape"
+            - "SQL"
+            - "SEO"
+            - "Graphic Design"
+            - "Security"
+            - "lisp"
+            - "scheme"
+            - "programming"
+            - "software development"
+            - "Web Development"
+            - "Photography"
+          knowsLanguage:
+            - "en-US"
+            - "en-GB"
+            - "pl-PL"
+          worksFor:
+            "@type": "Organization"
+            legalName: "ASTEK Polska sp. z o.o."
+            slogan: "Tworzymy zepół Expertów"
+            url: "https://astek.pl/"
     magda:
         url: "http://www.frontend-con.io/"
         name: "Magda Kulczycka"
+        ld:
+          "@type": "Person"
+          name: "Magda Kulczycka"
 
 links:
   -
