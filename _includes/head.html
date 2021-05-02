@@ -1,6 +1,3 @@
-<!DOCTYPE html>
-<head lang="pl">
-    <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>{% if page.title %}{{ page.title }}{% if page.title.length < 50 %} | {{ site.title }}{% endif %}{% else %}{{ site.title }} | Blog głównie o Front-Endzie{% endif %}</title>
     <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}"/>
@@ -130,4 +127,16 @@
     </script>
     {% endif %}
     <meta name="generator" content="Jekyll {{ jekyll.version }}"/>
-</head>
+    <style>
+@font-face {
+    font-family: 'bebas';
+    src: url('/css/fonts/bebasneue-webfont.eot');
+    src: url('/css/fonts/bebasneue-webfont.eot?#iefix') format('embedded-opentype'),
+    url('/css/fonts/bebasneue-webfont.woff') format('woff'),
+    url('/css/fonts/bebasneue-webfont.ttf') format('truetype'),
+    url('/css/fonts/bebasneue-webfont.svg#bebas_neueregular') format('svg');
+    font-display: swap;
+    font-weight: normal;
+    font-style: normal;
+}
+</style>

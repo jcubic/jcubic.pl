@@ -11,6 +11,7 @@ Publikowane w [ITNext](https://itnext.io/).
 * [How to create interactive terminal like website?](https://itnext.io/how-to-create-interactive-terminal-like-website-888bb0972288?)
 * [Controlling Paint Worklet with JSON in CSS](https://itnext.io/controlling-paint-worklet-with-json-in-css-298a7b10e41c)
 * [Interactive R debugger (REPL) for shiny apps](https://itnext.io/interactive-r-debugger-repl-for-shiny-apps-87c769be4859)
+* [Simple way to create programming language that compile to javascript](https://hackernoon.com/creating-your-own-javascript-based-programming-language-has-never-been-easier-wju33by)
 
 Na moim starym blogu na wordpress.com (też po angielsku), też jest kilka artykułów.
 
