@@ -456,8 +456,9 @@ lint:
 
 Plik `.$(VERSION)` jest potrzebny. W przeciwnym razie, przy zmianie wersji, nie zbuduje się projekt.
 
-Pliki `README.md` oraz `package.json` powinny mięć wpisane ciągi znaków `{{VER}}`, w każdym miejscu,
-gdzie powinna pojawić się wersja. Natomiast plik `src/nazwa.js`, może mieć dodatkowo `{{DATE}}`.
+Pliki `README.md` oraz `package.json` powinny mięć wpisane ciągi znaków `{% raw %}{{VER}}{% endraw %}`,
+w każdym miejscu, gdzie powinna pojawić się wersja. Natomiast plik `src/nazwa.js`, może mieć dodatkowo
+`{% raw %}{{DATE}}{% endraw %}`.
 
 Aby zbudować projekt wystarczy wywołać:
 
