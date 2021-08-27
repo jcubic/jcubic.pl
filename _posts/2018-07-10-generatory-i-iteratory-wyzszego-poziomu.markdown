@@ -206,7 +206,7 @@ function concat_first(acc, title) {
 
 Aby można było skorzystać z iteratora dwa razy, zapisano nasze transformacje wewnątrz funkcji `terminals`.
 
-Na koniec [demko do części asynchronicznej](http://jsbin.com/jemexagezo/edit?js,console),
+Na koniec [demko do części asynchronicznej](https://jsbin.com/larusalini/edit?js,console),
 tym razem na jsBin ponieważ parser JavaScript, który jest na CodePen, nie lubi
 asynchronicznych generatorów :(
 
