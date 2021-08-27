@@ -32,8 +32,10 @@ RewriteRule (.*) /$1?fbclid= [R=302,L]
 
 <FilesMatch "^.*(?<!proxy\.php)$">
 Header set Access-Control-Allow-Origin "*"
-Header set Access-Control-Allow-Methods: "GET"
+Header add Access-Control-Allow-Methods "GET, POST, OPTIONS"
+Header add Access-Control-Allow-Headers "Content-Type"
 </FilesMatch>
+
 <FilesMatch "^proxy\.php$">
 Header unset Access-Control-Allow-Origin
 </FilesMatch>
