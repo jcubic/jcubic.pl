@@ -21,7 +21,7 @@ layout: default
         <h1 itemprop="title">{{ page.title }}</h1>
         {% if page.image %}
         <figure>
-            <img src="{{ page.image.url | prepend: site.baseurl | prepend: site.url }}" alt="{{ page.image.alt }}"/>
+            <img src="{{ page.image.url | prepend: site.baseurl | prepend: site.url }}" alt="{{ page.image.alt }}"{% if page.image.width and page.image.height %} width="{{ page.image.width }}" height="{{ page.image.height }}"{% endif %}/>
             {% if page.image.attribution %}
             <figcaption class="attribution">
                 {{ page.image.attribution | markdownify | remove: '<p>' | remove: '</p>' }}
