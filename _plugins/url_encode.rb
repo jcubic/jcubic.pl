@@ -1,11 +1,11 @@
 require 'liquid'
-require 'uri'
+require 'erb'
 
 # Percent encoding for URI conforming to RFC 3986.
 # Ref: http://tools.ietf.org/html/rfc3986#page-12
 module URLEncoding
   def url_encode(url)
-    return URI.escape(url, Regexp.new("[^#{URI::PATTERN::UNRESERVED}]"))
+    return ERB::Util.url_encode(url)
   end
 end
 
