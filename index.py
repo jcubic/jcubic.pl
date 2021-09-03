@@ -57,7 +57,7 @@ if __name__ == '__main__':
           f.close()
           if data is not None:
             c.execute('INSERT INTO page VALUES(?, ?, ?)', (data['title'], data['url'], data['text']))
-            print "indexed %s" % data['url']
+            print("indexed %s" % data['url'])
             sys.stdout.flush()
     conn.commit()
     conn.close()

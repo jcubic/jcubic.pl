@@ -29,7 +29,7 @@ users:
     jcubic:
         url: "https://jcubic.pl/me/"
         name: "Jakub T. Jankiewicz"
-        job: "Software Engineer - Front-End Developer"
+        job: "Senior Front-End Developer"
         twitter: "jcubic"
         ld:
           "@type": "Person"
@@ -41,7 +41,7 @@ users:
           alternateName: "jcubic"
           image: "https://live.staticflickr.com/65535/50132910231_73d867794f_k_d.jpg"
           gender: "https://schema.org/Male"
-          jobTitle: "Software Engineer - Front-End Developer"
+          jobTitle: "Senior Front-End Developer"
           sameAs:
             - "https://twitter.com/jcubic"
             - "https://www.facebook.com/jcubic/"
@@ -87,6 +87,15 @@ users:
             legalName: "ASTEK Polska sp. z o.o."
             slogan: "Tworzymy zepół Expertów"
             url: "https://astek.pl/"
+    mateuszmazurek:
+        name: "Mateusz Mazurek"
+        url: "https://mateuszmazurek.pl/"
+        ld:
+          "@type": "Person"
+          url: "https://mateuszmazurek.pl/"
+          name: "Mateusz Mazurek"
+          givenName: "Mateusz"
+          familyName: "Mazurek"
     magda:
         url: "http://www.frontend-con.io/"
         name: "Magda Kulczycka"
