@@ -75,6 +75,8 @@ działają. Przykładem mogą być programy takie jak Skype czy WhatsApp.
 Najprostszym przykładem własnego serwera, jest echo, czyli wszystko co jest wysyłane do tego serwera,
 będzie wysyłane z powrotem.
 
+Więcej w artykule: [Co to jest Hosting i Serwer?](https://jakwybrachosting.pl/co-to-jest-hosting/).
+
 ## 5. Klient
 
 Jest to aplikacja, która znajduje się po drugiej stronie serwera. Serwer nasłuchuje
@@ -97,12 +99,13 @@ internetowe. Więcej mają już tylko usługi VPS, ale to tylko dla zaawansowany
 internetowych, będę pisał w jednym z następnym artykułów.
 
 Funkcje jakie ma [Atthost](https://ref.atthost.pl/?id=10912) to SSH, darmowy SSL, SSD czyli szybie
-dyski bez ruchomych części, FTP, prosto konfigurowalne aplikacje w Node.js, Ruby on Rails, Python - Django czy Flask,
-(wymaga to więcej pracy, ale jak chcesz, to możesz nawet napisać aplikacje w C++, masz kompilator na
-serwerze, więc możesz sobie nawet zainstalować i używać języka LIPS np. przez aplikacje Guile,
-jeszcze nie próbowałem. Taka aplikacja to prawdziwy serwer www, a nie tylko skrypt CGI) możesz mieć
-też u nich swoją domenę. Masz 14 Dni na testy. Jak kupisz hosting używając powyższego linka, to
-dostane jakieś grosze, dzięki którym będę miał fundusze na utrzymanie tej strony.
+dyski bez ruchomych części, FTP, prosto konfigurowalne aplikacje w Node.js, Ruby on Rails, Python -
+Django czy Flask, (wymaga to więcej pracy, ale jak chcesz, to możesz nawet napisać aplikacje w C++,
+masz kompilator na serwerze, więc możesz sobie nawet zainstalować i używać języka LISP np. przez za
+pomocą interpretera Guile, jeszcze nie próbowałem. Taka aplikacja to prawdziwy serwer www, a nie
+tylko skrypt CGI) możesz mieć też u nich swoją domenę. Masz 14 Dni na testy. Jak kupisz hosting
+używając powyższego linka, to dostane jakieś grosze, dzięki którym będę miał fundusze na utrzymanie
+tej strony.
 
 Oprócz zwykłych hostingów istnieją także usługi nazywane zbiorczo
 [Chmurą](https://pl.wikipedia.org/wiki/Chmura_obliczeniowa) (chodzi głównie o PaaS), służą one
