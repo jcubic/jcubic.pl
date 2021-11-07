@@ -51,7 +51,7 @@ Dodatkowo S-Wyrażenia mogą mieć dodatkowe typy danych, dokładnie tak jak JSO
 Kod lispa składa się z S-Wyrażeń, ale to nie jest wszystko do czego mogą służyć. Nadają się doskonale
 jako format wymiany danych.
 
-S-Wyrażenia ją np. używane jako
+S-Wyrażenia są np. używane jako
 [zapis WASM, który można przeczytać](https://developer.mozilla.org/en-US/docs/WebAssembly/Understanding_the_text_format).
 Prawdopodobnie ze wzlędu na prostotę parsowania, oraz na to, że nie trzeba było wymyślać swojego
 własnego formatu.
