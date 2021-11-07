@@ -59,8 +59,14 @@ AddType application/vnd.google-earth.kmz .kmz
 RewriteCond %{HTTP_HOST}   ^www\.(.*) [NC]
 RewriteRule ^(.*)$ http://%1/$1 [R=301,L]
 
-RewriteRule ^/?([^/]+_tutorial)\.html$ /jakub-jankiewicz/$1.php [R=301,L]
-RewriteRule ^/?([^/]+_tutorial)\.php$ /jakub-jankiewicz/$1.php [R=301,L]
+RewriteRule ^/?([^/]+_tutorial)\.html$ https://jakub.jankiewicz.org/jakub-jankiewicz/$1.php [R=301,L]
+RewriteRule ^/?([^/]+_tutorial)\.php$ https://jakub.jankiewicz.org/jakub-jankiewicz/$1.php [R=301,L]
+
+RewriteRule ^/jakub-jankiewicz/?([^/]+_tutorial)\.html$ https://jakub.jankiewicz.org/jakub-jankiewicz/$1.php [R=301,L]
+RewriteRule ^/jakub-jankiewicz/?([^/]+_tutorial)\.php$ https://jakub.jankiewicz.org/jakub-jankiewicz/$1.php [R=301,L]
+RewriteRule ^/?poezja.php https://jakub.jankiewicz.org/poezja.php [R=301,L]
+RewriteRule ^/jakub-jankiewicz/?poezja.php https://jakub.jankiewicz.org/poezja.php [R=301,L]
+RewriteRule /?me/?$ https://jakub.jankiewicz.org [R=301,L]
 
 RewriteRule ^/?map.xml$ /sitemap.xml [R=301,L]
 
@@ -82,13 +88,8 @@ RewriteRule ^2018/06/asynchronicznosc-funkcja-async-jako-generator.html /2018/06
 RewriteRule ^2018/10/wyszukiwarka-plikow-statycznych-php-sqlite.html /2018/10/wyszukiwarka-plikow-statycznych-html-php-sqlite.html [R=301,L]
 RewriteRule ^2019/02/obserwujemy-wszystkow-przegladarace.html /2019/02/obserwujemy-wszystko-w-przegladarce.html [R=301,L]
 
-RewriteRule ^jakub-jankiewicz/cv.pdf /jakub-jankiewicz/jakub-jankiewicz-cv.pdf [R=301,L]
+RewriteRule ^jakub-jankiewicz/cv.pdf https://jakub.jankiewicz.org/jakub-jankiewicz-cv.pdf [R=301,L]
 
-
-
-
-
-RewriteRule ^/?poezja.php /jakub-jankiewicz/poezja.php [R=301,L]
 
 RewriteRule angular.piechart https://codepen.io/jcubic/pen/xRMGZz [R=301,L]
 
@@ -108,8 +109,6 @@ RewriteCond %{query_string} .*controller=.* [OR]
 RewriteCond %{query_string} .*proc\/self\/environ.* [OR]
 RewriteCond %{query_string} \.\.\/\.\.
 RewriteRule .* - [F]
-
-RewriteRule /?me/?$ /jakub-jankiewicz [R=301,L]
 
 RewriteCond %{SCRIPT_FILENAME} !-f
 RewriteCond %{SCRIPT_FILENAME} !-d
