@@ -13,7 +13,7 @@ RewriteEngine on
 RewriteCond %{SERVER_PORT} ^80$
 RewriteCond %{HTTP_HOST} !localhost
 RewriteCond %{HTTP_HOST} ^jcubic.pl$
-RewriteRule ^(.*)$ https://%{SERVER_NAME}%{REQUEST_URI} [L,R]
+RewriteRule ^(.*)$ https://%{SERVER_NAME}%{REQUEST_URI} [L,R=301]
 
 RewriteCond %{HTTP_HOST} ^www.jcubic.pl [NC]
 RewriteRule ^(.*)$ http://jcubic.pl/$1 [L,R=301]
@@ -67,6 +67,7 @@ RewriteRule ^/?jakub-jankiewicz/([^/]+_tutorial)\.php$ https://jakub.jankiewicz.
 RewriteRule ^/?poezja.php https://jakub.jankiewicz.org/poezja.php [R=301,L]
 RewriteRule ^/?jakub-jankiewicz/poezja.php https://jakub.jankiewicz.org/poezja.php [R=301,L]
 RewriteRule /?me/?$ https://jakub.jankiewicz.org [R=301,L]
+RewriteRule /?jakub-jankiewicz/(.*)$ https://jakub.jankiewicz.org/$1 [R=301,L]
 
 RewriteRule ^/?map.xml$ /sitemap.xml [R=301,L]
 

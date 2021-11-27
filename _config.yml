@@ -33,7 +33,7 @@ users:
         twitter: "jcubic"
         ld:
           "@type": "Person"
-          url: "https://jcubic.pl/me/"
+          url: "https://jakub.jankiewicz.org"
           name: "Jakub T. Jankiewicz"
           givenName: "Jakub"
           familyName: "Jankiewicz"
