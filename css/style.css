@@ -711,5 +711,7 @@ ul.tags:before {
     }
 }
 */
-
-
+#__lpform_hashover-main-password,
+#__lpform_hashover-main-name {
+    display: none;
+}

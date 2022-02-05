@@ -30,6 +30,7 @@ users:
         url: "https://jakub.jankiewicz.org"
         name: "Jakub T. Jankiewicz"
         job: "Senior Front-End Developer"
+        alternative: "jcubic"
         twitter: "jcubic"
         ld:
           "@type": "Person"
@@ -99,6 +100,11 @@ users:
     magda:
         url: "http://www.frontend-con.io/"
         name: "Magda Kulczycka"
+        ld:
+          "@type": "Person"
+          name: "Magda Kulczycka"
+    inga:
+        name: "Inga Durew"
         ld:
           "@type": "Person"
           name: "Magda Kulczycka"

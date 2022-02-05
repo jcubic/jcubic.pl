@@ -11,8 +11,14 @@ layout: default
             by
             <span itemscope itemtype="http://schema.org/Person">
                 <meta itemprop="name" content="{{ author.name }}"/>
-                <meta itemprop="alternateName" content="jcubic"/>
-                <a href="{{ author.url }}" itemprop="url">{{ author.name }}</a>
+                {% if author.alternative %}
+                <meta itemprop="alternateName" content="{{ author.alternative }}"/>
+                {% endif %}
+                {% if author.url %}
+                <a href="{{ author.url }}">{{ author.name }}</a>
+                {% else %}
+                <span>{{ author.name }}</span>
+                {% endif %}
                 {% if author.job %}
                 <meta itemprop="jobTitle" content="{{ author.job }}"/>
                 {% endif %}

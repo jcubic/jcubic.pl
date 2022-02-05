@@ -29,7 +29,11 @@ sitemap:
                         {{ post.date | date: "%Y-%m-%d" }}
                     </time>
                     by
+                    {% if author.url %}
                     <a href="{{ author.url }}">{{ author.name }}</a>
+                    {% else %}
+                    <span>{{ author.name }}</span>
+                    {% endif %}
                 </h3>
             </header>
             <div class="excerpt">
