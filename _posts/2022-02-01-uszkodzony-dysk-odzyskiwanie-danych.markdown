@@ -22,6 +22,8 @@ przywrócić swoje pliki, a także jak możesz skutecznie zapobiegać takim
 sytuacjom.** Przyjrzymy się również najczęstszym rodzajom usterek
 dysków. Zapraszamy do lektury!
 
+<!-- more -->
+
 ## Dysk HDD a SSD -- czym się różnią od siebie?
 
 Pewne rodzaje usterek dysków związane są bezpośrednio z ich budową.
