@@ -51,7 +51,7 @@ tą samą stronę. Warto się zabezpieczyć. Moja strona ma url: `https://www.ce
 Zapiszmy ją na dysk jako `page.html`.
 
 Aby wyciągnąć informacje o sklepie i cenie oraz formę dostawy, najlepiej jest użyć inspektora w
-narzędziu dev tools. Poniewarz pokazuje nam strukturę html, ale zawsze trzeba potwierdzić czy to
+narzędziu dev tools. Ponieważ pokazuje nam strukturę html, ale zawsze trzeba potwierdzić czy to
 samo znajduje się w kodzie html (strona może być dynamiczna i zmieniać strukturę dokumentu).
 
 Na stronie Ceneo (przynajmniej w moim przypadku) są dwie tabele:

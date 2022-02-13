@@ -185,7 +185,7 @@ delete x
 console.log(x);
 {% endhighlight %}
 
-Wyświetli `10` poniewarz operator `delete` działa tylko dla pól obiektów.
+Wyświetli `10` ponieważ operator `delete` działa tylko dla pól obiektów.
 
 ## 8. Co to znaczy że funkcje są typem pierwszo klasowym?
 
