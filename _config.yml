@@ -114,6 +114,9 @@ links:
     url: "https://pl.jooble.org/praca-javascript"
     text: "Oferty pracy w JavaScript"
     target: "_blank"
+  -
+    url: "https://jcubic.cupsell.pl/"
+    text: "Sklep"
 
 related:
   -

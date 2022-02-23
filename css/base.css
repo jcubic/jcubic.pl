@@ -165,7 +165,10 @@ section.search h1 {
 .index, .tag, .search {
     margin: 60px 0 2em 0;
 }
-.tag h1 {
+iframe {
+    padding-left: 20px;
+}
+.tag h1, .post h1 {
     font-size: 2em;
     font-family: 'Muli', sans-serif;
 }
