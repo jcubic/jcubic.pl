@@ -71,6 +71,8 @@ RewriteRule /?jakub-jankiewicz/(.*)$ https://jakub.jankiewicz.org/$1 [R=301,L]
 
 RewriteRule ^/?map.xml$ /sitemap.xml [R=301,L]
 
+RewriteRule ^/?(kopalinski.rb) https://jakub.jankiewicz.org/$1 [R=301,L]
+
 RewriteRule biwascheme/repl.html http://www.biwascheme.org/ [R=301,L]
 RewriteRule biwascheme/repl.php http://www.biwascheme.org/ [R=301,L]
 RewriteRule ^new/?$ /jakub-jankiewicz/ [R=301,L]

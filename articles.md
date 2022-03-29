@@ -17,7 +17,9 @@ Poniżej linki do moich artykułów (w języku angielskim), publikowanych w [ITN
 * [How I've created Photo in single div CSS](https://dev.to/jcubic/how-i-ve-created-photo-in-single-div-css-45bm)
 * [Favicon for Next.js and TypeScript](https://dev.to/jcubic/favicon-for-next-js-and-typescript-9gk)
 * [RPC in Next.js](https://dev.to/jcubic/rpc-in-next-js-5bd7)
+* [JavaScript Online Interpreter](https://dev.to/jcubic/javascript-online-interpreter-2dci)
 * [How to create Web Server in Browser](https://itnext.io/how-to-create-web-server-in-browser-ffaa371d2b53)
+* [CSRF Protection Problem and How to Fix it](https://www.freecodecamp.org/news/csrf-protection-problem-and-how-to-fix-it/)
 
 Poniżej artykuły w języku Polskim:
 * [Synchronizacja stanu aplikacji www między zakładkami](https://bulldogjob.pl/news/1804-synchronizacja-stanu-aplikacji-www-miedzy-zakladkami)

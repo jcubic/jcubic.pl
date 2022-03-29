@@ -59,7 +59,13 @@ test -x /usr/bin/nodejs || sudo ln -s /usr/bin/node /usr/bin/nodejs
 wszystko przez lexer do JavaScript-u (to taki Frankenstein).
 
 
-Aby zbudować stronę po zainstalowania wszystkich zależności wykonaj:
+Aby zbudować stronę, zainstaluj zależności:
+
+```
+sudo bundle install
+```
+
+potem wykonaj:
 
 ```
 make
@@ -108,7 +114,7 @@ Aby zbudować wersje produkcyjną strony z adresem z `_config.yml` wykonaj:
 
 ## Licencja
 
-Copyright (C) 2014-2019 [Jakub Jankiewicz](https://jcubic.pl/jakub-jankiewicz)
+Copyright (C) 2014-2022 [Jakub Jankiewicz](https://jcubic.pl/me)
 
 Wszystko na licencji [CC-BY-SA](https://creativecommons.org/licenses/by-sa/4.0/),
 chyba że napisano inaczej
