@@ -4,7 +4,7 @@
   {% endif %}
   <script async defer src="{{ '/script.js' | prepend: site.baseurl | prepend: site.url }}?{{ 'script.js' | nocache }}"></script>
   <div id="fb-root"></div>
-  <script type="text/javascript">
+  <script type="text/javascript" defer>
    /* code based on original FB snippet that's why it looks weird */
    (function (load_script) {
      function init_aside() {
@@ -38,7 +38,7 @@
   </script>
   {% if jekyll.environment == "production" %}
   <!-- Start Open Web Analytics Tracker -->
-  <script type="text/javascript">
+  <script type="text/javascript" defer>
   //<![CDATA[
   var owa_baseUrl = 'http://stats.jcubic.pl/';
   var owa_cmds = owa_cmds || [];

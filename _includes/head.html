@@ -29,8 +29,9 @@
           href="{{ site.baseurl | prepend: site.url }}/opensearchdescription.xml"/>
     <link rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/"/>
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}"/>
+    <link rel="preload"  href="{{ "/img/background.jpg" | prepend: site.baseurl | prepend: site.url }}" fetchpriority="high" as="image" />
     <link rel="stylesheet" href="{{ "/css/base.css" | prepend: site.baseurl | prepend: site.url }}?{{ "css/base.css" | nocache }}"/>
-    <link rel="preload" href="{{ "/css/style.css" | prepend: site.baseurl | prepend: site.url }}?{{ "css/style.css" | nocache }}" as="style"/>
+    <link rel="preload" href="{{ "/css/style.css" | prepend: site.baseurl | prepend: site.url }}?{{ "css/style.css" | nocache }}" fetchpriority="high" as="style"/>
     <link rel="stylesheet" data-href="{{ "/css/style.css" | prepend: site.baseurl | prepend: site.url }}?{{ "css/style.css" | nocache }}"/>
     <!--<link rel="stylesheet" href="{{ "/css/style.css" | prepend: site.baseurl | prepend: site.url }}"/>-->
     <link rel="alternate" type="application/rss+xml" title="Głównie JavaScript - RSS" href="{{ '/feed.xml' | prepend: site.baseurl | prepend: site.url }}"/>
