@@ -165,7 +165,7 @@ section.search h1 {
 .index, .tag, .search {
     margin: 60px 0 2em 0;
 }
-iframe {
+.content iframe {
     padding-left: 20px;
 }
 .tag h1, .post h1 {
@@ -252,6 +252,7 @@ header {
 }
 .meta img {
     width: 100%;
+    height: auto;
 }
 .meta .attribution {
     margin: 0;
