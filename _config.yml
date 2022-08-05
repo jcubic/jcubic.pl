@@ -10,15 +10,11 @@ source_url: "https://github.com/jcubic/jcubic.pl/blob/master/"
 logo:
   url: "/img/logo-glownie-javascript.png"
 
-exclude:
-    -
-        README.md
-
 include:
     -
         .htaccess
 
-exclude: [Gemfile, Gemfile.lock, Makefile, clean, date]
+exclude: [README.md, Gemfile, Gemfile.lock, Makefile, clean, date, vendor]
 
 image:
   url: "/img/background.jpg"
@@ -27,14 +23,14 @@ image:
 
 users:
     jcubic:
-        url: "https://jakub.jankiewicz.org"
+        url: "https://jakub.jankiewicz.org/pl/"
         name: "Jakub T. Jankiewicz"
         job: "Senior Front-End Developer"
         alternative: "jcubic"
         twitter: "jcubic"
         ld:
           "@type": "Person"
-          url: "https://jakub.jankiewicz.org"
+          url: "https://jakub.jankiewicz.org/pl/"
           name: "Jakub T. Jankiewicz"
           givenName: "Jakub"
           familyName: "Jankiewicz"
@@ -108,6 +104,11 @@ users:
         ld:
           "@type": "Person"
           name: "Magda Kulczycka"
+    magda_s:
+        name: "Magda Sujka"
+        ld:
+          "@type": "Person"
+          name: "Magda Sujka"
 
 links:
   -
@@ -117,6 +118,9 @@ links:
   -
     url: "https://jcubic.cupsell.pl/"
     text: "Sklep"
+  -
+    url: "https://koduj.jcubic.pl/"
+    text: "Koduj Głównie JavaScript"
 
 related:
   -
