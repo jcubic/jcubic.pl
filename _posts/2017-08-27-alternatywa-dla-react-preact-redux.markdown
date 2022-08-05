@@ -10,7 +10,7 @@ sitemap:
   lastmod: 2017-09-08 20:35:16+0200
 ---
 
-[React](https://facebook.github.io/react/) lub [Preact](https://preactjs.com/) + [Redux](http://redux.js.org/) to bardzo silne połączenie, dające możliwość tworzenia skomplikowanych aplikacji typu [SPA](https://en.wikipedia.org/wiki/Single-page_application), ale istnieje alternatywa, która zajmuje tylko 1KB zminimalizowana z kompresją gzip.
+[React](https://facebook.github.io/react/) lub [Preact](https://preactjs.com/) + [Redux](https://redux.js.org/) to bardzo silne połączenie, dające możliwość tworzenia skomplikowanych aplikacji typu [SPA](https://en.wikipedia.org/wiki/Single-page_application), ale istnieje alternatywa, która zajmuje tylko 1KB zminimalizowana z kompresją gzip.
 
 <!-- more -->
 
@@ -111,4 +111,4 @@ i można go użyć tak:
 
 Nazwy komponentów muszą zaczynać się wielką literą. Jeśli chcemy skorzystać, wewnątrz komponentów, z akcji lub stanu musimy niestety przekazać je jawnie jako właściwości (ang. props).
 
-Na codepen możecie zobaczyć [przykładową aplikacje TODO](https://codepen.io/jcubic/pen/eRbjOB), napisaną przez mnie, która bazuje na [TodoMVC](http://todomvc.com/), ale nie wszystko jest zaimplementowane (brakuje przełączania widoków). Jest także oficjalna wersja TodoMVC, trochę bardziej skomplikowana, na [tej stronie](http://hyperapp-todomvc.glitch.me/). Zawiera ona wszystkie funkcje, włączając router.
+Na codepen możecie zobaczyć [przykładową aplikacje TODO](https://codepen.io/jcubic/pen/eRbjOB), napisaną przez mnie, która bazuje na [TodoMVC](https://todomvc.com/), ale nie wszystko jest zaimplementowane (brakuje przełączania widoków). Jest także oficjalna wersja TodoMVC, trochę bardziej skomplikowana, na [tej stronie](http://hyperapp-todomvc.glitch.me/). Zawiera ona wszystkie funkcje, włączając router.

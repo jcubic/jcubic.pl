@@ -21,7 +21,7 @@ aspekty tworzenia aplikacji internetowych, skupiając się na warstwie Front-End
 Jestem programistą, pracującym głównie w języku JavaScript. W pracy korzystam między innymi z
 [Angular.js](https://angularjs.org/), [jQuery](http://jquery.com/), czy
 [twitter bootstrap](http://getbootstrap.com/). Jestem autorem kilku projektów Open Source takich jak:
-[jQuery Terminal](http://terminal.jcubic.pl), [sysend.js](https://github.com/jcubic/sysend.js),
+[jQuery Terminal](https://terminal.jcubic.pl), [sysend.js](https://github.com/jcubic/sysend.js),
 [jQuery Splitter](https://github.com/jcubic/jquery.splitter), [jQuery Filebrowser](https://github.com/jcubic/jquery.filebrowser) czy nie związane z JavaScript-em
 [Clarity](http://gnome-look.org/content/show.php?content=135654).
 

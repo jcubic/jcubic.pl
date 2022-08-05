@@ -40,7 +40,7 @@ podana strona może zawierać pliki JavaScript i CSS np.:
 
 Jeśli dołączymy w naszym skrypcie taki import, załaduje on nam do strony bibliotekę jQuery. Importy są singletonami więc jeśli dołączymy kilka razy dany import będzie on pobrany tylko raz.
 
-Dzięki importom HTML mamy możliwość definiowania komponentów, które dołączają wszystkie potrzebne pliki np. poniżej import który dołączy moją bibliotekę [jQuery Terminal](http://terminal.jcubic.pl) i utworzy globalną funkcje `terminal`:
+Dzięki importom HTML mamy możliwość definiowania komponentów, które dołączają wszystkie potrzebne pliki np. poniżej import który dołączy moją bibliotekę [jQuery Terminal](https://terminal.jcubic.pl) i utworzy globalną funkcje `terminal`:
 
 
 {% highlight html %}
@@ -148,7 +148,7 @@ Dołączając taki import mamy możliwość skorzystania z nowego taga `czesc`
 
 ## Wsparcie przeglądarek
 
-Wszystko Fajnie, ale jakie jest wsparcie dla importów HTML w przeglądarkach? Niestety nie jest dobrze, z chwilą pisania tego artykułu tylko Chrome we wszystkich wersjach oraz Opera mają tą funkcjonalność. Wsparcie można zobaczyć na stronie [Can I Use](http://caniuse.com/#feat=imports). Miejmy nadzieje, że wkrótce się to zmieni i wszystkie przeglądarki zaimplementują importy HTML, do tego czasu można użyć [polyfill](https://github.com/polymer/HTMLImports).
+Wszystko Fajnie, ale jakie jest wsparcie dla importów HTML w przeglądarkach? Niestety nie jest dobrze, z chwilą pisania tego artykułu tylko Chrome we wszystkich wersjach oraz Opera mają tą funkcjonalność. Wsparcie można zobaczyć na stronie [Can I Use](https://caniuse.com/#feat=imports). Miejmy nadzieje, że wkrótce się to zmieni i wszystkie przeglądarki zaimplementują importy HTML, do tego czasu można użyć [polyfill](https://github.com/polymer/HTMLImports).
 
 *[HTML]: Hypertext Markup Languagexs
 *[CSS]: Cascading Style Sheets

@@ -11,7 +11,7 @@ image:
  alt: "Grafika z obcym z pięcioma oczami, flagą LISP oraz napisem Made with secret alien technology"
  width: 800
  height: 500
- attribution: Jakub T. Jankiewicz, licencja [CC-BY-SA](https://creativecommons.org/licenses/by-sa/4.0/). źródło na [GitHub-ie](https://github.com/jcubic/jcubic.pl/blob/master/img/lisp-alien.svg) bazuje na [Lisperati](http://www.lisperati.com/logo.html) licencja Public Domain.
+ attribution: Jakub T. Jankiewicz, licencja [CC-BY-SA](https://creativecommons.org/licenses/by-sa/4.0/). źródło na [GitHub-ie](https://github.com/jcubic/jcubic.pl/blob/master/img/lisp-alien.svg) bazuje na [Lisperati](https://www.lisperati.com/logo.html) licencja Public Domain.
 related:
   -
     name: "Parser S-Wyrażeń (języka LISP) w JavaScript"
