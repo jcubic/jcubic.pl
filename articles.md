@@ -20,6 +20,7 @@ Poniżej linki do moich artykułów (w języku angielskim), publikowanych w [ITN
 * [JavaScript Online Interpreter](https://dev.to/jcubic/javascript-online-interpreter-2dci)
 * [How to create Web Server in Browser](https://itnext.io/how-to-create-web-server-in-browser-ffaa371d2b53)
 * [CSRF Protection Problem and How to Fix it](https://www.freecodecamp.org/news/csrf-protection-problem-and-how-to-fix-it/)
+* [Architecture for Non-Trivial R Shiny Applications](https://dev.to/jcubic/architecture-for-non-trivial-r-shiny-applications-3816)
 
 Poniżej artykuły w języku Polskim:
 * [Synchronizacja stanu aplikacji www między zakładkami](https://bulldogjob.pl/news/1804-synchronizacja-stanu-aplikacji-www-miedzy-zakladkami)
