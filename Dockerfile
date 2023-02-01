@@ -1,10 +1,12 @@
-FROM alpine:3.10
+FROM ruby:2.6-alpine
 
 LABEL maintainer "Jakub T. Jankiewicz <jcubic@onet.pl>"
 
-RUN apk add --update --no-cache git ruby ruby-dev python \
-    cmake libxslt nodejs make build-base py-pip python-dev bash \
+RUN apk add --update --no-cache git ruby ruby-dev python2 \
+    cmake libxslt nodejs make build-base py-pip python2-dev bash \
     libffi libxml2 zlib zlib-dev sed
+
+ENV LIBRARY_PATH=/lib:/usr/lib
 
 RUN git clone https://github.com/htacg/tidy-html5 --depth 1 /tmp/tidy-html5 && \
     cd /tmp/tidy-html5/build/cmake && \
@@ -32,11 +34,16 @@ RUN bundle config --global silence_root_warning 1 && \
     pip install --user --no-warn-script-location \
     https://github.com/jcubic/pygments-lexer-babylon/zipball/master
 
+RUN gem pristine --all
+
 RUN pip install bs4 html5lib
 
-RUN apk --no-cache del cmake python-dev ruby-dev build-base
+RUN apk --no-cache del cmake ruby-dev build-base
 
-RUN rm -rf /root/.gem
+#RUN rm -rf /root/.gem
 
 WORKDIR /tmp/www/
+
 CMD jekyll serve --host 0.0.0.0 --config _config.yml,_config_docker.yml
+
+
