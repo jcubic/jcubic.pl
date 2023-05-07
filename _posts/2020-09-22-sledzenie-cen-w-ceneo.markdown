@@ -58,7 +58,7 @@ Na stronie Ceneo (przynajmniej w moim przypadku) są dwie tabele:
 
 "Najlepsze oferty wybrane przez Ceneo" oraz "Nikon D780 Body Czarny - Pozostałe oferty"
 
-Wystarczy kliknąć prawym klawiszem na ikonkę z nawą firmy i wybrać inspect (zbadaj) z menu kontekstowego.
+Wystarczy kliknąć prawym klawiszem na ikonkę z nazwą firmy i wybrać inspect (zbadaj) z menu kontekstowego.
 
 Zauważyć można że jest tam obrazek img, ale jego alt to nazwa sklepu więc będzie to pierwszy element
 do pobrania.
@@ -402,11 +402,11 @@ wysłany więc trzeba będzie zajrzeć do logów programu.  Kod logowania błęd
 
 ## Aktualizacja 2020-11-10
 
-Jeszcze jedna aktualizacja html ceneo nie została wykryta przez mój skrypt, ponieważ usunięto tabeli.
-Główna pętla to przejście po tabelach na stronie, dlatego ze względu na to funkcja `parse`,
-zwracał pustą tablicę i skrypt nic nie robił oprócz dodania aktualnej dany bez innych danych.
+Jeszcze jedna aktualizacja html ceneo, która nie została wykryta przez mój skrypt, ponieważ usunięto tabelę.
+Główna pętla to przejście po tabelach na stronie, dlatego ze względu na to, funkcja `parse`,
+zwracała pustą tablicę i skrypt nic nie robił oprócz dodania aktualnej dany bez innych danych.
 
 Aktualny kod można znaleźć na GitHubie w repozytorium [jcubic/price.py](https://github.com/jcubic/price.py).
 
-Kod został także usprawniony i teraz gdy parser nie znajdzie żadnych głównych elementów także zostanie
+Kod został także usprawniony, i teraz gdy parser nie znajdzie żadnych głównych elementów, także zostanie
 zwrócony błąd i wysłany email z komunikatem. Dodano także opcje wysyłania wiadomości email jako opcjonalną.
