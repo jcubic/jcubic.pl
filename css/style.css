@@ -575,27 +575,27 @@ ul.tags:before {
     margin: 0;
 }
 .btn {
-	  box-shadow:inset 0px 1px 0px 0px #54a3f7;
-	  background:linear-gradient(to bottom, #007dc1 5%, #0061a7 100%);
-	  background-color:#007dc1;
-	  border-radius:3px;
-	  border:1px solid #124d77;
-	  display:inline-block;
-	  cursor:pointer;
-	  color:#ffffff;
-	  font-family:Arial;
-	  font-size:13px;
-	  padding:6px 24px;
-	  text-decoration:none;
-	  text-shadow:0px 1px 0px #154682;
+    box-shadow:inset 0px 1px 0px 0px #54a3f7;
+    background:linear-gradient(to bottom, #007dc1 5%, #0061a7 100%);
+    background-color:#007dc1;
+    border-radius:3px;
+    border:1px solid #124d77;
+    display:inline-block;
+    cursor:pointer;
+    color:#ffffff;
+    font-family:Arial;
+    font-size:13px;
+    padding:6px 24px;
+    text-decoration:none;
+    text-shadow:0px 1px 0px #154682;
 }
 .btn:hover {
-	  background:linear-gradient(to bottom, #0061a7 5%, #007dc1 100%);
-	  background-color:#0061a7;
+    background:linear-gradient(to bottom, #0061a7 5%, #007dc1 100%);
+    background-color:#0061a7;
 }
 .btn:active {
-	  position:relative;
-	  top:1px;
+    position:relative;
+    top:1px;
 }
 #codepen button {
     float: right;
@@ -613,6 +613,7 @@ ul.tags:before {
 .book-ads-wrapper {
     display: flex;
     justify-content: center;
+    margin-top: 20px;
 }
 .book-buy {
     font-size: 12px;
