@@ -109,6 +109,11 @@ users:
         ld:
           "@type": "Person"
           name: "Magda Sujka"
+    adam_w:
+         name: "Adam Wyzujak"
+         ld:
+           "@type": "Person"
+           name: "Adam Wyzujak"
 
 links:
   -
