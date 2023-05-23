@@ -39,13 +39,13 @@ var url = URL.createObjectURL(file);
 `createObjectURL` jest to bardzo fajne API, ponieważ nasz blob jest w pamięci, a funkcja utworzy
 specjalny link do tego miejsca w pamięci (tak przynajmniej mi się wydaje że to działa)
 w każdym razie dostaniemy specjalny URL, który zawiera hash naszego bloba. Dzięki temu
-można pobrać bardzo duże pliki i trzeba się przejmować, że przekroczymy limit długości URL-a.
+można pobrać bardzo duże pliki i nie trzeba się przejmować, że przekroczymy limit długości URL-a.
 Jeśli nie mamy tej funkcji trzeba użyć starego API czyli data URL, jest to sposób zawarcia
 danych bezpośrednio w URL. Więcej na temat data URL, na stronie
 [MDN](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs).
 
 Teraz wystarczy pobrać ten plik na dysk. Do tego celu wystarczy utworzyć link, dodać go do
-strony, kliknąć o potem można go usunąć. Wykona się to tak szybko, że nawet nie będzie widać, że
+strony, kliknąć a potem można go usunąć. Wykona się to tak szybko, że nawet nie będzie widać, że
 coś zostało dodane do strony.
 
 {% highlight javascript %}
