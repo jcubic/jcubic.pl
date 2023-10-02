@@ -18,6 +18,8 @@ RewriteRule ^(.*)$ https://%{SERVER_NAME}%{REQUEST_URI} [L,R=301]
 RewriteCond %{HTTP_HOST} ^www.jcubic.pl [NC]
 RewriteRule ^(.*)$ https://jcubic.pl/$1 [L,R=301]
 
+RewriteRule ^articles/?$ /articles.html [L,R=301]
+
 RewriteCond %{HTTP_HOST} ^([^.]+)\.jcubic\.pl$
 RewriteRule ^/?(.*)/?$ /%1/$1 [END,QSA]
 
@@ -68,6 +70,8 @@ RewriteRule ^/?poezja.php https://jakub.jankiewicz.org/poezja.php [R=301,L]
 RewriteRule ^/?jakub-jankiewicz/poezja.php https://jakub.jankiewicz.org/poezja.php [R=301,L]
 RewriteRule /?me/?$ https://jakub.jankiewicz.org [R=301,L]
 RewriteRule /?jakub-jankiewicz/(.*)$ https://jakub.jankiewicz.org/$1 [R=301,L]
+
+RewriteRule /?tag/interent/ /tag/internet [R=301,L]
 
 RewriteRule ^/?map.xml$ /sitemap.xml [R=301,L]
 

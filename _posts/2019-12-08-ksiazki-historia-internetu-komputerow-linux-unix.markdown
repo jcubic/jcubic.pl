@@ -3,7 +3,7 @@ layout: post
 title:  "10 książek o tym jak powstał Internet i Komputery"
 date:   2019-12-08 22:39:14+0100
 categories:
-tags: książki interent linux open-source unix www hacking
+tags: książki internet linux open-source unix www hacking
 author: jcubic
 description: Historia komputerów, internetu oraz UNIXa/LINUXa na 50-tą rocznicę powstania internetu.
 image:

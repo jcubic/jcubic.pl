@@ -13,7 +13,7 @@
     <nav>
         <ul>
         {% for page in pages %}
-          <li><a href="{{ page.url | prepend: site.baseurl | prepend: site.url }}.html">{{ page.title }}</a></li>
+          <li><a href="{{ page.url | prepend: site.baseurl | prepend: site.url }}">{{ page.title }}</a></li>
         {% endfor %}
         {% for link in site.links %}
           <li>

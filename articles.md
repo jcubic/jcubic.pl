@@ -1,6 +1,7 @@
 ---
 layout: page
 title:  "Artykuły"
+permalink: /articles.html
 type: "main"
 description: Moje artykuły nie koniecznie związane z JavaScript.
 sitemap:
@@ -28,6 +29,8 @@ Poniżej artykuły w języku Polskim:
 Na moim starym blogu na wordpress.com (też po angielsku), też jest kilka artykułów.
 
 Adres bloga to [https://jcubic.wordpress.com/](https://jcubic.wordpress.com/).
+
+Mój nowy blog (głównie po angielsku) [https://jakub.jankiewicz.org/blog/](https://jakub.jankiewicz.org/blog/).
 
 Kiedyś napisałem też dwa tutoriale:
 
