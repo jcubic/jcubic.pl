@@ -9,6 +9,8 @@ description: Użycie Service Worker-a w celu serwowania plików statyczncych, tw
 image:
   url: "/img/web.jpg"
   alt: "Duży napis WEB złożony z innych słów"
+sitemap:
+  lastmod: 2023-06-13 20:18:40+0200
 ---
 
 Nie jest to implementacja serwera www całkowicie w JavaScript oraz przeglądarce, ale serwowanie
@@ -234,6 +236,33 @@ w katalogu, w którym został umieszczony plik Service Worker-a lub w jednym z p
 Jedno z ograniczeń Service Worker-a jest to, że można go odpalić tylko z prawdziwego pliku, nie można odpalać go
 z pliku, który sam jest zwracany przez innego Service Worker-a. Dlatego poprzez GIT Web Terminal, nie będzie można
 uruchomić aplikacji, która sama korzysta z Service Worker-a.
+
+## Biblioteka Open Source
+
+Mechanizm dodawania zapytań HTTP w samej przeglądarce został zamknięty w małej
+[bibliotece po nazwą Wayne](https://github.com/jcubic/wayne).
+
+Aby dodać obsługę systemu plików jak w powyższym przypadku można użyć takiego kodu:
+
+{% highlight javascript %}
+import { Wayne, FileSystem } from 'https://cdn.jsdelivr.net/npm/@jcubic/wayne';
+import FS from "https://cdn.skypack.dev/@isomorphic-git/lightning-fs";
+import mime from "https://cdn.skypack.dev/mime";
+import path from "https://cdn.skypack.dev/path-browserify";
+
+const { promises: fs } = new FS("__wayne__");
+
+const app = new Wayne();
+
+app.use(FileSystem({ path, fs, mime, prefix: '__fs__' }));
+{% endhighlight %}
+
+W tym przypadku zamiast BrowserFS, użyłem lżejszej biblioteki
+[LightningFS](https://github.com/isomorphic-git/lightning-fs). Powyższy kod używa modułów ES, jest to możliwe,
+gdy instalujemy Service Worker z opcją module. Możesz o tym przeczytać na tej stronie
+[web.dev](https://web.dev/es-modules-in-sw/). Analogicznie można używać zwykłego mechanizmu oraz `importScripts`,
+ale należy pamiętać, że ścieżki do bibliotek powinny używać modułów typu
+[UMD](/2017/07/uniwersalne-biblioteki-javascript.html).
 
 *[PR]: Pull Request
 *[PWA]: Progressive Web Apps
