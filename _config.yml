@@ -41,13 +41,23 @@ users:
           jobTitle: "Senior Front-End Developer"
           sameAs:
             - "https://twitter.com/jcubic"
-            - "https://www.facebook.com/jcubic/"
+            - "https://pinterest.com/jcubic/"
             - "https://www.instagram.com/jcubic/"
+            - "https://www.facebook.com/jcubic/"
+            - "https://www.linkedin.com/in/jakubjankiewicz/"
+            - "https://github.com/jcubic"
+            - "https://profiles.wordpress.org/jcubic/"
+            - "https://codepen.io/jcubic/"
+            - "https://stackoverflow.com/users/387194/jcubic"
+            - "https://www.deviantart.com/jcubic/"
+            - "https://www.behance.net/jcubic"
             - "https://www.flickr.com/photos/jcubic"
             - "https://www.reddit.com/user/jcubic"
-            - "https://github.com/jcubic"
             - "https://dribbble.com/jcubic"
-            - "https://stackoverflow.com/users/387194/jcubic"
+            - "https://www.freecodecamp.org/news/author/jcubic/"
+            - "https://bulldogjob.pl/readme/authors/jakub-t-jankiewicz"
+            - "https://dev.to/jcubic"
+            - "https://hackernoon.com/u/jcubic"
           knowsAbout:
             - "Front-End"
             - "JavaScript"
@@ -56,6 +66,11 @@ users:
             - "R"
             - "PHP"
             - "TypeScript"
+            - "React"
+            - "ReactNative"
+            - "Redux"
+            - "Prisma"
+            - "Eleventy"
             - "Bash"
             - "SVG"
             - "CSS"
@@ -66,6 +81,8 @@ users:
             - "GNU/Linux"
             - "Inkscape"
             - "SQL"
+            - "SQLite"
+            - "MySQL"
             - "SEO"
             - "Graphic Design"
             - "Security"
@@ -81,9 +98,9 @@ users:
             - "pl-PL"
           worksFor:
             "@type": "Organization"
-            legalName: "ASTEK Polska sp. z o.o."
-            slogan: "Tworzymy zepół Expertów"
-            url: "https://astek.pl/"
+            legalName: "Britenet sp. z o.o."
+            slogan: "Nam możesz powierzyć rozwój oprogramowania oraz outsourcing IT"
+            url: "https://britenet.eu/"
     mateuszmazurek:
         name: "Mateusz Mazurek"
         url: "https://mateuszmazurek.pl/"
@@ -109,6 +126,12 @@ users:
         ld:
           "@type": "Person"
           name: "Magda Sujka"
+    szymon_s:
+        name: "Szymon Spychała"
+        url: "https://carted.pl/"
+        ld:
+            "@type": "Person"
+            name: "Szymon Spychała"
     adam_w:
          name: "Adam Wyzujak"
          ld:
