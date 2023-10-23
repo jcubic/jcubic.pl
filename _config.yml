@@ -150,15 +150,6 @@ links:
     url: "https://koduj.jcubic.pl/"
     text: "Koduj Głównie JavaScript"
 
-related:
-  -
-    url: "http://www.algosmart.pl/"
-    text: "AlgoSmart. Blog o sprytnym podejściu do nauki ReactJS"
-  -
-    url: "https://fsgeek.pl/"
-    title: "Full Stack Geek"
-    text: "FSGeek. Blog pasjonata technologii webowych"
-
 defaults:
   -
     scope:
