@@ -6,8 +6,12 @@ layout: null
   {% for post in site.posts %}
     {% unless post.published == false %}
     <url>
+      {% if post.permalink %}
+      <loc>{{ post.permalink | prepend: site.baseurl | prepend: site.url }}</loc>
+      {% else %}
       <loc>{{ post.url | prepend: site.baseurl | prepend: site.url }}</loc>
-            {% if post.sitemap.lastmod %}
+      {% endif %}
+      {% if post.sitemap.lastmod %}
         {% if site.sitemap.lastmod > post.sitemap.lastmod %}
            <lastmod>{{ site.sitemap.lastmod | date_to_xmlschema }}</lastmod>
         {% else %}
