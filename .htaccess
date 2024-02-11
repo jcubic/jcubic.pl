@@ -32,6 +32,10 @@ RewriteRule ^(.well-known.*)$ /mail/$1 [L]
 RewriteCond %{QUERY_STRING} fbclid=.+
 RewriteRule (.*) /$1?fbclid= [R=302,L]
 
+RewriteCond %{QUERY_STRING} !^$
+RewriteCond %{SCRIPT_FILENAME} .html$
+RewriteRule ^ %{REQUEST_URI} [L,R=302,QSD]
+
 <FilesMatch "^.*(?<!proxy\.php)$">
 Header set Access-Control-Allow-Origin "*"
 Header add Access-Control-Allow-Methods "GET, POST, OPTIONS"
