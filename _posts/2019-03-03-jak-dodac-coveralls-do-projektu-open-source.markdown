@@ -3,7 +3,7 @@ layout: post
 title:  "Jak dodać usługę Coveralls do projektu Open Source?"
 date:   2019-03-03 11:49:37+0100
 categories:
-tags: javascript biblioteki open-source
+tags: javascript biblioteki open-source testy
 author: jcubic
 description: Jak dodać ciągłą integracje (Continuous Integration) i licznik pokrycia kodu testami, do projektu Open Source na GitHubie.
 image:

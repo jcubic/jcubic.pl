@@ -135,8 +135,14 @@ users:
     adam_w:
          name: "Adam Wyzujak"
          ld:
-           "@type": "Person"
-           name: "Adam Wyzujak"
+             "@type": "Person"
+             name: "Adam Wyzujak"
+    adam_b:
+         name: "Adam Blok"
+         url: "https://ping.pl/kontakt"
+         ld:
+             "@type": "Person"
+             name: "Adam Blok"
 
 links:
   -
