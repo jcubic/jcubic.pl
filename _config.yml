@@ -143,6 +143,8 @@ users:
          ld:
              "@type": "Person"
              name: "Adam Blok"
+    anon:
+         name: "Anonymous"
 
 links:
   -

@@ -5,7 +5,7 @@ date:   2024-02-22 14:04:53+0100
 categories:
 tags: testy e2e
 author: adam_b
-description: Jak w prosty sposób stworzyć stronę internetową która wygląda jak terminal (np. ten z systemy GNU/Linux)
+description: Czy usługa automatycznego monitoringu stron internetowych oferująca testowanie według przygotowanego scenariusza może być alternatywą dla testów E2E?
 image:
  url: "/img/checklist.jpg"
  alt: "Czerwony marker oraz zaznaczone checkboxy na kartce papieru"
