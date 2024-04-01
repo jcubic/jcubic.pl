@@ -16,6 +16,8 @@ image:
 
 Sieć LAN, czyli Local Area Network, to lokalna sieć komputerowa. Terminem tym określa się rodzaj połączenia, dzięki któremu możliwa jest współpraca komputer i urządzeń peryferyjnych (na przykład drukarek) na określonym terenie. Sieci LAN pozwalają na łączenie sprzętów w zasięgu nie przekraczającym kilometra. W ich przypadku niezwykle ważne jest nieustanne monitorowanie sieci, które pozwala wykryć ewentualne błędy i wdrożyć odpowiednie działania. Stosując monitoring sieci można wyeliminować błędy, a tym samym stworzyć sieć, która będzie działać niezawodnie.
 
+
+
 <!-- more -->
 
 ## Spis treści

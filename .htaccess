@@ -100,6 +100,7 @@ RewriteRule ^2018/06/asynchronicznosc-iteratory-i-generatory-asynchroniczne.html
 RewriteRule ^2018/06/asynchronicznosc-funkcja-async-jako-generator.html /2018/06/asynchronicznosc-javascript-funkcja-async-jako-generator.html [R=301,L]
 RewriteRule ^2018/10/wyszukiwarka-plikow-statycznych-php-sqlite.html /2018/10/wyszukiwarka-plikow-statycznych-html-php-sqlite.html [R=301,L]
 RewriteRule ^2019/02/obserwujemy-wszystkow-przegladarace.html /2019/02/obserwujemy-wszystko-w-przegladarce.html [R=301,L]
+RewriteRule ^2024/02/minitoring-sieci-lan.html /2024/02/monitoring-sieci-lan.html [R=301,L]
 
 RewriteRule ^jakub-jankiewicz/cv.pdf https://jakub.jankiewicz.org/jakub-jankiewicz-cv.pdf [R=301,L]
 
