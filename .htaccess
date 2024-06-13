@@ -113,6 +113,7 @@ RewriteRule 2017/10/metaprogramming-javascript.html /2017/10/metaprogramowanie-j
 RewriteRule 2014/08/jak-napisac-wlasna-obsluge-json-rpc.html /2014/08/jak-napisac-wlasna-obsluge-json-rpc-w-javascript-i-php.html [R=301,L]
 RewriteRule 2018/06/asynchronicznosc-for-await-of.html /2018/06/asynchronicznosc-iteratory-i-generatory-asynchroniczne.html [R=301,L]
 RewriteRule tag/jQuery/ /tag/jquery/ [R=301,L]
+RewriteRule 2024/02/minitoring-jako-test-e2e.html /2024/02/monitoring-jako-test-e2e.html [R=301,L]
 
 RewriteRule ^wp- source.php
 
