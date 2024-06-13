@@ -140,6 +140,8 @@ users:
              name: "Adam Blok"
     it-man:
          name: "IT Manager"
+    asnyk:
+         name: "Karol Asnyk"
     anon:
          name: "Anonymous"
 

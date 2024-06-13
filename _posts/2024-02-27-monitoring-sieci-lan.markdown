@@ -3,7 +3,7 @@ layout: post
 title:  "Profesjonalny monitoring sieci LAN"
 date:   2024-02-27 14:00:49+0100
 categories:
-tags: minitoring sieci lan
+tags: monitoring sieci lan
 author: it-man
 description: Jakie korzyści przynosi monitoring sieci LAN?
 image:
