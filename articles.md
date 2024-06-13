@@ -8,7 +8,7 @@ sitemap:
   - lastmod: 2021-11-27 15:26:02+0100
 ---
 
-Poniżej linki do moich artykułów (w języku angielskim), publikowanych w [ITNext](https://itnext.io/), [HackerNoon](https://hackernoon.com) oraz [DEV Community](https://dev.to/).
+Poniżej linki do moich artykułów (w języku angielskim), publikowanych w [ITNext](https://itnext.io/@jcubic), [HackerNoon](https://hackernoon.com/u/jcubic), [DEV Community](https://dev.to/jcubic) oraz [FreeCodeCamp](https://www.freecodecamp.org/news/author/jcubic/).
 
 * [How to create interactive terminal like website?](https://itnext.io/how-to-create-interactive-terminal-like-website-888bb0972288?)
 * [Controlling Paint Worklet with JSON in CSS](https://itnext.io/controlling-paint-worklet-with-json-in-css-298a7b10e41c)
@@ -22,6 +22,8 @@ Poniżej linki do moich artykułów (w języku angielskim), publikowanych w [ITN
 * [How to create Web Server in Browser](https://itnext.io/how-to-create-web-server-in-browser-ffaa371d2b53)
 * [CSRF Protection Problem and How to Fix it](https://www.freecodecamp.org/news/csrf-protection-problem-and-how-to-fix-it/)
 * [Architecture for Non-Trivial R Shiny Applications](https://dev.to/jcubic/architecture-for-non-trivial-r-shiny-applications-3816)
+* [How to Parse S-expressions in JavaScript](https://www.freecodecamp.org/news/s-expressions-in-javascript/)
+* [How to Create an Interactive Terminal-Based Portfolio Website](https://www.freecodecamp.org/news/how-to-create-interactive-terminal-based-portfolio/)
 
 Poniżej artykuły w języku Polskim:
 * [Synchronizacja stanu aplikacji www między zakładkami](https://bulldogjob.pl/news/1804-synchronizacja-stanu-aplikacji-www-miedzy-zakladkami)
