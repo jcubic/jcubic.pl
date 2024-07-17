@@ -147,10 +147,6 @@ users:
 
 links:
   -
-    url: "https://pl.jooble.org/praca-javascript"
-    text: "Oferty pracy w JavaScript"
-    target: "_blank"
-  -
     url: "https://jcubic.cupsell.pl/"
     text: "Sklep"
   -
@@ -165,13 +161,8 @@ defaults:
     values:
       is_post: true # automatically set is_post=true for all posts
 
-#links:
-#  -
-#    name: "Mentoring"
-#    url: "https://kodmentor.pl/"
-
 sitemap:
-  lastmod: 2019-10-30 16:38:53+0000
+  lastmod: 2024-07-17 19:31:46+0200
 
 paginate: 10
 paginate_path: "/page:num"
