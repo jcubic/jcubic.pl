@@ -57,7 +57,7 @@ Przy wyborze dostawcy internetu światłowodowego warto zwrócić uwagę na kilk
 4.  **Dostępność** - Sprawdź, czy usługi dostawcy są dostępne w Twojej lokalizacji.
 
 ![dostawcy internetu](/img/fiber-2.jpg)<br/>
-<small>Źródło: pexels.com; Licencja: <a href="pexels.com/photo-license/">https://www.pexels.com/photo-license/</a></small>
+<small>Źródło: pexels.com; Licencja: <a href="https://www.pexels.com/photo-license/">pexels.com/photo-license/</a></small>
 
 ## Przyszłość Internetu Światłowodowego
 
@@ -73,19 +73,19 @@ Technologia światłowodowa stale się rozwija i ma ogromny potencjał na przysz
 Światłowody są zbudowane z niezwykle cienkich włókien szklanych lub plastikowych, które są pokryte warstwą ochronną. Te włókna są zdolne do przewodzenia światła dzięki zjawisku całkowitego wewnętrznego odbicia. Impulsy świetlne przesyłane przez światłowód są przekształcane na dane cyfrowe przez specjalne urządzenia na obu końcach przewodu. Dzięki temu, że światłowody mogą przewodzić światło na duże odległości bez znaczących strat sygnału, są idealnym medium do przesyłania danych.
 
 ![światłowody](/img/fiber-4.jpg)<br/>
-<small>Źródło: pexels.com; Licencja: <a href="pexels.com/photo-license/">https://www.pexels.com/photo-license/</a></small>
+<small>Źródło: pexels.com; Licencja: <a href="https://www.pexels.com/photo-license/">pexels.com/photo-license/</a></small>
 
 ## Wpływ Internetu Światłowodowego na Biznes
 
 Firmy, które inwestują w szybki [internet światłowodowy](https://www.vectra.pl/oferta-internet-swiatlowodowy), zyskują znaczną przewagę konkurencyjną. Nielimitowany internet o wysokiej prędkości umożliwia szybkie przetwarzanie dużych ilości danych, co jest kluczowe w dzisiejszym świecie biznesu. Stabilny internet zapewnia również niezawodność, co jest niezbędne dla firm prowadzących działalność online. Firmy mogą korzystać z zaawansowanych aplikacji chmurowych, wideokonferencji oraz narzędzi do zarządzania projektami bez obaw o przerwy w połączeniu.
 
 [internet biznes](/img/fiber-3.jpg)<br/>
-<small>Źródło: pexels.com; Licencja: <a href="pexels.com/photo-license/">https://www.pexels.com/photo-license/</a></small>
+<small>Źródło: pexels.com; Licencja: <a href="https://www.pexels.com/photo-license/">pexels.com/photo-license/</a></small>
 
 ## Internet Światłowodowy w Domach
 
 Coraz więcej gospodarstw domowych decyduje się na instalację szybkiego internetu światłowodowego. Dzięki niemu, cała rodzina może korzystać z internetu bez ograniczeń. Nielimitowany internet pozwala na jednoczesne korzystanie z wielu urządzeń, streaming w wysokiej jakości, granie online oraz zdalną pracę i naukę.
-  
+
 ![internet w domu](/img/fiber-1.jpg)<br/>
 <small>Źródło: unsplash.com; Licencja: <a href="https://unsplash.com/license">unsplash.com/license</a></small>
 
