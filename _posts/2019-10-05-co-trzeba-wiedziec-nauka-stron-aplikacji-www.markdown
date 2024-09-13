@@ -94,12 +94,12 @@ Jest to usługa, która udostępnia miejsce na dysku na twoją stronę. Jest wie
 udostępniających różne funkcjonalności. Do tej pory kożystałem z firmy Atthost, ze względu na liczbę
 funkcji jakie udostępniała, niestety w 2024 firma została przejęta, prawdopodobnie przez Nazwa.pl i
 niestety już nie polecam tego hostingu, najbliższy jeśli chodzi o parametry, który pogę polecić to
-[MyDevil](http://www.mydevil.net/pp/5ND6NSWJKN)).  Ma praktycznie to samo co Atthost którego
+[MyDevil](httsp://www.mydevil.net/pp/5ND6NSWJKN)).  Ma praktycznie to samo co Atthost którego
 używałem do tej pory, czyli wszystko czego będziesz potrzebować, nawet gdy będziesz pisać
 zaawansowane aplikacje internetowe. Więcej mają już tylko usługi VPS, ale to tylko dla
 zaawansowanych.  O aplikacjach internetowych, będę pisał w jednym z następnym artykułów.
 
-Funkcje jakie ma [MyDevil](http://www.mydevil.net/pp/5ND6NSWJKN) to SSH, darmowy SSL, pełna kontrola
+Funkcje jakie ma [MyDevil](https://www.mydevil.net/pp/5ND6NSWJKN) to SSH, darmowy SSL, pełna kontrola
 DNS, SSD czyli szybie dyski bez ruchomych części, FTP, prosto konfigurowalne aplikacje w Node.js,
 Ruby on Rails, Python - np. Django, (wymaga to więcej pracy, ale jak chcesz, to możesz nawet napisać
 aplikacje w C++, masz kompilator na serwerze, więc możesz sobie nawet zainstalować i używać języka
@@ -122,12 +122,12 @@ innych rozwiązać. Może się zdarzyć, że dla twojej aplikacji, zwykły hosti
 ## 7. SSH oraz FTP
 
 Są to dwa protokoły, z których prawdopodobnie będziesz korzystać, gdy będziesz miał hosting
-www. [Atthost](https://ref.atthost.pl/?id=10912) udostępnia oba. SSH czasami nie jest dostępny w
+www. [MyDevil](httsp://www.mydevil.net/pp/5ND6NSWJKN) udostępnia oba. SSH czasami nie jest dostępny w
 usługach hostingowych, a dzięki niemu można się "przenieść" do systemu operacyjnego na serwerze
 (czyli GNU/Linuxa i wykonywać tam polecenia, co jest bardzo użyteczne). Na poprzednim hostingu tego
 nie miałem i napisałem specjalnie aplikację, która udostępnia wiersz poleceń o nazwie
 [Leash](https://leash.jcubic.pl/), jeśli masz już hosting, który nie ma SSH, możesz z niej skorzystać
-lub przejść do Atthost.
+lub przejść do MyDevil.
 
 Protokół SSH jest następcą innego protokołu o nazwie Telnet, który działał dokładnie tak samo,
 nie był jednak szyfrowany. Co ciekawe za pomocą programu telnet (dostępny także na Windowsie)
@@ -313,7 +313,7 @@ urządzeniami. Wystarczy więc, że jakaś osoba będzie nasłuchiwać na takim 
 tzw. atak MITM (ang. Man In The Middle). Dzięki takiemu atakowi, ktoś może np. odczytać twoje hasło
 lub zmienić dane, które trafiają na serwer. Dlatego banki i inne ważne strony korzystają z HTTPS,
 czyli szyfrowanego połączenia. Praktycznie każda strona, która ma system logowania powinna
-używać HTTPS. Co jest tak na prawdę bardzo proste i tanie (na Atthost masz za darmo certyfikat SSL
+używać HTTPS. Co jest tak na prawdę bardzo proste i tanie (na MyDevil masz za darmo certyfikat SSL
 dzięki usłudze [Let’s Encrypt](https://pl.wikipedia.org/wiki/Let%E2%80%99s_Encrypt)).
 
 Więcej o TLS na
