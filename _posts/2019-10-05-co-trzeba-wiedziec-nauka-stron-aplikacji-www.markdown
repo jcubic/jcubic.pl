@@ -91,21 +91,22 @@ Aplikacje składające się z serwera i klientów nazywane są aplikacjami typu 
 ## 6. Hosting
 
 Jest to usługa, która udostępnia miejsce na dysku na twoją stronę. Jest wiele takich firm,
-udostępniających różne funkcjonalności. Ja korzystam z firmy
-[Atthost](https://ref.atthost.pl/?id=10912), ze względu na liczbę funkcji jakie udostępnia.
-Masz wszystko i tylko płacisz odpowiednio mniej lub więcej za ilość miejsca jaką chcesz mieć.  Ma
-praktycznie wszystko czego będziesz potrzebować, nawet gdy będziesz pisać zaawansowane aplikacje
-internetowe. Więcej mają już tylko usługi VPS, ale to tylko dla zaawansowanych.  O aplikacjach
-internetowych, będę pisał w jednym z następnym artykułów.
+udostępniających różne funkcjonalności. Do tej pory kożystałem z firmy Atthost, ze względu na liczbę
+funkcji jakie udostępniała, niestety w 2024 firma została przejęta, prawdopodobnie przez Nazwa.pl i
+niestety już nie polecam tego hostingu, najbliższy jeśli chodzi o parametry, który pogę polecić to
+[MyDevil](http://www.mydevil.net/pp/5ND6NSWJKN)).  Ma praktycznie to samo co Atthost którego
+używałem do tej pory, czyli wszystko czego będziesz potrzebować, nawet gdy będziesz pisać
+zaawansowane aplikacje internetowe. Więcej mają już tylko usługi VPS, ale to tylko dla
+zaawansowanych.  O aplikacjach internetowych, będę pisał w jednym z następnym artykułów.
 
-Funkcje jakie ma [Atthost](https://ref.atthost.pl/?id=10912) to SSH, darmowy SSL, SSD czyli szybie
-dyski bez ruchomych części, FTP, prosto konfigurowalne aplikacje w Node.js, Ruby on Rails, Python -
-Django czy Flask, (wymaga to więcej pracy, ale jak chcesz, to możesz nawet napisać aplikacje w C++,
-masz kompilator na serwerze, więc możesz sobie nawet zainstalować i używać języka LISP np. przez za
-pomocą interpretera Guile, jeszcze nie próbowałem. Taka aplikacja to prawdziwy serwer www, a nie
-tylko skrypt CGI) możesz mieć też u nich swoją domenę. Masz 14 Dni na testy. Jak kupisz hosting
-używając powyższego linka, to dostane jakieś grosze, dzięki którym będę miał fundusze na utrzymanie
-tej strony.
+Funkcje jakie ma [MyDevil](http://www.mydevil.net/pp/5ND6NSWJKN) to SSH, darmowy SSL, pełna kontrola
+DNS, SSD czyli szybie dyski bez ruchomych części, FTP, prosto konfigurowalne aplikacje w Node.js,
+Ruby on Rails, Python - np. Django, (wymaga to więcej pracy, ale jak chcesz, to możesz nawet napisać
+aplikacje w C++, masz kompilator na serwerze, więc możesz sobie nawet zainstalować i używać języka
+LISP np. przez za pomocą interpretera Guile, jeszcze nie próbowałem. Taka aplikacja to prawdziwy
+serwer www, a nie tylko skrypt CGI) możesz mieć też u nich swoją domenę. Masz 14 Dni na testy. Jak
+kupisz hosting używając powyższego linka, to dostane jakieś grosze, dzięki którym będę miał fundusze
+na utrzymanie tej strony.
 
 Oprócz zwykłych hostingów istnieją także usługi nazywane zbiorczo
 [Chmurą](https://pl.wikipedia.org/wiki/Chmura_obliczeniowa) (chodzi głównie o PaaS), służą one
