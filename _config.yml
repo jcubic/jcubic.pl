@@ -142,6 +142,8 @@ users:
          name: "IT Manager"
     asnyk:
          name: "Karol Asnyk"
+    paczek:
+         name: "Andrzej Pączyński"
     anon:
          name: "Anonymous"
 
