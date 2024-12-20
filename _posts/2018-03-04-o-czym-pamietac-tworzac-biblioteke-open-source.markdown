@@ -361,7 +361,7 @@ tabulacji, które określają przynależność komend od reguł. `make` opiera s
 Jeśli masz jednak więcej niż jeden plik, których używasz jak moduły lepszym rozwiązaniem będzie np.
 [Rollup](https://rollupjs.org/guide/en).
 Jest też [Webpack](https://webpack.js.org/) ale raczej
-[stosuje się go do aplikacji SPA, a nie do bibliotek](http://u.jcubic.pl/n461y26).
+[stosuje się go do aplikacji SPA, a nie do bibliotek](https://u.jcubic.pl/n461y26).
 
 Jeśli chcesz użyć Rollup w procesie budowania projektu, powinieneś go zainstalować lokalnie bez opcji `-g`.
 
