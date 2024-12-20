@@ -46,9 +46,9 @@ W kontekście gier dla dzieci, nadmiar reklam może być jeszcze bardziej proble
 
 W Polsce istnieje wiele stron, które oferują szeroką gamę gier online dla dzieci. Te platformy są popularne nie tylko ze względu na prostą obsługę, ale także na szeroki wybór gier edukacyjnych i rozrywkowych. Oto kilka najczęściej odwiedzanych serwisów:
 
-1.  [**Grywacz.pl**](https://grywacz.pl/) – Strona oferuje wiele darmowych gier, zarówno dla dzieci, jak i starszych użytkowników. Gry są zróżnicowane tematycznie, od gier logicznych po zręcznościowe. Można tam znaleźć klasykę Flash emulowaną dzięki językowi programowania Rust w projekcie open source Ruffle, czyli takie gry jak Kingdom Rush, Bloons Tower Defense, Mario Bross ale i nowsze jak np. Psi Patrol
-2.  [**Gry.pl**](https://www.gry.pl/) – Jeden z najbardziej znanych polskich portali z grami online. Oferuje szeroki wybór gier przeglądarkowych, w tym specjalne kategorie gier dla dzieci, takie jak gry logiczne, platformowe i edukacyjne.
-3.  [PisuPisu.pl](https://pisupisu.pl/) – Platforma, która skupia się na grach edukacujnych  dla dzieci, w tym wielu tytułach wymagających myślenia i wyobraźni i rozwijających zdolności manualne.
+1.  <a href="https://grywacz.pl/" target="_blank" rel="noopener"><strong>Grywacz.pl</strong></a> – Strona oferuje wiele darmowych gier, zarówno dla dzieci, jak i starszych użytkowników. Gry są zróżnicowane tematycznie, od gier logicznych po zręcznościowe. Można tam znaleźć klasykę Flash emulowaną dzięki językowi programowania Rust w projekcie open source Ruffle, czyli takie gry jak Kingdom Rush, Bloons Tower Defense, Mario Bross ale i nowsze jak np. Psi Patrol.
+2.  **Gry.pl** – Jeden z najbardziej znanych polskich portali z grami online. Oferuje szeroki wybór gier przeglądarkowych, w tym specjalne kategorie gier dla dzieci, takie jak gry logiczne, platformowe i edukacyjne.
+3.  PisuPisu.pl – Platforma, która skupia się na grach edukacujnych  dla dzieci, w tym wielu tytułach wymagających myślenia i wyobraźni i rozwijających zdolności manualne.
 
 ## Podsumowanie
 
