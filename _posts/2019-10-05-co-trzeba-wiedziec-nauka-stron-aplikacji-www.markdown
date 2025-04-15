@@ -409,9 +409,7 @@ Poniżej krótki kurs Inkscape'a (kilka filmów)
   frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
   allowfullscreen></iframe>
 
-Polecam też książkę "Design dla hakerów":
-
-<script src="https://jcubic.pl/ads/helion.php?code=deshak"></script>
+Polecam też książkę "[Design dla hakerów](https://lubimyczytac.pl/ksiazka/154800/design-dla-hakerow-sekrety-genialnych-projektow)":
 
 Niestety w księgarni Helion tylko ebook, prawdopodobnie nikt z drukowaną kopią się nie rozstaje,
 jest tak dobra.
@@ -447,8 +445,6 @@ Poniżej dwie strony, które warto przeczytać przed zadaniem pytania:
 * [Jak mądrze zadawać pytania](http://rtfm.killfile.pl/) tłumaczenie eseju hakera
   [Erica S. Raymonda](https://pl.wikipedia.org/wiki/Eric_Raymond), polecam też jego książkę
   UNIX. Sztuka programowania. (nie koniecznie dla osób, które programują na Unix-a lub Linux-a)
-
-<script src="https://jcubic.pl/ads/helion.php?code=unszpr"></script>
 
 * [How do I ask a good question?](https://stackoverflow.com/help/how-to-ask) - FAQ StackOveflow.
 

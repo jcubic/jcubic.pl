@@ -68,11 +68,7 @@ zweryfikować różne informacje. W książce pojawiają, się oprócz literówe
 Książka przypomina taką bardzo dużą stronę internetową, wydaną pod postacią książki. Bez jakiś
 większych korekt. Chociaż jej powstanie pewnie wymagało dużo pracy.
 
-Ebook poniżej:
-
-<script src="https://jcubic.pl/ads/helion.php?r=a_04db"></script>
-
-Zobacz też na [ceneo.pl](https://www.ceneo.pl/56229679)
+Zobacz na [ceneo.pl](https://www.ceneo.pl/56229679)
 oraz [lubimyczytac.pl](http://lubimyczytac.pl/ksiazka/4835308/prawdziwa-historia-internetu---wydanie-iii-rozszerzone).
 
 ## 4. Steven Levy Hackers
@@ -90,8 +86,6 @@ trzeba mieć pod ręką.
 
 Poniżej link do e-booka, fizyczna kopia chyba tylko przez
 [amazon.co.uk](https://www.amazon.co.uk/Hackers-Heroes-Computer-Revolution-Anniversary/dp/1449388396/).
-
-<script src="https://jcubic.pl/ads/helion.php?r=e_e03l_ebook"></script>
 
 ## 5. Where Wizards Stay Up Late
 ### The origins of The Internet
@@ -142,10 +136,6 @@ Co ciekawe, książka została wydana z licencją GNU (a dokładnie
 temu Stallman i FSF mogą wydawać swoje własne, poprawione wersje. Dostępna jest poprawiona wersja
 2.0 z inną okładką (co jest wymogiem licencji), dostępna w
 [sklepie fundacji](https://shop.fsf.org/collection/books-docs).
-
-Link do polskiej wersji poniżej:
-
-<script src="https://jcubic.pl/ads/helion.php?code=wobron"></script>
 
 ## 8. Fire in the Valley
 ### The Birth and Death of the Personal Computer

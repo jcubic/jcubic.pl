@@ -468,6 +468,3 @@ na której można testować lokalnie różne błędy.
 W przypadku programu VirtualBox, aby dwie maszyny wirtualne się widziały trzeba ustawić kartę sieciową podatnej maszyny
 w tryb mostkowy (ang. bridge mode) lub [utworzyć usługę NAT](https://www.virtualbox.org/manual/ch06.html#network_nat_service),
 jeśli nie chcesz, aby inni użytkownicy sieci lokalnej mieli dostęp do twojej podatnej maszyny.
-
-
-<script src="https://jcubic.pl/ads/helion.php?category=hacking,haking,hacker,haker,bezpieczeństwo"></script>
