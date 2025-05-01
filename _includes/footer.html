@@ -36,23 +36,8 @@
    });
   </script>
   {% if jekyll.environment == "production" %}
-  <!-- Start Open Web Analytics Tracker -->
-  <script type="text/javascript" defer>
-  //<![CDATA[
-  var owa_baseUrl = 'http://stats.jcubic.pl/';
-  var owa_cmds = owa_cmds || [];
-  owa_cmds.push(['setSiteId', 'b0fda2fd267289c39125653957851823']);
-  owa_cmds.push(['trackPageView']);
-  owa_cmds.push(['trackClicks']);
-  (function() {
-      var _owa = document.createElement('script'); _owa.type = 'text/javascript'; _owa.async = true;
-      owa_baseUrl = ('https:' == document.location.protocol ? window.owa_baseSecUrl || owa_baseUrl.replace(/http:/, 'https:') : owa_baseUrl );
-      _owa.src = owa_baseUrl + 'modules/base/js/owa.tracker-combined-min.js';
-      var _owa_s = document.getElementsByTagName('script')[0]; _owa_s.parentNode.insertBefore(_owa, _owa_s);
-  }());
-  //]]>
-  </script>
-  <!-- End Open Web Analytics Code -->
+  <script defer src="https://umami.jcubic.pl/script.js"
+          data-website-id="7d022e52-20b9-4898-b1cb-994161246858"></script>
   {% endif %}
   <p>Copyright &copy; 2014-{{ 'now' | date: "%Y" }} <a href="/jakub-jankiewicz">Jakub Jankiewicz</a></p>
   <p>Wszystko na licencji <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA</a>, chyba że napisano inaczej</p>
