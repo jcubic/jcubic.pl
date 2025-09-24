@@ -17,13 +17,13 @@ def get_data(html):
     for tag in body.select('figure'):
         tag.decompose()
 
-    text = tree.findAll("div", {"class": "content"})
+    text = tree.find_all("div", {"class": "content"})
     if len(text) > 0:
       text = text[0].get_text(separator='\n')
     else:
       text = None
-    title = tree.findAll("h1", {"itemprop" : "title"})
-    url = tree.findAll("link", {"rel": "canonical"})
+    title = tree.find_all("h1", {"itemprop" : "title"})
+    url = tree.find_all("link", {"rel": "canonical"})
     if len(title) > 0:
       title = title[0].get_text()
     else:
