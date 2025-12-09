@@ -99,4 +99,4 @@ Wikipedia to nie jedyny taki projekt, gdzie można dodać linki. Poniżej tzw. p
 
 Jeśli zainteresował cię temat, edycji Wikipedii, masz jakieś hasło, które chcesz dodać, oferuje [płatne edycje i konsultacje](https://wikipedia.jcubic.pl/).
 
-Dodatkowo do 16 lutego 2026 na WOŚP wystawione jest [szkolenie Wikipedia+SEO i nie tylko](https://allegro.pl/oferta/2-dniowe-szkolenie-wikipedia-seo-i-nie-tylko-18136151156).
+Dodatkowo do 16 lutego 2026 na WOŚP wystawione jest moje szkolenie: „[Wikipedia+SEO i nie tylko](https://allegro.pl/oferta/2-dniowe-szkolenie-wikipedia-seo-i-nie-tylko-18136151156)”.
