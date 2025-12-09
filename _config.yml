@@ -142,6 +142,9 @@ users:
          name: "IT Manager"
     asnyk:
          name: "Karol Asnyk"
+    ag:
+         name: "ag-notebooki"
+         url: "https://www.ag.pl/"
     paczek:
          name: "Andrzej Pączyński"
     anon:
