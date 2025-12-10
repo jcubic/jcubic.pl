@@ -68,9 +68,9 @@ Ogólne wytyczne na temat [encyklopedyczności](https://pl.wikipedia.org/wiki/Wi
 * [Neutralny punkt widzenia](https://pl.wikipedia.org/wiki/Wikipedia:Neutralny_punkt_widzenia)
 * [Encyklopedyczność](https://pl.wikipedia.org/wiki/Wikipedia:Encyklopedyczność)
 * [Nie przedstawiamy twórczości własnej](https://pl.wikipedia.org/wiki/Wikipedia:Nie_przedstawiamy_tw%C3%B3rczo%C5%9Bci_w%C5%82asnej)
+* [Prawa autorskie](https://pl.wikipedia.org/wiki/Wikipedia:Prawa_autorskie)
 
-Artykuł musi być neutralny, nie wolno używać słów jak "najlepszy na rynku", natomiast można napisać "najlepszy według magazynu Forbes" i przypis.
-Nie może to być tekst marketingowy. Zobacz hasło: [Unikaj wyrażeń zwodniczych](https://pl.wikipedia.org/wiki/Wikipedia:Unikaj_wyrażeń_zwodniczych). Nie można pisać z głowy, treści muszą bazować na wiarygodnych źródłach, które są niezleżne.
+Artykuł musi być neutralny, nie wolno używać słów jak "najlepszy na rynku", natomiast można napisać "najlepszy według magazynu Forbes" i przypis. Nie może to być tekst marketingowy. Zobacz hasło: [Unikaj wyrażeń zwodniczych](https://pl.wikipedia.org/wiki/Wikipedia:Unikaj_wyrażeń_zwodniczych). Nie można pisać z głowy, treści muszą bazować na wiarygodnych źródłach, które są niezleżne. Treści nie mogą być skopiowane z innego miejsca, chyba że objęte są odpowiednią licencją, zazwczyaj [Creative Commons](https://pl.wikipedia.org/wiki/Creative_Commons).
 
 ## Wiarygodne źródła
 
