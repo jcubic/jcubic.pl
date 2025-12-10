@@ -26,7 +26,7 @@ W Polskiej Wikipedii jest kilka rodzajów usuwania zmian:
 
 1. ek, czyli ekspresowe kasowanie, każdy może dodać ek-a do artykułu, który jest ewidentnie marketingowy, jest spamem, lub żartem.
 2. Cofnięcie do brudnopisu, gdy artykuł nie spełnia wymogów Wikipedii. Jest np. źle sformatowany.
-3. DNU, czyli poczekalnia. Tam trafiają artykuły, nad którymi toczy się dyskusja nad usunięciem lub pozostawieniem w Wikipedii. Każdy może zabrać głos w dyskusji. DNU jest to także czas, aby poprawić artykuł, np. wykazać, że temat jest encyklopedyczny. Można dodać więcej źródeł. Poprawić coś lub usunąć. Decyzję ostateczną podejmuje jeden z Administratorów. Głosy muszą być jednomyślne, jeśli jest jakaś wątpliwość i ktoś uważa, że artykuł jest encyklopedyczny, poda jakiś argument. To artykuł zostaje przez brak konsensusu.
+3. DNU, czyli poczekalnia. Tam trafiają artykuły, nad którymi toczy się dyskusja nad usunięciem lub pozostawieniem w Wikipedii. Każdy może zabrać głos w dyskusji. DNU jest to także czas, aby poprawić artykuł, np. wykazać, że temat jest encyklopedyczny. Można dodać więcej źródeł. Poprawić coś lub usunąć. Decyzję ostateczną podejmuje jeden z Administratorów. Głosy muszą być jednomyślne, jeśli jest jakaś wątpliwość i ktoś uważa, że artykuł jest encyklopedyczny, poda jakiś argument. To artykuł zostaje przez brak konsensusu.
 
 ## Gdzie dodać link w Wikipedii?
 
@@ -67,13 +67,14 @@ Ogólne wytyczne na temat [encyklopedyczności](https://pl.wikipedia.org/wiki/Wi
 * [Weryfikowalność](https://pl.wikipedia.org/wiki/Wikipedia:Weryfikowalno%C5%9B%C4%87)
 * [Neutralny punkt widzenia](https://pl.wikipedia.org/wiki/Wikipedia:Neutralny_punkt_widzenia)
 * [Encyklopedyczność](https://pl.wikipedia.org/wiki/Wikipedia:Encyklopedyczność)
+* [Nie przedstawiamy twórczości własnej](https://pl.wikipedia.org/wiki/Wikipedia:Nie_przedstawiamy_tw%C3%B3rczo%C5%9Bci_w%C5%82asnej)
 
 Artykuł musi być neutralny, nie wolno używać słów jak "najlepszy na rynku", natomiast można napisać "najlepszy według magazynu Forbes" i przypis.
-Nie może to być tekst marketingowy. Zobacz hasło: [Unikaj wyrażeń zwodniczych](https://pl.wikipedia.org/wiki/Wikipedia:Unikaj_wyrażeń_zwodniczych).
+Nie może to być tekst marketingowy. Zobacz hasło: [Unikaj wyrażeń zwodniczych](https://pl.wikipedia.org/wiki/Wikipedia:Unikaj_wyrażeń_zwodniczych). Nie można pisać z głowy, treści muszą bazować na wiarygodnych źródłach, które są niezleżne.
 
 ## Wiarygodne źródła
 
-Wiarygodnymi źródłami są np. ogólno-polskie prasie, gazety pokroju Wyborczej, Rzeczpospolitej, czy Wprost. Mogą to być także lokalne media, np. Dziennik Bałtycki. Ważne, aby to nie był jakiś mało znany blog i tym podobne. Wiarygodne są także recenzowane artykuły naukowe, czy książki. 
+Wiarygodnymi źródłami są np. ogólno-polskie prasie, gazety pokroju Wyborczej, Rzeczpospolitej, czy Wprost. Mogą to być także lokalne media, np. Dziennik Bałtycki. Ważne, aby to nie był jakiś mało znany blog i tym podobne. Wiarygodne są także recenzowane artykuły naukowe, czy książki.
 
 ## Jaka firma nadaje się do Wikipedii?
 
