@@ -36,7 +36,6 @@ section .tag li > a {
     font-weight: bold;
 }
 footer a:hover, section a:hover, aside a:hover, #tag-cloud a:hover, #sponsors a:hover {
-    color: #1520FF;
     text-decoration: underline;
 }
 footer a, footer a:visited, section a, section a:visited, #tag-cloud a, #sponsors a {
@@ -456,7 +455,7 @@ figure {
         color: #797979;
     }
     footer a, footer a:visited, section a, section a:visited, #tag-cloud a, #sponsors a, .cookie-baner a {
-        color: #776e8e !important;
+        color: #776e8e;
     }
     .cookie-baner {
         background-color: #333333;
