@@ -3,7 +3,7 @@ layout: post
 title: "Wikipedia + SEO: Jak Dodać Artykuł?"
 date: 2025-12-09 19:34:01+0100
 categories:
-tags: wikipedia seo
+tags: wikipedia seo creative-commons
 author: jcubic
 description: Artykuł na Wikipedii, lub chociaż link, uważany jest często jako święty Graal SEO. W tym artykule postaram się wyjaśnić jak dodawać treści do Wikipedii, aby nie zostały usunięte przez Wikipedystów.
 image:
