@@ -14,7 +14,7 @@ image:
  height: 450
 ---
 
-Czy usługa automatycznego monitoringu stron internetowych oferująca testowanie według przygotowanego scenariusza może być alternatywą dla testów E2E?
+Czy usługa automatycznego [monitoringu stron internetowych](https://www.supermonitoring.pl/) oferująca testowanie według przygotowanego scenariusza może być alternatywą dla testów E2E?
 
 <!-- more -->
 
