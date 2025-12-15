@@ -151,12 +151,6 @@ users:
          name: "Anonymous"
 
 links:
-  -
-    url: "https://jcubic.cupsell.pl/"
-    text: "Sklep"
-  -
-    url: "https://koduj.jcubic.pl/"
-    text: "Koduj Głównie JavaScript"
 
 defaults:
   -
