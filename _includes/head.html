@@ -125,6 +125,26 @@
      }
     </script>
     {% endif %}
+    {% if page.faq %}
+    <script type="application/ld+json">
+     {
+         "@context": "https://schema.org",
+         "@type": "FAQPage",
+         "mainEntity": [
+             {% for item in page.faq %}
+             {
+                 "@type": "Question",
+                 "name": {{ item.question | jsonify }},
+                 "acceptedAnswer": {
+                     "@type": "Answer",
+                     "text": {{ item.answer | jsonify }}
+                 }
+             }{% unless forloop.last %},{% endunless %}
+             {% endfor %}
+         ]
+     }
+    </script>
+    {% endif %}
     <meta name="generator" content="Jekyll {{ jekyll.version }}"/>
     <style>
 @font-face {
