@@ -37,7 +37,7 @@ sitemap:
                 </h3>
             </header>
             <div class="excerpt">
-              {{ post.content | split: '<!-- more -->' | first }}
+              {{ post.content | split: '<!-- more -->' | first | regex_replace: '<a href=".*?">(.*?)</a>', '\1' }}
             </div>
             {% if page.tags %}
             <ul class="tags">

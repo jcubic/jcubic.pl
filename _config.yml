@@ -181,4 +181,6 @@ kramdown:
     input: GFM
     hard_wrap: false
     smart_quotes:  ["rsquo", "rsquo", "bdquo", "rdquo"]
-plugins: [jekyll-paginate]
+plugins:
+  - jekyll-paginate
+  - jekyll-regex-replace

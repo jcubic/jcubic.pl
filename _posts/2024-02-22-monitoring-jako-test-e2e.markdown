@@ -12,6 +12,8 @@ image:
  attribution: "Image by [Freepik](https://www.freepik.com/free-photo/top-view-marked-checking-box_5330479.htm)"
  width: 800
  height: 450
+sitemap:
+  lastmod: 2025-12-12 14:48:45+0100
 ---
 
 Czy usługa automatycznego [monitoringu stron internetowych](https://www.supermonitoring.pl/) oferująca testowanie według przygotowanego scenariusza może być alternatywą dla testów E2E?
