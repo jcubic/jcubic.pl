@@ -131,6 +131,7 @@
          "name": "{{ site.title }}",
          "url": "{{ site.url }}",
          "description": "{{ site.description }}",
+         "inLanguage": "pl-PL",
          "countryOfOrigin": {
              "@type": "Country",
              "name": "Poland"
@@ -145,6 +146,7 @@
              "https://github.com/jcubic/jcubic.pl"
          ],
          "dateCreated": "2014-07-29",
+         "dateModified": {{ site.time | date_to_xmlschema | jsonify }},
          "license": {
              "@type": "CreativeWork",
              "name": "Creative Commons Attribution-ShareAlike 4.0 International",
