@@ -74,4 +74,10 @@ layout: null
       <priority>0.3</priority>
     </url>
   {% endfor %}
+  <url>
+    <loc>https://jcubic.pl/wikipedia/</loc>
+    <lastmod>2026-02-22T17:09:17+01:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
 </urlset>
