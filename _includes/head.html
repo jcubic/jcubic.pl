@@ -35,7 +35,6 @@
     <link rel="stylesheet" data-href="{{ "/css/style.css" | prepend: site.baseurl | prepend: site.url }}?{{ "css/style.css" | nocache }}"/>
     <!--<link rel="stylesheet" href="{{ "/css/style.css" | prepend: site.baseurl | prepend: site.url }}"/>-->
     <link rel="alternate" type="application/rss+xml" title="Głównie JavaScript - RSS" href="{{ '/feed.xml' | prepend: site.baseurl | prepend: site.url }}"/>
-
     <!-- meta tags -->
     <!-- based on https://github.com/mmistakes/hpstr-jekyll-theme/blob/master/_includes/head.html -->
     <meta property="og:locale" content="pl_PL"/>
@@ -45,12 +44,12 @@
     <meta property="og:url" content="{{ site.url }}{{ page.url }}"/>
     <meta property="og:site_name" content="{{ site.title }}"/>
     <meta property="og:image" content="{% if page.image %}{{ page.image.url | prepend: site.baseurl | prepend: site.url }}{% else %}{{ '/img/background.jpg' | prepend: site.baseurl | prepend: site.url }}{% endif %}"/>
-    {% if page.image.width %}
+    {%- if page.image.width -%}
     <meta property="og:image:width" content="{{page.image.width}}"/>
-    {% endif %}
-    {% if page.image.height %}
+    {%- endif -%}
+    {%- if page.image.height -%}
     <meta property="og:image:height" content="{{page.image.height}}"/>
-    {% endif %}
+    {%- endif -%}
     <meta name="twitter:image" content="{% if page.image %}{{ page.image.url | prepend: site.baseurl | prepend: site.url }}{% else %}{{ '/img/background.jpg' | prepend: site.baseurl | prepend: site.url }}{% endif %}"/>
     <meta name="twitter:image:alt" content="{% if page.image %}{{ page.image.alt }}{% else %}Klawiatura laptopa{% endif %}"/>
     <meta name="twitter:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}"/>
@@ -60,34 +59,34 @@
     <meta name="twitter:creator" content="@{% if page.author && site.users[page.author].twitter %}{{ site.users[page.author].twitter }}{% else %}{{ site.twitter }}{% endif %}"/>
     <!--<link rel="preload" href="{{ "/img/easter-background-vignette.jpg" | prepend: site.baseurl | prepend: site.url }}" as="image" />-->
     <link rel="preload" href="{{ "/img/background.jpg" | prepend: site.baseurl | prepend: site.url }}" as="image" />
-    {% if page.image %}
+    {% if page.image -%}
     <link rel="preload" href="{{ page.image.url | prepend: site.baseurl | prepend: site.url }}" as="image" />
-    {% endif %}
+    {%- endif -%}
     <link rel="preconnect" href="https://www.facebook.com"/>
     <link rel="preconnect" href="https://pagead2.googlesyndication.com"/>
     <link rel="preconnect" href="https://piwik.jcubic.pl"/>
-    {% if paginator.previous_page %}
-    {% if paginator.previous_page == 1 %}
+    {%- if paginator.previous_page -%}
+    {%- if paginator.previous_page == 1 -%}
     <link rel="prev" href="{{ '/' | prepend: site.baseurl | prepend: site.url }}" />
     {% else %}
     <link rel="prev" href="{{ '/page' | prepend: site.baseurl | prepend: site.url }}{{ paginator.previous_page }}/" />
     {% endif %}
-    {% endif %}
-    {% if paginator.next_page %}
+    {%- endif -%}
+    {%- if paginator.next_page %}
     <link rel="next" href="{{ '/page' | prepend: site.baseurl | prepend: site.url }}{{ paginator.next_page }}/"/>
     {% endif %}
-    {% if page.is_post %}
-      <!-- <link rel="preload" href="https://jcubic.pl/hashover-next/hashover/themes/default/comments.css" as="style" /> -->
-      {% if jekyll.environment == "production" %}
-      <link rel="preload" href="/hashover-next/hashover/comments.php" as="script"/>
-      {% endif %}
+    {%- if page.is_post %}
+    <!-- <link rel="preload" href="https://jcubic.pl/hashover-next/hashover/themes/default/comments.css" as="style" /> -->
+    {% if jekyll.environment == "production" -%}
+    <link rel="preload" href="/hashover-next/hashover/comments.php" as="script"/>
+    {%- endif %}
     <link rel="schema.dc" href="http://purl.org/dc/elements/1.1/"/>
     <meta name="DC.license" content="https://creativecommons.org/licenses/by-sa/4.0/"/>
     <meta name="DC.created" content="{{ page.date }}"/>
     <meta name="DC.creator" content="{% if page.author %}{{ site.users[page.author].name }}{% else %}Jakub Jankiewicz{% endif %}"/>
-    {% if page.sitemap.lastmod %}
+    {% if page.sitemap.lastmod -%}
     <meta name="DC.modified" content="{{ page.sitemap.lastmod }}"/>
-    {% endif %}
+    {%- endif %}
     <script type="application/ld+json">
      {
          "@context": "http://schema.org",
@@ -124,14 +123,45 @@
          }
      }
     </script>
-    {% endif %}
-    {% if page.faq %}
+    {%- else -%}
+    <script type="application/ld+json">
+     {
+         "@context": "http://schema.org",
+         "@type": "Blog",
+         "name": "{{ site.title }}",
+         "url": "{{ site.url }}",
+         "description": "{{ site.description }}",
+         "countryOfOrigin": {
+             "@type": "Country",
+             "name": "Poland"
+         },
+         "keywords": [{% for tag_entry in site.tags %}
+             {{ tag_entry[0] | jsonify }}{%- unless forloop.last -%},{%- endunless -%}
+         {% endfor %}
+         ],
+         "sameAs": [
+             "https://www.wikidata.org/wiki/Q137396574",
+             "https://www.facebook.com/glowniejavascript/",
+             "https://github.com/jcubic/jcubic.pl"
+         ],
+         "dateCreated": "2014-07-29",
+         "license": {
+             "@type": "CreativeWork",
+             "name": "Creative Commons Attribution-ShareAlike 4.0 International",
+             "url": "https://creativecommons.org/licenses/by-sa/4.0/",
+             "identifier": "CC-BY-SA-4.0"
+         },
+         "author": {{ site.users.jcubic.ld | jsonify }}
+     }
+    </script>
+    {%- endif %}
+    {% if page.faq -%}
     <script type="application/ld+json">
      {
          "@context": "https://schema.org",
          "@type": "FAQPage",
          "mainEntity": [
-             {% for item in page.faq %}
+             {% for item in page.faq -%}
              {
                  "@type": "Question",
                  "name": {{ item.question | jsonify }},
@@ -144,7 +174,7 @@
          ]
      }
     </script>
-    {% endif %}
+    {%- endif -%}
     <meta name="generator" content="Jekyll {{ jekyll.version }}"/>
     <style>
 @font-face {
