@@ -40,19 +40,10 @@ users:
           image: "https://live.staticflickr.com/65535/50132910231_73d867794f_k_d.jpg"
           gender: "https://schema.org/Male"
           jobTitle: "Senior Front-End Developer"
-          notableWork:
-            - "@type": "Blog"
-              "@id": "https://www.wikidata.org/wiki/Q137396574"
-              "url": "https://jcubic.pl"
-              name: "Głównie JavaScript"
-            - "@type": "SoftwareSourceCode"
-              "@id": "https://www.wikidata.org/wiki/Q108196498"
-              "name": "jQuery Terminal"
-              "url": "https://terminal.jcubic.pl"
-            - "@type": "SoftwareSourceCode"
-              "@id": "https://www.wikidata.org/wiki/Q124321922"
-              "name": "LIPS Scheme"
-              "url": "https://lips.js.org"
+          mainEntityOfPage:
+            - "@id": "https://www.wikidata.org/wiki/Q137396574"
+            - "@id": "https://www.wikidata.org/wiki/Q108196498"
+            - "@id": "https://www.wikidata.org/wiki/Q124321922"
           sameAs:
             - "https://twitter.com/jcubic"
             - "https://pinterest.com/jcubic/"
