@@ -35,7 +35,7 @@ faq:
       UWAGA: Jeśli firma nie nadaje się do Wikipedii teraz, nie oznacza, że nie będzie się nadawać już zawsze.
 ---
 
-Wiele osób chce dodać artykuł do Wikipedii, lub chociaż link. Niestety nie każdy byt, można dodać do Wikipedii.
+Wiele osób chce dodać artykuł do Wikipedii, lub chociaż link. Niestety nie każdy temat nadaje się do Wikipedii.
 W tym artykule postaram się wyjaśnić jak dodawać treści do Wikipedii, aby nie zostały usunięte przez Wikipedystów.
 
 <!-- more -->
