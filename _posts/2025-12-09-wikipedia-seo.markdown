@@ -17,41 +17,26 @@ sitemap:
 faq:
   - question: "Czy płatne edytowanie Wikipedii jest dozwolone?"
     answer: |
-      <p>Tak, pod warunkiem pełnego ujawnienia takich edycji na stronie użytkownika lub w opisie zmian. Jednak różne wersje językowe moga mieć różne wytyczne, ponieważ Wikipedia jest to projekt społeczny i zasady są wypracowywane przez społeczność. Jeśli chodzi o płatne edycje Angielska Wikipedia jest bardziej restrykcyjna na temat ujawniania płatnych edycji.</p>
-      <p>W polskiej Wikipedii, nie ma wypracowanej zasady dotyczącej płatnych edycji, ale mimo to warto dodać taką informacje na swojej stronie dyskusji. <a href="https://foundation.wikimedia.org/wiki/Policy:Terms_of_Use/Frequently_asked_questions_on_paid_contributions_without_disclosure">Ogólne wytyczne na temat Płatnych edycji można znaleźć na stronie Wikimedia Foundation</a>.</p>
+      Tak, pod warunkiem pełnego ujawnienia takich edycji na stronie użytkownika lub w opisie zmian. Jednak różne wersje językowe moga mieć różne wytyczne, ponieważ Wikipedia jest to projekt społeczny i zasady są wypracowywane przez społeczność. Jeśli chodzi o płatne edycje, Angielska Wikipedia jest bardziej restrykcyjna na temat ujawniania płatnych edycji.
+      W polskiej Wikipedii, nie ma wypracowanej zasady dotyczącej płatnych edycji, ale mimo to warto dodać taką informację na swojej stronie profilowej. Ogólne wytyczne na temat Płatnych edycji można znaleźć na stronie Wikimedia Foundation.
   - question: "Gdzie dodać link w Wikipedii?"
     answer: |
-      <p>Jest kilka zasad dodawania linków zewnętrznych do Wikipedii.</p>
-      <ol>
-        <li>Linki mogą być tylko w:
-          <ul>
-            <li>sekcji Linki zewnętrzne na końcu artykułu</li>
-            <li>przypisach</li>
-            <li>W infoboksie (ramka z podsumowaniem po prawej stronie)</li>
-          </ul>
-        </li>
-        <li>Źródłem (w przypisie) musi być wiarygodne źródło. Link do bloga firmowego może zostać skasowany.</li>
-        <li>Linki zewnętrzne muszą dodawać więcej informacji do artykułu. Wzbogacać go o dodatkowe treści.</li>
-        <li>W infoboksie oraz w linkach zewnętrznych można dodać link do oficjalnej strony bytu, który opisujesz.</li>
-      </ol>
-      <p>Zobacz: <a href="https://pl.wikipedia.org/wiki/Wikipedia:Zasady_wstawiania_link%C3%B3w_zewn%C4%99trznych">Zasady wstawiania linków zewnętrznych</a></p>
+      Jest kilka zasad dodawania linków zewnętrznych do Wikipedii.
+      Linki mogą być tylko w:
+      - sekcji Linki zewnętrzne na końcu artykułu
+      - przypisach</li>
+      - W infoboksie (ramka z podsumowaniem po prawej stronie)
+      - Źródłem (w przypisie) musi być wiarygodne źródło. Link do bloga firmowego może zostać skasowany.
+      - Linki zewnętrzne muszą dodawać więcej informacji do artykułu. Wzbogacać go o dodatkowe treści.
+      - W infoboksie oraz w linkach zewnętrznych można dodać link do oficjalnej strony bytu, który opisujesz.
   - question: "Jak dodać link do Wikipedii?"
     answer: |
-      <p>Z punktu widzenia technicznego, aby dodać link, wystarczy edytować artykuł i dodać go w odpowiednie, wymienione powyżej miejsce (czyli sekcji Linki zewnętrzne, przypisy oraz infobox). Nie trzeba być nawet zalogowanym. Chociaż dodawanie linków, które nie wnoszą nic do treści artykułu, mogą zostać zkasowane przez Wikipedystów. Linki muszą być wartościowe i pochodzić z wiarygodnych źródeł.</p>
-  - question: "Jak dodać poprawnie artykuł do Wikipedii?"
+      Z punktu widzenia technicznego, aby dodać link, wystarczy edytować artykuł i dodać go w odpowiednie, wymienione powyżej miejsce (czyli sekcji Linki zewnętrzne, przypisy oraz infobox). Nie trzeba być nawet zalogowanym. Chociaż dodawanie linków, które nie wnoszą nic do treści artykułu, mogą zostać zkasowane przez Wikipedystów. Linki muszą być wartościowe i pochodzić z wiarygodnych źródeł.
+  - question: "Jaka firma nadaje się do Wikipedii?"
     answer: |
-      <ol>
-        <li>Pierwsza rzecz, warto założyć konto.</li>
-        <li>Oraz zacząć w brudnopisie.</li>
-        <li>Warto zacząć pisanie od znalezienia źródeł, powinny one być niezależne. W przypadku firm nie mogą to być np. notki prasowe ani np. blog firmowy. Więcej można przeczytać na stronie <a href="https://pl.wikipedia.org/wiki/Wikipedia:Weryfikowalno%C5%9B%C4%87">Weryfikowalność</a>. Jest to jedna z głównych zasad Wikipedii.</li>
-        <li>Można się zapytać swojego przewodnika, czy artykuł jest ok i można go opublikować.</li>
-        <li>Jesli artykuł będzie ok, twój przewodnik przeniesie go do przestrzni głównej. Osoby początkujące nie mogą tego robić, chociaż mogą tworzyć nowe artykuły bezpośrednio, takie artykuły często są cofane do brudnopisu.</li>
-      </ol>
-  - question: "Jaka firma nadaje się do Wikipedii?"
-    answer: |
-      <p>Według propozycji kryteriów (link wyżej). O encyklopedyczności może świadczyć to, że dostała jakieś nagrody i wyróżnienia. Przy czym nagroda musi znaczna. Nagroda jest to przesłanka, że firma może być ency, ale wcale nie musi być.</p>
-      <p>Firma jest znana na rynku. Piszą o niej media niezależne. Duże znaczenie ma to, czy jest to spółka giełdowa.</p>
-      <p><strong>UWAGA</strong>: Jeśli firma nie nadaje się do Wikipedii teraz, nie oznacza, że nie będzie się nadawać już zawsze.</p>
+      Według propozycji kryteriów (link wyżej). O encyklopedyczności może świadczyć to, że dostała jakieś nagrody i wyróżnienia. Przy czym nagroda musi znaczna. Nagroda jest to przesłanka, że firma może być ency, ale wcale nie musi być.
+      Firma jest znana na rynku. Piszą o niej media niezależne. Duże znaczenie ma to, czy jest to spółka giełdowa.
+      UWAGA: Jeśli firma nie nadaje się do Wikipedii teraz, nie oznacza, że nie będzie się nadawać już zawsze.
 ---
 
 Artykuł na Wikipedii lub chociaż link, uważany jest często jako święty Graal SEO.
@@ -102,17 +87,17 @@ Ogólne wytyczne na temat [encyklopedyczności](https://pl.wikipedia.org/wiki/Wi
 
 1. Pierwsza rzecz, warto założyć konto.
 2. Oraz zacząć w brudnopisie.
-3. Warto zacząć pisanie od znalezienia źródeł, powinny one być niezależne. W przypadku firm nie mogą to być np. notki prasowe ani np. blog firmowy. Więcej można przeczytać na stronie [Weryfikowalność](https://pl.wikipedia.org/wiki/Wikipedia:Weryfikowalno%C5%9B%C4%87). Jest to jedna z głównych zasad Wikipedii.
+3. Warto zacząć pisanie od znalezienia źródeł, powinny one być niezależne. W przypadku firm nie mogą to być np. notki prasowe ani np. blog firmowy. Więcej można przeczytać na stronie [Weryfikowalność](https://pl.wikipedia.org/wiki/WP:WER). Jest to jedna z głównych zasad Wikipedii.
 4. Można się zapytać swojego przewodnika, czy artykuł jest ok i można go opublikować.
 5. Jesli artykuł będzie ok, twój przewodnik przeniesie go do przestrzni głównej. Osoby początkujące nie mogą tego robić, chociaż mogą tworzyć nowe artykuły bezpośrednio, takie artykuły często są cofane do brudnopisu.
 
 ## Główne zasady Wikipedii
 
-* [Weryfikowalność](https://pl.wikipedia.org/wiki/Wikipedia:Weryfikowalno%C5%9B%C4%87)
-* [Neutralny punkt widzenia](https://pl.wikipedia.org/wiki/Wikipedia:Neutralny_punkt_widzenia)
-* [Encyklopedyczność](https://pl.wikipedia.org/wiki/Wikipedia:Encyklopedyczność)
-* [Nie przedstawiamy twórczości własnej](https://pl.wikipedia.org/wiki/Wikipedia:Nie_przedstawiamy_tw%C3%B3rczo%C5%9Bci_w%C5%82asnej)
-* [Prawa autorskie](https://pl.wikipedia.org/wiki/Wikipedia:Prawa_autorskie)
+* [Weryfikowalność](https://pl.wikipedia.org/wiki/WP:WER)
+* [Neutralny punkt widzenia](https://pl.wikipedia.org/wiki/WP:NPOV)
+* [Encyklopedyczność](https://pl.wikipedia.org/wiki/WP:ENCY)
+* [Nie przedstawiamy twórczości własnej](https://pl.wikipedia.org/wiki/WP:OR)
+* [Prawa autorskie](https://pl.wikipedia.org/wiki/WP:PA)
 
 Artykuł musi być neutralny, nie wolno używać słów jak "najlepszy na rynku", natomiast można napisać "najlepszy według magazynu Forbes" i przypis. Nie może to być tekst marketingowy. Zobacz hasło: [Unikaj wyrażeń zwodniczych](https://pl.wikipedia.org/wiki/Wikipedia:Unikaj_wyrażeń_zwodniczych). Nie można pisać z głowy, treści muszą bazować na wiarygodnych źródłach, które są niezleżne. Treści nie mogą być skopiowane z innego miejsca, chyba że objęte są odpowiednią licencją, zazwczyaj [Creative Commons](https://pl.wikipedia.org/wiki/Creative_Commons).
 
@@ -131,7 +116,7 @@ Firma jest znana na rynku. Piszą o niej media niezależne. Duże znaczenie ma t
 ## Jak nie Wikipedia to co?
 
 Wikipedia to nie jedyny taki projekt, gdzie można dodać linki. Poniżej tzw. projekty siostrzane gdzie można umieścić link:
-* [Wikidane](https://pl.wikipedia.org/wiki/Wikidane) - jest to baza wszystkiego, tzw. Graf Wiedzy. Można tam dodać firmę czy osobę (np. szefa firmy), które nie nadają się do Wikipedii.
+* [Wikidane](https://pl.wikipedia.org/wiki/Wikidane) - jest to baza wszystkiego, tzw. Graf Wiedzy. Można tam dodać firmę czy biogram osoby (np. szefa firmy), które nie nadają się do Wikipedii.
   Dodanie wpisu w Wikidanych może prowadzić do powstania wpisu w [Grafie Wiedzy Google](https://pl.wikipedia.org/wiki/Google_Knowledge_Graph).
 * [Wikimedia Commons](https://pl.wikipedia.org/wiki/Wikimedia_Commons) - czyli zasoby medialne Wikipedii. Można zrobić zdjęcie budynku firmy oraz jego szefa. Dodać kategorię ze zdjęciami firmy, połączyć z Wikidanymi. Zdjęcie może zawierać źródło, skąd pobrane jest zdjęcie. Należy jednak pamiętać, że zdjęcie na stronie musi mieć odpowiednią [licencje Creative Commons](https://pl.wikipedia.org/wiki/Licencje_Creative_Commons).
 * [WikiNews](https://pl.wikinews.org) - można tam dodać newsy na temat firmy. Uwaga, muszą być aktualne.
