@@ -1,11 +1,11 @@
 ---
 layout: post
-title: "Wikipedia + SEO: Jak Dodać Artykuł?"
+title: "Jak dodać artykuł do Wikipedii?"
 date: 2025-12-09 19:34:01+0100
 categories:
 tags: wikipedia seo creative-commons
 author: jcubic
-description: Artykuł na Wikipedii, lub chociaż link, uważany jest często jako święty Graal SEO. W tym artykule postaram się wyjaśnić jak dodawać treści do Wikipedii, aby nie zostały usunięte przez Wikipedystów.
+description: Wiele osób chce dodać artykuł do Wikipedii, lub chociaż link. W tym artykule postaram się wyjaśnić jak dodawać treści do Wikipedii, aby nie zostały usunięte przez Wikipedystów.
 image:
   url: "/img/wikipedia-globe.jpg"
   alt: "Ręce trzymające wydrukowane w 3D logo Wikipedii oraz text: Wikipedia+SEO"
@@ -15,16 +15,12 @@ image:
 sitemap:
   lastmod: 2026-01-01 01:35:57+0100
 faq:
-  - question: "Czy płatne edytowanie Wikipedii jest dozwolone?"
-    answer: |
-      Tak, pod warunkiem pełnego ujawnienia takich edycji na stronie użytkownika lub w opisie zmian. Jednak różne wersje językowe moga mieć różne wytyczne, ponieważ Wikipedia jest to projekt społeczny i zasady są wypracowywane przez społeczność. Jeśli chodzi o płatne edycje, Angielska Wikipedia jest bardziej restrykcyjna na temat ujawniania płatnych edycji.
-      W polskiej Wikipedii, nie ma wypracowanej zasady dotyczącej płatnych edycji, ale mimo to warto dodać taką informację na swojej stronie profilowej. Ogólne wytyczne na temat Płatnych edycji można znaleźć na stronie Wikimedia Foundation.
   - question: "Gdzie dodać link w Wikipedii?"
     answer: |
       Jest kilka zasad dodawania linków zewnętrznych do Wikipedii.
       Linki mogą być tylko w:
       - sekcji Linki zewnętrzne na końcu artykułu
-      - przypisach</li>
+      - przypisach
       - W infoboksie (ramka z podsumowaniem po prawej stronie)
       - Źródłem (w przypisie) musi być wiarygodne źródło. Link do bloga firmowego może zostać skasowany.
       - Linki zewnętrzne muszą dodawać więcej informacji do artykułu. Wzbogacać go o dodatkowe treści.
@@ -39,9 +35,8 @@ faq:
       UWAGA: Jeśli firma nie nadaje się do Wikipedii teraz, nie oznacza, że nie będzie się nadawać już zawsze.
 ---
 
-Artykuł na Wikipedii lub chociaż link, uważany jest często jako święty Graal SEO.
-Niestety nie każdy byt, można dodać do Wikipedii. W tym artykule postaram się wyjaśnić jak dodawać
-treści do Wikipedii, aby nie zostały usunięte przez Wikipedystów.
+Wiele osób chce dodać artykuł do Wikipedii, lub chociaż link. Niestety nie każdy byt, można dodać do Wikipedii.
+W tym artykule postaram się wyjaśnić jak dodawać treści do Wikipedii, aby nie zostały usunięte przez Wikipedystów.
 
 <!-- more -->
 
@@ -105,7 +100,7 @@ Artykuł musi być neutralny, nie wolno używać słów jak "najlepszy na rynku"
 
 Wiarygodnymi źródłami są np. ogólno-polskie prasie, gazety pokroju Wyborczej, Rzeczpospolitej, czy Wprost. Mogą to być także lokalne media, np. Dziennik Bałtycki. Ważne, aby to nie był jakiś mało znany blog i tym podobne. Wiarygodne są także recenzowane artykuły naukowe, czy książki.
 
-## Jaka firma nadaje się do Wikipedii?
+## Jaka firma nadaje się do Wikipedii?
 
 Według propozycji kryteriów (link wyżej). O encyklopedyczności może świadczyć to, że dostała jakieś nagrody i wyróżnienia. Przy czym nagroda musi znaczna. Nagroda jest to przesłanka, że firma może być ency, ale wcale nie musi być.
 
@@ -127,9 +122,7 @@ Wikipedia to nie jedyny taki projekt, gdzie można dodać linki. Poniżej tzw. p
 
 ## Płatne edycje i konsultacje z Wikipedii
 
-Jeśli zainteresował cię temat, edycji Wikipedii, masz jakieś hasło, które chcesz dodać, oferuje [płatne edycje i konsultacje](https://support.jcubic.pl/wikipedia).
-
-Dodatkowo do 16 lutego 2026 na WOŚP wystawione jest moje szkolenie: „[Wikipedia+SEO i nie tylko](https://allegro.pl/oferta/2-dniowe-szkolenie-wikipedia-seo-i-nie-tylko-18136151156)”.
+Jeśli zainteresował cię temat, edycji Wikipedii, masz jakieś hasło, które chcesz dodać, oferuje [płatne edycje i konsultacje](/wikipedia).
 
 ## Czy płatne edytowanie Wikipedii jest dozwolone?
 
