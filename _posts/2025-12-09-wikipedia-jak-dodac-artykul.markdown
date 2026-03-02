@@ -13,7 +13,7 @@ image:
   height: 591
   attribution: "[Wikimedia Foundation](https://commons.wikimedia.org/wiki/File:10_sharing_book_cover_background.jpg), CC BY-SA 3.0 <https://creativecommons.org/licenses/by-sa/3.0>, via Wikimedia Commons"
 sitemap:
-  lastmod: 2026-01-01 01:35:57+0100
+  lastmod: 2026-03-02 19:50:32+0100
 faq:
   - question: "Gdzie dodać link w Wikipedii?"
     answer: |
