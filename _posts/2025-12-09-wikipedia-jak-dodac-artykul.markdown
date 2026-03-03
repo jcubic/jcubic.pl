@@ -13,7 +13,7 @@ image:
   height: 591
   attribution: "[Wikimedia Foundation](https://commons.wikimedia.org/wiki/File:10_sharing_book_cover_background.jpg), CC BY-SA 3.0 <https://creativecommons.org/licenses/by-sa/3.0>, via Wikimedia Commons"
 sitemap:
-  lastmod: 2026-03-02 19:50:32+0100
+  lastmod: 2026-03-03 01:03:29+0100
 faq:
   - question: "Gdzie dodać link w Wikipedii?"
     answer: |
@@ -37,46 +37,9 @@ faq:
 
 Wiele osób chce dodać artykuł do Wikipedii, lub chociaż link. Niestety nie każdy temat nadaje się do Wikipedii.
 W tym artykule postaram się wyjaśnić jak dodawać treści do Wikipedii, aby nie zostały usunięte przez Wikipedystów.
+Jeśli interesuje cię jak dodać np. osobę lub firmę do Wikipedii, czytaj dalej.
 
 <!-- more -->
-
-## Rodzaje usuwania zmian na Wikipedii
-
-W Polskiej Wikipedii jest kilka rodzajów usuwania zmian:
-
-1. ek, czyli ekspresowe kasowanie, każdy może dodać ek-a do artykułu, który jest ewidentnie marketingowy, jest spamem, lub żartem.
-2. Cofnięcie do brudnopisu, gdy artykuł nie spełnia wymogów Wikipedii. Jest np. źle sformatowany.
-3. DNU, czyli poczekalnia. Tam trafiają artykuły, nad którymi toczy się dyskusja nad usunięciem lub pozostawieniem w Wikipedii. Każdy może zabrać głos w dyskusji. DNU jest to także czas, aby poprawić artykuł, np. wykazać, że temat jest encyklopedyczny. Można dodać więcej źródeł. Poprawić coś lub usunąć. Decyzję ostateczną podejmuje jeden z Administratorów. Głosy muszą być jednomyślne, jeśli jest jakaś wątpliwość i ktoś uważa, że artykuł jest encyklopedyczny, poda jakiś argument. To artykuł zostaje przez brak konsensusu.
-
-## Gdzie dodać link w Wikipedii?
-
-Jest kilka zasad dodawania linków zewnętrznych do Wikipedii.
-
-1. Linki mogą być tylko w:
-   * sekcji Linki zewnętrzne na końcu artykułu
-   * przypisach
-   * W infoboksie (ramka z podsumowaniem po prawej stronie)
-2. Źródłem (w przypisie) musi być wiarygodne źródło. Link do bloga firmowego może zostać skasowany.
-3. Linki zewnętrzne muszą dodawać więcej informacji do artykułu. Wzbogacać go o dodatkowe treści.
-4. W infoboksie oraz w linkach zewnętrznych można dodać link do oficjalnej strony bytu, który opisujesz.
-
-Zobacz: [Zasady wstawiania linków zewnętrznych](https://pl.wikipedia.org/wiki/Wikipedia:Zasady_wstawiania_link%C3%B3w_zewn%C4%99trznych)
-
-## Jak dodać link do Wikipedii?
-
-Z punktu widzenia technicznego, aby dodać link, wystarczy edytować artykuł i dodać go w odpowiednie, wymienione powyżej miejsce (czyli sekcji Linki zewnętrzne, przypisy oraz infobox). Nie trzeba być nawet zalogowanym. Chociaż dodawanie linków, które nie wnoszą nic do treści artykułu, mogą zostać zkasowane przez Wikipedystów. Linki muszą być wartościowe i pochodzić z wiarygodnych źródeł.
-
-## Zasady encyklopedyczności
-
-Zasady na temat tego, co nadaje się do Wikipedii, a co nie, są wypracowywane przez społeczność Wikipedystów na przestrzeni lat.
-Dlatego to, co nadaje się w angielskiej Wikipedii, nie koniecznie musi się nadawać w Polskiej i odwrotnie. To samo tyczy się innych wersji językowych.
-
-Sprawdź propozycje kryteriów dla:
-
-* [Przedsiębiorstw](https://pl.wikipedia.org/wiki/Wikipedia:Propozycje_kryteri%C3%B3w_encyklopedyczno%C5%9Bci/Przedsi%C4%99biorstwa)
-* [stron internetowych](https://pl.wikipedia.org/wiki/Wikipedia:Propozycje_kryteri%C3%B3w_encyklopedyczno%C5%9Bci/Strony_internetowe)
-
-Ogólne wytyczne na temat [encyklopedyczności](https://pl.wikipedia.org/wiki/Wikipedia:Encyklopedyczno%C5%9B%C4%87)
 
 ## Jak dodać poprawnie artykuł do Wikipedii?
 
@@ -96,9 +59,18 @@ Ogólne wytyczne na temat [encyklopedyczności](https://pl.wikipedia.org/wiki/Wi
 
 Artykuł musi być neutralny, nie wolno używać słów jak "najlepszy na rynku", natomiast można napisać "najlepszy według magazynu Forbes" i przypis. Nie może to być tekst marketingowy. Zobacz hasło: [Unikaj wyrażeń zwodniczych](https://pl.wikipedia.org/wiki/Wikipedia:Unikaj_wyrażeń_zwodniczych). Nie można pisać z głowy, treści muszą bazować na wiarygodnych źródłach, które są niezleżne. Treści nie mogą być skopiowane z innego miejsca, chyba że objęte są odpowiednią licencją, zazwczyaj [Creative Commons](https://pl.wikipedia.org/wiki/Creative_Commons).
 
-## Wiarygodne źródła
+## Zasady encyklopedyczności
 
-Wiarygodnymi źródłami są np. ogólno-polskie prasie, gazety pokroju Wyborczej, Rzeczpospolitej, czy Wprost. Mogą to być także lokalne media, np. Dziennik Bałtycki. Ważne, aby to nie był jakiś mało znany blog i tym podobne. Wiarygodne są także recenzowane artykuły naukowe, czy książki.
+Zasady na temat tego, co nadaje się do Wikipedii, a co nie, są wypracowywane przez społeczność Wikipedystów na przestrzeni lat.
+Dlatego to, co nadaje się w angielskiej Wikipedii, nie koniecznie musi się nadawać w Polskiej i odwrotnie. To samo tyczy się innych wersji językowych.
+
+Sprawdź propozycje kryteriów dla:
+
+* [Przedsiębiorstw i firm](https://pl.wikipedia.org/wiki/Wikipedia:Propozycje_kryteri%C3%B3w_encyklopedyczno%C5%9Bci/Przedsi%C4%99biorstwa)
+* [stron internetowych](https://pl.wikipedia.org/wiki/Wikipedia:Propozycje_kryteri%C3%B3w_encyklopedyczno%C5%9Bci/Strony_internetowe)
+
+
+Ogólne wytyczne na temat [encyklopedyczności](https://pl.wikipedia.org/wiki/WP:ENCY)
 
 ## Jaka firma nadaje się do Wikipedii?
 
@@ -107,6 +79,36 @@ Według propozycji kryteriów (link wyżej). O encyklopedyczności może świadc
 Firma jest znana na rynku. Piszą o niej media niezależne. Duże znaczenie ma to, czy jest to spółka giełdowa.
 
 **UWAGA**: Jeśli firma nie nadaje się do Wikipedii teraz, nie oznacza, że nie będzie się nadawać już zawsze.
+
+## Rodzaje usuwania zmian na Wikipedii
+
+Możesz się spotkać z tym, że treść, która dodaszm do Wikipedii zostanie skasowana. W Polskiej Wikipedii jest kilka rodzajów usuwania zmian:
+
+1. ek, czyli ekspresowe kasowanie, każdy może dodać ek-a do artykułu, który jest ewidentnie marketingowy, jest spamem, lub żartem.
+2. Cofnięcie do brudnopisu, gdy artykuł nie spełnia wymogów Wikipedii. Jest np. źle sformatowany.
+3. DNU, czyli poczekalnia. Tam trafiają artykuły, nad którymi toczy się dyskusja nad usunięciem lub pozostawieniem w Wikipedii. Każdy może zabrać głos w dyskusji. DNU jest to także czas, aby poprawić artykuł, np. wykazać, że temat jest encyklopedyczny. Można dodać więcej źródeł. Poprawić coś lub usunąć. Decyzję ostateczną podejmuje jeden z Administratorów. Głosy muszą być jednomyślne, jeśli jest jakaś wątpliwość i ktoś uważa, że artykuł jest encyklopedyczny, poda jakiś argument. To artykuł zostaje przez brak konsensusu.
+
+## Wiarygodne źródła
+
+Wiarygodnymi źródłami są np. ogólno-polskie prasie, gazety pokroju Wyborczej, Rzeczpospolitej, czy Wprost. Mogą to być także lokalne media, np. Dziennik Bałtycki. Ważne, aby to nie był jakiś mało znany blog i tym podobne. Wiarygodne są także recenzowane artykuły naukowe, czy książki.
+
+## Gdzie dodać link w Wikipedii?
+
+Jest kilka zasad dodawania linków zewnętrznych do Wikipedii.
+
+1. Linki mogą być tylko w:
+   * sekcji Linki zewnętrzne na końcu artykułu
+   * przypisach
+   * W infoboksie (ramka z podsumowaniem po prawej stronie)
+2. Źródłem (w przypisie) musi być wiarygodne źródło. Link do bloga firmowego może zostać skasowany.
+3. Linki zewnętrzne muszą dodawać więcej informacji do artykułu. Wzbogacać go o dodatkowe treści.
+4. W infoboksie oraz w linkach zewnętrznych można dodać link do oficjalnej strony bytu, który opisujesz.
+
+Zobacz: [Zasady wstawiania linków zewnętrznych](https://pl.wikipedia.org/wiki/Wikipedia:Zasady_wstawiania_link%C3%B3w_zewn%C4%99trznych)
+
+## Jak dodać link do Wikipedii?
+
+Z punktu widzenia technicznego, aby dodać link, wystarczy edytować artykuł i dodać go w odpowiednie, wymienione powyżej miejsce (czyli sekcji Linki zewnętrzne, przypisy oraz infobox). Nie trzeba być nawet zalogowanym. Chociaż dodawanie linków, które nie wnoszą nic do treści artykułu, mogą zostać zkasowane przez Wikipedystów. Linki muszą być wartościowe i pochodzić z wiarygodnych źródeł.
 
 ## Jak nie Wikipedia to co?
 
