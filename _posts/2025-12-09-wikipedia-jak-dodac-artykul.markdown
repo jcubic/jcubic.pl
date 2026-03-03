@@ -7,7 +7,7 @@ tags: wikipedia seo creative-commons
 author: jcubic
 description: Wiele osób chce dodać artykuł do Wikipedii, lub chociaż link. W tym artykule postaram się wyjaśnić jak dodawać treści do Wikipedii, aby nie zostały usunięte przez Wikipedystów.
 image:
-  url: "/img/wikipedia-globe.jpg"
+  url: "/img/wikipedia-article.jpg"
   alt: "Ręce trzymające wydrukowane w 3D logo Wikipedii oraz pytanie: Jak dodać artykuł do Wikipedii?"
   width: 800
   height: 591
