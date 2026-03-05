@@ -77,7 +77,7 @@ layout: null
   {% for url in site.sitemap.pages %}
     <url>
       <loc>https://jcubic.pl{{ url }}</loc>
-      <lastmod>{{ site.sitemap.lastmod }}</lastmod>
+      <lastmod>{{ site.sitemap.lastmod  | date_to_xmlschema }}</lastmod>
       <changefreq>{{ site.sitemap.changefreq }}</changefreq>
       <priority>{{ site.sitemap.priority }}</priority>
     </url>
