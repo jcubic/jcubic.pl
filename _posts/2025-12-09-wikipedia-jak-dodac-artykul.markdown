@@ -13,7 +13,7 @@ image:
   height: 591
   attribution: "[Wikimedia Foundation](https://commons.wikimedia.org/wiki/File:10_sharing_book_cover_background.jpg), CC BY-SA 3.0 <https://creativecommons.org/licenses/by-sa/3.0>, via Wikimedia Commons"
 sitemap:
-  lastmod: 2026-03-03 01:03:29+0100
+  lastmod: 2026-03-05 10:49:40+0100
 faq:
   - question: "Gdzie dodać link w Wikipedii?"
     answer: |
@@ -124,7 +124,7 @@ Wikipedia to nie jedyny taki projekt, gdzie można dodać linki. Poniżej tzw. p
 
 ## Płatne edycje i konsultacje z Wikipedii
 
-Jeśli zainteresował cię temat, edycji Wikipedii, masz jakieś hasło, które chcesz dodać, oferuje [płatne edycje i konsultacje](/wikipedia).
+Jeśli zainteresował cię temat, edycji Wikipedii, masz jakieś hasło, które chcesz dodać, oferuje [płatne edycje i konsultacje: Wikipedia+SEO](/wikipedia).
 
 ## Czy płatne edytowanie Wikipedii jest dozwolone?
 
