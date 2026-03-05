@@ -176,7 +176,12 @@ defaults:
       is_post: true # automatically set is_post=true for all posts
 
 sitemap:
-  lastmod: 2024-07-17 19:31:46+0200
+  lastmod: 2026-03-05 20:32:48+0100
+  priority: 1.0
+  changefreq: weekly
+  pages:
+    - /wikizeit/
+    - /wikizeit/szkolenia/
 
 paginate: 10
 paginate_path: "/page:num"
