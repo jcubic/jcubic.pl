@@ -88,39 +88,99 @@
     <meta name="DC.modified" content="{{ page.sitemap.lastmod }}"/>
     {%- endif %}
     <script type="application/ld+json">
-     {
-         "@context": "http://schema.org",
-         "@type": "BlogPosting",
-         "datePublished": "{{ page.date }}",
-         "dateModified": {% if page.sitemap.lastmod %}"{{ page.sitemap.lastmod }}"{% else %}"{{ page.date }}"{% endif %},
-         "publisher": {
-             "@type": "Organization",
-             "name": "{{ site.title }}",
-             "url": "{{ site.baseurl | prepend: site.url }}",
-             "logo": {
-                 "@type": "ImageObject",
-                 "url": "{{ site.logo.url | prepend: site.baseurl | prepend: site.url }}"
-             }
-         },
-         "author": {{ site.users[page.author].ld | jsonify }},
-         "headline": "{{ page.title }}",{% if page.image %}
-         "image": {
-             "@type": "ImageObject",
-             "url": "{{ page.image.url | prepend: site.baseurl | prepend: site.url }}"{% if page.image.width %},
-             "width": {{ page.image.width }}{% endif %}{% if page.image.height %},
-             "height": {{ page.image.height }}{% endif %}
-         }{% else %}
-         "image": {
-             "@type": "ImageObject",
-             "url": "{{ site.image.url | prepend: site.baseurl | prepend: site.url }}",
-             "width": {{ site.image.width }},
-             "height": {{ site.image.height }}
-         }{% endif %},
-         "description": "{{ page.description }}",
-         "mainEntityOfPage": {
-             "@type": "WebPage",
-             "@id": "https://google.com/article"
-         }
+    {
+         "@context": "https://schema.org",
+         "@graph": [
+             {{ site.users.jcubic.ld | jsonify }},
+             {
+                 "@type": "BlogPosting",
+                 "datePublished": "{{ page.date }}",
+                 "dateModified": {% if page.sitemap.lastmod %}"{{ page.sitemap.lastmod }}"{% else %}"{{ page.date }}"{% endif %},
+                 "publisher": {
+                     "@type": "Organization",
+                     "name": "{{ site.title }}",
+                     "url": "{{ site.baseurl | prepend: site.url }}",
+                     "logo": {
+                         "@type": "ImageObject",
+                         "url": "{{ site.logo.url | prepend: site.baseurl | prepend: site.url }}"
+                     }
+                 },
+                 "author": {{ site.users[page.author].ld | jsonify }},
+                 "headline": "{{ page.title }}",{% if page.image %}
+                 "image": {
+                     "@type": "ImageObject",
+                     "url": "{{ page.image.url | prepend: site.baseurl | prepend: site.url }}"{% if page.image.width %},
+                     "width": {{ page.image.width }}{% endif %}{% if page.image.height %},
+                     "height": {{ page.image.height }}{% endif %}
+                 }{% else %}
+                 "image": {
+                     "@type": "ImageObject",
+                     "url": "{{ site.image.url | prepend: site.baseurl | prepend: site.url }}",
+                     "width": {{ site.image.width }},
+                     "height": {{ site.image.height }}
+                 }{% endif %},
+                 "description": "{{ page.description }}",
+                 "mainEntityOfPage": {
+                     "@type": "WebPage",
+                     "@id": "https://google.com/article"
+                 },
+                 "isPartOf": {
+                     "@id": "{{ site.url }}{{ page.url }}#webpage"
+                 }
+             },
+             {
+                 "@type": "WebPage",
+                 "@id": "{{ site.url }}{{ page.url }}#webpage",
+                 "url": "{{ site.url }}{{ page.url }}",
+                 "isPartOf": { "@id": "{{ site.url }}{{ page.url }}#blog" },
+                 "breadcrumb": { "@id": "{{ site.url }}{{ page.url }}#breadcrumbs" },
+                 "mainEntity": { "@id": "{{ site.url }}{{ page.url }}" }
+             },
+             {
+                 "@type": "Blog",
+                 "@id": "{{ site.url }}#blog",
+                 "name": "{{ site.title }}",
+                 "url": "{{ site.url }}",
+                 "description": "{{ site.description }}",
+                 "isPartOf": { "@id": "{{ site.url }}" },
+                 "inLanguage": "pl-PL"
+             },
+             {
+                 "@type": "WebSite",
+                 "@id": "{{ site.url }}",
+                 "url": "{{ site.url }}",
+                 "name": "jcubic.pl"
+             },
+             {
+                 "@type": "BreadcrumbList",
+                 "@id": "{{ site.url }}{{ page.url }}#breadcrumbs",
+                 "itemListElement": [
+                     {
+                         "@type": "ListItem",
+                         "position": 1,
+                         "item": {
+                             "@id": "https://jakub.jankiewicz.org",
+                             "name": "Home Page"
+                         }
+                     }
+                 ]
+             }{% if page.faq -%},
+             {
+                 "@type": "FAQPage",
+                 "mainEntity": [
+                     {% for item in page.faq -%}
+                     {
+                         "@type": "Question",
+                         "name": {{ item.question | jsonify }},
+                         "acceptedAnswer": {
+                             "@type": "Answer",
+                             "text": {{ item.answer | jsonify }}
+                         }
+                     }{% unless forloop.last %},{% endunless %}
+                     {% endfor %}
+                 ]
+             }{% endif %}
+         ]
      }
     </script>
     {%- else -%}
@@ -131,6 +191,7 @@
              {{ site.users.jcubic.ld | jsonify }},
              {
                  "@type": "Blog",
+                 "@id": "{{ site.url }}#blog",
                  "name": "{{ site.title }}",
                  "url": "{{ site.url }}",
                  "description": "{{ site.description }}",
@@ -157,36 +218,45 @@
                      "identifier": "CC-BY-SA-4.0"
                  },
                  "author": { "@id": "https://jakub.jankiewicz.org" },
-                 "publisher": { "@id": "https://jakub.jankiewicz.org" }
+                 "publisher": { "@id": "https://jakub.jankiewicz.org" },
+                 "isPartOf": { "@id": "{{ site.url }}" }
              },
              {% assign projects = site.users.jcubic.projects | except: '@type', 'Blog' %}
              {% for project in projects %}
-             {{ project | jsonify }}{%- unless forloop.last -%},{%- endunless -%}
+             {{ project | jsonify }},
              {% endfor %}
+             {
+                 "@type": "WebPage",
+                 "@id": "{{ site.url }}#webpage",
+                 "url": "{{ site.url }}",
+                 "isPartOf": { "@id": "{{ site.url }}" },
+                 "breadcrumb": { "@id": "{{ site.url }}#breadcrumbs" },
+                 "mainEntity": { "@id": "{{ site.url }}#blog" }
+             },
+             {
+                 "@type": "WebSite",
+                 "@id": "{{ site.url }}",
+                 "url": "{{ site.url }}",
+                 "name": "jcubic.pl"
+             },
+             {
+                 "@type": "BreadcrumbList",
+                 "@id": "{{ site.url }}#breadcrumbs",
+                 "itemListElement": [
+                     {
+                         "@type": "ListItem",
+                         "position": 1,
+                         "item": {
+                             "@id": "{{ site.url }}#webpage",
+                             "name": "Głównie JavaScript"
+                         }
+                     }
+                 ]
+             }
          ]
      }
     </script>
     {%- endif %}
-    {% if page.faq -%}
-    <script type="application/ld+json">
-     {
-         "@context": "https://schema.org",
-         "@type": "FAQPage",
-         "mainEntity": [
-             {% for item in page.faq -%}
-             {
-                 "@type": "Question",
-                 "name": {{ item.question | jsonify }},
-                 "acceptedAnswer": {
-                     "@type": "Answer",
-                     "text": {{ item.answer | jsonify }}
-                 }
-             }{% unless forloop.last %},{% endunless %}
-             {% endfor %}
-         ]
-     }
-    </script>
-    {%- endif -%}
     <meta name="generator" content="Jekyll {{ jekyll.version }}"/>
     <style>
 @font-face {
