@@ -126,34 +126,44 @@
     {%- else -%}
     <script type="application/ld+json">
      {
-         "@context": "http://schema.org",
-         "@type": "Blog",
-         "name": "{{ site.title }}",
-         "url": "{{ site.url }}",
-         "description": "{{ site.description }}",
-         "inLanguage": "pl-PL",
-         "countryOfOrigin": {
-             "@type": "Country",
-             "name": "Poland"
-         },
-         "keywords": [{% for tag_entry in site.tags %}
-             {{ tag_entry[0] | jsonify }}{%- unless forloop.last -%},{%- endunless -%}
-         {% endfor %}
-         ],
-         "sameAs": [
-             "https://www.wikidata.org/wiki/Q137396574",
-             "https://www.facebook.com/glowniejavascript/",
-             "https://github.com/jcubic/jcubic.pl"
-         ],
-         "dateCreated": "2014-07-29",
-         "dateModified": {{ site.time | date_to_xmlschema | jsonify }},
-         "license": {
-             "@type": "CreativeWork",
-             "name": "Creative Commons Attribution-ShareAlike 4.0 International",
-             "url": "https://creativecommons.org/licenses/by-sa/4.0/",
-             "identifier": "CC-BY-SA-4.0"
-         },
-         "author": {{ site.users.jcubic.ld | jsonify }}
+         "@context": "https://schema.org",
+         "@graph": [
+             {{ site.users.jcubic.ld | jsonify }},
+             {
+                 "@type": "Blog",
+                 "name": "{{ site.title }}",
+                 "url": "{{ site.url }}",
+                 "description": "{{ site.description }}",
+                 "inLanguage": "pl-PL",
+                 "countryOfOrigin": {
+                     "@type": "Country",
+                     "name": "Poland"
+                 },
+                 "keywords": [{% for tag_entry in site.tags %}
+                     {{ tag_entry[0] | jsonify }}{%- unless forloop.last -%},{%- endunless -%}
+                     {% endfor %}
+                 ],
+                 "sameAs": [
+                     "https://www.wikidata.org/wiki/Q137396574",
+                     "https://www.facebook.com/glowniejavascript/",
+                     "https://github.com/jcubic/jcubic.pl"
+                 ],
+                 "dateCreated": "2014-07-29",
+                 "dateModified": {{ site.time | date_to_xmlschema | jsonify }},
+                 "license": {
+                     "@type": "CreativeWork",
+                     "name": "Creative Commons Attribution-ShareAlike 4.0 International",
+                     "url": "https://creativecommons.org/licenses/by-sa/4.0/",
+                     "identifier": "CC-BY-SA-4.0"
+                 },
+                 "author": { "@id": "https://jakub.jankiewicz.org" },
+                 "publisher": { "@id": "https://jakub.jankiewicz.org" }
+             },
+             {% assign projects = site.users.jcubic.projects | except: '@type', 'Blog' %}
+             {% for project in projects %}
+             {{ project | jsonify }}{%- unless forloop.last -%},{%- endunless -%}
+             {% endfor %}
+         ]
      }
     </script>
     {%- endif %}
