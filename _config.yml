@@ -56,7 +56,11 @@ users:
           url: "https://jakub.jankiewicz.org/pl/"
           "@id": "https://jakub.jankiewicz.org"
           name: "Jakub T. Jankiewicz"
-          image: "https://live.staticflickr.com/65535/50132910231_73d867794f_k_d.jpg"
+          image:
+            "@type": "ImageObject"
+            "@id": "https://jakub.jankiewicz.org#image"
+            url: "https://live.staticflickr.com/65535/50132910231_73d867794f_k_d.jpg"
+            caption: "Jakub T. Jankiewicz"
           jobTitle: "Senior Front-End Developer"
           sameAs:
             - "https://www.wikidata.org/wiki/Q113688230"
@@ -125,7 +129,7 @@ defaults:
       is_post: true # automatically set is_post=true for all posts
 
 sitemap:
-  lastmod: 2026-03-06 13:58:26+0100
+  lastmod: 2026-03-06 14:37:32+0100
   priority: 1.0
   changefreq: weekly
   pages:
