@@ -155,13 +155,17 @@
                  "@type": "BreadcrumbList",
                  "@id": "{{ site.url }}{{ page.url }}#breadcrumbs",
                  "itemListElement": [
+                      {
+                         "@type": "ListItem",
+                         "position": 1,
+                         "item": "{{ site.url }}#webpage",
+                          "name": "Głównie JavaScript"
+                     },
                      {
                          "@type": "ListItem",
                          "position": 1,
-                         "item": {
-                             "@id": "https://jakub.jankiewicz.org",
-                             "name": "Home Page"
-                         }
+                         "item": "{{ site.url }}{{ page.url }}#webpage"
+                         "name": "{{ page.title }}"
                      }
                  ]
              }{% if page.faq -%},
@@ -246,10 +250,8 @@
                      {
                          "@type": "ListItem",
                          "position": 1,
-                         "item": {
-                             "@id": "{{ site.url }}#webpage",
-                             "name": "Głównie JavaScript"
-                         }
+                         "item": "{{ site.url }}#webpage",
+                         "name": "Głównie JavaScript"
                      }
                  ]
              }
