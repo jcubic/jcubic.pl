@@ -124,7 +124,7 @@ Wikipedia to nie jedyny taki projekt, gdzie można dodać linki. Poniżej tzw. p
 
 ## Płatne edycje i konsultacje z Wikipedii
 
-Jeśli zainteresował cię temat, edycji Wikipedii, masz jakieś hasło, które chcesz dodać, oferuje [płatne edycje i konsultacje: Wikipedia+SEO](/wikipedia).
+Jeśli zainteresował cię temat, edycji Wikipedii, masz jakieś hasło, które chcesz dodać, oferuje [płatne edycje i konsultacje: Wikipedia+SEO](/wikizeit/szkolenia/).
 
 ## Czy płatne edytowanie Wikipedii jest dozwolone?
 
