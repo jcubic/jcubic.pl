@@ -10,7 +10,18 @@
       <div id="google_translate_element"></div>
       <script type="text/javascript">
        function googleTranslateElementInit() {
-         new google.translate.TranslateElement({pageLanguage: 'pl'}, 'google_translate_element');
+           // Sprawdzamy język przeglądarki (np. 'en-US' -> 'en')
+           var param = new URLSearchParams(location.search).get('lang');
+           var userLang = param || (navigator.language || navigator.userLanguage).split('-')[0];
+
+           if (userLang !== 'pl' && !document.cookie.includes('googtrans')) {
+               document.cookie = "googtrans=/pl/" + userLang + "; path=/; domain=" + location.hostname;
+           }
+
+           new google.translate.TranslateElement({
+               pageLanguage: 'pl',
+               layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+           }, 'google_translate_element');
        }
       </script>
     </div>
