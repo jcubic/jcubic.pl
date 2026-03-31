@@ -1,6 +1,7 @@
-Sitemap: http://jcubic.pl/sitemap-index.xml
+Sitemap: https://jcubic.pl/sitemap-index.xml
 
 User-agent: *
 Disallow: /hashover-next/
 
 Allow: /wikizeit/
+Disallow: /wikizeit/api/
