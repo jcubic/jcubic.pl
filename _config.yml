@@ -161,9 +161,6 @@ sitemap:
   lastmod: 2026-03-07 19:51:18+0100
   priority: 1.0
   changefreq: weekly
-  pages:
-    - /wikizeit/
-    - /wikizeit/szkolenia/
 
 paginate: 10
 paginate_path: "/page:num"
