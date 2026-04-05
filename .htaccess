@@ -76,7 +76,7 @@ RewriteRule /?me/?$ https://jakub.jankiewicz.org [R=301,L]
 RewriteRule /?jakub-jankiewicz/(.*)$ https://jakub.jankiewicz.org/$1 [R=301,L]
 
 RewriteRule /?2025/12/wikipedia-seo.html /2025/12/wikipedia-jak-dodac-artykul.html [R=301,L]
-RewriteRule ^/?wikipedia/?(.*)$ /wikizeit/szkolenia/$1 [R=301,L]
+RewriteRule ^/?wikipedia/?(.*)$ /wikizeit/oferta/$1 [R=301,L]
 
 
 RewriteRule /?Thunar-crash.ogv / [R=301,L]
