@@ -5,3 +5,32 @@ Disallow: /hashover-next/
 
 Allow: /wikizeit/
 Disallow: /wikizeit/api/
+
+# AI crawlers — explicit allow for GEO visibility
+User-agent: GPTBot
+Allow: /wikizeit/
+Disallow: /wikizeit/api/
+
+User-agent: OAI-SearchBot
+Allow: /wikizeit/
+Disallow: /wikizeit/api/
+
+User-agent: anthropic-ai
+Allow: /wikizeit/
+Disallow: /wikizeit/api/
+
+User-agent: ClaudeBot
+Allow: /wikizeit/
+Disallow: /wikizeit/api/
+
+User-agent: Google-Extended
+Allow: /wikizeit/
+Disallow: /wikizeit/api/
+
+User-agent: PerplexityBot
+Allow: /wikizeit/
+Disallow: /wikizeit/api/
+
+User-agent: Applebot-Extended
+Allow: /wikizeit/
+Disallow: /wikizeit/api/
