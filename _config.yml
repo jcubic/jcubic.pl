@@ -92,8 +92,11 @@ users:
             - "https://pl.wikipedia.org/wiki/Wikipedysta:Jcubic"
             - "https://en.wikipedia.org/wiki/User:Jcubic"
             - "https://commons.wikimedia.org/wiki/User:Jcubic"
+            - "https://commons.wikimedia.org/wiki/Category:Jakub_T._Jankiewicz"
             - "https://www.wikidata.org/wiki/Q113688230"
             - "https://www.youtube.com/@jcubic"
+            - "https://buzzsumo.com/journalist/jakub-t--jankiewicz-3975897/"
+            - "https://pypi.org/user/jcubic/"
     mateuszmazurek:
         name: "Mateusz Mazurek"
         url: "https://mateuszmazurek.pl/"
