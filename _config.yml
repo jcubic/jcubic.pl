@@ -164,7 +164,7 @@ defaults:
       is_post: true # automatically set is_post=true for all posts
 
 sitemap:
-  lastmod: 2026-04-06 15:05:25+0200
+  lastmod: 2026-04-22 13:56:40+0200
   priority: 1.0
   changefreq: weekly
 
