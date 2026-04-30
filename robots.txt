@@ -1,4 +1,4 @@
-Sitemap: https://jcubic.pl/sitemap.xml
+Sitemap: https://jcubic.pl/sitemap-index.xml
 
 User-agent: *
 Disallow: /hashover-next/
