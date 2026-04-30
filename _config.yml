@@ -30,11 +30,11 @@ users:
         twitter: "jcubic"
         projects:
           - "@type": "EducationalOrganization"
-            "@id": "https://jcubic.pl/wikizeit/"
-            name: "WikiZeit"
-            alternateName: "Projekt WikiZeit"
-            url: "https://jcubic.pl/wikizeit/"
-            logo: "https://jcubic.pl/wikizeit/img/logo.svg"
+            "@id": "https://wikizeit.jcubic.pl/"
+            name: "WikiZEIT"
+            alternateName: "Projekt WikiZEIT"
+            url: "https://wikizeit.jcubic.pl/"
+            logo: "https://wikizeit.jcubic.pl/img/logo.svg"
             description: "Projekt edukacyjny poświęcony etycznemu SEO, danym strukturalnym i profesjonalnej edycji Wikipedii."
             founder:
               "@id": "https://jakub.jankiewicz.org"
@@ -63,6 +63,7 @@ users:
           url: "https://jakub.jankiewicz.org/pl/"
           "@id": "https://jakub.jankiewicz.org"
           name: "Jakub T. Jankiewicz"
+          alternateName: "jcubic"
           image:
             "@type": "ImageObject"
             "@id": "https://jakub.jankiewicz.org#image"
@@ -98,6 +99,7 @@ users:
             - "https://www.youtube.com/@jcubic"
             - "https://www.npmjs.com/~jcubic"
             - "https://pypi.org/user/jcubic/"
+            - "https://launchpad.net/~jcubic"
             - "https://buzzsumo.com/journalist/jakub-t--jankiewicz-3975897/"
     mateuszmazurek:
         name: "Mateusz Mazurek"
@@ -164,7 +166,7 @@ defaults:
       is_post: true # automatically set is_post=true for all posts
 
 sitemap:
-  lastmod: 2026-04-22 13:56:40+0200
+  lastmod: 2026-04-30 02:24:16+0200
   priority: 1.0
   changefreq: weekly
 
