@@ -71,7 +71,7 @@ module Jekyll
             fname = "_includes/tags/#{tag}.md"
 
             if File.exist?(fname) then
-              data['content'] = File.read(fname)
+              data['content'] = File.read(fname, encoding: 'utf-8')
             end
           end
 
