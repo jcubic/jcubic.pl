@@ -83,6 +83,8 @@ RewriteRule ^wikizeit/szkolenia/(.*)$ https://wikizeit.jcubic.pl/oferta/$1 [R=30
 RewriteCond %{REQUEST_URI} !sitemap\.xml$ [NC]
 RewriteRule ^wikizeit/?(.*)$ https://wikizeit.jcubic.pl/$1 [R=301,L]
 
+RewriteRule ^wikizet/sitemap.xml /wikizeit/sitemap.xml [R=301,L]
+
 RewriteRule /?Thunar-crash.ogv / [R=301,L]
 
 RewriteRule /?tag/interent/ /tag/internet [R=301,L]
