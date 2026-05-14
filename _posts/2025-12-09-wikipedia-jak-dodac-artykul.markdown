@@ -116,15 +116,13 @@ Wikipedia to nie jedyny taki projekt, gdzie można dodać linki. Poniżej tzw. p
 * [Wikidane](https://pl.wikipedia.org/wiki/Wikidane) - jest to baza wszystkiego, tzw. Graf Wiedzy. Można tam dodać firmę czy biogram osoby (np. szefa firmy), które nie nadają się do Wikipedii.
   Dodanie wpisu w Wikidanych może prowadzić do powstania wpisu w [Grafie Wiedzy Google](https://pl.wikipedia.org/wiki/Google_Knowledge_Graph).
 * [Wikimedia Commons](https://pl.wikipedia.org/wiki/Wikimedia_Commons) - czyli zasoby medialne Wikipedii. Można zrobić zdjęcie budynku firmy oraz jego szefa. Dodać kategorię ze zdjęciami firmy, połączyć z Wikidanymi. Zdjęcie może zawierać źródło, skąd pobrane jest zdjęcie. Należy jednak pamiętać, że zdjęcie na stronie musi mieć odpowiednią [licencje Creative Commons](https://pl.wikipedia.org/wiki/Licencje_Creative_Commons).
-* [WikiNews](https://pl.wikinews.org) - można tam dodać newsy na temat firmy. Uwaga, muszą być aktualne.
-
 
 **UWAGA**: Edycja powyższych serwisów może być trudniejsza niż Wikipedii, która zawiera tzw. Edytor Wizualny, który działa tak ja Word, czyli tzw.
 [WYSIWYG](https://pl.wikipedia.org/wiki/WYSIWYG).
 
 ## Płatne edycje i konsultacje z Wikipedii
 
-Jeśli zainteresował cię temat, edycji Wikipedii, masz jakieś hasło, które chcesz dodać, oferuje [płatne edycje i konsultacje: Wikipedia+SEO](/wikizeit/szkolenia/).
+Jeśli zainteresował cię temat, edycji Wikipedii, masz jakieś hasło, które chcesz dodać, oferuje [płatne edycje i konsultacje: Wikipedia+SEO](https://wikizeit.jcubic.pl/oferta/).
 
 ## Czy płatne edytowanie Wikipedii jest dozwolone?
 
