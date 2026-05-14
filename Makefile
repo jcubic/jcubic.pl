@@ -1,16 +1,26 @@
+SOURCES := $(shell git ls-files _posts _layouts _includes _plugins css img _config.yml)
+
 all: build tidy
 
-.PHONY: index tidy build watch install sitemap
-
-index:
-	@echo "Indexing..." && ./index.py _site > /dev/null && echo "            Done"
+.PHONY: tidy watch install sitemap deploy
 
 tidy:
 	@echo "cleaning..."
 	@./clean
 
-build: prod
-	@bundle exec jekyll build
+.last_build: $(SOURCES)
+	@JEKYLL_ENV=production bundle exec jekyll build
+	@echo "Indexing..." && ./index.py _site > /dev/null && echo "            Done"
+	@touch $@
+
+build: .last_build
+
+.last_deploy: .last_build
+	./_deploy
+	scp index.db mydevil:~/jcubic.pl/ < /dev/null
+	@touch $@
+
+deploy: .last_deploy
 
 watch:
 	@bundle exec jekyll serve
@@ -22,9 +32,6 @@ install:
 
 now:
 	@date +"%F %T%:z"
-
-prod:
-  export JEKYLL_ENV=production
 
 sitemap:
 	@sed -i "s/lastmod: .*/lastmod: `./date`/" _config.yml

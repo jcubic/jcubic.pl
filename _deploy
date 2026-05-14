@@ -1,0 +1,4 @@
+#!/bin/bash
+
+cd _site
+tar cf - 20*/ *.html *.xml *.php tag/ | ssh mydevil "tar xf - -C ~/jcubic.pl/"
