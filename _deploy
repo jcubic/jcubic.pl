@@ -1,4 +1,7 @@
 #!/bin/bash
 
 cd _site
-tar cf - 20*/ *.html *.xml *.php tag/ | ssh mydevil "tar xf - -C ~/jcubic.pl/"
+ARCHIVE=$(mktemp)
+tar cf "$ARCHIVE" 20*/ *.html *.xml *.php tag/
+pv "$ARCHIVE" | ssh mydevil "tar xf - -C ~/jcubic.pl/"
+rm -f "$ARCHIVE"
