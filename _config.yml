@@ -103,6 +103,9 @@ users:
             - "https://packagist.org/users/jcubic/"
             - "https://buzzsumo.com/journalist/jakub-t--jankiewicz-3975897/"
             - "https://algora.io/jcubic/profile"
+            - "https://www.devtree.site/jcubic"
+            - "https://archive.fosdem.org/2023/schedule/speaker/jakub_t_jankiewicz/"
+            - "https://hashnode.com/@jcubic"
     mateuszmazurek:
         name: "Mateusz Mazurek"
         url: "https://mateuszmazurek.pl/"
