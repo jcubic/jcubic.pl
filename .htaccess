@@ -110,7 +110,7 @@ RewriteRule /?jakub-jankiewicz/(.*)$ https://jakub.jankiewicz.org/$1 [R=301,L]
 
 RewriteRule /?2025/12/wikipedia-seo.html /2025/12/wikipedia-jak-dodac-artykul.html [R=301,L]
 
-RewriteRule ^/?wikipedia/?(.*)$ https://wikizeit.edu.pl/oferta/$1 [R=301,L]
+RewriteRule ^wikipedia/?(.*)$ https://wikizeit.edu.pl/oferta/$1 [R=301,L]
 RewriteRule ^wikizeit/szkolenia/(.*)$ https://wikizeit.edu.pl/oferta/$1 [R=301,L]
 
 RewriteRule ^wikizet/sitemap.xml https://wikizeit.edu.pl/sitemap.xml [R=301,L]

@@ -30,11 +30,11 @@ users:
         twitter: "jcubic"
         projects:
           - "@type": "EducationalOrganization"
-            "@id": "https://wikizeit.jcubic.pl/"
+            "@id": "https://wikizeit.edu.pl/"
             name: "WikiZEIT"
             alternateName: "Projekt WikiZEIT"
-            url: "https://wikizeit.jcubic.pl/"
-            logo: "https://wikizeit.jcubic.pl/img/logo.svg"
+            url: "https://wikizeit.edu.pl/"
+            logo: "https://wikizeit.edu.pl/img/logo.svg"
             description: "Projekt edukacyjny poświęcony etycznemu SEO, danym strukturalnym i profesjonalnej edycji Wikipedii."
             founder:
               "@id": "https://jakub.jankiewicz.org"
@@ -89,7 +89,7 @@ users:
             - "https://www.freecodecamp.org/news/author/jcubic/"
             - "https://bulldogjob.pl/readme/authors/jakub-t-jankiewicz"
             - "https://dev.to/jcubic"
-            - "https://wikizeit.jcubic.pl/autor/jcubic/"
+            - "https://wikizeit.edu.pl/autor/jcubic/"
             - "https://hackernoon.com/u/jcubic"
             - "https://pl.wikipedia.org/wiki/Wikipedysta:Jcubic"
             - "https://en.wikipedia.org/wiki/User:Jcubic"
