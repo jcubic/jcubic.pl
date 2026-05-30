@@ -13,6 +13,7 @@ RewriteEngine on
 
 ## REMOVE OLD GARBAGE
 RewriteCond %{HTTP_HOST} !^(www\.)?jcubic\.pl$ [NC]
+RewriteCond %{HTTP_HOST} !^clarity\.jcubic\.pl$ [NC]
 RewriteCond %{HTTP_HOST} !^books\.jcubic\.pl$ [NC]
 RewriteCond %{HTTP_HOST} !^cssdraw\.jcubic\.pl$ [NC]
 RewriteCond %{HTTP_HOST} !^dev\.jcubic\.pl$ [NC]
