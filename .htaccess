@@ -44,6 +44,11 @@ RewriteCond %{HTTP_HOST} !^wolska\.jcubic\.pl$ [NC]
 RewriteCond %{HTTP_HOST} !^wp\.wolska\.jcubic\.pl$ [NC]
 RewriteRule ^(.*)$ - [R=410,L]
 
+RewriteRule ^wikipedia/?(.*)$ https://wikizeit.edu.pl/oferta/$1 [R=301,L]
+RewriteRule ^wikizeit/szkolenia/(.*)$ https://wikizeit.edu.pl/oferta/$1 [R=301,L]
+RewriteRule ^wikizet/sitemap.xml https://wikizeit.edu.pl/sitemap.xml [R=301,L]
+RewriteRule ^wikizeit/?(.*)$ https://wikizeit.edu.pl/$1 [R=301,L]
+
 RewriteCond %{SERVER_PORT} ^80$
 RewriteCond %{HTTP_HOST} !localhost
 RewriteCond %{HTTP_HOST} ^jcubic.pl$
@@ -111,13 +116,6 @@ RewriteRule /?jakub-jankiewicz/(.*)$ https://jakub.jankiewicz.org/$1 [R=301,L]
 
 RewriteRule /?2025/12/wikipedia-seo.html /2025/12/wikipedia-jak-dodac-artykul.html [R=301,L]
 
-RewriteRule ^wikipedia/?(.*)$ https://wikizeit.edu.pl/oferta/$1 [R=301,L]
-RewriteRule ^wikizeit/szkolenia/(.*)$ https://wikizeit.edu.pl/oferta/$1 [R=301,L]
-
-RewriteRule ^wikizet/sitemap.xml https://wikizeit.edu.pl/sitemap.xml [R=301,L]
-
-RewriteRule ^wikizeit/?(.*)$ https://wikizeit.edu.pl/$1 [R=301,L]
-
 RewriteRule /?Thunar-crash.ogv / [R=301,L]
 
 RewriteRule /?tag/interent/ /tag/internet [R=301,L]
@@ -130,8 +128,6 @@ RewriteRule biwascheme/repl.html http://www.biwascheme.org/ [R=301,L]
 RewriteRule biwascheme/repl.php http://www.biwascheme.org/ [R=301,L]
 RewriteRule ^new/?$ /jakub-jankiewicz/ [R=301,L]
 RewriteRule ^tag/API/ /tag/api/ [R=301,L]
-
-
 
 RewriteRule ^2016/04/wyrazenia-regularne.html /2016/04/wyrazenia-regularne-javascript.html [R=301,L]
 RewriteRule ^2018/11/prosta-biblioteka-dom-zamiast-jquery.html /2018/11/prosta-biblioteka-javascript-dom-zamiast-jquery.html [R=301,L]
