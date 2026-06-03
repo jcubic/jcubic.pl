@@ -142,7 +142,13 @@
                  "url": "{{ site.url }}",
                  "description": "{{ site.description }}",
                  "isPartOf": { "@id": "{{ site.url }}" },
-                 "inLanguage": "pl-PL"
+                 "inLanguage": "pl-PL",
+                 "sameAs": [
+                     "https://www.wikidata.org/wiki/Q137396574",
+                     "https://www.facebook.com/glowniejavascript/",
+                     "https://github.com/jcubic/jcubic.pl",
+                     "https://www.linkedin.com/company/g%C5%82%C3%B3wnie-javascript/"
+                 ]
              },
              {
                  "@type": "WebSite",
@@ -203,6 +209,60 @@
                      "@type": "Country",
                      "name": "Poland"
                  },
+                 "about": [
+                     {
+                         "@type": "Thing",
+                         "name": "JavaScript",
+                         "sameAs": "https://www.wikidata.org/wiki/Q2063"
+                     },
+                     {
+                         "@type": "Thing",
+                         "name": "Front-end",
+                         "sameAs": "https://www.wikidata.org/wiki/Q70507976"
+                     }
+                 ],
+                 "mentions": [
+                     {
+                         "@type": "Thing",
+                         "name": "PHP",
+                         "sameAs": "https://www.wikidata.org/wiki/Q59"
+                     },
+                     {
+                         "@type": "Thing",
+                         "name": "Python",
+                         "sameAs": "https://www.wikidata.org/wiki/Q28865"
+                     },
+                     {
+                         "@type": "Thing",
+                         "name": "SQL",
+                         "sameAs": "https://www.wikidata.org/wiki/Q47607"
+                     },
+                     {
+                         "@type": "Thing",
+                         "name": "CSS",
+                         "sameAs": "https://www.wikidata.org/wiki/Q46441"
+                     },
+                     {
+                         "@type": "Thing",
+                         "name": "Web Development",
+                         "sameAs": "https://www.wikidata.org/wiki/Q386275"
+                     },
+                     {
+                         "@type": "Thing",
+                         "name": "Open Source",
+                         "sameAs": "https://www.wikidata.org/wiki/Q39162"
+                     },
+                     {
+                         "@type": "Thing",
+                         "name": "World Wide Web",
+                         "sameAs": "https://www.wikidata.org/wiki/Q466"
+                     },
+                     {
+                         "@type": "Thing",
+                         "name": "Technology",
+                         "sameAs": "https://www.wikidata.org/wiki/Q11016"
+                     }
+                 ],
                  "keywords": [{% for tag_entry in site.tags %}
                      {{ tag_entry[0] | jsonify }}{%- unless forloop.last -%},{%- endunless -%}
                      {% endfor %}
@@ -210,7 +270,8 @@
                  "sameAs": [
                      "https://www.wikidata.org/wiki/Q137396574",
                      "https://www.facebook.com/glowniejavascript/",
-                     "https://github.com/jcubic/jcubic.pl"
+                     "https://github.com/jcubic/jcubic.pl",
+                     "https://www.linkedin.com/company/głównie-javascript/"
                  ],
                  "dateCreated": "2014-07-29",
                  "dateModified": {{ site.time | date_to_xmlschema | jsonify }},
