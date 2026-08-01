@@ -2,6 +2,6 @@
 
 cd _site
 ARCHIVE=$(mktemp)
-tar cf "$ARCHIVE" 20*/ *.html *.xml *.php tag/
+tar cf "$ARCHIVE" 20*/ css *.html *.xml *.php tag/
 pv "$ARCHIVE" | ssh mydevil "tar xf - -C ~/jcubic.pl/"
 rm -f "$ARCHIVE"

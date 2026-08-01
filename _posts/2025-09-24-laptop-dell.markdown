@@ -4,6 +4,7 @@ title: "Dell Latitude i nowe linie Dell Pro – jak wybrać laptopa dopasowanego
 date: 2025-09-24 16:16:53+0200
 categories:
 tags: laptop sprzęt
+ad: true
 author: ag
 description: Latopy firmy Dell
 image:

@@ -4,6 +4,7 @@ title:  "Internet Światłowodowy: Przyszłość Sieci w Twoim Domu"
 date:   2024-06-12 15:43:13+0200
 categories:
 tags: sieci
+ad: true
 author: asnyk
 description: Dostęp do szybkiego i stabilnego internetu jest nieodzownym elementem codziennego życia
 image:

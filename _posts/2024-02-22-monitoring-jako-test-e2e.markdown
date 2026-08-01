@@ -4,6 +4,7 @@ title:  "Użycie monitoringu według scenariusza jako pomysł na test E2E"
 date:   2024-02-22 14:04:53+0100
 categories:
 tags: testy e2e
+ad: true
 author: adam_b
 description: Czy usługa automatycznego monitoringu stron internetowych oferująca testowanie według przygotowanego scenariusza może być alternatywą dla testów E2E?
 image:

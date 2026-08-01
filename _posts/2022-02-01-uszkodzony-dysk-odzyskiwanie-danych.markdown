@@ -5,6 +5,7 @@ date:   2022-02-01 18:11:51+0100
 categories:
 tags: sprzęt bezpieczeństwo
 author: inga
+ad: true
 description: Jak dbać o dysk twardy oraz jak odzyskać dane gdy jednak dysk się uszkodzi.
 image:
  url: "/img/hard-drive.jpg"

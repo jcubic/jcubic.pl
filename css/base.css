@@ -289,6 +289,16 @@ section p img + em a:visited {
 .meta h1, .meta .a {
     text-align: right;
 }
+.meta h1:has(+ .ad) {
+    margin-bottom: 0.5em;
+}
+.meta .ad {
+    text-align: right;
+    font-family: 'Muli', sans-serif;
+    font-size: 1em;
+    margin-bottom: 1em;
+    font-weight: lighter;
+}
 h3 {
     font-size: 1.2em;
 }

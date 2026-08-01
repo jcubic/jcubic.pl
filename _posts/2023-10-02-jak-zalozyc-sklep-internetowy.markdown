@@ -4,6 +4,7 @@ title:  "Jak założyć sklep internetowy krok po kroku? Poznaj te zasady!"
 date:   2023-10-02 19:41:33+0200
 categories:
 tags: sklep www e-commerce
+ad: true
 author: szymon_s
 description: Od czego zaczyna się zakładanie sklepu internetowego? Jakie są podstawowe i kluczowe działania, o których warto pamiętać? Wbrew pozorom nie jest to takie trudne.
 image:
