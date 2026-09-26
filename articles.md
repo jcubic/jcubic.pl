@@ -24,6 +24,13 @@ Poniżej linki do moich artykułów (w języku angielskim), publikowanych w [ITN
 * [Architecture for Non-Trivial R Shiny Applications](https://dev.to/jcubic/architecture-for-non-trivial-r-shiny-applications-3816)
 * [How to Parse S-expressions in JavaScript](https://www.freecodecamp.org/news/s-expressions-in-javascript/)
 * [How to Create an Interactive Terminal-Based Portfolio Website](https://www.freecodecamp.org/news/how-to-create-interactive-terminal-based-portfolio/)
+* [How to Create a REST API Without a Server](https://www.freecodecamp.org/news/how-to-create-a-rest-api-without-a-server/)
+* [How to Match Parentheses in JavaScript without Using Regex](https://www.freecodecamp.org/news/how-to-match-parentheses-in-javascript-without-using-regex/)
+* [My Open Source story @ opensource.org](https://opensource.org/maintainers/jcubic)
+* [How to Create a Table of Contents for Your Article](https://www.freecodecamp.org/news/how-to-create-a-table-of-contents-for-your-article/)
+* [How to Build a Zero-Cost Personal Project with PHP, Wasmer, and Cloudflare](https://www.freecodecamp.org/news/how-to-build-a-zero-cost-personal-project-with-php-wasmer-and-cloudflare/)
+* [How to Build a Dark Mode Toggle Without JavaScript](https://www.freecodecamp.org/news/how-to-build-a-dark-mode-toggle-without-javascript/)
+* [How to get access to DOM from Service Worker?](https://dev.to/jcubic/how-to-get-access-to-dom-from-service-worker-43e3)
 
 Poniżej artykuły w języku Polskim:
 * [Synchronizacja stanu aplikacji www między zakładkami](https://bulldogjob.pl/news/1804-synchronizacja-stanu-aplikacji-www-miedzy-zakladkami)
