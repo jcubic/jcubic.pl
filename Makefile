@@ -1,4 +1,4 @@
-SOURCES := $(shell git ls-files _posts _layouts _includes _plugins css img _config.yml)
+SOURCES := $(shell git ls-files _posts _layouts _includes _plugins css img _config.yml articles.md)
 
 all: build tidy
 
