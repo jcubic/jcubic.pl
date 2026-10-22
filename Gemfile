@@ -12,6 +12,7 @@ gem 'jekyll-paginate'
 gem 'bigdecimal'
 gem 'nuggets'
 gem 'pygments.rb'
+#gem 'pygments.rb', '~> 2.3.0'
 gem 'json', '~> 2.0'
 gem "webrick", "~> 1.4"
 gem "etc", "~> 1.0"

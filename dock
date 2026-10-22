@@ -3,9 +3,28 @@
 if [ -z "$1" ]; then
     docker run --rm -ti -v $(pwd):/tmp/www -e "JEKYLL_ENV=docker" -p 9000:4000 jcubic.pl
 elif [ "$1" = "build" ]; then
-    docker build -t jcubic.pl .
+    docker build --progress=plain -t jcubic.pl .
+    docker tag jcubic.pl jcubic777/jcubic-blog:latest
+elif [ "$1" == "publish" ]; then
+    docker push jcubic777/jcubic-blog:latest
 elif [ "$1" = "bash" ]; then
-    docker run --rm -ti -v $(pwd):/tmp/www jcubic.pl bash
+  docker run --rm -ti \
+    -e GIT_CONFIG_COUNT=1 \
+    -e GIT_CONFIG_KEY_0=safe.directory \
+    -e GIT_CONFIG_VALUE_0=* \
+    -e GEM_HOME=/usr/lib/ruby/gems/2.6.0 \
+    -e BUNDLE_PATH=/usr/lib/ruby/gems/2.6.0 \
+    -e PYTHONPATH=/usr/lib/python2.7/site-packages:/root/.local/lib/python2.7/site-packages \
+    -v $(pwd):/tmp/www:Z \
+    jcubic777/jcubic-blog:latest bash
 elif [ "$1" = "make" ]; then
-    docker run --rm -ti -v $(pwd):/tmp/www jcubic.pl make $2
+  docker run --rm -ti \
+    -e GIT_CONFIG_COUNT=1 \
+    -e GIT_CONFIG_KEY_0=safe.directory \
+    -e GIT_CONFIG_VALUE_0=* \
+    -e GEM_HOME=/usr/lib/ruby/gems/2.6.0 \
+    -e BUNDLE_PATH=/usr/lib/ruby/gems/2.6.0 \
+    -e PYTHONPATH=/usr/lib/python2.7/site-packages:/root/.local/lib/python2.7/site-packages \
+    -v $(pwd):/tmp/www:Z \
+    jcubic777/jcubic-blog:latest make
 fi
