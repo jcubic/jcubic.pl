@@ -120,9 +120,9 @@ Wikipedia to nie jedyny taki projekt, gdzie można dodać linki. Poniżej tzw. p
 **UWAGA**: Edycja powyższych serwisów może być trudniejsza niż Wikipedii, która zawiera tzw. Edytor Wizualny, który działa tak ja Word, czyli tzw.
 [WYSIWYG](https://pl.wikipedia.org/wiki/WYSIWYG).
 
-## Płatne edycje i konsultacje z Wikipedii
+## Czy edycja Wikipedii jest trudna?
 
-Jeśli zainteresował cię temat, edycji Wikipedii, masz jakieś hasło, które chcesz dodać, oferuje [płatne edycje i konsultacje: Wikipedia+SEO](https://wikizeit.jcubic.pl/oferta/).
+Nauka edycji Wikipedii może wymagać trochę czasu. Nie jest to trudne, ale gdy twoim jedynym celem jest napisanie jednego artykułu (o sobie lub firmie), łatwiej jest zlecić napisanie artykułu specjaliście, np. [WikIZEIT](https://wikizeit.jcubic.pl/oferta/).
 
 ## Czy płatne edytowanie Wikipedii jest dozwolone?
 
