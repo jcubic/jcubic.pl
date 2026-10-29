@@ -85,6 +85,8 @@ users:
             - "https://www.siepomaga.pl/pomagacze/jcubic"
             - "https://own.page/jcubic"
             - "https://nownownow.com/p/6i6J"
+            - "https://techrez.io/resume/jcubic"
+            - "https://buildinpublic.com/x/jcubic"
           knowsAbout:
             - "@type": "DefinedTerm"
               name: "Front-End Development"
